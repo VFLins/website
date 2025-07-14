@@ -130,3 +130,17 @@ blockquote.callout-faliure {
     border-left: 2px solid var(--faliure-text);
     color: var(--faliure-text);
 }
+
+/* big static checkboxes */
+input[type="checkbox"]:disabled {
+    width: 18px;
+    height: 21px;
+    display: inline-block;
+    float: left;
+    margin: 12px;
+}
+
+/* remove the dot behind static checkboxes */
+li:has(input)::marker {
+    color: var(--page-bg)
+}
