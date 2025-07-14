@@ -1,0 +1,11 @@
+{% macro render_blog_post(post, from_index=false) %}
+  <div class="blog-post">
+  {% if from_index %}
+    <h1><a href="{{ post|url }}">{{ post.title }}</a></h1>
+  {% else %}
+    <h1>{{ post.title }}</h1>
+  {% endif %}
+  <p class="meta" style="color:teal">{{ post.pub_date }}</p>
+  {{ post.body }}
+  </div>
+{% endmacro %}
