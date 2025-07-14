@@ -2,29 +2,32 @@
 <meta charset="utf-8">
 <link rel="stylesheet" href="{{ get_pygments_stylesheet()|url }}">
 <link rel="stylesheet" href="{{ '/static/style.css'|url }}">
+<script src="{{ '/static/toggle-theme.js'|url }}"></script>
 <title>{% block title %}{% endblock %} — Vitor F. Lins</title>
 <body>
-  <header>
-    <h1><b>Vitor F. Lins</b></h1>
-    <nav>
-      <ul class="nav navbar-nav">
-        <li{% if this._path == '/' %} class="active"{% endif
-          %}><a href="{{ '/'|url }}">Início</a></li>
-        {% for href, title in [
-          ['/blog', 'Blog'],
-          ['/projetos', 'Projetos'],
-          ['/sobre', 'Sobre mim']
-        ] %}
-          <li{% if this.is_child_of(href) %} class="active"{% endif
-            %}><a href="{{ href|url }}">{{ title }}</a></li>
-        {% endfor %}
-      </ul>
-    </nav>
-  </header>
-  <div class="page">
-    {% block body %}{% endblock %}
-  </div>
-  <footer>
-    &copy; Copyright 2025 by Vitor F. Lins.
-  </footer>
+    <header>
+        <h1><b>Vitor F. Lins</b></h1>
+        <nav>
+            <ul class="nav navbar-nav">
+                <li{% if this._path == '/' %} class="active"{% endif%}>
+                    <a href="{{ '/'|url }}">Início</a>
+                </li>
+                {% for href, title in [
+                    ['/blog', 'Blog'],
+                    ['/projetos', 'Projetos'],
+                    ['/sobre', 'Sobre mim']
+                ] %}
+                    <li{% if this.is_child_of(href) %} class="active"{% endif
+                    %}><a href="{{ href|url }}">{{ title }}</a></li>
+                {% endfor %}
+                <li style="color:var(--page-text);float:right"><input type="checkbox" id="theme-toggle"><label for="theme-toggle">Tema claro</label></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="page">
+        {% block body %}{% endblock %}
+    </div>
+    <footer>
+        &copy; Copyright 2025 by Vitor F. Lins.
+    </footer>
 </body>
