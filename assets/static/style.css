@@ -6,27 +6,35 @@
 }
 
 :root {
-    --bg-color: #293f46;
     --page-bg: #212729;
     --page-text: #84b3b1;
     --link-color: teal;
     --link-hover-color: darkcyan;
     --header-text: #20B2AA;
+    --header-bg: #293f46;
+    --success-text: #84b397;
+    --success-bg: #23352d;
+    --faliure-text: #b38484;
+    --faliure-bg: #352323;
 }
 
 /* Dark Theme Variables */
 body.light-theme {
-    --bg-color: #84b3b1;
     --page-bg: #d3dadd;
     --page-text: #127772;
     --link-color: #0d4d49;
     --link-hover-color: #127772;
     --header-text: #103936;
+    --header-bg: #84b3b1;
+    --success-text: #1a4928;
+    --success-bg: #afcbbc;
+    --faliure-text: #352323;
+    --faliure-bg: #b38484;
 }
 
 body {
     margin: 50px 25px;
-    background-color: var(--bg-color);
+    background-color: var(--header-bg);
 }
 
 footer {
@@ -62,6 +70,7 @@ header, footer {
 
 div.page {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: var(--page-bg) initial;
 }
 
 header h1 {
@@ -110,13 +119,14 @@ blockquote {
 }
 
 blockquote.callout-success {
-    background: #233435;
-    border-left: 2px solid #84b3b1;
+    background: var(--success-bg);
+    border-left: 4px solid var(--success-text);
+    color: var(--success-text)
 
 }
 
 blockquote.callout-faliure {
-    background: #352323;
-    border-left: 2px solid #b38484;
-    color: #b38484;
+    background: var(--faliure-bg);
+    border-left: 2px solid var(--faliure-text);
+    color: var(--faliure-text);
 }
