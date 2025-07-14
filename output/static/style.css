@@ -6,13 +6,12 @@
 }
 
 body {
-    font-family: 'Roboto Slab', monospace;
     margin: 50px 25px;
     background-color: #293f46;
 }
 
 footer {
-    color: lightgray;
+    color: #84b3b1;
 }
 
 a {
@@ -23,10 +22,27 @@ a:hover {
     color: darkcyan;
 }
 
+p {
+    line-height: 1.5;
+}
+
+li {
+    line-height: 1.5;
+    margin-bottom: 9px;
+}
+
 header, footer, div.page {
     width: 760px;
     margin: 0 auto;
     padding: 20px 30px;
+}
+
+header, footer {
+    font-family: 'Roboto Slab', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+div.page {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 header h1 {
@@ -34,6 +50,11 @@ header h1 {
     margin: 0;
     font-weight: normal;
     font-size: 42px;
+}
+
+h2 {
+    font-size: x-large;
+    font-weight: normal;
 }
 
 header a {
@@ -53,5 +74,30 @@ header nav ul li {
 }
 
 div.page {
-    background: darkgray;
+    background: #212729;
+    color: #84b3b1
+}
+
+pre {
+    padding: 18px;
+    background: #1a1a1a;
+    font-family: Consolas, monospace;
+    font-size: medium;
+}
+
+blockquote {
+    font-family: 'Roboto Slab', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 9px 18px;
+}
+
+blockquote.callout-success {
+    background: #233435;
+    border-left: 2px solid #84b3b1;
+
+}
+
+blockquote.callout-faliure {
+    background: #352323;
+    border-left: 2px solid #b38484;
+    color: #b38484;
 }
