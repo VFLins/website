@@ -1,0 +1,62 @@
+title: Funcionalidades do Cashd migradas para o Cashd-cross
+---
+pub_date: 2025-06-16
+---
+body:
+
+<blockquote class="callout-success">
+
+    <p><b>Todas as funcionalidades do <i>Cashd</i> agora estão presentes no <i>Cashd-Cross</i></b></p>
+
+    <p>Alguns ajustes ainda são necessários para tornar a experiência satisfatória, elas
+    estão listadas abaixo. Mas isto conclui a tarefa do dia [[2025-05-22]].</p>
+
+</blockquote>
+
+## Problemas com desempenho
+
+Atualmente, os *widgets* que carregam dados do banco de dados acabam sendo bastante 
+lentos, principalmente na tela de estatísticas, onde existe uma grande quantidade de
+tabelas para carregar. Dependendo do computador, o Toga pode demorar mais de 5 segundos
+carregando o estado inicial de todas as tabelas contidas nele.
+
+As soluções que eu consigo vislumbrar no momento seriam:
+
+<ol>
+    <li>
+    Classes que podem instanciar o *widget* e uma referência para seus dados,
+    carregando-os apenas quando precisar ser exibido na tela;</li>
+    <li>
+    Generalizar a funcionalidade de paginação presente na tabela de clientes para que os
+    *widgets* de dados não precisem carregar todos os dados de uma vez;</li>
+    <li>
+    Atualizar o mecanismo de busca, que atualmente só consegue pesquisar dados carregados
+    na memória pelo Python, para que pesquise diretamente no banco de dados, retornando
+    apenas os resultados da pesquisa direto do banco de dados.</li>
+</ol>
+
+Esta última abordagem pode fazer muitas pesquisas desnecessárias se não houver um
+mecanismo de esperar a parada da digitação do usuário, mas talvez não seja necessário se
+eu não tiver planos de implementar esta pesquisa nas tabelas da secção de estatísticas. 
+
+- [x] **[Cashd-Cross]** Melhorar a qualidade da interação com o banco de dados, evitando
+carregar muitos dados desnecessariamente
+
+## Problemas na interface 
+
+A interface do Cashd-Cross possui uma largura fixa, mas o tamanho das fontes pode escalar
+dependendo da resolução da tela, isto acaba fazendo com que, em resoluções maiores, o
+conteúdo fique muito comprimido numa largura excessivamente estreita.
+
+
+Outro problema que pode ser encontrado atualmente na interface está nos formulários de
+informações do cliente e de configurações, alguns inputs que podem ser organizados em
+duas colunas estão sendo organizados verticalmente em uma coluna só, fazendo o conteúdo
+da página ocupar um espaço vertical desnecessariamente grande.
+
+Por fim, eu ainda tenho dúvidas sobre a organização atual dos itens na tela inicial, eu
+acredito que ainda dá para simplificar mais aquela tela, reduzindo a quantidade de botões
+e empregando um *tabset* para as opções do cliente selecionado.
+
+- [ ] **[Cashd-Cross]** Melhorar interface, permitindo aumentar a largura do conteúdo e
+organizar inputs em duas colunas

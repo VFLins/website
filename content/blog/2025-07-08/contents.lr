@@ -29,12 +29,18 @@ para sinalizar as regras de formatação dos dados ao `sqlalchemy`.
 
 Uma nova classe chamada `_DataSource` traz as funcionalidades para:
 
-1. Fazer o pré-processamento direto no banco de dados;
-2. Lidar com paginação, onde o usuário vê apenas um recorte dos dados, e pode solicitar 
-  o "próximo recorte" interagindo com a interface gráfica;
-3. Lidar com pesquisa, procurando por palavras-chave em múltiplas colunas do conjunto de
-  dados retornados pelo `_DataSource`;
-4. Em caso de série temporal, mudar a frequência dos dados entre mensal, semanal e diário.
+<ol>
+    <li>
+    Fazer o pré-processamento direto no banco de dados;</li>
+    <li>
+    Lidar com paginação, onde o usuário vê apenas um recorte dos dados, e pode solicitar 
+    o "próximo recorte" interagindo com a interface gráfica;</li>
+    <li>
+    Lidar com pesquisa, procurando por palavras-chave em múltiplas colunas do conjunto de
+    dados retornados pelo `_DataSource`;</li>
+    <li>
+    Em caso de série temporal, mudar a frequência dos dados entre mensal, semanal e diário.</li>
+</ol>
 
 ## CRUD feito pelas tabelas declaradas
 
