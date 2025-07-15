@@ -7,6 +7,7 @@
 
 :root {
     --page-bg: #212729;
+    --page-dark-bg: #1a1d1f;
     --page-text: #84b3b1;
     --link-color: teal;
     --link-hover-color: darkcyan;
@@ -21,9 +22,10 @@
 /* Dark Theme Variables */
 body.light-theme {
     --page-bg: #d3dadd;
+    --page-dark-bg: #c7ced1;
     --page-text: #127772;
-    --link-color: #0d4d49;
-    --link-hover-color: #127772;
+    --link-color: #347d78;
+    --link-hover-color: #186662;
     --header-text: #103936;
     --header-bg: #84b3b1;
     --success-text: #1a4928;
@@ -71,13 +73,14 @@ header, footer {
 div.page {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: var(--page-bg) initial;
+    border-radius: 6px;
 }
 
 header h1 {
     color: var(--header-text);
     margin: 0;
     font-weight: normal;
-    font-size: 42px;
+    font-size: max(48px, 3.5vh);
 }
 
 h2 {
@@ -92,7 +95,13 @@ header a {
 header nav ul {
     list-style: none;
     margin: 0;
+    font-size: max(22px, 1.6vh);
     padding: 0;
+}
+
+header nav ul li input {
+    height: max(18px, 1vh);
+    width: max(18px, 1vh);
 }
 
 header nav ul li {
@@ -108,9 +117,18 @@ div.page {
 
 pre {
     padding: 18px;
-    background: #1a1a1a;
+    border-radius: 6px;
+    background: var(--page-dark-bg);
+    font-family: Consolas, monospace;
+    font-size: inherit;
+}
+
+code {
+    padding: 1px 3px;
+    border-radius: 6px;
     font-family: Consolas, monospace;
     font-size: medium;
+    background-color: var(--page-dark-bg);
 }
 
 blockquote {

@@ -13,8 +13,9 @@ body:
     paradigma "Funcional". Além disso, também podemos processar os dados direto na engine do
     banco de dados, o que nos dá um ganho muito relevante de desempenho.</p>
     
-    <p>Isto conclui a primeira tarefa de: "Melhorar a qualidade da interação com o banco de dados,
-    evitando carregar muitos dados desnecessariamente".</p>
+    <p>Isto conclui a primeira tarefa de: <a href="../2025-06-16/">"Melhorar a
+    qualidade da interação com o banco de dados, evitando carregar muitos dados 
+    desnecessariamente"</a>.</p>
 
 </blockquote>
 
