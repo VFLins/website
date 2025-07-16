@@ -19,7 +19,7 @@
     --faliure-bg: #352323;
 }
 
-/* Dark Theme Variables */
+/* Light Theme Variables */
 body.light-theme {
     --page-bg: #d3dadd;
     --page-dark-bg: #c7ced1;
@@ -53,6 +53,10 @@ a:hover {
 
 p {
     line-height: 1.5;
+}
+
+p.meta {
+    color: teal;
 }
 
 li {
@@ -153,8 +157,8 @@ blockquote.callout-faliure {
 input[type="checkbox"]:disabled {
     width: 18px;
     height: 21px;
-    display: inline-block;
     float: left;
+    vertical-align: center;
     margin: 12px;
 }
 

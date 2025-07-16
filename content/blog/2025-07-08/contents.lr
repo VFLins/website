@@ -38,7 +38,7 @@ Uma nova classe chamada `_DataSource` traz as funcionalidades para:
     o "próximo recorte" interagindo com a interface gráfica;</li>
     <li>
     Lidar com pesquisa, procurando por palavras-chave em múltiplas colunas do conjunto de
-    dados retornados pelo `_DataSource`;</li>
+    dados retornados pelo <code>_DataSource</code>;</li>
     <li>
     Em caso de série temporal, mudar a frequência dos dados entre mensal, semanal e diário.</li>
 </ol>

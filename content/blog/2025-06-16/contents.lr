@@ -26,11 +26,11 @@ As soluções que eu consigo vislumbrar no momento seriam:
 
 <ol>
     <li>
-    Classes que podem instanciar o *widget* e uma referência para seus dados,
+    Classes que podem instanciar o <i>widget</i> e uma referência para seus dados,
     carregando-os apenas quando precisar ser exibido na tela;</li>
     <li>
     Generalizar a funcionalidade de paginação presente na tabela de clientes para que os
-    *widgets* de dados não precisem carregar todos os dados de uma vez;</li>
+    <i>widgets</i> de dados não precisem carregar todos os dados de uma vez;</li>
     <li>
     Atualizar o mecanismo de busca, que atualmente só consegue pesquisar dados carregados
     na memória pelo Python, para que pesquise diretamente no banco de dados, retornando

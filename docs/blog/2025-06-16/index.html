@@ -30,7 +30,13 @@
   
     <h1>Funcionalidades do Cashd migradas para o Cashd-cross</h1>
   
-  <p class="meta" style="color:teal">2025-06-16</p>
+  <p class="meta">2025-06-16
+    
+       | tag:
+         <a href="../../blog@tag/projetos">projetos</a>
+      
+    
+  </p>
   <blockquote class="callout-success">
 
     <p><b>Todas as funcionalidades do <i>Cashd</i> agora estão presentes no <i>Cashd-Cross</i></b></p>
@@ -46,11 +52,11 @@ carregando o estado inicial de todas as tabelas contidas nele.</p>
 <p>As soluções que eu consigo vislumbrar no momento seriam:</p>
 <ol>
     <li>
-    Classes que podem instanciar o *widget* e uma referência para seus dados,
+    Classes que podem instanciar o <i>widget</i> e uma referência para seus dados,
     carregando-os apenas quando precisar ser exibido na tela;</li>
     <li>
     Generalizar a funcionalidade de paginação presente na tabela de clientes para que os
-    *widgets* de dados não precisem carregar todos os dados de uma vez;</li>
+    <i>widgets</i> de dados não precisem carregar todos os dados de uma vez;</li>
     <li>
     Atualizar o mecanismo de busca, que atualmente só consegue pesquisar dados carregados
     na memória pelo Python, para que pesquise diretamente no banco de dados, retornando

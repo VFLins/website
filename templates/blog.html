@@ -7,7 +7,15 @@
   <ul class="blog-index">
   {% for post in this.pagination.items %}
     <h3><a href="{{ post|url }}">{{ post.title }}</a></h3>
-    <p style="color:var(--page-text)">{{ post.pub_date|dateformat }}</p>
+    <p style="color:var(--page-text)">{{ post.pub_date|dateformat }}
+    {% if post.tags %}
+      {% if post.tags|length > 1 %} | tags: 
+        {% for t in post.tags %} <a href="{{ ('/blog@tag/' ~ t)|url }}">{{ t }}</a>, {% endfor %}
+      {% else %} | tag:
+        {% for t in post.tags %} <a href="{{ ('/blog@tag/' ~ t)|url }}">{{ t }}</a>{% endfor %}
+      {% endif %}
+    {% endif %}
+    </p>
     <hr style="border: 1px dashed; border-style: none none dotted none;">
   {% endfor %}
   </ul>
