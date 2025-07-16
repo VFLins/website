@@ -6,12 +6,10 @@
     <h1>{{ post.title }}</h1>
   {% endif %}
   <p class="meta">{{ post.pub_date }}
-    {% if post.tags %}
-      {% if post.tags|length > 1 %} | tags: 
-        {% for t in post.tags %} <a href="{{ ('/blog@tag/' ~ t)|url }}">{{ t }}</a> {% endfor %}
-      {% else %} | tag:
-        {% for t in post.tags %} <a href="{{ ('/blog@tag/' ~ t)|url }}">{{ t }}</a>{% endfor %}
-      {% endif %}
+    {% if post.tags %} |
+        {% for t in post.tags %}
+            <code><a href="{{ ('/blog@tag/' ~ t)|url }}">{{ t }}</a></code>
+        {% endfor %}
     {% endif %}
   </p>
   {{ post.body }}

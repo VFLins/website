@@ -6,7 +6,8 @@
 <div class="posts-list">
     <ul>
             {% for i in this.items %}
-            <li>[{{ i.pub_date }}] <a href="{{ i|url }}">{{ i.title }}</a></li>
+            {% set other_tags = i.tags | reject('equalto', this.tag) | list %}
+            <li>[{{ i.pub_date }} - {{other_tags | join(', ') }}] <a href="{{ i|url }}">{{ i.title }}</a></li>
             {% else %}
             <li><em>No items.</em></li>
             {% endfor %}
