@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block title %}Tag: {{ this.tag }}{% endblock %}
+{% block body %}
+    <h1>Tag: {{ this.tag }}</h1>
+
+<div class="posts-list">
+    <ul>
+            {% for i in this.items %}
+            <li>[{{ i.pub_date }}] <a href="{{ i|url }}">{{ i.title }}</a></li>
+            {% else %}
+            <li><em>No items.</em></li>
+            {% endfor %}
+    </ul>
+</div> 
+{% endblock %}

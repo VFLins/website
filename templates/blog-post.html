@@ -5,7 +5,7 @@
   <ul>
     {% for t in this.tags -%}
       <li>
-        <a href="{{ ('/blog@tag/' ~ t)|url }}">
+        <a href="{{ ('/tag/' ~ t)|replace(' ', '_')|url }}">
           All posts tagged {{ t }}
         </a>
       </li>
