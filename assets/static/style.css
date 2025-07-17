@@ -21,17 +21,17 @@
 
 /* Light Theme Variables */
 body.light-theme {
-    --page-bg: #d3dadd;
-    --page-dark-bg: #c7ced1;
-    --page-text: #127772;
-    --link-color: #347d78;
-    --link-hover-color: #186662;
-    --header-text: #103936;
-    --header-bg: #84b3b1;
-    --success-text: #1a4928;
-    --success-bg: #afcbbc;
-    --faliure-text: #352323;
-    --faliure-bg: #b38484;
+    --page-bg: #ffffff;
+    --page-dark-bg: #e9f2f1;
+    --page-text: #47827d;
+    --link-color: #52827e;
+    --link-hover-color: #21a7a0;
+    --header-text: darkslategray;
+    --header-bg: #e9f2f1;
+    --success-text: #496133;
+    --success-bg: #d9f5d5;
+    --faliure-text: #8b4848;
+    --faliure-bg: #e5c5c5;
 }
 
 body {
