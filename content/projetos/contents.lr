@@ -1,9 +1,34 @@
-title: Meus projetos
+title: Meus projetos:
 ---
 body:
 
-This is a list of the projects:
+## Cashd
 
-* Project 1
-* Project 2
-* Project 3
+[Informações](../tag/Cashd) | [Repositório](https://github.com/VFLins/cashd)
+
+Este projeto foi idealizado e desenvolvido enquanto trabalhava com o meu pai no comércio
+dele. Trata-se de um comércio de pequeno porte que aceita vender à prazo com base na
+confiança, forma de pagamento conhecido popularmente como "Fiado".
+
+O registro dos saldos devedores de cada cliente era feito em um caderno, onde se
+registrava algumas informações básicas de contato e endereço do cliente, junto com o seu
+histórico de compras e abatimentos. A principal motivação por trás do Cashd era de
+acelerar o registro destas transações, mas a possibilidade de analizar estes dados de
+transações acabou trazendo outras externalidades estratégicas para o negócio.
+
+___
+
+## Price Indexr
+
+[Informações](../tag/Price_Indexr) | [Repositório](https://github.com/VFLins/price_indexr)
+
+Quando estive montando o meu computador, procurar pelo preço de tantas possíveis peças
+que eu poderia escolher para combinar na montagem da minha estação de trabalho e
+*gameplay* consumia muito o meu tempo, então eu tive a ideia de criar um projeto de
+código que me ajudasse fazer este acompanhamento com mais facilidade.
+
+A execução do projeto segue a maneira que eu pesquisava os preços para mim mesmo: usando
+os mecanismos mais populares de busca de preços. Para evitar a coleta de preços
+de outros produtos indesejados que também podem aparecer nos resultados, o
+**Price Indexr** usa um sistema de filtros, que conseguem garantir um bom nível de
+qualidade nos dados coletados quando bem definidos.
