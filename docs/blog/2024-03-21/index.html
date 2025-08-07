@@ -1,0 +1,181 @@
+<!doctype html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../static/pygments.css">
+<link rel="stylesheet" href="../../static/style.css">
+<script src="../../static/toggle-theme.js"></script>
+<title>Preparei o meu ambiente de estudos de Big Data com PySpark e uma Data Warehouse na nuvem, veja como! — Vitor F. Lins</title>
+<body>
+    <header>
+        <h1><b>Vitor F. Lins</b></h1>
+        <nav>
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="../../">Início</a>
+                </li>
+                
+                    <li class="active"><a href="../">Blog</a></li>
+                
+                    <li><a href="../../projetos/">Projetos</a></li>
+                
+                    <li><a href="../../sobre/">Sobre mim</a></li>
+                
+                <li style="color:var(--page-text);float:right"><input type="checkbox" id="theme-toggle"><label for="theme-toggle">Tema claro</label></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="page">
+        
+  
+  <div class="blog-post">
+  
+    <h1>Preparei o meu ambiente de estudos de Big Data com PySpark e uma Data Warehouse na nuvem, veja como!</h1>
+  
+  <p class="meta">2024-03-21
+     |
+        
+            <code><a href="../../tag/Artigo,_Tutorial/">Artigo, Tutorial</a></code>
+        
+    
+  </p>
+  <p>O cientista de dados é um profissional multidisciplinar, eu já estive estudando e praticando diversos temas da área, mas ainda não me aprofundei bem em ferramentas e técnicas relacionadas à Big Data. Neste tutorial, eu vou mostrar o que eu fiz para preparar o meu próprio “laboratório de Big Data”.</p>
+<p>O resultado deste passo-a-passo vai ser uma máquina Linux que executa PySpark localmente, e tem acesso à até dois bancos de dados gratuitos da Oracle na nuvem, que podem armazenar até 20GB de dados cada (gratuitamente). Se você gostou da proposta, vamos ao tutorial!</p>
+<hr>
+<h2>Disclaimer:</h2>
+<p>Os exemplos de código apresentados aqui foram testados nestas condições:</p>
+<ul>
+<p>Uma conta free tier já cadastrada na Oracle Cloud Infrastructure e um banco de dados provisionado</p>
+<p>Um sistema Debian 12 como subsistema de Windows (WSL 2)</p>
+<p>PySpark 3.5.1</p>
+<p>Java 17</p>
+<p>Python 3.9</p>
+</ul>
+<hr>
+<h2>Java</h2>
+<p>Vamos usar uma conexão JDBC (Java Database Connection), o backend do PySpark vai usar o Java instalado no sistema operacional para se comunicar com o banco de dados. Vamos começar garantindo que o Java está instalado.</p>
+<h3>Encontrar as versões disponíveis</h3>
+<pre><code>apt search openjdk
+</code></pre>
+<h3>Instalar a versão mais recente disponível</h3>
+<p>A consulta anterior pode mostrar outro número de versão, use-o no lugar do 17 abaixo.</p>
+<div class="hll"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>openjdk-17-jdk
+</pre></div>
+<p>Alternativamente, é possível simplesmente instalar a versão recomendada pelo sistema, com:</p>
+<div class="hll"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>default-jdk<span class="w"> </span>-y
+<span class="c1"># verificar a versão instalada</span>
+java<span class="w"> </span>--version
+</pre></div>
+<p>Note que esta versão provavelmente não é a mais recente.</p>
+<h2>Drivers JDBC da oracle</h2>
+<p>Baixar arquivo <code>.jar</code>. Cada tecnologia de banco de dados vai usar um driver diferente, para este exemplo vamos usar os drivers referentes ao banco de dados da Oracle.</p>
+<ul>
+<p>Verifique qual <a href="https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html">versão de Driver</a> é compatível com a sua versão de Java instalada, como instalamos os Java 17 na etapa anterior, vamos usar a versão 11 do driver.</p>
+<p>O link após o comando <code>wget</code> é simplesmente o link de download do arquivo.</p>
+<p>O comando abaixo vai simplesmente baixar o arquivo no diretório atual, talvez você queira criar uma pasta mais conveniente com <code>mkdir</code> e mudar para aquela pasta com <code>cd</code> antes de fazer o download.</p>
+</ul>
+<div class="hll"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>wget
+<span class="c1"># Driver JDBC</span>
+wget<span class="w"> </span>https://download.oracle.com/otn-pub/otn_software/jdbc/233/ojdbc11.jar
+<span class="c1"># Universal Connection Pool (UCP)</span>
+wget<span class="w"> </span>https://download.oracle.com/otn-pub/otn_software/jdbc/233/ucp11.jar
+</pre></div>
+<h2>Autenticação mTLS</h2>
+<h3>Baixar carteira de autenticação.</h3>
+<p>A carteira vai ser um arquivo .zip que pode ser baixado pelo painel de gerenciamento de conexões da sua base de dados. Usando WSL 2, podemos usar qualquer navegador disponível no repositório <code>apt</code>.</p>
+<p>Um sistema (Windows) com menos de 8gb de memória pode ter dificuldade para navegar, já que o subsistema Linux (Debian, neste caso) vai geralmente usar 50% da memória total do sistema. Também é recomendado um monitor com resolução de pelo menos 1920x1080. Se estiver seguindo este tutorial de um sistema Linux nativo (sem WSL), as restrições de memória e resolução de tela são mais leves.</p>
+<div class="hll"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>chromium<span class="w"> </span>-y
+chromium
+</pre></div>
+<p>[Imagem será adicionada posteriormente]</p>
+<p>Primeiro acessamos a seção “Database Connection”</p>
+<p>[Imagem será adicionada posteriormente]</p>
+<p>Depois baixamos a carteira</p>
+<h3>Obter drivers adicionais</h3>
+<p>Estes são necessários para lidar com autenticação através de variáveis locais: oraclekpi.jar, osdt_cert.jar, osdt_core.jar.</p>
+<p>É recomendável pegar todos os arquivos com o mesmo número de versão para evitar problemas de compatibilidade, aqui usaremos a versão 21.9.0.0.</p>
+<p>Encontre a versão mais recente de cada um, obtenha o link, e faça o download. Exemplo com wget:</p>
+<div class="hll"><pre><span></span><span class="c1"># oraclepki.jar</span>
+wget<span class="w"> </span>https://repo1.maven.org/maven2/com/oracle/database/security/oraclepki/21.9.0.0/oraclepki-21.9.0.0.jar
+<span class="c1"># osdt_cert.jar</span>
+wget<span class="w"> </span>https://repo1.maven.org/maven2/com/oracle/database/security/osdt_cert/21.9.0.0/osdt_cert-21.9.0.0.jar
+<span class="c1"># osdt_core.jar</span>
+wget<span class="w"> </span>https://repo1.maven.org/maven2/com/oracle/database/security/osdt_core/21.9.0.0/osdt_core-21.9.0.0.jar
+</pre></div>
+<h2>PySpark, concedendo acesso aos <code>.jar</code></h2>
+<p>A maneira mais simples é incluir os arquivos .jar baixados na biblioteca local do PySpark, se estiver usando um ambiente virtual (venv), esta biblioteca pode ser encontrada desta maneira:</p>
+<div class="hll"><pre><span></span><span class="c1"># Cria uma ambiente virtual, vamos usar uma pasta “env”:</span>
+python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>env
+
+<span class="c1">#Ativa o ambiente virtual</span>
+<span class="nb">source</span><span class="w"> </span>env/bin/activate
+
+<span class="c1"># Instala o PySpark</span>
+pip<span class="w"> </span>install<span class="w"> </span>pyspark
+
+<span class="c1"># Copia os arquivos .jar adquiridos nas etapas 2 e 3 para a pasta com a biblioteca do PySpark no ambiente virtual</span>
+cp<span class="w"> </span>*.jar<span class="w"> </span>~/env/lib/python3.9/site-packages/pyspark/jars
+</pre></div>
+<p>Repare a pasta com nome python3.9, se sua versão de python for diferente, este vai ser o nome da pasta. Alternativamente, existem outros métodos para chegar neste resultado, se deseja explorá-los, veja <a href="https://sparkbyexamples.com/pyspark/how-to-add-multiple-jars-to-pyspark/">este tutorial</a>.</p>
+<h2>PySpark, acessando as credenciais</h2>
+<h3>Extraindo arquivos da carteira</h3>
+<p>Para autenticar qualquer transação com o banco de dados, primeiramente será necessário informar a carteira de acesso Wallet_dbname.zip</p>
+<p>Crie uma nova pasta e extraia o conteúdo da carteira nela</p>
+<div class="hll"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/lib
+mkdir<span class="w"> </span>certs
+unzip<span class="w"> </span>~/Downloads/Wallet_dbname.zip<span class="w"> </span>-d<span class="w"> </span>~/lib/certs/Wallet_dbname
+</pre></div>
+<p>Repare que <code>dbname</code> é o nome do banco de dados, substitua pelo nome que você escolheu ao criar o banco de dados.</p>
+<h3>Autenticando transações</h3>
+<p>A partir daqui, todos os demais detalhes da autenticação serão determinados dentro do python. A string de conexão deve fornecer o caminho para a pasta com as credencias que criamos na etapa anterior</p>
+<p>O nome de usuário, senha, e string de conexão sempre serão fornecidos em qualquer comunicação com o banco de dados</p>
+<div class="hll"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">getpass</span><span class="w"> </span><span class="kn">import</span> <span class="n">getpass</span>
+
+<span class="n">DBNAME</span> <span class="o">=</span> <span class="s2">&quot;dbname&quot;</span>
+<span class="n">URL</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;jdbc:oracle:thin:@</span><span class="si">{</span><span class="n">DBNAME</span><span class="si">}</span><span class="s2">_high?TNS_ADMIN=/home/user/lib/certs/Wallet_</span><span class="si">{</span><span class="n">DBNAME</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="n">USR</span> <span class="o">=</span> <span class="s2">&quot;ADMIN&quot;</span>
+<span class="n">PWD</span> <span class="o">=</span> <span class="n">getpass</span><span class="p">(</span><span class="s2">&quot;Insira a senha de administrador: &quot;</span><span class="p">)</span>
+<span class="n">drivername</span> <span class="o">=</span> <span class="s2">&quot;oracle.jdbc.OracleDriver&quot;</span>
+<span class="n">tablename</span> <span class="o">=</span> <span class="s2">&quot;example_table&quot;</span>
+</pre></div>
+<p>Existem maneiras mais seguras de armazenar a sua senha, tenha cuidado se pretende publicar seu código. Agora podemos testar se a nossa conexão está funcionando com este código simples:</p>
+<div class="hll"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">pyspark.sql</span><span class="w"> </span><span class="kn">import</span> <span class="n">SparkSession</span><span class="p">,</span> <span class="n">Row</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">date</span>
+
+<span class="c1"># data frame genérico para testar a conexão</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">createDataFrame</span><span class="p">([</span>
+  <span class="n">Row</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mf">2.</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;string1&#39;</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">e</span><span class="o">=</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">0</span><span class="p">)),</span>
+  <span class="n">Row</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mf">3.</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;string2&#39;</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">e</span><span class="o">=</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">0</span><span class="p">)),</span>
+  <span class="n">Row</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mf">5.</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;string3&#39;</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">e</span><span class="o">=</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+<span class="p">])</span>
+
+<span class="c1"># exemplo de comando INSERT através da conexão JDBC</span>
+<span class="n">df</span><span class="o">.</span><span class="n">write</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;jdbc&quot;</span><span class="p">)</span>\
+  <span class="o">.</span><span class="n">option</span><span class="p">(</span><span class="s2">&quot;driver&quot;</span><span class="p">,</span> <span class="n">drivername</span><span class="p">)</span>\
+  <span class="o">.</span><span class="n">option</span><span class="p">(</span><span class="s2">&quot;dbtable&quot;</span><span class="p">,</span> <span class="n">tablename</span><span class="p">)</span>\
+  <span class="o">.</span><span class="n">option</span><span class="p">(</span><span class="s2">&quot;url&quot;</span><span class="p">,</span> <span class="n">URL</span><span class="p">)</span>\
+  <span class="o">.</span><span class="n">option</span><span class="p">(</span><span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="n">USR</span><span class="p">)</span>\
+  <span class="o">.</span><span class="n">option</span><span class="p">(</span><span class="s2">&quot;password&quot;</span><span class="p">,</span> <span class="n">PWD</span><span class="p">)</span>\
+  <span class="o">.</span><span class="n">save</span><span class="p">()</span>
+
+<span class="c1"># lendo a tabela inserida</span>
+<span class="n">query</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;SELECT * FROM </span><span class="si">{</span><span class="n">tablename</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="n">read_df</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;jdbc&quot;</span><span class="p">)</span>\
+  <span class="o">.</span><span class="n">option</span><span class="p">(</span><span class="s2">&quot;driver&quot;</span><span class="p">,</span> <span class="n">drivername</span><span class="p">)</span>\
+  <span class="o">.</span><span class="n">option</span><span class="p">(</span><span class="s2">&quot;query&quot;</span><span class="p">,</span> <span class="n">query</span><span class="p">)</span>\
+  <span class="o">.</span><span class="n">option</span><span class="p">(</span><span class="s2">&quot;url&quot;</span><span class="p">,</span> <span class="n">URL</span><span class="p">)</span>\
+  <span class="o">.</span><span class="n">option</span><span class="p">(</span><span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="n">USR</span><span class="p">)</span>\
+  <span class="o">.</span><span class="n">option</span><span class="p">(</span><span class="s2">&quot;password&quot;</span><span class="p">,</span> <span class="n">PWD</span><span class="p">)</span>\
+  <span class="o">.</span><span class="n">load</span><span class="p">()</span>
+
+ <span class="n">read_df</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+<p>Verifique se o resultado de read_df.show() é o mesmo que df.show(), se for, está funcionando!</p>
+<p>Aprendi bastante sobre JDBC, métodos de autenticação e PySpark produzindo este tutorial, espero que você também tenha, e que você consiga tirar bastante proveito deste laboratório de Big Data, até a próxima!</p>
+
+  </div>
+
+
+    </div>
+    <footer>
+        &copy; Copyright 2025 by Vitor F. Lins.
+    </footer>
+</body>
