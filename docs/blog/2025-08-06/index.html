@@ -1,0 +1,222 @@
+<!doctype html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../static/pygments.css">
+<link rel="stylesheet" href="../../static/style.css">
+<script src="../../static/toggle-theme.js"></script>
+<title>Concluindo a primeira versão do front-end do Cashd com Toga — Vitor F. Lins</title>
+<body>
+    <header>
+        <h1><b>Vitor F. Lins</b></h1>
+        <nav>
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="../../">Início</a>
+                </li>
+                
+                    <li class="active"><a href="../">Blog</a></li>
+                
+                    <li><a href="../../projetos/">Projetos</a></li>
+                
+                    <li><a href="../../sobre/">Sobre mim</a></li>
+                
+                <li style="color:var(--page-text);float:right"><input type="checkbox" id="theme-toggle"><label for="theme-toggle">Tema claro</label></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="page">
+        
+  
+  <div class="blog-post">
+  
+    <h1>Concluindo a primeira versão do front-end do Cashd com Toga</h1>
+  
+  <p class="meta">2025-08-06
+     |
+        
+            <code><a href="../../tag/Cashd/">Cashd</a></code>
+        
+            <code><a href="../../tag/Novo_recurso/">Novo recurso</a></code>
+        
+    
+  </p>
+  <blockquote class="callout-success">
+
+    <p><b>✅ O <i>layout</i> inicial do aplicativo do Cashd está finalizado</b></p>
+
+    <p>Agora temos formulários em duas colunas, além de espaçamentos e alinhamentos
+    padronizados.</p>
+
+    <p>Isto conclui a segunda tarefa de: <a href="../2025-06-16/">"Melhorar interface,
+    permitindo aumentar a largura do conteúdo e organizar inputs em duas colunas"
+    </a>.</p>
+
+</blockquote><h2>Introduzindo <code>FormHandler</code></h2>
+<p>Três classes foram adicionadas para lidar com a criação dinâmica de formulários:</p>
+<ol>
+<li>`FormField`, que representa um campo, o menor elemento de um formulário, e contém
+um dos *inputs* que serão fornecidos pelo usuário;</li>
+
+<li>`FormRow`, uma combinação de campos dispostos horizontalmente, ele deve controlar a
+quantidade de colunas exibidas, a largura do formulário, e a largura máxima de cada um
+de seus campos;</li>
+
+<li>`FormHandler`, possui uma propriedade `full_contents` onde ficam os conteúdos de todos
+os seus `FormRow`. Ele oferece uma interface para os dados preenchidos pelo usuário e
+lida com a inclusão e remoção de campos, além dos eventos `on_change`, `on_lose_focus`,
+etc.</li>
+</ol><h3>Os campos do formulário</h3>
+<p>Uma instância da nova classe <code>FormField</code> retorna um <code>toga.Box</code> modificado, essencialmente
+com três elementos:</p>
+<ol>
+<li>Um rótulo (`label`), com um título para o campo;</li>
+
+<li>Um *widget* de *input* (`input_widget`), onde o usuário vai inserir a informação;</li>
+
+<li>Uma descrição opcional (`annotation`), um texto curto abaixo do `input_widget` com
+  mais informações para o usuário.</li>
+</ol><p>Outro atributo também importante, mas não essencial é o <code>id</code>, que é usado para
+identificar cada <em>input</em> com uma <em>string</em> única, o <code>FormField</code> definido com o id
+<code>"my_field"</code> poderá ser obtido do <code>FormHandler</code>:</p>
+<div class="hll"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">cashd.wigets.form</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">FormHandler</span><span class="p">,</span>
+    <span class="n">FormField</span>
+<span class="p">)</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">toga</span><span class="w"> </span><span class="kn">import</span> <span class="n">TextInput</span>
+
+<span class="n">form</span> <span class="o">=</span> <span class="n">FormHandler</span><span class="p">()</span>
+<span class="n">field</span> <span class="o">=</span> <span class="n">FormField</span><span class="p">(</span>
+    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;My field&quot;</span><span class="p">,</span>
+    <span class="n">input_widget</span><span class="o">=</span><span class="n">TextInput</span><span class="p">(),</span>
+    <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;my_field&quot;</span><span class="p">,</span>
+    <span class="n">required</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">form</span><span class="o">.</span><span class="n">add_fields</span><span class="p">([</span><span class="n">field</span><span class="p">])</span>
+<span class="sd">&quot;&quot;&quot;Adicionar o FormField ao FormHandler.&quot;&quot;&quot;</span>
+
+<span class="n">form</span><span class="o">.</span><span class="n">fields</span><span class="p">[</span><span class="s2">&quot;my_field&quot;</span><span class="p">]</span>
+<span class="sd">&quot;&quot;&quot;Acessar o FormField.&quot;&quot;&quot;</span>
+
+<span class="n">form</span><span class="o">.</span><span class="n">fields</span><span class="p">[</span><span class="s2">&quot;my_field&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">input_widget</span><span class="o">.</span><span class="n">value</span>
+<span class="sd">&quot;&quot;&quot;Dado inserido pelo usuário.&quot;&quot;&quot;</span>
+</pre></div>
+<p>Repare que também existe um parâmetro <code>required</code> ao definir o <code>FormField</code>, ele será
+explicado mais adiante, no tópico "O manipulador de formulários". Mas antes, vamos falar
+sobre o que se espera das linhas do formulário.</p>
+<h3>As linhas do formulário</h3>
+<p>Atualmente, para fim de simplicidade e velocidade de implementação, <code>FormRow</code> apenas
+possuem uma largura fixa, não se adaptando à largura da janela, e não aceita mais que
+dois campos, com uma largura máxima fixada.</p>
+<p>A largura dos campos atualmente está sendo gerenciada fora de <code>FormRow</code>, com a função
+<code>cashd.style.user_input()</code>, que recebe um tipo de <em>input</em> como <code>toga.TextInput</code> e retorna
+o <code>toga.style.Pack</code> padrão correspondente.</p>
+<p>Mas no caso de uma implementação para dispositivos móveis, onde a largura da tela depende
+da orientação do aparelho, seria necessário que <code>FormHandler</code> tivesse um 
+<em>event listener</em>, que automaticamente ativaria a rotina de reorganização dos campos em um
+novo conjunto de <code>FormRow</code>, aumentando ou diminuindo a quantidade de <em>inputs</em> por linha.</p>
+<h3>O manipulador de formulários</h3>
+<p>O <code>FormHandler</code> é responsável por organizar os campos do formulário em uma grade
+orientada à linhas de <em>inputs</em>. Ele também é responsável por passar uma função que se
+ative sempre que algum tipo de interação ocorre com o input, como <code>on_change</code> ou
+<code>on_lose_focus</code>, todos os campos recebem a mesma função, portanto, para oferecer
+tratamentos distintos para cada uma, seria necessário acessar os metadados de cada campo.</p>
+<p>Atualmente, para as necessidades do [[Cashd]], o único metadado que precisa ser acessado
+é o fato de o preenchimento de determinado campo é obrigatório ou não, isto é passado
+para cada <code>FormField</code> individualmente, com o valor padrão <code>False</code>. Ainda é possível
+verificar se todos os campos obrigatórios foram preenchidos usando o método
+<code>required_fields_are_filled()</code>:</p>
+<div class="hll"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">cashd.widgets.form</span><span class="w"> </span><span class="kn">import</span> <span class="n">FormHandler</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">cashd.data</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_default_customer</span>
+
+<span class="n">customer</span> <span class="o">=</span> <span class="n">get_default_customer</span><span class="p">()</span>
+<span class="sd">&quot;&quot;&quot;Instância de cashd.data.tbl_clientes</span>
+<span class="sd">com alguns valores preenchidos.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="n">form</span> <span class="o">=</span> <span class="n">FormHandler</span><span class="p">()</span>
+
+<span class="n">form</span><span class="o">.</span><span class="n">add_table_fields</span><span class="p">(</span><span class="n">table</span><span class="o">=</span><span class="n">customer</span><span class="p">)</span>
+<span class="sd">&quot;&quot;&quot;Adicionar campos da tabela &#39;clientes&#39;.&quot;&quot;&quot;</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">on_change_form</span><span class="p">(</span><span class="n">widget</span><span class="p">):</span>
+    <span class="n">required_filled</span> <span class="o">=</span> <span class="n">form</span><span class="o">.</span><span class="n">required_fields_are_filled</span><span class="p">()</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Verificar se todos os campos obrigatórios</span>
+<span class="sd">    foram preenchidos.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">required_filled</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Required fields are filled!&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Some required fields are still empty.&quot;</span><span class="p">)</span>
+
+<span class="n">form</span><span class="o">.</span><span class="n">on_change</span> <span class="o">=</span> <span class="n">on_change_form</span>
+</pre></div>
+<p>Veja que também podemos preencher um formulário com todos os campos da tabela clientes
+rapidamente, isto também preenche os campos com os valores de <code>customer</code>, define o <code>id</code>
+de cada campo com o nome de sua respectiva coluna no banco de dados, o <code>label</code> com o
+respectivo <code>display_name</code> definido em <code>cashd.data.tbl_clientes</code>, e o metadado <code>required</code>
+de acordo com o [[2025-07-08#1.1 A validação de dados agora é feita pelo <code>sqlalchemy</code>|tipo de dados declarado ao SQLAlchemy]].</p>
+<p>O exemplo de código acima funciona adequadamente quando recebe uma instância de
+<code>cashd.data.tbl_clientes</code>, mas atualmente ainda não consegue lidar com
+<code>cashd.data.tbl_transacoes</code>, porque ainda não foi instruído sobre como lidar com campos
+de data.</p>
+<h2>Melhorias visuais e de experiência do usuário</h2>
+<p>Todas as telas exceto a de estatísticas passaram por melhorias visuais, vamos mostrar
+por ordem:</p>
+<h3>Tela inicial</h3>
+<p>A tela inicial não possui mais os três botões, em que cada um levaria à uma interação
+diferente, agora, em vez disso, apenas um botão leva para um <code>toga.OptionContainer</code>,
+que mostra um conjunto de abas que mostra todas as interações possíveis com o usuários
+selecionado.</p>
+<p><img src="cashd-selecionar_cliente-winforms.png" alt="Tela inicial do Cahsd, &quot;Selecionar cliente&quot;."></p>
+<p>Ao clicar no ícone de usuário com uma caneta, vamos para uma tela com todas as opções
+que antes estavam dispostas em botões, agora dispostas em abas. Todas as interações
+feitas dentro deste conjunto de abas serão aplicadas ao usuário informado na parte
+superior.</p>
+<p><img src="cashd-transacoes_nova_transacao-winforms.png" alt="Tela inicial do Cashd, &quot;Inserir transação&quot;."></p>
+<p>Esta é a tela de histórico de transações:</p>
+<p><img src="cashd-transacoes_historico-winforms.png" alt="Tela inicial do Cashd, &quot;Histórico de transações&quot;."></p>
+<p>Para habilitar o botão "Remover transação", o usuário deve primeiro selecionar
+alguma linha da tabela, ao remover uma transação, o usuário recebe um diálogo de
+confirmação, que informa qual transação será excluída. Ao confirmar, esta transação será
+removida, e as informações na parte superior serão atualizadas.</p>
+<p><img src="cashd-confirma_remover_transacao-winforms.png" alt="Diálogo de confirmação, &quot;Remover transação?&quot;."></p>
+<p>Já na aba "Informações do cliente" é possível ver as informações de cadastro atuais do
+cliente selecionado, e modificá-las:</p>
+<p><img src="cashd-transacoes_informacoes-winforms.png" alt="Tela inicial do Cashd, informações do cliente selecionado."></p>
+<p>A tela acima já segue o <em>layout</em> padrão de formulários definido pelo <code>FormHandler</code>
+mencionado anteriormente, mas este não é o único lugar onde esse <em>layout</em> é aplicado.</p>
+<h3>Telas "Novo cliente" e "Configurações"</h3>
+<p>As telas "Novo Cliente" e "Configurações" também seguem o novo <em>layout</em> de duas colunas
+implementados com <code>FormHandler</code>:</p>
+<p><img src="cashd-novo_cliente-winforms.png" alt="Tela &quot;Novo cliente&quot; do Cahsd."></p>
+<p><img src="cashd-configuracoes-winforms.png" alt="Tela de Configurações do Cashd."></p>
+<h2>Migrando as duas versões do Cashd para um único repositório</h2>
+<p>Até o momento, os dois projetos foram desenvolvidos em repositórios separados, um aberto
+chamado <code>cashd</code>, onde está o projeto desenvolvido com Taipy, que pode servir um único app
+web para uma rede local, que pode ser acessado apenas no próprio computador, ou em
+qualquer número de computadores conectados na rede local. E outro repositório
+<code>cashd-cross</code>, fechado, onde eu desenvolvo o aplicativo <em>stand-alone</em> e independente de
+rede, que pode ser compilado para qualquer plataforma atual, seja <em>mobile</em> ou para
+computador de mesa (<em>cross-platform</em>, daí o nome).</p>
+<p>A próxima coisa a ser feita neste projeto é unir ambas as implementações em um só
+repositório, reservando um
+<em><a href="https://packaging.python.org/en/latest/guides/packaging-namespace-packages/#native-namespace-packages">namespace</a></em>
+para cada projeto. Além disso, existem outras coisas pertinentes para se adicionar à
+lista de coisas a fazer:</p>
+<ul>
+<p><p>[ ] <strong>[Cashd]</strong> Agregar os repositórios <code>cashd</code> e <code>cashd-cross</code> + Adaptar <code>cashd</code> com Taipy para agir como servidor.</p>
+<ul>
+<p>Preparar o primeiro <em>release</em> do <code>cashd-cross</code> e uma rotina pública de <em>build</em> para os seus binários;</p>
+<p>Mudar os nomes de cada projeto para <code>cashd-server</code> e <code>cashd-local</code>;</p>
+<p>Mudar o foco do <code>cashd-server</code> para agir como servidor, em vez de fazer parecer um programa local usando um <em>webview</em>.</p>
+</ul>
+</p>
+</ul>
+
+  </div>
+
+
+    </div>
+    <footer>
+        &copy; Copyright 2025 by Vitor F. Lins.
+    </footer>
+</body>
