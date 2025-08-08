@@ -1,4 +1,4 @@
-title: Preparei o meu ambiente de estudos de Big Data com PySpark e uma Data Warehouse na nuvem, veja como!
+title: Veja como preparei o meu ambiente de estudos de Big Data com PySpark e uma Data Warehouse na nuvem
 ---
 body:
 
@@ -8,16 +8,20 @@ O resultado deste passo-a-passo vai ser uma máquina Linux que executa PySpark l
 
 ----
 
-## Disclaimer:
-Os exemplos de código apresentados aqui foram testados nestas condições:
+<blockquote class="callout-faliure">
 
-- Uma conta free tier já cadastrada na Oracle Cloud Infrastructure e um banco de dados provisionado
-- Um sistema Debian 12 como subsistema de Windows (WSL 2)
-- PySpark 3.5.1
-- Java 17
-- Python 3.9
+  <b>Disclaimer:</b>
+  Os exemplos de código apresentados aqui foram testados nestas condições:
 
-----
+  <ul>
+  <li>Uma conta free tier já cadastrada na Oracle Cloud Infrastructure e um banco de dados provisionado</li>
+  <li>Um sistema Debian 12 como subsistema de Windows (WSL 2)</li>
+  <li>PySpark 3.5.1</li>
+  <li>Java 17</li>
+  <li>Python 3.9</li>
+  </ul>
+
+</blockquote>
 
 ## Java
 
@@ -115,7 +119,8 @@ source env/bin/activate
 # Instala o PySpark
 pip install pyspark
 
-# Copia os arquivos .jar adquiridos nas etapas 2 e 3 para a pasta com a biblioteca do PySpark no ambiente virtual
+# Copia os arquivos .jar adquiridos nas etapas 2 e 3 para a pasta com a
+# biblioteca do PySpark no ambiente virtual
 cp *.jar ~/env/lib/python3.9/site-packages/pyspark/jars
 ```
 
@@ -147,7 +152,10 @@ O nome de usuário, senha, e string de conexão sempre serão fornecidos em qual
 from getpass import getpass
 
 DBNAME = "dbname"
-URL = f"jdbc:oracle:thin:@{DBNAME}_high?TNS_ADMIN=/home/user/lib/certs/Wallet_{DBNAME}"
+URL = (
+  f"jdbc:oracle:thin:@{DBNAME}_high?"
+  f"TNS_ADMIN=/home/user/lib/certs/Wallet_{DBNAME}"
+)
 USR = "ADMIN"
 PWD = getpass("Insira a senha de administrador: ")
 drivername = "oracle.jdbc.OracleDriver"
@@ -162,9 +170,27 @@ from datetime import datetime, date
 
 # data frame genérico para testar a conexão
 df = spark.createDataFrame([
-  Row(a=1, b=2., c='string1', d=date(2000, 1, 1), e=datetime(2000, 1, 1, 12, 0)),
-  Row(a=2, b=3., c='string2', d=date(2000, 2, 1), e=datetime(2000, 1, 2, 12, 0)),
-  Row(a=4, b=5., c='string3', d=date(2000, 3, 1), e=datetime(2000, 1, 3, 12, 0))
+  Row(
+    a=1,
+    b=2.,
+    c='string1',
+    d=date(2000, 1, 1),
+    e=datetime(2000, 1, 1, 12, 0),
+  ),
+  Row(
+    a=2,
+    b=3.,
+    c='string2',
+    d=date(2000, 2, 1),
+    e=datetime(2000, 1, 2, 12, 0)
+  ),
+  Row(
+    a=4,
+    b=5.,
+    c='string3',
+    d=date(2000, 3, 1),
+    e=datetime(2000, 1, 3, 12, 0)
+  )
 ])
 
 # exemplo de comando INSERT através da conexão JDBC
@@ -195,4 +221,7 @@ Aprendi bastante sobre JDBC, métodos de autenticação e PySpark produzindo est
 ---
 pub_date: 2024-03-21
 ---
-tags: Artigo, Tutorial
+tags:
+
+Artigo
+Tutorial

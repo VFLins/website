@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="../../static/pygments.css">
 <link rel="stylesheet" href="../../static/style.css">
 <script src="../../static/toggle-theme.js"></script>
-<title>Preparei o meu ambiente de estudos de Big Data com PySpark e uma Data Warehouse na nuvem, veja como! — Vitor F. Lins</title>
+<title>Veja como preparei o meu ambiente de estudos de Big Data com PySpark e uma Data Warehouse na nuvem — Vitor F. Lins</title>
 <body>
     <header>
         <h1><b>Vitor F. Lins</b></h1>
@@ -28,29 +28,34 @@
   
   <div class="blog-post">
   
-    <h1>Preparei o meu ambiente de estudos de Big Data com PySpark e uma Data Warehouse na nuvem, veja como!</h1>
+    <h1>Veja como preparei o meu ambiente de estudos de Big Data com PySpark e uma Data Warehouse na nuvem</h1>
   
   <p class="meta">2024-03-21
      |
         
-            <code><a href="../../tag/Artigo,_Tutorial/">Artigo, Tutorial</a></code>
+            <code><a href="../../tag/Artigo/">Artigo</a></code>
+        
+            <code><a href="../../tag/Tutorial/">Tutorial</a></code>
         
     
   </p>
   <p>O cientista de dados é um profissional multidisciplinar, eu já estive estudando e praticando diversos temas da área, mas ainda não me aprofundei bem em ferramentas e técnicas relacionadas à Big Data. Neste tutorial, eu vou mostrar o que eu fiz para preparar o meu próprio “laboratório de Big Data”.</p>
 <p>O resultado deste passo-a-passo vai ser uma máquina Linux que executa PySpark localmente, e tem acesso à até dois bancos de dados gratuitos da Oracle na nuvem, que podem armazenar até 20GB de dados cada (gratuitamente). Se você gostou da proposta, vamos ao tutorial!</p>
 <hr>
-<h2>Disclaimer:</h2>
-<p>Os exemplos de código apresentados aqui foram testados nestas condições:</p>
-<ul>
-<p>Uma conta free tier já cadastrada na Oracle Cloud Infrastructure e um banco de dados provisionado</p>
-<p>Um sistema Debian 12 como subsistema de Windows (WSL 2)</p>
-<p>PySpark 3.5.1</p>
-<p>Java 17</p>
-<p>Python 3.9</p>
-</ul>
-<hr>
-<h2>Java</h2>
+<blockquote class="callout-faliure">
+
+  <b>Disclaimer:</b>
+  Os exemplos de código apresentados aqui foram testados nestas condições:
+
+  <ul>
+  <li>Uma conta free tier já cadastrada na Oracle Cloud Infrastructure e um banco de dados provisionado</li>
+  <li>Um sistema Debian 12 como subsistema de Windows (WSL 2)</li>
+  <li>PySpark 3.5.1</li>
+  <li>Java 17</li>
+  <li>Python 3.9</li>
+  </ul>
+
+</blockquote><h2>Java</h2>
 <p>Vamos usar uma conexão JDBC (Java Database Connection), o backend do PySpark vai usar o Java instalado no sistema operacional para se comunicar com o banco de dados. Vamos começar garantindo que o Java está instalado.</p>
 <h3>Encontrar as versões disponíveis</h3>
 <pre><code>apt search openjdk
@@ -111,7 +116,8 @@ python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </s
 <span class="c1"># Instala o PySpark</span>
 pip<span class="w"> </span>install<span class="w"> </span>pyspark
 
-<span class="c1"># Copia os arquivos .jar adquiridos nas etapas 2 e 3 para a pasta com a biblioteca do PySpark no ambiente virtual</span>
+<span class="c1"># Copia os arquivos .jar adquiridos nas etapas 2 e 3 para a pasta com a</span>
+<span class="c1"># biblioteca do PySpark no ambiente virtual</span>
 cp<span class="w"> </span>*.jar<span class="w"> </span>~/env/lib/python3.9/site-packages/pyspark/jars
 </pre></div>
 <p>Repare a pasta com nome python3.9, se sua versão de python for diferente, este vai ser o nome da pasta. Alternativamente, existem outros métodos para chegar neste resultado, se deseja explorá-los, veja <a href="https://sparkbyexamples.com/pyspark/how-to-add-multiple-jars-to-pyspark/">este tutorial</a>.</p>
@@ -130,7 +136,10 @@ unzip<span class="w"> </span>~/Downloads/Wallet_dbname.zip<span class="w"> </spa
 <div class="hll"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">getpass</span><span class="w"> </span><span class="kn">import</span> <span class="n">getpass</span>
 
 <span class="n">DBNAME</span> <span class="o">=</span> <span class="s2">&quot;dbname&quot;</span>
-<span class="n">URL</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;jdbc:oracle:thin:@</span><span class="si">{</span><span class="n">DBNAME</span><span class="si">}</span><span class="s2">_high?TNS_ADMIN=/home/user/lib/certs/Wallet_</span><span class="si">{</span><span class="n">DBNAME</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="n">URL</span> <span class="o">=</span> <span class="p">(</span>
+  <span class="sa">f</span><span class="s2">&quot;jdbc:oracle:thin:@</span><span class="si">{</span><span class="n">DBNAME</span><span class="si">}</span><span class="s2">_high?&quot;</span>
+  <span class="sa">f</span><span class="s2">&quot;TNS_ADMIN=/home/user/lib/certs/Wallet_</span><span class="si">{</span><span class="n">DBNAME</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="p">)</span>
 <span class="n">USR</span> <span class="o">=</span> <span class="s2">&quot;ADMIN&quot;</span>
 <span class="n">PWD</span> <span class="o">=</span> <span class="n">getpass</span><span class="p">(</span><span class="s2">&quot;Insira a senha de administrador: &quot;</span><span class="p">)</span>
 <span class="n">drivername</span> <span class="o">=</span> <span class="s2">&quot;oracle.jdbc.OracleDriver&quot;</span>
@@ -142,9 +151,27 @@ unzip<span class="w"> </span>~/Downloads/Wallet_dbname.zip<span class="w"> </spa
 
 <span class="c1"># data frame genérico para testar a conexão</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">createDataFrame</span><span class="p">([</span>
-  <span class="n">Row</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mf">2.</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;string1&#39;</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">e</span><span class="o">=</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">0</span><span class="p">)),</span>
-  <span class="n">Row</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mf">3.</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;string2&#39;</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">e</span><span class="o">=</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">0</span><span class="p">)),</span>
-  <span class="n">Row</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mf">5.</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;string3&#39;</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">e</span><span class="o">=</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+  <span class="n">Row</span><span class="p">(</span>
+    <span class="n">a</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">b</span><span class="o">=</span><span class="mf">2.</span><span class="p">,</span>
+    <span class="n">c</span><span class="o">=</span><span class="s1">&#39;string1&#39;</span><span class="p">,</span>
+    <span class="n">d</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="n">e</span><span class="o">=</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+  <span class="p">),</span>
+  <span class="n">Row</span><span class="p">(</span>
+    <span class="n">a</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">b</span><span class="o">=</span><span class="mf">3.</span><span class="p">,</span>
+    <span class="n">c</span><span class="o">=</span><span class="s1">&#39;string2&#39;</span><span class="p">,</span>
+    <span class="n">d</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="n">e</span><span class="o">=</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+  <span class="p">),</span>
+  <span class="n">Row</span><span class="p">(</span>
+    <span class="n">a</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+    <span class="n">b</span><span class="o">=</span><span class="mf">5.</span><span class="p">,</span>
+    <span class="n">c</span><span class="o">=</span><span class="s1">&#39;string3&#39;</span><span class="p">,</span>
+    <span class="n">d</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="n">e</span><span class="o">=</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+  <span class="p">)</span>
 <span class="p">])</span>
 
 <span class="c1"># exemplo de comando INSERT através da conexão JDBC</span>
