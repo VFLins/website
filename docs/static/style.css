@@ -55,19 +55,27 @@ a:hover {
 
 p {
     line-height: 1.5;
+    font-size: min(2.8vw, 16px);
+}
+
+li {
+    font-size: 2vw;
 }
 
 p.meta {
     color: var(--page-text);
+    font-weight: bold;
+    font-size: inherit;
 }
 
 li {
     line-height: 1.5;
     margin-bottom: 9px;
+    font-size: min(2.8vw, 16px);
 }
 
 header, footer, div.page {
-    width: 760px;
+    width: min(80%, 760px);
     margin: 0 auto;
     padding: 20px 30px;
 }
@@ -90,17 +98,17 @@ header h1 {
 }
 
 h1 {
-    font-size: max(38px, 3vh);
+    font-size: min(32px, 3vw);
     font-weight: bold;
 }
 
 h2 {
-    font-size: max(32px, 3.2vh);
+    font-size: min(32px, 3.5vw);
     font-weight: normal;
 }
 
 h3 {
-    font-size: max(26px, 2.6vh);
+    font-size: min(22px, 2.8vw);
     font-weight: normal;
 }
 
@@ -144,7 +152,7 @@ code {
     padding: 1px 3px;
     border-radius: 6px;
     font-family: Consolas, monospace;
-    font-size: inherit;
+    font-size: min(2.8vw, 16px);
     background-color: var(--page-dark-bg);
 }
 
@@ -152,12 +160,13 @@ blockquote {
     background: var(--page-light-bg);
     border-left: 4px solid var(--page-text);
     padding: 9px 18px;
+    font-size: min(2.8vw, 16px);
 }
 
 blockquote.callout-success {
     background: var(--success-bg);
     border-left: 4px solid var(--success-text);
-    color: var(--success-text)
+    color: var(--success-text);
 
 }
 
