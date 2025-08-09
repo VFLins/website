@@ -15,11 +15,8 @@ body:
     <p><b>✅ O <i>layout</i> inicial do aplicativo do Cashd está finalizado</b></p>
     
     <p>Agora temos formulários em duas colunas, além de espaçamentos e alinhamentos
-    padronizados.</p>
-    
-    <p>Isto conclui a segunda tarefa de: <a href="../2025-06-16/">"Melhorar interface,
-    permitindo aumentar a largura do conteúdo e organizar inputs em duas colunas"
-    </a>.</p>
+    padronizados. Isto conclui a segunda tarefa de: <a href="../2025-06-16/">"Melhorar
+    interface, aumentar a largura do conteúdo e organizar inputs em duas colunas"</a>.</p>
 
 </blockquote>
 
@@ -27,33 +24,25 @@ body:
 
 Três classes foram adicionadas para lidar com a criação dinâmica de formulários:
 
-<ol>
-<li>`FormField`, que representa um campo, o menor elemento de um formulário, e contém
-um dos *inputs* que serão fornecidos pelo usuário;</li>
-
-<li>`FormRow`, uma combinação de campos dispostos horizontalmente, ele deve controlar a
+1. `FormField`, que representa um campo, o menor elemento de um formulário, e contém
+um dos *inputs* que serão fornecidos pelo usuário;
+2. `FormRow`, uma combinação de campos dispostos horizontalmente, ele deve controlar a
 quantidade de colunas exibidas, a largura do formulário, e a largura máxima de cada um
-de seus campos;</li>
-
-<li>`FormHandler`, possui uma propriedade `full_contents` onde ficam os conteúdos de todos
+de seus campos;
+3. `FormHandler`, possui uma propriedade `full_contents` onde ficam os conteúdos de todos
 os seus `FormRow`. Ele oferece uma interface para os dados preenchidos pelo usuário e
 lida com a inclusão e remoção de campos, além dos eventos `on_change`, `on_lose_focus`,
-etc.</li>
-</ol>
+etc.
 
 ### Os campos do formulário
 
 Uma instância da nova classe `FormField` retorna um `toga.Box` modificado, essencialmente
 com três elementos:
 
-<ol>
-<li>Um rótulo (`label`), com um título para o campo;</li>
-
-<li>Um *widget* de *input* (`input_widget`), onde o usuário vai inserir a informação;</li>
-
-<li>Uma descrição opcional (`annotation`), um texto curto abaixo do `input_widget` com
-  mais informações para o usuário.</li>
-</ol>
+1. Um rótulo (`label`), com um título para o campo;
+2. Um *widget* de *input* (`input_widget`), onde o usuário vai inserir a informação;
+3. Uma descrição opcional (`annotation`), um texto curto abaixo do `input_widget` com
+  mais informações para o usuário.
 
 Outro atributo também importante, mas não essencial é o `id`, que é usado para
 identificar cada *input* com uma *string* única, o `FormField` definido com o id
@@ -111,7 +100,7 @@ ative sempre que algum tipo de interação ocorre com o input, como `on_change` 
 `on_lose_focus`, todos os campos recebem a mesma função, portanto, para oferecer
 tratamentos distintos para cada uma, seria necessário acessar os metadados de cada campo.
 
-Atualmente, para as necessidades do [[Cashd]], o único metadado que precisa ser acessado
+Atualmente, para as necessidades do [Cashd](../../tag/Cashd), o único metadado que precisa ser acessado
 é o fato de o preenchimento de determinado campo é obrigatório ou não, isto é passado
 para cada `FormField` individualmente, com o valor padrão `False`. Ainda é possível
 verificar se todos os campos obrigatórios foram preenchidos usando o método
@@ -220,8 +209,7 @@ repositório, reservando um
 para cada projeto. Além disso, existem outras coisas pertinentes para se adicionar à
 lista de coisas a fazer:
 
-- [ ] **[Cashd]** Agregar os repositórios `cashd` e `cashd-cross` + Adaptar `cashd` com Taipy para agir como servidor.
-
-	- Preparar o primeiro *release* do `cashd-cross` e uma rotina pública de *build* para os seus binários;
-	- Mudar os nomes de cada projeto para `cashd-server` e `cashd-local`;
-	- Mudar o foco do `cashd-server` para agir como servidor, em vez de fazer parecer um programa local usando um *webview*.
+> 📝 **Tarefa pendente:** Agregar os repositórios `cashd` e `cashd-cross` + Adaptar `cashd` com Taipy para agir como servidor.
+>	- Preparar o primeiro *release* do `cashd-cross` e uma rotina pública de *build* para os seus binários;
+>	- Mudar os nomes de cada projeto para `cashd-server` e `cashd-local`;
+>	- Mudar o foco do `cashd-server` para agir como servidor, em vez de fazer parecer um programa local usando um *webview*.

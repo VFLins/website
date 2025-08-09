@@ -44,37 +44,32 @@
     <p><b>✅ O <i>layout</i> inicial do aplicativo do Cashd está finalizado</b></p>
 
     <p>Agora temos formulários em duas colunas, além de espaçamentos e alinhamentos
-    padronizados.</p>
-
-    <p>Isto conclui a segunda tarefa de: <a href="../2025-06-16/">"Melhorar interface,
-    permitindo aumentar a largura do conteúdo e organizar inputs em duas colunas"
-    </a>.</p>
+    padronizados. Isto conclui a segunda tarefa de: <a href="../2025-06-16/">"Melhorar
+    interface, aumentar a largura do conteúdo e organizar inputs em duas colunas"</a>.</p>
 
 </blockquote><h2>Introduzindo <code>FormHandler</code></h2>
 <p>Três classes foram adicionadas para lidar com a criação dinâmica de formulários:</p>
 <ol>
-<li>`FormField`, que representa um campo, o menor elemento de um formulário, e contém
-um dos *inputs* que serão fornecidos pelo usuário;</li>
-
-<li>`FormRow`, uma combinação de campos dispostos horizontalmente, ele deve controlar a
+<li><code>FormField</code>, que representa um campo, o menor elemento de um formulário, e contém
+um dos <em>inputs</em> que serão fornecidos pelo usuário;</li>
+<li><code>FormRow</code>, uma combinação de campos dispostos horizontalmente, ele deve controlar a
 quantidade de colunas exibidas, a largura do formulário, e a largura máxima de cada um
 de seus campos;</li>
-
-<li>`FormHandler`, possui uma propriedade `full_contents` onde ficam os conteúdos de todos
-os seus `FormRow`. Ele oferece uma interface para os dados preenchidos pelo usuário e
-lida com a inclusão e remoção de campos, além dos eventos `on_change`, `on_lose_focus`,
+<li><code>FormHandler</code>, possui uma propriedade <code>full_contents</code> onde ficam os conteúdos de todos
+os seus <code>FormRow</code>. Ele oferece uma interface para os dados preenchidos pelo usuário e
+lida com a inclusão e remoção de campos, além dos eventos <code>on_change</code>, <code>on_lose_focus</code>,
 etc.</li>
-</ol><h3>Os campos do formulário</h3>
+</ol>
+<h3>Os campos do formulário</h3>
 <p>Uma instância da nova classe <code>FormField</code> retorna um <code>toga.Box</code> modificado, essencialmente
 com três elementos:</p>
 <ol>
-<li>Um rótulo (`label`), com um título para o campo;</li>
-
-<li>Um *widget* de *input* (`input_widget`), onde o usuário vai inserir a informação;</li>
-
-<li>Uma descrição opcional (`annotation`), um texto curto abaixo do `input_widget` com
-  mais informações para o usuário.</li>
-</ol><p>Outro atributo também importante, mas não essencial é o <code>id</code>, que é usado para
+<li>Um rótulo (<code>label</code>), com um título para o campo;</li>
+<li>Um <em>widget</em> de <em>input</em> (<code>input_widget</code>), onde o usuário vai inserir a informação;</li>
+<li>Uma descrição opcional (<code>annotation</code>), um texto curto abaixo do <code>input_widget</code> com
+mais informações para o usuário.</li>
+</ol>
+<p>Outro atributo também importante, mas não essencial é o <code>id</code>, que é usado para
 identificar cada <em>input</em> com uma <em>string</em> única, o <code>FormField</code> definido com o id
 <code>"my_field"</code> poderá ser obtido do <code>FormHandler</code>:</p>
 <div class="hll"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">cashd.wigets.form</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
@@ -120,7 +115,7 @@ orientada à linhas de <em>inputs</em>. Ele também é responsável por passar u
 ative sempre que algum tipo de interação ocorre com o input, como <code>on_change</code> ou
 <code>on_lose_focus</code>, todos os campos recebem a mesma função, portanto, para oferecer
 tratamentos distintos para cada uma, seria necessário acessar os metadados de cada campo.</p>
-<p>Atualmente, para as necessidades do [[Cashd]], o único metadado que precisa ser acessado
+<p>Atualmente, para as necessidades do <a href="../../tag/Cashd">Cashd</a>, o único metadado que precisa ser acessado
 é o fato de o preenchimento de determinado campo é obrigatório ou não, isto é passado
 para cada <code>FormField</code> individualmente, com o valor padrão <code>False</code>. Ainda é possível
 verificar se todos os campos obrigatórios foram preenchidos usando o método
@@ -202,15 +197,13 @@ repositório, reservando um
 <em><a href="https://packaging.python.org/en/latest/guides/packaging-namespace-packages/#native-namespace-packages">namespace</a></em>
 para cada projeto. Além disso, existem outras coisas pertinentes para se adicionar à
 lista de coisas a fazer:</p>
+<blockquote><p>📝 <strong>Tarefa pendente:</strong> Agregar os repositórios <code>cashd</code> e <code>cashd-cross</code> + Adaptar <code>cashd</code> com Taipy para agir como servidor.</p>
 <ul>
-<p><p>[ ] <strong>[Cashd]</strong> Agregar os repositórios <code>cashd</code> e <code>cashd-cross</code> + Adaptar <code>cashd</code> com Taipy para agir como servidor.</p>
-<ul>
-<p>Preparar o primeiro <em>release</em> do <code>cashd-cross</code> e uma rotina pública de <em>build</em> para os seus binários;</p>
-<p>Mudar os nomes de cada projeto para <code>cashd-server</code> e <code>cashd-local</code>;</p>
-<p>Mudar o foco do <code>cashd-server</code> para agir como servidor, em vez de fazer parecer um programa local usando um <em>webview</em>.</p>
+<li>Preparar o primeiro <em>release</em> do <code>cashd-cross</code> e uma rotina pública de <em>build</em> para os seus binários;</li>
+<li>Mudar os nomes de cada projeto para <code>cashd-server</code> e <code>cashd-local</code>;</li>
+<li>Mudar o foco do <code>cashd-server</code> para agir como servidor, em vez de fazer parecer um programa local usando um <em>webview</em>.</li>
 </ul>
-</p>
-</ul>
+</blockquote>
 
   </div>
 

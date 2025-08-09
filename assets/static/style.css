@@ -8,9 +8,10 @@
 :root {
     --page-bg: #212729;
     --page-dark-bg: #1a1d1f;
-    --page-text: #84b3b1;
-    --link-color: teal;
-    --link-hover-color: darkcyan;
+    --page-light-bg: #183034;
+    --page-text: #8db2b0;
+    --link-color: #84b3b0;
+    --link-hover-color: #2f8683;
     --header-text: #20B2AA;
     --header-bg: #293f46;
     --success-text: #84b397;
@@ -23,6 +24,7 @@
 body.light-theme {
     --page-bg: #ffffff;
     --page-dark-bg: #e9f2f1;
+    --page-light-bg: #dbeaec;
     --page-text: #47827d;
     --link-color: #52827e;
     --link-hover-color: #21a7a0;
@@ -56,7 +58,7 @@ p {
 }
 
 p.meta {
-    color: teal;
+    color: var(--page-text);
 }
 
 li {
@@ -136,12 +138,13 @@ code {
     padding: 1px 3px;
     border-radius: 6px;
     font-family: Consolas, monospace;
-    font-size: medium;
+    font-size: inherit;
     background-color: var(--page-dark-bg);
 }
 
 blockquote {
-    font-family: 'Roboto Slab', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background: var(--page-light-bg);
+    border-left: 4px solid var(--page-text);
     padding: 9px 18px;
 }
 

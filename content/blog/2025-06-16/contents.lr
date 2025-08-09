@@ -44,8 +44,8 @@ Esta última abordagem pode fazer muitas pesquisas desnecessárias se não houve
 mecanismo de esperar a parada da digitação do usuário, mas talvez não seja necessário se
 eu não tiver planos de implementar esta pesquisa nas tabelas da secção de estatísticas. 
 
-- [x] **[Cashd-Cross]** Melhorar a qualidade da interação com o banco de dados, evitando
-carregar muitos dados desnecessariamente
+> ✅ **Tarefa concluída:** Melhorar a qualidade da interação com o banco de dados, evitando
+> carregar muitos dados desnecessariamente
 
 ## Problemas na interface 
 
@@ -63,5 +63,6 @@ Por fim, eu ainda tenho dúvidas sobre a organização atual dos itens na tela i
 acredito que ainda dá para simplificar mais aquela tela, reduzindo a quantidade de botões
 e empregando um *tabset* para as opções do cliente selecionado.
 
-- [ ] **[Cashd-Cross]** Melhorar interface, permitindo aumentar a largura do conteúdo e
+> 📝 **Tarefa pendente:** Melhorar interface, permitindo aumentar a largura do conteúdo e
 organizar inputs em duas colunas
+
