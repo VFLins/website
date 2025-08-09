@@ -89,13 +89,18 @@ header h1 {
     font-size: max(48px, 3.5vh);
 }
 
+h1 {
+    font-size: max(38px, 3vh);
+    font-weight: bold;
+}
+
 h2 {
-    font-size: xx-large;
+    font-size: max(32px, 3.2vh);
     font-weight: normal;
 }
 
 h3 {
-    font-size: x-large;
+    font-size: max(26px, 2.6vh);
     font-weight: normal;
 }
 
@@ -132,6 +137,7 @@ pre {
     background: var(--page-dark-bg);
     font-family: Consolas, monospace;
     font-size: inherit;
+    overflow-x: auto;
 }
 
 code {
