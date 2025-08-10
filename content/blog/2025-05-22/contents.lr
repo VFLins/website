@@ -21,21 +21,21 @@ body:
 
 </blockquote>
 
-## Widgets compostos
+## 1 Widgets compostos
 
 Além de algumas melhorias no alinhamento dos itens, quero reduzir a quantidade de código
 escrito, algumas estruturas de *widgets* se repetem (ou faria sentido repetí-las em
 alguns lugares), e o meu desejo é fazer uma classe que lida com esses conjuntos de
 *widgets* como um único objeto, ou um "*widget* composto".
 
-## Melhores ícones
+## 2 Melhores ícones
 
 Estou aproveitando ícones feitos por Débora no formato SVG, fazendo uma simples conversão
 de formato para que sejam reconhecidos pelos *backends* do WinForms ou do GTK, mas é
 visível como eles não se encaixam bem na interface, começando pela necessidade de
 implementar um fundo transparente neles.
 
-## Transferir *backend* do [[Cashd]]
+## 3 Transferir *backend* do [[Cashd]]
 
 Agora que temos uma interface feita, para que tenhamos um programa completo, só falta
 transferir a lógica de *backend* já presente no Cashd para o Cashd-Cross. Eu sinto que
@@ -44,7 +44,7 @@ mais produtivo fazer a migração antes e pensar nisso depois.
 
 - [x] **[Cashd-Cross]** Transferir *backend* do `cashd com taipy` para o `cashd com toga`
 
-## Adesão á nova interface mais "velha"
+## 4 Adesão á nova interface mais "velha"
 
 Por mais que a nova interface seja mais leve em recursos de *hardware*, pode ser que o
 fato de ser construída em *backends* antigos como WinForms e GTK3 pode ser percebido como

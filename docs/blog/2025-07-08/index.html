@@ -52,12 +52,12 @@
     qualidade da interação com o banco de dados, evitando carregar muitos dados 
     desnecessariamente"</a>.</p>
 
-</blockquote><h2>A validação de dados agora é feita pelo <code>sqlalchemy</code></h2>
+</blockquote><h2>1 A validação de dados agora é feita pelo <code>sqlalchemy</code></h2>
 <p>O projeto original do <code>Cashd</code>, usava um <code>cashd.db.FormObj</code> para fazer a validação e
 formatação dos inputs com código totalmente próprio, mas agora usamos o
 <a href="https://docs.sqlalchemy.org/en/20/core/custom_types.html#sqlalchemy.types.TypeDecorator"><code>TypeDecorator</code></a>
 para sinalizar as regras de formatação dos dados ao <code>sqlalchemy</code>.</p>
-<h2>Dados formatados e interativos com <code>cashd.data._DataSource</code></h2>
+<h2>2 Dados formatados e interativos com <code>cashd.data._DataSource</code></h2>
 <p>Uma nova classe chamada <code>_DataSource</code> traz as funcionalidades para:</p>
 <ol>
     <li>
@@ -70,7 +70,7 @@ para sinalizar as regras de formatação dos dados ao <code>sqlalchemy</code>.</
     dados retornados pelo <code>_DataSource</code>;</li>
     <li>
     Em caso de série temporal, mudar a frequência dos dados entre mensal, semanal e diário.</li>
-</ol><h2>CRUD feito pelas tabelas declaradas</h2>
+</ol><h2>3 CRUD feito pelas tabelas declaradas</h2>
 <p>As operações de CRUD, que antes eram realizadas por funções especializadas, agora são
 funções genéricas que usam as classes herdeiras da
 <a href="https://docs.sqlalchemy.org/en/20/orm/declarative_tables.html">base declarativa</a>,
@@ -100,7 +100,7 @@ dados com os novos métodos:</p>
 <span class="n">customer</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
 <span class="sd">&quot;&quot;&quot;Remove a linha correspondente do banco de dados.&quot;&quot;&quot;</span>
 </pre></div>
-<h2>Novos testes</h2>
+<h2>4 Novos testes</h2>
 <p>Foram adicionados testes unitários adicionais para o novo código que interage com o banco de dados, com cobertura do código presente em <code>data.py</code> de 92%.</p>
 
   </div>

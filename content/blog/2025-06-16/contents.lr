@@ -18,7 +18,7 @@ body:
 
 </blockquote>
 
-## Problemas com desempenho
+## 1 Problemas com desempenho
 
 Atualmente, os *widgets* que carregam dados do banco de dados acabam sendo bastante 
 lentos, principalmente na tela de estatísticas, onde existe uma grande quantidade de
@@ -47,7 +47,7 @@ eu não tiver planos de implementar esta pesquisa nas tabelas da secção de est
 > ✅ **Tarefa concluída:** Melhorar a qualidade da interação com o banco de dados, evitando
 > carregar muitos dados desnecessariamente
 
-## Problemas na interface 
+## 2 Problemas na interface 
 
 A interface do Cashd-Cross possui uma largura fixa, mas o tamanho das fontes pode escalar
 dependendo da resolução da tela, isto acaba fazendo com que, em resoluções maiores, o

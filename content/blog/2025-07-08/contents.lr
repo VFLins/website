@@ -24,14 +24,14 @@ body:
 
 </blockquote>
 
-## A validação de dados agora é feita pelo `sqlalchemy`
+## 1 A validação de dados agora é feita pelo `sqlalchemy`
 
 O projeto original do `Cashd`, usava um `cashd.db.FormObj` para fazer a validação e
 formatação dos inputs com código totalmente próprio, mas agora usamos o
 [`TypeDecorator`](https://docs.sqlalchemy.org/en/20/core/custom_types.html#sqlalchemy.types.TypeDecorator)
 para sinalizar as regras de formatação dos dados ao `sqlalchemy`.
 
-## Dados formatados e interativos com `cashd.data._DataSource`
+## 2 Dados formatados e interativos com `cashd.data._DataSource`
 
 Uma nova classe chamada `_DataSource` traz as funcionalidades para:
 
@@ -48,7 +48,7 @@ Uma nova classe chamada `_DataSource` traz as funcionalidades para:
     Em caso de série temporal, mudar a frequência dos dados entre mensal, semanal e diário.</li>
 </ol>
 
-## CRUD feito pelas tabelas declaradas
+## 3 CRUD feito pelas tabelas declaradas
 
 As operações de CRUD, que antes eram realizadas por funções especializadas, agora são
 funções genéricas que usam as classes herdeiras da
@@ -82,6 +82,6 @@ customer.delete()
 """Remove a linha correspondente do banco de dados."""
 ```
 
-## Novos testes
+## 4 Novos testes
 
 Foram adicionados testes unitários adicionais para o novo código que interage com o banco de dados, com cobertura do código presente em `data.py` de 92%.

@@ -6,7 +6,7 @@
 
   <ul class="blog-index">
   {% for post in this.pagination.items %}
-    <h3><a href="{{ post|url }}">{{ post.title }}</a></h3>
+    <h4><a href="{{ post|url }}">{{ post.title }}</a></h4>
     <p style="color:var(--page-text)">{{ post.pub_date|dateformat('dd/MM/YYYY') }}
     {% if post.tags %} |
         {% for t in post.tags %}

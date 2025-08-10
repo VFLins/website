@@ -54,12 +54,12 @@
   <li>Python 3.9</li>
   </ul>
 
-</blockquote><h2>Java</h2>
+</blockquote><h2>1 Java</h2>
 <p>Vamos usar uma conexão JDBC (Java Database Connection), o backend do PySpark vai usar o Java instalado no sistema operacional para se comunicar com o banco de dados. Vamos começar garantindo que o Java está instalado.</p>
-<h3>Encontrar as versões disponíveis</h3>
+<h3>1.1 Encontrar as versões disponíveis</h3>
 <pre><code>apt search openjdk
 </code></pre>
-<h3>Instalar a versão mais recente disponível</h3>
+<h3>1.2 Instalar a versão mais recente disponível</h3>
 <p>A consulta anterior pode mostrar outro número de versão, use-o no lugar do 17 abaixo.</p>
 <div class="hll"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>openjdk-17-jdk
 </pre></div>
@@ -69,7 +69,7 @@
 java<span class="w"> </span>--version
 </pre></div>
 <p>Note que esta versão provavelmente não é a mais recente.</p>
-<h2>Drivers JDBC da oracle</h2>
+<h2>1.3 Drivers JDBC da oracle</h2>
 <p>Baixar arquivo <code>.jar</code>. Cada tecnologia de banco de dados vai usar um driver diferente, para este exemplo vamos usar os drivers referentes ao banco de dados da Oracle.</p>
 <ul>
 <li>Verifique qual <a href="https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html">versão de Driver</a> é compatível com a sua versão de Java instalada, como instalamos os Java 17 na etapa anterior, vamos usar a versão 11 do driver.</li>
@@ -82,8 +82,8 @@ wget<span class="w"> </span>https://download.oracle.com/otn-pub/otn_software/jdb
 <span class="c1"># Universal Connection Pool (UCP)</span>
 wget<span class="w"> </span>https://download.oracle.com/otn-pub/otn_software/jdbc/233/ucp11.jar
 </pre></div>
-<h2>Autenticação mTLS</h2>
-<h3>Baixar carteira de autenticação.</h3>
+<h2>2 Autenticação mTLS</h2>
+<h3>2.1 Baixar carteira de autenticação.</h3>
 <p>A carteira vai ser um arquivo .zip que pode ser baixado pelo painel de gerenciamento de conexões da sua base de dados. Usando WSL 2, podemos usar qualquer navegador disponível no repositório <code>apt</code>.</p>
 <p>Um sistema (Windows) com menos de 8gb de memória pode ter dificuldade para navegar, já que o subsistema Linux (Debian, neste caso) vai geralmente usar 50% da memória total do sistema. Também é recomendado um monitor com resolução de pelo menos 1920x1080. Se estiver seguindo este tutorial de um sistema Linux nativo (sem WSL), as restrições de memória e resolução de tela são mais leves.</p>
 <div class="hll"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>chromium<span class="w"> </span>-y
@@ -93,7 +93,7 @@ chromium
 <p>Primeiro acessamos a seção “Database Connection”</p>
 <p>[Imagem será adicionada posteriormente]</p>
 <p>Depois baixamos a carteira</p>
-<h3>Obter drivers adicionais</h3>
+<h3>2.2 Obter drivers adicionais</h3>
 <p>Estes são necessários para lidar com autenticação através de variáveis locais: oraclekpi.jar, osdt_cert.jar, osdt_core.jar.</p>
 <p>É recomendável pegar todos os arquivos com o mesmo número de versão para evitar problemas de compatibilidade, aqui usaremos a versão 21.9.0.0.</p>
 <p>Encontre a versão mais recente de cada um, obtenha o link, e faça o download. Exemplo com wget:</p>
@@ -104,7 +104,7 @@ wget<span class="w"> </span>https://repo1.maven.org/maven2/com/oracle/database/s
 <span class="c1"># osdt_core.jar</span>
 wget<span class="w"> </span>https://repo1.maven.org/maven2/com/oracle/database/security/osdt_core/21.9.0.0/osdt_core-21.9.0.0.jar
 </pre></div>
-<h2>PySpark, concedendo acesso aos <code>.jar</code></h2>
+<h2>3 PySpark, concedendo acesso aos <code>.jar</code></h2>
 <p>A maneira mais simples é incluir os arquivos .jar baixados na biblioteca local do PySpark, se estiver usando um ambiente virtual (venv), esta biblioteca pode ser encontrada desta maneira:</p>
 <div class="hll"><pre><span></span><span class="c1"># Cria uma ambiente virtual, vamos usar uma pasta “env”:</span>
 python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>env
@@ -120,8 +120,8 @@ pip<span class="w"> </span>install<span class="w"> </span>pyspark
 cp<span class="w"> </span>*.jar<span class="w"> </span>~/env/lib/python3.9/site-packages/pyspark/jars
 </pre></div>
 <p>Repare a pasta com nome python3.9, se sua versão de python for diferente, este vai ser o nome da pasta. Alternativamente, existem outros métodos para chegar neste resultado, se deseja explorá-los, veja <a href="https://sparkbyexamples.com/pyspark/how-to-add-multiple-jars-to-pyspark/">este tutorial</a>.</p>
-<h2>PySpark, acessando as credenciais</h2>
-<h3>Extraindo arquivos da carteira</h3>
+<h2>4 PySpark, acessando as credenciais</h2>
+<h3>4.1 Extraindo arquivos da carteira</h3>
 <p>Para autenticar qualquer transação com o banco de dados, primeiramente será necessário informar a carteira de acesso Wallet_dbname.zip</p>
 <p>Crie uma nova pasta e extraia o conteúdo da carteira nela</p>
 <div class="hll"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/lib
@@ -129,7 +129,7 @@ mkdir<span class="w"> </span>certs
 unzip<span class="w"> </span>~/Downloads/Wallet_dbname.zip<span class="w"> </span>-d<span class="w"> </span>~/lib/certs/Wallet_dbname
 </pre></div>
 <p>Repare que <code>dbname</code> é o nome do banco de dados, substitua pelo nome que você escolheu ao criar o banco de dados.</p>
-<h3>Autenticando transações</h3>
+<h3>4.2 Autenticando transações</h3>
 <p>A partir daqui, todos os demais detalhes da autenticação serão determinados dentro do python. A string de conexão deve fornecer o caminho para a pasta com as credencias que criamos na etapa anterior</p>
 <p>O nome de usuário, senha, e string de conexão sempre serão fornecidos em qualquer comunicação com o banco de dados</p>
 <div class="hll"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">getpass</span><span class="w"> </span><span class="kn">import</span> <span class="n">getpass</span>

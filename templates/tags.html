@@ -7,7 +7,7 @@
     <ul>
             {% for i in this.items %}
             {% set other_tags = i.tags | reject('equalto', this.tag) | list %}
-            <li>[{{ i.pub_date }} - {{other_tags | join(', ') }}] <a href="{{ i|url }}">{{ i.title }}</a></li>
+		<li><b>[{{ i.pub_date }} <code>{{other_tags | join(', ') }}</code>]</b> <a href="{{ i|url }}">{{ i.title }}</a></li>
             {% else %}
             <li><em>No items.</em></li>
             {% endfor %}

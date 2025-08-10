@@ -49,17 +49,17 @@
     aparência de alguns elementos, mas os requisitos pedidos na tarefa de [[2025-04-21]]
     estão satisfeitos.</p>
 
-</blockquote><h2>Widgets compostos</h2>
+</blockquote><h2>1 Widgets compostos</h2>
 <p>Além de algumas melhorias no alinhamento dos itens, quero reduzir a quantidade de código
 escrito, algumas estruturas de <em>widgets</em> se repetem (ou faria sentido repetí-las em
 alguns lugares), e o meu desejo é fazer uma classe que lida com esses conjuntos de
 <em>widgets</em> como um único objeto, ou um "<em>widget</em> composto".</p>
-<h2>Melhores ícones</h2>
+<h2>2 Melhores ícones</h2>
 <p>Estou aproveitando ícones feitos por Débora no formato SVG, fazendo uma simples conversão
 de formato para que sejam reconhecidos pelos <em>backends</em> do WinForms ou do GTK, mas é
 visível como eles não se encaixam bem na interface, começando pela necessidade de
 implementar um fundo transparente neles.</p>
-<h2>Transferir <em>backend</em> do [[Cashd]]</h2>
+<h2>3 Transferir <em>backend</em> do [[Cashd]]</h2>
 <p>Agora que temos uma interface feita, para que tenhamos um programa completo, só falta
 transferir a lógica de <em>backend</em> já presente no Cashd para o Cashd-Cross. Eu sinto que
 teria bom proveito se fizesse alguns <em>refactors</em> no módulo <code>db.py</code>, mas acho que será
@@ -67,7 +67,7 @@ mais produtivo fazer a migração antes e pensar nisso depois.</p>
 <ul>
 <li>[x] <strong>[Cashd-Cross]</strong> Transferir <em>backend</em> do <code>cashd com taipy</code> para o <code>cashd com toga</code></li>
 </ul>
-<h2>Adesão á nova interface mais "velha"</h2>
+<h2>4 Adesão á nova interface mais "velha"</h2>
 <p>Por mais que a nova interface seja mais leve em recursos de <em>hardware</em>, pode ser que o
 fato de ser construída em <em>backends</em> antigos como WinForms e GTK3 pode ser percebido como
 um retrocesso, acredito que terei que testar o que o meu pai acha melhor de usar, e

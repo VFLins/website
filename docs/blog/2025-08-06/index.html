@@ -47,7 +47,7 @@
     padronizados. Isto conclui a segunda tarefa de: <a href="../2025-06-16/">"Melhorar
     interface, aumentar a largura do conteúdo e organizar inputs em duas colunas"</a>.</p>
 
-</blockquote><h2>Introduzindo <code>FormHandler</code></h2>
+</blockquote><h2>1 Introduzindo <code>FormHandler</code></h2>
 <p>Três classes foram adicionadas para lidar com a criação dinâmica de formulários:</p>
 <ol>
 <li><code>FormField</code>, que representa um campo, o menor elemento de um formulário, e contém
@@ -60,7 +60,7 @@ os seus <code>FormRow</code>. Ele oferece uma interface para os dados preenchido
 lida com a inclusão e remoção de campos, além dos eventos <code>on_change</code>, <code>on_lose_focus</code>,
 etc.</li>
 </ol>
-<h3>Os campos do formulário</h3>
+<h3>1.1 Os campos do formulário</h3>
 <p>Uma instância da nova classe <code>FormField</code> retorna um <code>toga.Box</code> modificado, essencialmente
 com três elementos:</p>
 <ol>
@@ -98,7 +98,7 @@ identificar cada <em>input</em> com uma <em>string</em> única, o <code>FormFiel
 <p>Repare que também existe um parâmetro <code>required</code> ao definir o <code>FormField</code>, ele será
 explicado mais adiante, no tópico "O manipulador de formulários". Mas antes, vamos falar
 sobre o que se espera das linhas do formulário.</p>
-<h3>As linhas do formulário</h3>
+<h3>1.2 As linhas do formulário</h3>
 <p>Atualmente, para fim de simplicidade e velocidade de implementação, <code>FormRow</code> apenas
 possuem uma largura fixa, não se adaptando à largura da janela, e não aceita mais que
 dois campos, com uma largura máxima fixada.</p>
@@ -109,7 +109,7 @@ o <code>toga.style.Pack</code> padrão correspondente.</p>
 da orientação do aparelho, seria necessário que <code>FormHandler</code> tivesse um 
 <em>event listener</em>, que automaticamente ativaria a rotina de reorganização dos campos em um
 novo conjunto de <code>FormRow</code>, aumentando ou diminuindo a quantidade de <em>inputs</em> por linha.</p>
-<h3>O manipulador de formulários</h3>
+<h3>1.3 O manipulador de formulários</h3>
 <p>O <code>FormHandler</code> é responsável por organizar os campos do formulário em uma grade
 orientada à linhas de <em>inputs</em>. Ele também é responsável por passar uma função que se
 ative sempre que algum tipo de interação ocorre com o input, como <code>on_change</code> ou
@@ -153,10 +153,10 @@ de acordo com o [[2025-07-08#1.1 A validação de dados agora é feita pelo <cod
 <code>cashd.data.tbl_clientes</code>, mas atualmente ainda não consegue lidar com
 <code>cashd.data.tbl_transacoes</code>, porque ainda não foi instruído sobre como lidar com campos
 de data.</p>
-<h2>Melhorias visuais e de experiência do usuário</h2>
+<h2>2 Melhorias visuais e de experiência do usuário</h2>
 <p>Todas as telas exceto a de estatísticas passaram por melhorias visuais, vamos mostrar
 por ordem:</p>
-<h3>Tela inicial</h3>
+<h3>2.1 Tela inicial</h3>
 <p>A tela inicial não possui mais os três botões, em que cada um levaria à uma interação
 diferente, agora, em vez disso, apenas um botão leva para um <code>toga.OptionContainer</code>,
 que mostra um conjunto de abas que mostra todas as interações possíveis com o usuários
@@ -179,12 +179,12 @@ cliente selecionado, e modificá-las:</p>
 <p><img src="cashd-transacoes_informacoes-winforms.png" alt="Tela inicial do Cashd, informações do cliente selecionado."></p>
 <p>A tela acima já segue o <em>layout</em> padrão de formulários definido pelo <code>FormHandler</code>
 mencionado anteriormente, mas este não é o único lugar onde esse <em>layout</em> é aplicado.</p>
-<h3>Telas "Novo cliente" e "Configurações"</h3>
+<h3>2.2 Telas "Novo cliente" e "Configurações"</h3>
 <p>As telas "Novo Cliente" e "Configurações" também seguem o novo <em>layout</em> de duas colunas
 implementados com <code>FormHandler</code>:</p>
 <p><img src="cashd-novo_cliente-winforms.png" alt="Tela &quot;Novo cliente&quot; do Cahsd."></p>
 <p><img src="cashd-configuracoes-winforms.png" alt="Tela de Configurações do Cashd."></p>
-<h2>Migrando as duas versões do Cashd para um único repositório</h2>
+<h2>3 Migrando as duas versões do Cashd para um único repositório</h2>
 <p>Até o momento, os dois projetos foram desenvolvidos em repositórios separados, um aberto
 chamado <code>cashd</code>, onde está o projeto desenvolvido com Taipy, que pode servir um único app
 web para uma rede local, que pode ser acessado apenas no próprio computador, ou em
