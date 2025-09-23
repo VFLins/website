@@ -1,0 +1,87 @@
+title: Melhorias no backend do Cashd com Toga
+---
+pub_date: 2025-07-08
+---
+tags:
+
+Cashd
+Novo recurso
+---
+body:
+
+<blockquote class="callout-success">
+
+    <p><b>✅ O <i>backend</i> está pronto e testado</b></p>
+    
+    <p>Algumas mudanças estruturais foram feitas no código, a lógica de interação com o banco
+    de dados agora adere ao paradigma de "Programação Orientada a Objetos" em vez do
+    paradigma "Funcional". Além disso, também podemos processar os dados direto na engine do
+    banco de dados, o que nos dá um ganho muito relevante de desempenho.</p>
+    
+    <p>Isto conclui a primeira tarefa de: <a href="../2025-06-16/">"Melhorar a
+    qualidade da interação com o banco de dados, evitando carregar muitos dados 
+    desnecessariamente"</a>.</p>
+
+</blockquote>
+
+## 1 A validação de dados agora é feita pelo `sqlalchemy`
+
+O projeto original do `Cashd`, usava um `cashd.db.FormObj` para fazer a validação e
+formatação dos inputs com código totalmente próprio, mas agora usamos o
+[`TypeDecorator`](https://docs.sqlalchemy.org/en/20/core/custom_types.html#sqlalchemy.types.TypeDecorator)
+para sinalizar as regras de formatação dos dados ao `sqlalchemy`.
+
+## 2 Dados formatados e interativos com `cashd.data._DataSource`
+
+Uma nova classe chamada `_DataSource` traz as funcionalidades para:
+
+<ol>
+    <li>
+    Fazer o pré-processamento direto no banco de dados;</li>
+    <li>
+    Lidar com paginação, onde o usuário vê apenas um recorte dos dados, e pode solicitar 
+    o "próximo recorte" interagindo com a interface gráfica;</li>
+    <li>
+    Lidar com pesquisa, procurando por palavras-chave em múltiplas colunas do conjunto de
+    dados retornados pelo <code>_DataSource</code>;</li>
+    <li>
+    Em caso de série temporal, mudar a frequência dos dados entre mensal, semanal e diário.</li>
+</ol>
+
+## 3 CRUD feito pelas tabelas declaradas
+
+As operações de CRUD, que antes eram realizadas por funções especializadas, agora são
+funções genéricas que usam as classes herdeiras da
+[base declarativa](https://docs.sqlalchemy.org/en/20/orm/declarative_tables.html),
+agora podemos preencher um `cashd.data.tbl_clientes` com dados e gerenciá-lo no banco de
+dados com os novos métodos:
+
+```python
+from cashd import data
+
+customer = data.get_default_customer()
+"""`tbl_clientes` preenchido com os valores padrão."""
+
+customer.PrimeiroNome = "José"
+customer.Sobrenome = "Da Silva"
+"""Preenche os campos obrigatórios que não são preenchidos por padrão."""
+
+customer.write()
+"""Cria uma nova linha na tabela 'clientes' do banco de dados contendo
+os dados de `customer`.
+"""
+
+customer.read(row_id=1)
+"""Preenche `customer` com os dados da primeira linha da tabela 'clientes'."""
+
+customer.Bairro = "Novo Bairro"
+customer.update()
+"""Atualiza a linha correspondente no banco de dados."""
+
+customer.delete()
+"""Remove a linha correspondente do banco de dados."""
+```
+
+## 4 Novos testes
+
+Foram adicionados testes unitários adicionais para o novo código que interage com o banco de dados, com cobertura do código presente em `data.py` de 92%.

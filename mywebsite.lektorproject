@@ -1,6 +1,0 @@
-[project]
-name = 'Data Explorer'
-
-[packages]
-lektor-markdown-highlighter = 0.3.2
-lektor-tags = 0.5.2
