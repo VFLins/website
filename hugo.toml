@@ -1,8 +1,4 @@
-baseURL = 'https://vflins.github.io/website/'
+baseURL = 'https://vflins.github.io/'
 languageCode = 'pt-br'
 title = 'Vitor F. Lins'
-theme = 'tella'
-
-[caches]
-[caches.images]
-dir = ':cacheDir/images'
+theme = 'ananke'
