@@ -1,4 +1,5 @@
-baseURL = 'https://vflins.github.io/'
+baseURL = "https://vflins.github.io/"
 languageCode = 'pt-br'
-title = 'Vitor F. Lins'
-theme = 'ananke'
+title = "Vitkon"
+theme = "ananke"
+sectionPagesMenu = "main"
