@@ -1,9 +1,12 @@
 baseURL = "https://vflins.github.io/"
 languageCode = 'pt-br'
 title = "Vitor F. Lins"
-theme = "ananke"
+theme = ["ananke"]
 sectionPagesMenu = "main"
 enableEmoji = true
+
+[params]
+custom_css = ["colors.css", "layout.css"]
 
 [markup]
 [markup.goldmark]
