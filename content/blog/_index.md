@@ -1,5 +1,5 @@
 +++
 title = "Blog"
-featured_image = "images/illustrations/arisa-chattasa-unsplash-papers.jpg"
+omit_header_text = true
 +++
 

@@ -1,0 +1,203 @@
+@font-face {
+  font-family: 'Roboto Slab';
+  src: url('/static/fonts/SlabRobotoSlab-VariableFont_wght.ttf') format('ttf');
+  font-weight: 100 900; /* Range of weights */
+  font-style: normal;
+}
+
+
+@media screen and (min-width: 60em) {
+    .pv6-l {
+        padding-top: 2rem;
+    }
+}
+
+:root {
+    --page-bg: #212729;
+    --page-dark-bg: #1a1d1f;
+    --page-light-bg: #183034;
+    --page-text: #8db2b0;
+    --link-color: #84b3b0;
+    --link-hover-color: #2f8683;
+    --header-text: #20B2AA;
+    --header-bg: #293f46;
+    --success-text: #84b397;
+    --success-bg: #23352d;
+    --faliure-text: #b38484;
+    --faliure-bg: #352323;
+}
+
+/* Light Theme Variables */
+body.light-theme {
+    --page-bg: #ffffff;
+    --page-dark-bg: #e9f2f1;
+    --page-light-bg: #dbeaec;
+    --page-text: #47827d;
+    --link-color: #52827e;
+    --link-hover-color: #21a7a0;
+    --header-text: darkslategray;
+    --header-bg: #e9f2f1;
+    --success-text: #496133;
+    --success-bg: #d9f5d5;
+    --faliure-text: #8b4848;
+    --faliure-bg: #e5c5c5;
+}
+
+body {
+    margin: 50px 25px;
+    background-color: var(--header-bg);
+}
+
+footer {
+    color: var(--page-text);
+}
+
+a {
+    color: var(--link-color);
+}
+
+a:hover {
+    color: var(--link-hover-color);
+}
+
+p {
+    line-height: 1.5;
+    font-size: 1rem;
+}
+
+p.meta {
+    color: var(--page-text);
+    font-weight: bold;
+    font-size: inherit;
+}
+
+li {
+    line-height: 1.5;
+    margin-bottom: 9px;
+    font-size: 1rem;
+}
+
+header, footer, div.page {
+    width: min(88%, 760px);
+    margin: 0 auto;
+    padding: 20px 30px;
+}
+
+header, footer {
+    font-family: 'Roboto Slab', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+div.page {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: var(--page-bg) initial;
+    border-radius: 6px;
+}
+
+header h1 {
+    color: var(--header-text);
+    margin: 0;
+    font-weight: normal;
+    font-size: max(48px, 3.5vh);
+}
+
+h1 {
+    font-size: 2.1rem;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding-top: 32px;
+}
+
+h3 {
+    font-size: 1.6rem;
+    font-style: italic;
+    font-weight: normal;
+}
+
+h4 {
+    font-size: 1.3rem;
+}
+header a {
+    color: var(--header-text);
+    font-size: max();
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    font-size: max(22px, 1.6vh);
+    padding: 0;
+}
+
+header nav ul li input {
+    height: max(18px, 1vh);
+    width: max(18px, 1vh);
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 8px 0 0;
+    padding: 0;
+    font-size: max(1.2rem, 1.5vh);
+}
+
+div.page {
+    background: var(--page-bg);
+    color: var(--page-text)
+}
+
+pre {
+    padding: 18px;
+    border-radius: 6px;
+    background: var(--page-dark-bg);
+    font-family: Consolas, monospace;
+    font-size: inherit;
+    overflow-x: auto;
+}
+
+code {
+    padding: 1px 3px;
+    border-radius: 6px;
+    font-family: Consolas, monospace;
+    font-size: inherit;
+    background-color: var(--page-dark-bg);
+}
+
+blockquote {
+    background: var(--page-light-bg);
+    border-left: 4px solid var(--page-text);
+    padding: 9px 18px;
+}
+
+blockquote.callout-success {
+    background: var(--success-bg);
+    border-left: 4px solid var(--success-text);
+    color: var(--success-text);
+
+}
+
+blockquote.callout-faliure {
+    background: var(--faliure-bg);
+    border-left: 2px solid var(--faliure-text);
+    color: var(--faliure-text);
+}
+
+/* big static checkboxes */
+input[type="checkbox"]:disabled {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin: 0px 12px;
+}
+
+/* remove the dot behind static checkboxes */
+li:has(input)::marker {
+    color: var(--page-bg)
+}
+
+img {
+    max-width: 100%;
+}
