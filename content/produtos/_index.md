@@ -1,9 +1,7 @@
 +++
-title = "Services"
-description = "We offer a range of services to help your business"
-intro_image = "images/illustrations/reading.svg"
-intro_image_absolute = true
-intro_image_hide_on_mobile = false
+title = "Produtos"
+description = "Coisas boa"
+featured_image = "images/illustrations/andras-vas-unsplash-notebook.jpg"
 +++
 
 # Services that grow with your business

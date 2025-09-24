@@ -7,6 +7,14 @@ O cientista de dados é um profissional multidisciplinar, eu já estive estudand
 
 O resultado deste passo-a-passo vai ser uma máquina Linux que executa PySpark localmente, e tem acesso à até dois bancos de dados gratuitos da Oracle na nuvem, que podem armazenar até 20GB de dados cada (gratuitamente). Se você gostou da proposta, vamos ao tutorial!
 
+> [!WARNING]+ **Disclaimer**: Os exemplos de código apresentados foram testados nestas condições
+>
+> 1. Uma conta free tier já cadastrada na Oracle Cloud Infrastructure e um banco de dados provisionado
+> 2. Um sistema Debian 12 como subsistema de Windows (WSL 2)
+> 3. PySpark 3.5.1
+> 4. Java 17
+> 5. Python 3.9
+
 <blockquote class="callout-faliure">
 
   <b>⚠️ Disclaimer:</b>

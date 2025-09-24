@@ -1,5 +1,12 @@
 baseURL = "https://vflins.github.io/"
 languageCode = 'pt-br'
-title = "Vitkon"
+title = "Vitor F. Lins"
 theme = "ananke"
 sectionPagesMenu = "main"
+enableEmoji = true
+
+[markup]
+[markup.goldmark]
+[markup.goldmark.parser]
+[markup.goldmark.parser.attribute]
+block = true
