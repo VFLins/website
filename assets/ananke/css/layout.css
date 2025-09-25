@@ -1,11 +1,25 @@
+/*make table of contents sticky*/
 .pa3.nested-list-reset {
   position: sticky;
   top: 0;
 }
 
+/*page title block*/
 @media screen and (min-width: 60em) {
   .pv6-l {
-    padding-top: 2rem;
+    padding-top: 2rem;/*reduce top padding*/
     padding-bottom: 8rem;
   }
+}
+
+/*social icons*/
+a.ananke-social-link {
+  padding-right: 16px;/*increase horizontal spacing*/
+}
+
+/*code blocks*/
+pre {
+  overflow-x: auto;/*display scrollbar only when needed*/
+  overflow-y: auto;
+  border-radius: 8px; /*rounded corners*/
 }

@@ -6,7 +6,25 @@ sectionPagesMenu = "main"
 enableEmoji = true
 
 [params]
+read_more_copy = "continue lendo"
 custom_css = ["colors.css", "layout.css"]
+
+[params.ananke.social.share]
+icons = true
+networks = ["email", "facebook", "instagram", "linkedin", "whatsapp"]
+
+[params.ananke.social.linkedin]
+username = "vflins"
+
+[params.ananke.social.instagram]
+username = "vitorkon"
+
+[params.ananke.social.medium]
+username = "vflins"
+
+[params.ananke.social.follow]
+new_window_icon = true
+networks = ["linkedin", "instagram"]
 
 [markup]
 [markup.goldmark]
