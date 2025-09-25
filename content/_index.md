@@ -1,6 +1,5 @@
 ---
-title: 'Vitor Ferreira Lins'
-meta_title: 'metatitle'
+title: "Vitor Ferreira Lins"
 description: "Um especialista para a sua empresa."
 featured_image: "/images/illustrations/jingwei-ke-unsplash-lake.jpg"
 ---
@@ -17,4 +16,6 @@ Desenvolver a melhor solução para todos, observando todos os impactos promovid
 # Visão 
 
 O desenvolvimento humano acompanha o desenvolvimento econômico, nossa contribuição deve influenciar positivamente a sociedade local.
+
+---
 

@@ -1,10 +1,17 @@
 +++
-title = 'Cashd'
+title = "Controle de vendas à ver"
 +++
 
-[Informações](../tag/Cashd) | [Repositório](https://github.com/VFLins/cashd)
+A venda no "fiado" ainda é bastante presente em nossa região, embora muitas vezes, não
+seja uma prática recomendada. Muitos comerciantes ainda se sentem presos à esta prática,
+por não se ver capazes de demonstrar nenhum diferencial em relação aos grandes
+concorrentes na região.
 
 <!--more-->
+
+[Últimas atualizações](../tag/Cashd) | [Página do projeto](https://github.com/VFLins/cashd)
+
+# Como surgiu o Cashd
 
 Este projeto foi idealizado e desenvolvido enquanto trabalhava com o meu pai no comércio
 dele. Trata-se de um comércio de pequeno porte que aceita vender à prazo com base na
