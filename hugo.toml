@@ -1,11 +1,14 @@
 baseURL = "https://vflins.github.io/"
-languageCode = 'pt-br'
+languageCode = "pt_BR"
+defaultContentLanguage = "pt-br"
 title = "Vitor F. Lins"
 theme = ["ananke"]
 sectionPagesMenu = "main"
 enableEmoji = true
 
 [params]
+date_format = ":date_full"
+locale = "pt_BR"
 read_more_copy = "continue lendo"
 custom_css = ["colors.css", "layout.css"]
 
@@ -26,8 +29,8 @@ username = "vflins"
 new_window_icon = true
 networks = ["linkedin", "instagram"]
 
-[markup]
-[markup.goldmark]
-[markup.goldmark.parser]
+[markup.highlight]
+style = "trac"
+
 [markup.goldmark.parser.attribute]
 block = true

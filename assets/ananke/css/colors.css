@@ -1,3 +1,21 @@
 .pb7 {
-  background-color: lightgray;
+  background-color: #f0f0f0;
 }
+
+pre code {
+  color: black;
+  background-color: #fff;
+}
+
+/*callout-success*/
+blockquote.alert.alert-success {
+  border-left-color: green;
+}
+/*callout-successs: heading*/
+blockquote.alert-success p.alert-heading::before {
+  content: "✅"
+}
+blockquote.alert-success p.alert-heading {
+  color: green;
+}
+

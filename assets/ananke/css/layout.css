@@ -23,3 +23,8 @@ pre {
   overflow-y: auto;
   border-radius: 8px; /*rounded corners*/
 }
+
+/*callouts*/
+blockquote.alert p.alert-heading {
+  font-size: 1.2em;
+}
