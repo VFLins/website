@@ -1,10 +1,12 @@
-/*make table of contents sticky*/
+/*table of contents*/
 .pa3.nested-list-reset {
   position: sticky;
-  top: 0;
+  top: 8px;
+  background-color: #e0e0e0;
+  border-radius: 8px;
 }
 
-/*page title block*/
+/*site title block*/
 @media screen and (min-width: 60em) {
   .pv6-l {
     padding-top: 2rem;/*reduce top padding*/
@@ -25,6 +27,11 @@ pre {
 }
 
 /*callouts*/
+blockquote.alert {
+  padding: 5px 30px;
+  border-radius: 8px;
+}
+/*callouts: heading*/
 blockquote.alert p.alert-heading {
   font-size: 1.2em;
 }
