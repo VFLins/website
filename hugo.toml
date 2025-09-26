@@ -25,9 +25,12 @@ username = "vitorkon"
 [params.ananke.social.medium]
 username = "vflins"
 
+[params.ananke.social.github]
+username = "VFLins"
+
 [params.ananke.social.follow]
 new_window_icon = true
-networks = ["linkedin", "instagram"]
+networks = ["linkedin", "instagram", "medium", "github"]
 
 [markup.highlight]
 style = "trac"
