@@ -9,6 +9,8 @@ concorrentes na região.
 
 <!--more-->
 
+> [!pending] O conteúdo desta página ainda está sendo escrito.
+
 [Últimas atualizações](../tag/Cashd) | [Página do projeto](https://github.com/VFLins/cashd)
 
 # Como surgiu o Cashd

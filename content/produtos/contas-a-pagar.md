@@ -10,6 +10,8 @@ vez maior.
 
 <!--more-->
 
+> [!pending] O conteúdo desta página ainda está sendo escrito.
+
 ## Por que é importante?
 
 Você não merece se preocupar com problemas meramente operacionais, não sofra mais com
@@ -35,3 +37,4 @@ relevantes por este meio.
 
 - Treinamento em boas práticas para controle das contas a pagar
 - Treinamento prático no controle de suas contas com _software_ de planilhas
+

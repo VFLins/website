@@ -7,7 +7,9 @@ qualidade sobre as suas vendas, é possível identificar quais são os seus prod
 
 <!--more-->
 
-# O que eu sei
+> [!pending] O conteúdo desta página ainda está sendo escrito.
+
+## O que eu sei
 
 - Coleta de dados de venda com `nflogic`
 - Cálculo de métrica de lucratividade
