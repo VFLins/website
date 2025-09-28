@@ -31,9 +31,18 @@ A pessoa indicada para esta proposta está querendo começar ou começou sem emp
 a pouco tempo, e deseja levar sua empresa a sério e evitar cair nas armadilhas mais
 comuns para os empresários iniciantes.
 
+Se assim como eu, você acredita que a tecnologia pode te ajudar a se tornar e se manter
+mais competitivo, ainda mais no mercado atual, em que o pequeno empresário tem, muitas
+vezes, que competir com empresas maiores, então este treinamento pode fazer muito sentido
+para você.
+
 ## O que você recebe?
 
 - Treinamento em boas práticas para controle das contas a pagar
 - Treinamento prático no controle de suas contas com _software_ de planilhas
 - Conhecimento de métricas para saúde financeira da sua empresa
+- Implementação prática das boas práticas e acompanhamento
+
+## Apenas contas a pagar?
+
 

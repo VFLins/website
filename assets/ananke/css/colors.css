@@ -3,6 +3,16 @@
   background-color: #f0f0f0;
 }
 
+/*site header*/
+div.bg-dark-green {
+  background-color: darkslategray;
+}
+
+/*site footer*/
+footer.bg-dark-green {
+  background-color: darkslategray;
+}
+
 /*links*/
 a {
   text-decoration: none;

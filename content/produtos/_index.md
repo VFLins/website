@@ -1,6 +1,6 @@
 +++
 title = "Produtos"
 description = ""
-featured_image = "images/illustrations/andras-vas-unsplash-notebook.jpg"
+featured_image = "images/illustrations/ilgmyzin-unsplash-abstractcyan2.jpg"
 +++
 

@@ -1,7 +1,7 @@
 ---
 title: "Vitor Ferreira Lins"
 description: "Um especialista para a sua empresa."
-featured_image: "/images/illustrations/jingwei-ke-unsplash-lake.jpg"
+featured_image: "/images/illustrations/a-chosen-soul-unsplash-abstractcyan1.jpg"
 ---
 
 

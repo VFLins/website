@@ -1,5 +1,5 @@
 +++
 title = "Blog"
-featured_image = "images/illustrations/arisa-chattasa-unsplash-papers.jpg"
+featured_image = "images/illustrations/steve-johnson-Y5CAliOsN9E-unsplash.jpg"
 +++
 
