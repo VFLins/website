@@ -22,34 +22,36 @@ pre code {
 blockquote.alert {
   background-color: #e0e0e0;
 }
-
-/*callout-success*/
+/*callout: success*/
 blockquote.alert.alert-success {
   border-left-color: green;
 }
-/*callout-successs: heading*/
-blockquote.alert-success p.alert-heading::before {
-  content: "✅‎"
-}
-blockquote.alert-success p.alert-heading {
-  color: green;
-}
-
-/*callout-warning + callout-pending*/
+/*callout: warning + pending*/
 blockquote.alert.alert-warning,
 blockquote.alert.alert-pending {
   border-left-color: darkgoldenrod;
 }
+
+/*callout-heading*/
+blockquote.alert p.alert-heading::before {
+  margin: 0.5em;
+}
+/*callout-heading: success*/
+blockquote.alert-success p.alert-heading::before {
+  content: "✅"
+}
+blockquote.alert-success p.alert-heading {
+  color: green;
+}
+/*callout-heading: warning + pending*/
+blockquote.alert-warning p.alert-heading::before {
+  content: "⚠️"
+}
+blockquote.alert-pending p.alert-heading::before {
+  content: "🕐"
+}
 blockquote.alert-warning p.alert-heading,
 blockquote.alert-pending p.alert-heading {
   color: darkgoldenrod;
-}
-/*callout-warning: heading*/
-blockquote.alert-warning p.alert-heading::before {
-  content: "⚠️‎"
-}
-/*callout-pending: heading*/
-blockquote.alert-pending p.alert-heading::before {
-  content: "🕐‎"
 }
 
