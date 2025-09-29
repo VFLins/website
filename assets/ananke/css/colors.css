@@ -7,6 +7,13 @@
 div.bg-dark-green {
   background-color: darkslategray;
 }
+/*site header: socials*/
+div.ananke-socials:not([id]) a {
+    color: #ffffffe6;
+}
+div.ananke-socials:not([id]) a:hover {
+    color: #fff;
+}
 
 /*site footer*/
 footer.bg-dark-green {
@@ -20,6 +27,17 @@ a {
 .nested-links a:focus, .nested-links a:hover {
     color: #264d80;
     transition: color .08s ease-in;
+}
+
+/*tables*/
+th {
+  background-color: darkgray;
+  color: #ffffff;
+  padding: 6px;
+  padding: 8px;
+}
+tr:nth-child(even) {
+  background-color: #e0e0e0;
 }
 
 /*code blocks*/

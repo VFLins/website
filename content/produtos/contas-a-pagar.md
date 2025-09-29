@@ -1,5 +1,6 @@
 +++
 title = "Contas a pagar"
+toc = true
 +++
 
 Para manter o negócio em funcionamento, precisamos manter a entrada constante de
@@ -8,8 +9,6 @@ controle das contas à pagar aos nossos fornecedores acaba se tornando um desafi
 vez maior.
 
 <!--more-->
-
-> [!pending] O conteúdo desta página ainda está sendo escrito.
 
 ## Por que é importante?
 
@@ -36,13 +35,24 @@ mais competitivo, ainda mais no mercado atual, em que o pequeno empresário tem,
 vezes, que competir com empresas maiores, então este treinamento pode fazer muito sentido
 para você.
 
-## O que você recebe?
+## O que recebo?
 
-- Treinamento em boas práticas para controle das contas a pagar
-- Treinamento prático no controle de suas contas com _software_ de planilhas
-- Conhecimento de métricas para saúde financeira da sua empresa
-- Implementação prática das boas práticas e acompanhamento
+| Benefício                                                                  | Básico | Avançado | Completo |
+| :---                                                                       | :----: | :------: | :------: |
+| Treinamento em boas práticas para controle das contas a pagar              |   ✅   |    ✅    |    ✅    |
+| Treinamento prático no controle de suas contas com _software_ de planilhas |   ✅   |    ✅    |    ✅    |
+| Conhecimento de métricas para saúde financeira da sua empresa              |        |    ✅    |    ✅    |
+| Implementação das boas práticas com acompanhamento limitado                |        |          |    ✅    |
 
 ## Apenas contas a pagar?
 
+Além das contas a pagar, o controle de contas a receber é igualmente importante, as boas
+práticas e métricas ensinadas em todos os planos **valem igualmente** para o controle das
+contas a receber.
+
+Mas se você trabalha ou quer trabalhar oferecendo vendas "fiado" para os seus clientes,
+talvez você queira dar uma olhada nos planos de [Controle de vendas à ver](./cashd). que
+pode oferecer soluções para ajudar na sua jornada, independentemente de você querer
+deixar de oferecer esta forma de pagamento, ou apenas melhorar o seu nível de controle
+sobre este tipo especial de recebimento.
 
