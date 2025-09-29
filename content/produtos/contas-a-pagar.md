@@ -56,3 +56,6 @@ pode oferecer soluções para ajudar na sua jornada, independentemente de você 
 deixar de oferecer esta forma de pagamento, ou apenas melhorar o seu nível de controle
 sobre este tipo especial de recebimento.
 
+Se você se interessou e deseja entrar em contato, você pode me encontrar em qualquer um
+dos links abaixo, no rodapé desta página.
+

@@ -24,20 +24,22 @@ footer.bg-dark-green {
 a {
   text-decoration: none;
 }
+.nested-links a {
+  color: #52827e;
+}
 .nested-links a:focus, .nested-links a:hover {
-    color: #264d80;
+    color: #21a7a0;
     transition: color .08s ease-in;
 }
 
 /*tables*/
 th {
-  background-color: darkgray;
+  background-color: darkslategray;
   color: #ffffff;
-  padding: 6px;
   padding: 8px;
 }
 tr:nth-child(even) {
-  background-color: #e0e0e0;
+  background-color: #dbeaec;
 }
 
 /*code blocks*/

@@ -11,9 +11,9 @@ concorrentes na região.
 
 > [!pending] O conteúdo desta página ainda está sendo escrito.
 
-[Últimas atualizações](../tag/Cashd) | [Página do projeto](https://github.com/VFLins/cashd)
-
 # Como surgiu o Cashd
+
+[Página do projeto](https://github.com/VFLins/cashd) | [Download](https://github.com/VFLins/cashd/releases/latest)
 
 Este projeto foi idealizado e desenvolvido enquanto trabalhava com o meu pai no comércio
 dele. Trata-se de um comércio de pequeno porte que aceita vender à prazo com base na
