@@ -27,7 +27,7 @@ independentemente de sua área de atuação: varejo, serviços, ou matufatura.
 ## O que recebo?
 
 | Benefício                                                         | Essencial | Avançado | Completo |
-| :---                                                              | :-------: | :------: | :------: |
+| :----                                                             | :-------: | :------: | :------: |
 | Coleta de dados de venda com `nflogic`                            |    ✅     |    ✅    |    ✅    |
 | Produção e apresentação de relatório de lucratividade             |    ✅     |    ✅    |    ✅    |
 | Inclusão de análise econômica conjuntural                         |           |    ✅    |    ✅    |

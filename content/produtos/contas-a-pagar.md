@@ -37,12 +37,12 @@ para você.
 
 ## O que recebo?
 
-| Benefício                                                                  | Básico | Avançado | Completo |
-| :---                                                                       | :----: | :------: | :------: |
-| Treinamento em boas práticas para controle das contas a pagar              |   ✅   |    ✅    |    ✅    |
-| Treinamento prático no controle de suas contas com _software_ de planilhas |   ✅   |    ✅    |    ✅    |
-| Conhecimento de métricas para saúde financeira da sua empresa              |        |    ✅    |    ✅    |
-| Implementação das boas práticas com acompanhamento limitado                |        |          |    ✅    |
+| Benefício                                                                  | Essencial | Avançado | Completo |
+| :----                                                                      | :-------: | :------: | :------: |
+| Treinamento em boas práticas para controle das contas a pagar              |    ✅     |    ✅    |    ✅    |
+| Treinamento prático no controle de suas contas com _software_ de planilhas |    ✅     |    ✅    |    ✅    |
+| Conhecimento de métricas para saúde financeira da sua empresa              |           |    ✅    |    ✅    |
+| Implementação das boas práticas com acompanhamento limitado                |           |          |    ✅    |
 
 ## Apenas contas a pagar?
 
@@ -56,6 +56,6 @@ pode oferecer soluções para ajudar na sua jornada, independentemente de você 
 deixar de oferecer esta forma de pagamento, ou apenas melhorar o seu nível de controle
 sobre este tipo especial de recebimento.
 
-Se você se interessou e deseja entrar em contato, você pode me encontrar em qualquer um
-dos links abaixo, no rodapé desta página.
+Se você se interessou e deseja entrar em contato, você pode [entrar em contato comigo](../contato)
+pelo método que preferir.
 
