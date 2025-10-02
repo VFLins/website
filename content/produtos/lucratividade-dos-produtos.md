@@ -13,6 +13,23 @@ campeões.
 
 ## Por que é importante?
 
+O maior benefício em conhecer os produtos mais lucrativos de sua empresa, caso você tenha
+um comércio ou produção, está na inteligência de alocação dos produtos no estoque ou na
+vitrine. Já no caso de uma empresa de serviços, o benefício está na alocação de recursos,
+veja o por quê:
+
+> [!product] Comércio
+> Alguma coisa
+
+> [!service] Serviços
+> Outra coisa
+
+Conhecer o desempenho de seus produtos e serviços também é uma maneira de compreender os
+desejos de seus clientes, isto vai te capacitar para formular melhor o seu relacionamento
+com o cliente, desde campanhas de marketing e promoções até a oferta de novos produtos.
+
+- melhor conhecimento da própria empresa
+
 ## Para quem é indicado?
 
 Por se tratar de uma análise com nível maior de complexidade, é necessário que a sua
@@ -24,7 +41,7 @@ Além disso, este projeto de análise vai bem para empresários que estão pensa
 **reestruturar ou otimizar a alocação de sua carteira de produtos** ou serviços,
 independentemente de sua área de atuação: varejo, serviços, ou matufatura.
 
-## O que recebo?
+## Como funciona?
 
 | Benefício                                                         | Essencial | Avançado | Completo |
 | :----                                                             | :-------: | :------: | :------: |

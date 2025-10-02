@@ -61,6 +61,12 @@ blockquote.alert.alert-warning,
 blockquote.alert.alert-pending {
   border-left-color: darkgoldenrod;
 }
+/*callout: product + service + analysis*/
+blockquote.alert.alert-product,
+blockquote.alert.alert-service,
+blockquote.alert.alert-analysis {
+  border-left-color: teal;
+}
 
 /*callout-heading*/
 blockquote.alert p.alert-heading::before {
@@ -84,4 +90,18 @@ blockquote.alert-warning p.alert-heading,
 blockquote.alert-pending p.alert-heading {
   color: darkgoldenrod;
 }
-
+/*callout-heading: product + service + analysis*/
+blockquote.alert-product p.alert-heading::before {
+  content: "🛒"
+}
+blockquote.alert-service p.alert-heading::before {
+  content: "🛠️"
+}
+blockquote.alert-analysis p.alert-heading::before {
+  content: "📊"
+}
+blockquote.alert-product p.alert-heading,
+blockquote.alert-service p.alert-heading,
+blockquote.alert-analysis p.alert-heading {
+  color: teal;
+}
