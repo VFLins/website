@@ -19,7 +19,16 @@ vitrine. Já no caso de uma empresa de serviços, o benefício está na alocaç�
 veja o por quê:
 
 > [!product] Comércio
-> Alguma coisa
+> O _score_ de lucratividade de um produto é feito de um componente que mede a velocidade
+> de giro do estoque. Você pode dizer:
+>
+> - Qual é o produto mais lucrativo da sua loja?
+> - Se ele está bem alocado em suas prateleiras e estoque? 
+> - Quanto que a melhoria da eficiência alocativa de seus produtos pode impactar a
+>   lucratividade da loja inteira?
+>
+> Esta análise permite o acesso à métricas de desempenho e ajustes finos de alocação que
+> não seriam possíveis de outra forma.
 
 > [!service] Serviços
 > Outra coisa
