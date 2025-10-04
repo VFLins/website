@@ -31,13 +31,16 @@ veja o por quê:
 > não seriam possíveis de outra forma.
 
 > [!service] Serviços
-> Outra coisa
+> Neste caso, o maior benefício da análise de lucratividade está no suporte à tomada
+> de decisão. Ao conhecer a lucratividade e os componentes da lucratividade de cada
+> serviço prestado, você:
+>
+> - Compreende melhor os desejos de seus clientes;
+> - Toma decisões melhores em campanhas de _marketing_;
+> - Estará mais bem informado sobre a adesão de possíveis novos produtos.
 
-Conhecer o desempenho de seus produtos e serviços também é uma maneira de compreender os
-desejos de seus clientes, isto vai te capacitar para formular melhor o seu relacionamento
-com o cliente, desde campanhas de marketing e promoções até a oferta de novos produtos.
-
-- melhor conhecimento da própria empresa
+Embora a métrica final obtida seja a lucratividade de seus produtos/serviços, esta
+análise permite conhecer alguns aspectos de sua empresa, clientes, e até da concorrência.
 
 ## Para quem é indicado?
 
