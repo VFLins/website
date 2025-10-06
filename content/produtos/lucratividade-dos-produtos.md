@@ -9,8 +9,6 @@ campeões.
 
 <!--more-->
 
-> [!pending] O conteúdo desta página ainda está sendo escrito.
-
 ## Por que é importante?
 
 O maior benefício em conhecer os produtos mais lucrativos de sua empresa, caso você tenha
