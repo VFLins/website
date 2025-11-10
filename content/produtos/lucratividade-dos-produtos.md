@@ -1,6 +1,7 @@
 +++
 title = "Análise de lucratividade dos produtos"
 toc = true
+draft = true
 +++
 
 Não é só a margem de lucro que afeta a lucratividade de um produto, com dados de boa
