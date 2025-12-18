@@ -29,7 +29,15 @@ a {
 }
 .nested-links a:focus, .nested-links a:hover {
     color: #21a7a0;
-    transition: color .08s ease-in;
+    transition: color .1s ease-in;
+}
+
+a:visited.category-link, a.category-link {
+  color: #2f4f4f;
+  transition: color 0.1s ease;
+}
+a:hover.category-link {
+  color: #2b7c7c;
 }
 
 /*tables*/
