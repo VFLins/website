@@ -1,5 +1,5 @@
 +++
-title = "Contas a pagar"
+title = "Como não quebrar vendendo à prazo"
 toc = true
 +++
 
