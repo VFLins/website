@@ -1,6 +1,7 @@
 +++
 title = "Como não quebrar vendendo à prazo"
 toc = true
+categories = ["treinamento"]
 +++
 
 Para manter o negócio em funcionamento, precisamos manter a entrada constante de

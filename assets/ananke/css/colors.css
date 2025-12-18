@@ -63,6 +63,7 @@ blockquote.alert.alert-pending {
 }
 /*callout: product + service + analysis*/
 blockquote.alert.alert-product,
+blockquote.alert.alert-retail,
 blockquote.alert.alert-service,
 blockquote.alert.alert-analysis {
   border-left-color: teal;
@@ -91,7 +92,8 @@ blockquote.alert-pending p.alert-heading {
   color: darkgoldenrod;
 }
 /*callout-heading: product + service + analysis*/
-blockquote.alert-product p.alert-heading::before {
+blockquote.alert-product p.alert-heading::before,
+blockquote.alert-retail p.alert-heading::before {
   content: "🛒"
 }
 blockquote.alert-service p.alert-heading::before {
@@ -101,6 +103,7 @@ blockquote.alert-analysis p.alert-heading::before {
   content: "📊"
 }
 blockquote.alert-product p.alert-heading,
+blockquote.alert-retail p.alert-heading,
 blockquote.alert-service p.alert-heading,
 blockquote.alert-analysis p.alert-heading {
   color: teal;
