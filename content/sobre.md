@@ -1,6 +1,8 @@
-title: Sobre mim
----
-body:
++++
+title = "Sobre mim"
+type = "page"
+menu = "main"
++++
 
 Me chamo _Vitor_, sou de Palmares, cidade do interior de Pernambuco, formado em Ciências Econômicas em
 2022.
