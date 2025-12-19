@@ -13,7 +13,7 @@
     <div class="mw9 ph4-ns w-100 w-70-ns center">
       {{ $n_posts := $.Param "recent_posts_number" | compare.Default 4 }}
 
-      <section class="cf ph2-ns w-100 mw8">
+      <section class="cf ph2-ns w-100 mw9">
         {{/* Range through the first $n_posts items of the section */}}
         {{ range (collections.First $n_posts $section) }}
           <div class="fl w-100 w-50-ns pa2 mb4 relative">
