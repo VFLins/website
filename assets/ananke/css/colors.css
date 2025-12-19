@@ -56,6 +56,12 @@ pre code {
   background-color: #fff;
 }
 
+/*grey bg elements*/
+.bg-light-gray,
+.bg-light-grey {
+  background-color: #e0e0e0;
+}
+
 /*callout*/
 blockquote.alert {
   background-color: #e0e0e0;
