@@ -1,6 +1,7 @@
 +++
-title = "Análise de lucratividade dos produtos"
+title = "Análise de lucratividade e cesta de produtos"
 toc = true
+categories = ["análise"]
 +++
 
 Não é só a margem de lucro que afeta a lucratividade de um produto, com dados de boa qualidade sobre as suas vendas, é possível identificar quais são os seus produtos campeões.
