@@ -6,7 +6,7 @@
     {{ $cover_dimming_class := site.Params.cover_dimming_class | compare.Default "bg-black-60" }}
     <div class="{{ $cover_dimming_class }}">
       {{ partials.Include "site-navigation.html" .}}
-      <div class="pv4 pv6-l ph3 ph4-ns">
+      <div class="pa3 pa4-ns w-100 w-70-ns center">
         <h1 class="f2 f-subheadline-l fw2 white-90 mb0 lh-title">
           {{ .Title | compare.Default .Site.Title }}
         </h1>
