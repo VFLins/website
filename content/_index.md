@@ -17,5 +17,9 @@ Desenvolver a melhor solução para todos, observando todos os impactos promovid
 
 O desenvolvimento humano acompanha o desenvolvimento econômico, nossa contribuição deve influenciar positivamente a sociedade local.
 
+# Cursos e certificados
+
+{{< emphasis-list knowledge >}}
+
 ---
 
