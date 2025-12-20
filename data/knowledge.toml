@@ -5,17 +5,26 @@ topics = [
   "Precificação,",
   "Vendas à prazo,",
   "Acompanhamento do fluxo de caixa,",
-  "Negociação com fornecedores"
+  "Negociação com fornecedores."
+]
+
+[[items]]
+title = "Livros"
+description = "Literatura científica e técnica"
+icon = "book-open.svg"
+topics = [
+  "A Bíblia da Consultoria por Alan Weiss,",
+  "Data Science for Business por Provost e Fawcett.",
 ]
 
 [[items]]
 title = "VAI Academy"
 description = "Ciência de dados na prática (2023)"
-icon = "test-tube-diagonal.svg"
+icon = "test-tube.svg"
 topics = [
   "Tratamento de altas quantidades de dados,",
   "Aprendizado de máquina,",
-  "Apresentações de alto impacto"
+  "Apresentações de alto impacto."
 ]
 
 [[items]]
@@ -26,5 +35,5 @@ topics = [
   "Análise conjuntural econômica,",
   "Entendimento sistemético da empresa,",
   "Análise de eficiência,",
-  "Modelos preditivos"
+  "Modelos preditivos."
 ]
