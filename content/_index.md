@@ -11,7 +11,7 @@ sua empresa.
 
 ## Conhecimentos adquiridos
 
-{{< emphasis-list knowledge >}}
+{{< emphasis-grid knowledge >}}
 
 ---
 
