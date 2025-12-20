@@ -4,20 +4,12 @@ description: "Um especialista para a sua empresa."
 featured_image: "/images/illustrations/a-chosen-soul-unsplash-abstractcyan1.jpg"
 ---
 
+Sou _Vitor_, um consultor de empresas localizado em Palmares, Pernambuco. Você está
+convidado a saber mais [sobre mim](sobre) e sobre [o que eu posso fazer](produtos) pela
+sua empresa.
 
-# Missão
 
-Contribuir com o sucesso de todas as empresas da região, principalmente as que mais precisam
-
-# Valores
-
-Desenvolver a melhor solução para todos, observando todos os impactos promovidos pelo meu trabalho
-
-# Visão 
-
-O desenvolvimento humano acompanha o desenvolvimento econômico, nossa contribuição deve influenciar positivamente a sociedade local.
-
-# Cursos e certificados
+## Conhecimentos adquiridos
 
 {{< emphasis-list knowledge >}}
 

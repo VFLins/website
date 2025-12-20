@@ -12,7 +12,14 @@
     </div>
     <div class="tl">
       <h3 class="f4 fw6 lh-title mv0">{{ .title }}</h3>
-      <p class="f5 lh-copy gray mv1">{{ .description }}</p>
+      <p class="f5 lh-copy gray mv1"><i>{{ .description }}</i></p>
+      {{ if .topics }}
+        <ul class="f5 lh-copy gray mv1">
+        {{ range .topics }}
+          <li>{{ . }}</li>
+        {{ end }}
+        </ul>
+      {{ end }}
     </div>
   </li>
   {{ end }}

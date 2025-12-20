@@ -1,9 +1,30 @@
 [[items]]
-title = "Universidade Federal de Pernambuco"
-description = "Graduado em Ciências Econômicas."
-icon = "graduation-cap.svg"
+title = "Ponto das Variedades"
+description = "Vivência cotidiana com o varejo"
+topics = [
+  "Precificação,",
+  "Vendas à prazo,",
+  "Acompanhamento do fluxo de caixa,",
+  "Negociação com fornecedores"
+]
 
 [[items]]
 title = "VAI Academy"
-description = "Ciência de dados na prática."
+description = "Ciência de dados na prática (2023)"
 icon = "test-tube-diagonal.svg"
+topics = [
+  "Tratamento de altas quantidades de dados,",
+  "Aprendizado de máquina,",
+  "Apresentações de alto impacto"
+]
+
+[[items]]
+title = "Universidade Federal de Pernambuco"
+description = "Ciências Econômicas (2021)"
+icon = "graduation-cap.svg"
+topics = [
+  "Análise conjuntural econômica,",
+  "Entendimento sistemético da empresa,",
+  "Análise de eficiência,",
+  "Modelos preditivos"
+]
