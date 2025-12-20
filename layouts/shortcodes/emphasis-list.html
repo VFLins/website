@@ -1,7 +1,7 @@
 {{ $file := .Get 0 }}
 {{ $data := index .Site.Data $file }}
 
-<ul class="list pl0 mw7 center ph3">
+<ul class="list pl0 center ph3">
   {{ range $data.items }}
   <li class="flex items-start mb4">
     <div class="pr3 flex-shrink-0">
@@ -12,7 +12,7 @@
     </div>
     <div class="tl">
       <h3 class="f4 fw6 lh-title mv0">{{ .title }}</h3>
-      <p class="f6 lh-copy gray mv1">{{ .description }}</p>
+      <p class="f5 lh-copy gray mv1">{{ .description }}</p>
     </div>
   </li>
   {{ end }}

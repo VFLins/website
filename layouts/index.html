@@ -1,5 +1,5 @@
 {{ define "main" }}
-  <article class="pv4-l f4 center lh-copy pa3 pa4-ns w-100 w-70-ns center {{ $.Param "text_color" | compare.Default "mid-gray" }}">
+  <article class="pv4-l f4 center lh-copy pa3 pa4-ns w-100 w-70-ns mw9 center {{ $.Param "text_color" | compare.Default "mid-gray" }}">
     {{ .Content }}
   </article>
 
@@ -10,7 +10,7 @@
   {{ $section_count := len $section }}
 
   {{ if and ($show_recent_posts) (compare.Ge $section_count 1) }}
-    <div class="mw9 ph4-ns w-100 w-70-ns center">
+    <div class="ph4-ns w-100 w-70-ns mw9 enter">
       {{ $n_posts := $.Param "recent_posts_number" | compare.Default 4 }}
 
       <section class="cf ph2-ns w-100 mw9">
