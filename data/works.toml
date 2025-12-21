@@ -1,0 +1,22 @@
+[[items]]
+title = "Software"
+description = "Programas de computador desenvolvidos por mim para acelerar a sua operação"
+icon = "code.svg"
+
+[[items]]
+title = "Análise"
+description = "Projetos analíticos para embasar suas decisões"
+icon = "chart-line.svg"
+url = "categories/análise"
+
+[[items]]
+title = "Treinamento"
+description = "Treinamento empresarial com foco prático no dia-a-dia do empresário"
+icon = "graduation-cap.svg"
+url = "categories/treinamento"
+
+[[items]]
+title = "Implementação de tecnologias"
+description = "Trazendo ganhos de eficiência com ajuda da tecnologia"
+icon = "binary.svg"
+url = "categories/implantação-de-tecnologia"

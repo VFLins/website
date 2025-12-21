@@ -11,7 +11,11 @@
       </span>
     </div>
     <div class="tl">
-      <h3 class="f4 fw6 lh-title mv0">{{ .title }}</h3>
+      {{ if .url }}
+      <h3 class="f4 fw6 lh-title mv0"><a href="{{ .url }}">{{ .title }}</a></h3>
+      {{ else }}
+        <h3 class="f4 fw6 lh-title mv0">{{ .title }}</h3>
+      {{ end }}
       <p class="f5 lh-copy gray mv1"><i>{{ .description }}</i></p>
       {{ if .topics }}
         <ul class="f5 lh-copy gray mv1">

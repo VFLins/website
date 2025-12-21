@@ -10,7 +10,7 @@ topics = [
 
 [[items]]
 title = "Livros"
-description = "Literatura científica e técnica"
+description = "Literatura técnica e científica"
 icon = "book-open.svg"
 topics = [
   "A Bíblia da Consultoria por Alan Weiss,",

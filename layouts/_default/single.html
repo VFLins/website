@@ -14,7 +14,7 @@
           https://gohugo.io/variables/page/#section-variables-and-methods
           */}}
 	  {{ .CurrentSection.Title }} {{ with .GetTerms "categories" }} | {{ range $index, $term := . }}
-	  {{ if $index }}, {{ end }}
+	  {{ if $index }}・ {{ end }}
               <a class="category-link" href="{{ $term.Permalink }}">{{ $term.LinkTitle }}</a>
           {{ end }} {{ end }}
       </aside>
