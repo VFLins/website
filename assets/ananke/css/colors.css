@@ -21,8 +21,19 @@ footer.bg-dark-green {
 }
 
 /*links*/
-a {
+main a, main a:visited {
   text-decoration: none;
+  color: #55918c;
+}
+main a:focus, main a:hover {
+  color: #0c645d;
+  transition: color .1s ease-in;
+}
+a.black, a.black:focus, a.black:hover, a.black:visited {
+  color: black;
+}
+a.ba.b--moon-gray {
+  color: #777777;
 }
 .nested-links a {
   color: #52827e;
