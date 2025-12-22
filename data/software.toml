@@ -1,13 +1,8 @@
 [[cards]]
-title = "Cashd"
-description = "Registre o saldo de caixa das suas vendas em fiado, e tenha mais controle sobre as finanças de seu negócio"
 image = "gh_banner-cashd.png"
+title = "Cashd"
 url = "https://github.com/VFLins/cashd/blob/main/README.md#sobre"
-
-[[cards]]
-title = "Outro"
-description = "Testando os cards"
-
-[[cards]]
-title = "Estou adicionando itens"
-description = "Para testar se a grade funciona adequadamente"
+description = """
+  Registre o saldo de caixa das suas vendas em fiado, e tenha mais controle sobre
+  as finanças de seu negócio.
+"""
