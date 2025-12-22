@@ -2,6 +2,7 @@
 title = "Software"
 description = "Programas de computador desenvolvidos por mim para acelerar a sua operação"
 icon = "code.svg"
+url = "software"
 
 [[items]]
 title = "Análise"

@@ -1,0 +1,31 @@
+{{ $file := .Get 0 }}
+{{ $data := index .Site.Data $file }}
+
+<div class="cf mw9 center pa3">
+  <div class="flex flex-wrap na2">
+    {{/* Mudança aqui: acessamos .cards em vez de iterar direto no arquivo */}}
+    {{ range $data.cards }} 
+    <div class="fl w-100 w-50-ns pa2">
+      <article class="br2 ba b--black-10 mv4 h-100 bg-white shadow-4">
+        {{ if .image }}
+          <img src="{{ (printf "images/%s" .image) | relURL }}" 
+               class="db w-100 br2 br--top" 
+               alt="{{ .title }}" 
+               style="height: 200px; object-fit: cover;">
+        {{ end }}
+        
+        <div class="pa3 ph4-ns pb3-ns tc">
+          {{ if .url }}
+            <h1 class="f4 tl f3-ns mv0 fw6"><a href="{{ .url }} target='__blank' rel='noopener noreferrer'">{{ .title }}</a></h1>
+          {{ else }}
+            <h1 class="f4 tl f3-ns mv0 fw6">{{ .title }}</h1>
+          {{ end }}
+          <p class="f6 tl lh-copy measure center mt2 mid-gray">
+            {{ .description }}
+          </p>
+        </div>
+      </article>
+    </div>
+    {{ end }}
+  </div>
+</div>
