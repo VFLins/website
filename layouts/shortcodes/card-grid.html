@@ -5,7 +5,7 @@
   <div class="flex flex-wrap na2">
     {{/* Mudança aqui: acessamos .cards em vez de iterar direto no arquivo */}}
     {{ range $data.cards }} 
-    <div class="fl w-100 w-50-ns pa2">
+    <div class="fl w-100 w-50-ns pa2 grow">
       <article class="br2 ba b--black-10 mv4 h-100 bg-white shadow-4">
         {{ if .image }}
           <img src="{{ (printf "images/%s" .image) | relURL }}" 
@@ -16,7 +16,7 @@
         
         <div class="pa3 ph4-ns pb3-ns tc">
           {{ if .url }}
-            <h1 class="f4 tl f3-ns mv0 fw6"><a href="{{ .url }} target='__blank' rel='noopener noreferrer'">{{ .title }}</a></h1>
+            <h1 class="f4 tl f3-ns mv0 fw6"><a href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .title }}</a></h1>
           {{ else }}
             <h1 class="f4 tl f3-ns mv0 fw6">{{ .title }}</h1>
           {{ end }}
