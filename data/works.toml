@@ -1,23 +1,39 @@
-[[items]]
+[[cards]]
+image = "illustrations/andras-vas-unsplash-notebook.jpg"
 title = "Software"
-description = "Programas de computador desenvolvidos por mim para acelerar a sua operação"
+description = """
+Programas de computador desenvolvidos por mim para melhorar a sua qualidade de vida como
+dono de empresa.
+"""
 icon = "code.svg"
 url = "software"
 
-[[items]]
+[[cards]]
+image = "illustrations/alex-litvin-unsplash-presentation.jpg"
 title = "Análise"
-description = "Projetos analíticos para embasar suas decisões"
+description = """
+Projetos analíticos para colocar você em vantagem na competição, e dominar suas contas,
+elevar sua relação com clientes para outro nível.
+"""
 icon = "chart-line.svg"
 url = "categories/análise"
 
-[[items]]
+[[cards]]
+image = "illustrations/arisa-chattasa-unsplash-papers.jpg"
 title = "Treinamento"
-description = "Treinamento empresarial com foco prático no dia-a-dia do empresário"
+description = """
+Treinamento empresarial com foco prático no dia-a-dia do empresário, abordando aspectos
+específicos tanto da operação, quanto do planejamento em minicursos.
+"""
 icon = "graduation-cap.svg"
 url = "categories/treinamento"
 
-[[items]]
+[[cards]]
+image = "illustrations/scott-rodgerson-unsplash-wires.jpg"
 title = "Implementação de tecnologias"
-description = "Trazendo ganhos de eficiência com ajuda da tecnologia"
+description = """
+Alguns ganhos de eficiência e qualidade de vida são são possíveis quando incorporamos
+tecnologia no nosso dia a dia.
+"""
 icon = "binary.svg"
 url = "categories/implantação-de-tecnologia"
