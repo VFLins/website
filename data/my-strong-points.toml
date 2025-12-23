@@ -1,0 +1,18 @@
+[[items]]
+title = "Vivência no varejo"
+description = "+5 anos de atuação no varejo de Palmares"
+
+[[items]]
+title = "Conhecimento teórico"
+description = "Economista formado na Universidade Federal de Pernambuco"
+icon = "graduation-cap.svg"
+
+[[items]]
+title = "Conhecimento prático"
+description = "Conhecimento analítico e técnico em TI"
+icon = "chart-line.svg"
+
+[[items]]
+title = "Impacto comprovado"
+description = "Impacto comprovado implementando mudanças significativas"
+icon = "test-tube.svg"
