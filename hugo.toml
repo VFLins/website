@@ -1,7 +1,7 @@
 baseURL = "https://vflins.github.io/"
 languageCode = "pt_BR"
 defaultContentLanguage = "pt-br"
-title = "Vitor F. Lins"
+title = "Vitor Lins"
 theme = ["ananke"]
 sectionPagesMenu = "main"
 enableEmoji = true
