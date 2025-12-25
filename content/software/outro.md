@@ -1,3 +1,0 @@
-+++
-title = "Outro programa"
-+++
