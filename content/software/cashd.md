@@ -1,5 +1,6 @@
 +++
 title = "Cashd"
+omit_header_text = true
 featured_image = "images/gh_banner-cashd.png"
 toc = true
 +++
