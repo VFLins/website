@@ -14,6 +14,11 @@ More info here: https://github.com/theNewDynamic/gohugo-theme-ananke/releases/ta
         </div>
       {{ end }}
       <div class="blah w-100{{ if $featured_image }} w-60-ns {{ compare.Conditional (compare.Eq $.Site.Language.LanguageDirection "rtl") "pr3-ns" "pl3-ns" }}{{ end }}">
+		{{with .CurrentSection.Title }}<span class="f6 db pb3 gray"><b>{{ . }}</b>{{end}}
+          {{ with .Params.categories }}|{{ range $index, $category := . }}
+            {{ if $index }}・ {{ end }}{{ . | title}}
+          {{ end }} {{ end }}
+        </span>
         <h1 class="f3 mt0 lh-title">
           <a href="{{.RelPermalink}}" class="link">
             {{ .Title }}
