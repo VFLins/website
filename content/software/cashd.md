@@ -3,6 +3,7 @@ title = "Cashd"
 omit_header_text = true
 featured_image = "images/gh_banner-cashd.png"
 toc = true
+type = "page"
 +++
 
 Registre o saldo de caixa das suas vendas em fiado, e tenha mais controle sobre

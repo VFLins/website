@@ -1,7 +1,9 @@
 +++
-title = "Implementação de boas práticas em controle de contas a pagar"
+title = "Boas práticas em controle de contas a pagar"
+omit_header_text = true
 toc = true
 categories = ["treinamento", "implantação de tecnologia"]
+featured_image = "images/illustrations/christine-sandu-unsplash-spreadsheets.jpg"
 +++
 
 Para manter o negócio em funcionamento, precisamos manter a entrada constante de mercadorias para insumo ou revenda. Conforme a nossa empresa vai aumentando, manter o controle das contas à pagar aos nossos fornecedores acaba se tornando um desafio cada vez maior.

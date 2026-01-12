@@ -1,23 +1,23 @@
 [[items]]
 title = "Windows"
 description = "Para qualquer sistema Windows, mas testado apenas no Windows 11"
-url = "https://github.com/VFLins/cashd/releases/download/v0.3.2post1/cashd-windows-installer-x86_64.zip"
+url = "https://github.com/VFLins/cashd/releases/download/v0.3.4/cashd-windows-installer-x86_64.zip"
 icon = "windows-solid.svg"
 
 [[items]]
 title = "Linux .deb"
 description = "Para sistemas baseados em Debian ou Ubuntu"
-url = "https://github.com/VFLins/cashd/releases/download/v0.3.2post1/cashd-deb-installer-x86_64.zip"
+url = "https://github.com/VFLins/cashd/releases/download/v0.3.4/cashd-deb-installer-x86_64.zip"
 icon = "linux.svg"
 
 [[items]]
 title = "Linux .rpm"
 description = "Para sistemas baseados em RPM (Fedora, CentOS, OpenSUSE, entre outros)"
-url = "https://github.com/VFLins/cashd/releases/download/v0.3.2post1/cashd-rpm-installer-x86_64.zip"
+url = "https://github.com/VFLins/cashd/releases/download/v0.3.4/cashd-rpm-installer-x86_64.zip"
 icon = "linux.svg"
 
 [[items]]
 title = "Código fonte"
 description = "Código fonte contendo todas as distribuições do Cashd"
-url = "https://github.com/VFLins/cashd/archive/refs/tags/v0.3.2post1.zip"
+url = "https://github.com/VFLins/cashd/archive/refs/tags/v0.3.4post1.zip"
 icon = "code.svg"
