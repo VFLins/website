@@ -51,6 +51,27 @@ a:hover.category-link {
   color: #2b7c7c;
 }
 
+/*teal tint on images*/
+.duotone-teal {
+    background-color: #55918c; /* Turquesa (DarkTurquoise) */
+    display: inline-block;
+    line-height: 0;
+  border-radius: 6px;
+}
+.duotone-teal img {
+  filter: grayscale(100%) contrast(120%); /* Primeiro fica P&B */
+  mix-blend-mode: multiply;              /* Mistura com o fundo turquesa */
+  display: block;
+  width: 100%;
+  border-radius: 6px;
+  transition: filter 0.3s ease-in;
+}
+.duotone-teal:hover img {
+  filter: none;
+  mix-blend-mode: normal;
+  transition: filter 0.3s ease-in;
+}
+
 /*tables*/
 th {
   background-color: darkslategray;

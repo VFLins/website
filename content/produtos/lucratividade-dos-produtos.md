@@ -1,5 +1,7 @@
 +++
 title = "Análise de lucratividade e cesta de produtos"
+featured_image = "images/illustrations/linn-legros-unsplash-catbasekts.jpg"
+omit_header_text = true
 toc = true
 categories = ["análise"]
 +++

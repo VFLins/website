@@ -1,5 +1,7 @@
 +++
 title = "Análise de saúde financeira"
+featured_image = "images/illustrations/owen-beard-unsplash-xraynice.jpg"
+omit_header_text = true
 toc = true
 categories = ["análise"]
 +++

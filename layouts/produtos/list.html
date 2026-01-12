@@ -9,7 +9,7 @@
     <aside class="flex-ns mt5 flex-wrap justify-around">
       {{ range .Paginator.Pages }}
         <div class="w-100 relative pa3">
-          {{ .Render "summary-with-image" }}
+          {{ partial "summary-with-image.html" . }}
         </div>
       {{ end }}
     </aside>
