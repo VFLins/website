@@ -64,12 +64,12 @@ a:hover.category-link {
   display: block;
   width: 100%;
   border-radius: 6px;
-  transition: filter 0.3s ease-in;
+  transition: filter 0.3s linear;
 }
 .duotone-teal:hover img {
   filter: none;
   mix-blend-mode: normal;
-  transition: filter 0.3s ease-in;
+  transition: filter 0.3s ease-out;
 }
 
 /*tables*/

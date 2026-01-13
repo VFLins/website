@@ -1,5 +1,7 @@
 +++
 title = "Como não quebrar vendendo à prazo"
+featured_image = "images/illustrations/loriane-magnenat-unsplash-bird.jpg"
+omit_header_text = true
 toc = true
 categories = ["treinamento"]
 +++

@@ -1,5 +1,7 @@
 +++
-title = "Implementação de software para controle de fiado"
+title = "Software para controle de fiado"
+omit_header_text = true
+featured_image = "images/gh_banner-cashd.png"
 toc = true
 categories = ["implantação de tecnologia"]
 +++
