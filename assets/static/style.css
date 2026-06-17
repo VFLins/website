@@ -1,9 +1,58 @@
+/* Anton - Regular (400): titles */
 @font-face {
-  font-family: 'Roboto Slab';
-  src: url('/static/fonts/SlabRobotoSlab-VariableFont_wght.ttf') format('ttf');
-  font-weight: 100 900; /* Range of weights */
+  font-family: 'Anton';
   font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/anton/v25/1Ptgg87LSu5q13v96REF.woff2') format('woff2');
 }
+
+/* Space Mono - Regular (400): headings and emphasis */
+@font-face {
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/spacemono/v13/i7OMIF9tz9L07K2V9b_y82Qi87ic8g.woff2') format('woff2');
+}
+
+/* Space Mono - Bold (700): headings */
+@font-face {
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/spacemono/v13/i7ONIF9tz9L07K2V9b_y48bI37K38uY6.woff2') format('woff2');
+}
+
+/* Space Grotesk - Regular (400): headings */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/spacegrotesk/v16/V8mDoQDjQSkFtoMM3T6r8E7mF71Q-gOoraIA_I5EdfA.woff2') format('woff2');
+}
+
+/* Space Grotesk - Bold (700): headings */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/spacegrotesk/v16/V8mDoQDjQSkFtoMM3T6r8E7mF71Q-gOoraIA_I5UdfA.woff2') format('woff2');
+}
+
+/* clear-sans-400 - latin: body */
+@font-face {
+  font-family: 'Clear Sans';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/clear-sans@latest/latin-400-normal.woff2) format('woff2'),
+       url(https://cdn.jsdelivr.net/fontsource/fonts/clear-sans@latest/latin-400-normal.woff) format('woff');
+}
+
 
 :root {
     --page-bg: #212729;

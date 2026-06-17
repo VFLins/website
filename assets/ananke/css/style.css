@@ -1,0 +1,50 @@
+/* clear-sans-400 - latin: body */
+@font-face {
+  font-family: 'Clear Sans';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/clear-sans@latest/latin-400-normal.woff2) format('woff2'),
+       url(https://cdn.jsdelivr.net/fontsource/fonts/clear-sans@latest/latin-400-normal.woff) format('woff');
+}
+
+/* Theme variables
+:root {
+    --page-bg: #212729;
+    --page-dark-bg: #1a1d1f;
+    --page-light-bg: #183034;
+    --page-text: #8db2b0;
+    --link-color: #84b3b0;
+    --link-hover-color: #2f8683;
+    --header-text: #20B2AA;
+    --header-bg: #293f46;
+    --success-text: #84b397;
+    --success-bg: #23352d;
+    --faliure-text: #b38484;
+    --faliure-bg: #352323;
+}
+
+body.light-theme {
+    --page-bg: #ffffff;
+    --page-dark-bg: #e9f2f1;
+    --page-light-bg: #dbeaec;
+    --page-text: #47827d;
+    --link-color: #52827e;
+    --link-hover-color: #21a7a0;
+    --header-text: darkslategray;
+    --header-bg: #e9f2f1;
+    --success-text: #496133;
+    --success-bg: #d9f5d5;
+    --faliure-text: #8b4848;
+    --faliure-bg: #e5c5c5;
+}
+*/
+
+h1.f-subheadline-l {
+  font-family: 'Space Grotesk';
+  font-weight: bold;
+}
+
+p {
+  font-family: 'Clear Sans';
+}
