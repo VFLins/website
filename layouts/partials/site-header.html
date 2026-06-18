@@ -8,7 +8,7 @@
       {{ partials.Include "site-navigation.html" .}}
       <div class="pa3 pa4-ns w-100 w-70-ns mw9 center">
         <h1 class="f2 f-subheadline-l fw2 white-90 mb0 lh-title">
-          {{ .Title | compare.Default .Site.Title }}
+            {{ .Title | compare.Default .Site.Title }}
         </h1>
         {{ with .Params.description }}
           <h2 class="fw1 f5 f3-l white-80 center mt3">

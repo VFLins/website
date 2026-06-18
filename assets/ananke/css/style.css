@@ -1,13 +1,3 @@
-/* clear-sans-400 - latin: body */
-@font-face {
-  font-family: 'Clear Sans';
-  font-style: normal;
-  font-display: swap;
-  font-weight: 400;
-  src: url(https://cdn.jsdelivr.net/fontsource/fonts/clear-sans@latest/latin-400-normal.woff2) format('woff2'),
-       url(https://cdn.jsdelivr.net/fontsource/fonts/clear-sans@latest/latin-400-normal.woff) format('woff');
-}
-
 /* Theme variables
 :root {
     --page-bg: #212729;
@@ -40,11 +30,22 @@ body.light-theme {
 }
 */
 
+/*site header: title*/
 h1.f-subheadline-l {
   font-family: 'Space Grotesk';
   font-weight: bold;
+  font-size: 3rem;
+}
+/*site header: description*/
+h2.white-80 {
+  font-family: 'Space Mono';
+  font-size: 1.2rem;
 }
 
 p {
-  font-family: 'Clear Sans';
+  font-family: Inter;
+}
+
+li {
+  font-family: Inter;
 }
