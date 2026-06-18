@@ -1,6 +1,7 @@
 /*site logo*/
 .logo-width {
   max-width: 11rem;
+  margin-top: 2px; /*adjust logo vertical alignment*/
 }
 
 /*table of contents*/

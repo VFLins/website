@@ -1,6 +1,7 @@
 /*dimming class*/
-.bg-teal-50 {
-  background-color: #00808080;
+.bg-teal-80 {
+  background-color: #008080cc;
+  backdrop-filter: blur(10px);
 }
 
 /*site body*/

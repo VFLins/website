@@ -8,7 +8,7 @@ enableEmoji = true
 
 [params]
 site_logo = "images/icons/logo-vitor-symbolic-dark.svg"
-cover_dimming_class = "bg-teal-50"
+cover_dimming_class = "bg-teal-80"
 date_format = ":date_full"
 locale = "pt_BR"
 read_more_copy = "continue lendo"
