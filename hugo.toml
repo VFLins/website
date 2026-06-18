@@ -28,17 +28,14 @@ networks = ["email", "facebook", "instagram", "linkedin", "whatsapp"]
 username = "vflins"
 
 [params.ananke.social.instagram]
-username = "vitorkon"
-
-[params.ananke.social.medium]
-username = "vflins"
+username = "vitorlins.consultor"
 
 [params.ananke.social.github]
 username = "VFLins"
 
 [params.ananke.social.follow]
 new_window_icon = true
-networks = ["instagram", "medium", "github"]
+networks = ["instagram", "github"]
 
 [markup.highlight]
 style = "trac"

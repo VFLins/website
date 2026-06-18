@@ -30,6 +30,14 @@ body.light-theme {
 }
 */
 
+/*site navigation: item*/
+.nav-item {
+  font-size: medium;
+  margin-right: inherit;
+  font-weight: 500;
+  text-transform: lowercase;
+}
+
 /*site header: title*/
 h1.f-subheadline-l {
   font-family: 'Space Grotesk';
