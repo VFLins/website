@@ -1,4 +1,4 @@
-<div class="w-100 mb4 nested-copy-line-height relative">
+<div class="w-100 mb4 relative">
   <div class="mb3 pa4 gray overflow-hidden bg-white br3 ba b--teal-700">
     {{with .CurrentSection.Title }}
     <span class="summary-overline f6 db"><b>{{ . }}</b>
@@ -8,13 +8,13 @@
       {{ end }} {{ end }}
     </span>
     <h1 class="summary-title f3 near-black">
-      <a href="{{ .RelPermalink }}" class="link black dim">
+      <a href="{{ .RelPermalink }}">
         {{ .Title }}
       </a>
     </h1>
     <div class="summary-content nested-links f5 lh-copy nested-copy-line-height">
       {{ .Summary }}
     </div>
-    <a href="{{.RelPermalink}}" class="summary-readmore ba br2 dib f7 hover-bg-moon-gray link mt2 ph2 pv1">{{ $.Param "read_more_copy" | compare.Default (lang.Translate "readMore") }}</a>
+    <a href="{{.RelPermalink}}" class="summary-readmore ba br2 dib f7 link mt2 ph2 pv1">{{ $.Param "read_more_copy" | compare.Default (lang.Translate "readMore") }}</a>
   </div>
 </div>
