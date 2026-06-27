@@ -19,7 +19,7 @@
           {{ end }} {{ end }}
       </aside>
       {{- partials.IncludeCached "social/share.html" . . -}}
-      <h1 class="f1 athelas mt3 mb1">
+      <h1 class="f1 mt3 mb1">
         {{- .Title -}}
       </h1>
       {{ with .Params.author | compare.Default .Site.Params.author }}
@@ -53,7 +53,7 @@
         <span class="f6 mv4 dib tracked"> - {{ lang.Translate "wordCount" .WordCount }} </span>
       {{ end }}
     </header>
-    <div class="nested-copy-line-height lh-copy {{ $.Param "post_content_classes"  | compare.Default "serif"}} f4 nested-links {{ $.Param "text_color" | compare.Default "mid-gray" }} {{ compare.Conditional (compare.Eq $.Site.Language.LanguageDirection "rtl") "pl4-l" "pr4-l" }} w-two-thirds-l">
+    <div class="nested-copy-line-height lh-copy f4 nested-links {{ $.Param "text_color" | compare.Default "mid-gray" }} {{ compare.Conditional (compare.Eq $.Site.Language.LanguageDirection "rtl") "pl4-l" "pr4-l" }} w-two-thirds-l">
       {{- .Content -}}
       {{- partials.Include "tags.html" . -}}
       <div class="mt6 instapaper_ignoref">

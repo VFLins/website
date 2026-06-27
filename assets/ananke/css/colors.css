@@ -29,7 +29,7 @@ footer.bg-dark-green {
 /*links*/
 main a, main a:visited {
   text-decoration: none;
-  color: #55918c;
+  color: var(--teal-700);
 }
 main a:focus, main a:hover {
   color: #0c645d;
