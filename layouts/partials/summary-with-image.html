@@ -14,12 +14,12 @@ More info here: https://github.com/theNewDynamic/gohugo-theme-ananke/releases/ta
         </div>
       {{ end }}
       <div class="blah w-100{{ if $featured_image }} w-60-ns {{ compare.Conditional (compare.Eq $.Site.Language.LanguageDirection "rtl") "pr3-ns" "pl3-ns" }}{{ end }}">
-		{{with .CurrentSection.Title }}<span class="f6 db pb3 gray"><b>{{ . }}</b>{{end}}
+		{{with .CurrentSection.Title }}<span class="summary-overline f6 db pb3 gray"><b>{{ . }}</b>{{end}}
           {{ with .Params.categories }}|{{ range $index, $category := . }}
             {{ if $index }}・ {{ end }}{{ . | title}}
           {{ end }} {{ end }}
         </span>
-        <h1 class="f3 mt0 lh-title">
+        <h1 class="f3 mt0 lh-title summary-title">
           <a href="{{.RelPermalink}}" class="link">
             {{ .Title }}
             </a>
@@ -28,9 +28,9 @@ More info here: https://github.com/theNewDynamic/gohugo-theme-ananke/releases/ta
           {{ .Summary }}
         </div>
         {{ with .Params.author | compare.Default .Site.Params.author }}
-          <p class="f6 lh-copy mv0">By {{ . }}</p>
+          <p class="f6 lh-copy mv0">Por {{ . }}</p>
         {{- end -}}
-        <a href="{{.RelPermalink}}" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">{{ $.Param "read_more_copy" | compare.Default (lang.Translate "readMore") }}</a>
+        <a href="{{.RelPermalink}}" class="summary-readmore br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">{{ $.Param "read_more_copy" | compare.Default (lang.Translate "readMore") }}</a>
       </div>
     </div>
   </div>

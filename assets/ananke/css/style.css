@@ -30,11 +30,19 @@ body.light-theme {
 }
 */
 
+:root {
+  --teal-400: #32d6d0;
+  --teal-500: #12bbb7;
+  --teal-700: #008181;
+}
+
+
 /*site navigation: item*/
 .nav-item {
-  font-size: medium;
-  margin-right: inherit;
   font-weight: 500;
+  font-size: 16px;
+  font-family: 'Space Mono';
+  margin-right: inherit;
   text-transform: lowercase;
 }
 
@@ -42,18 +50,42 @@ body.light-theme {
 h1.f-subheadline-l {
   font-family: 'Space Grotesk';
   font-weight: bold;
-  font-size: 3rem;
+  font-size: 60px;
+  text-transform: uppercase;
 }
 /*site header: description*/
 h2.white-80 {
   font-family: 'Space Mono';
-  font-size: 1.2rem;
+  font-size: 20px;
 }
 
 p {
   font-family: Inter;
+  font-size: 16px;
 }
 
 li {
   font-family: Inter;
+}
+
+.summary-overline {
+  font-family: 'Space Mono';
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+.summary-title {
+  font-family: 'Space Mono';
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 110%;
+}
+
+.summary-readmore {
+  color: white;
+  background-color: var(--teal-500);
+}
+.summary-readmore:hover {
+  color: white;
+  background-color: var(--teal-700);
 }
