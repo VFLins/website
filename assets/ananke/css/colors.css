@@ -160,3 +160,8 @@ blockquote.alert-service p.alert-heading,
 blockquote.alert-analysis p.alert-heading {
   color: teal;
 }
+
+/* Custom tachyons-styled classes */
+.b--teal-700 {
+  border-color: var(--teal-700)
+}
