@@ -6,32 +6,36 @@
   <header class="{{ $featured_image_class }}" style="background-image: url('{{ $featured_image }}');">
     <div>
       {{ partials.Include "site-navigation.html" .}}
-      <div class="pa3 pa4-ns w-100 w-70-l mw9 center">
-        <h1 class="f2 pt6 f-subheadline-l fw2 white-90 mb0 lh-title">
+      {{ if not .IsHome }}
+        <div class="pa3 pa4-ns w-100 w-70-l mw9 center">
+          <h1 class="f2 pt6 f-subheadline-l fw2 white-90 mb0 lh-title">
             {{ .Title | compare.Default .Site.Title }}
-        </h1>
-        {{ with .Params.description }}
-          <h2 class="fw1 f5 f3-l white-80 center mt3">
-            {{ . }}
-          </h2>
-        {{ end }}
-      </div>
+          </h1>
+          {{ with .Params.description }}
+            <h2 class="fw1 f5 f3-l white-80 center mt3">
+              {{ . }}
+            </h2>
+          {{ end }}
+        </div>
+      {{ end }}
     </div>
   </header>
 {{ else }}
   <header>
     <div class="{{ .Site.Params.background_color_class | compare.Default "bg-black" }}">
       {{ partials.Include "site-navigation.html" . }}
-      <div class="pa3 pa4-ns w-100 w-70-l center ">
-        <h1 class="f2 pt6 f-subheadline-l fw2 silver mb0 lh-title white word-wrap">
-          {{ .Title | compare.Default .Site.Title }}
-        </h1>
-        {{ with .Params.description }}
-          <h2 class="fw1 f5 f3-l white-80 center lh-copy mt3 mb4">
-            {{ . }}
-          </h2>
-        {{ end }}
-      </div>
+      {{ if not .IsHome }}
+        <div class="pa3 pa4-ns w-100 w-70-l center ">
+          <h1 class="f2 pt6 f-subheadline-l fw2 silver mb0 lh-title white word-wrap">
+            {{ .Title | compare.Default .Site.Title }}
+          </h1>
+          {{ with .Params.description }}
+            <h2 class="fw1 f5 f3-l white-80 center lh-copy mt3 mb4">
+              {{ . }}
+            </h2>
+          {{ end }}
+        </div>
+      {{ end }}
     </div>
   </header>
 {{ end }}
