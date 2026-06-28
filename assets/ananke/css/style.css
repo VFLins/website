@@ -30,12 +30,6 @@ body.light-theme {
 }
 */
 
-:root {
-  --teal-400: #32d6d0;
-  --teal-500: #12bbb7;
-  --teal-700: #008181;
-}
-
 
 h1 {
   font-family: 'Space Grotesk';
@@ -78,6 +72,7 @@ h1.f-subheadline-l {
   font-weight: bold;
   font-size: 60px;
   text-transform: uppercase;
+  word-break: break-word;
 }
 
 /*site header: description*/
@@ -97,6 +92,7 @@ h2.white-80 {
   font-weight: normal;
   font-size: 32px;
   line-height: 110%;
+  word-break: break-word;
 }
 
 .summary-content {

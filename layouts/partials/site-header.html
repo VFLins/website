@@ -2,8 +2,8 @@
 {{ if $featured_image }}
   {{/* Trimming the slash and adding absURL make sure the image works no matter where our site lives */}}
   {{ $featured_image_class := site.Params.featured_image_class | compare.Default "cover bg-top" }}
+  {{ $cover_dimming_class := .Params.cover_dimming_class | compare.Default "bg-black-60" }}
   <header class="{{ $featured_image_class }}" style="background-image: url('{{ $featured_image }}');">
-    {{ $cover_dimming_class := site.Params.cover_dimming_class | compare.Default "bg-black-60" }}
     <div>
       {{ partials.Include "site-navigation.html" .}}
       <div class="pa3 pa4-ns w-100 w-70-ns mw9 center">
@@ -20,10 +20,10 @@
   </header>
 {{ else }}
   <header>
-    <div class="pb3-m pb6-l {{ .Site.Params.background_color_class | compare.Default "bg-black" }}">
+    <div class="{{ .Site.Params.background_color_class | compare.Default "bg-black" }}">
       {{ partials.Include "site-navigation.html" . }}
-      <div class="pa3 pa4-ns w-100 w-70-ns center">
-        <h1 class="f2 f-subheadline-l fw2 light-silver mb0 lh-title">
+      <div class="pa3 pa4-ns w-100 w-70-ns center ">
+        <h1 class="f2 pt6 f-subheadline-l fw2 silver mb0 lh-title white word-wrap">
           {{ .Title | compare.Default .Site.Title }}
         </h1>
         {{ with .Params.description }}
