@@ -6,7 +6,7 @@
   <header class="{{ $featured_image_class }}" style="background-image: url('{{ $featured_image }}');">
     <div>
       {{ partials.Include "site-navigation.html" .}}
-      <div class="pa3 pa4-ns w-100 w-70-ns mw9 center">
+      <div class="pa3 pa4-ns w-100 w-70-l mw9 center">
         <h1 class="f2 pt6 f-subheadline-l fw2 white-90 mb0 lh-title">
             {{ .Title | compare.Default .Site.Title }}
         </h1>
@@ -22,7 +22,7 @@
   <header>
     <div class="{{ .Site.Params.background_color_class | compare.Default "bg-black" }}">
       {{ partials.Include "site-navigation.html" . }}
-      <div class="pa3 pa4-ns w-100 w-70-ns center ">
+      <div class="pa3 pa4-ns w-100 w-70-l center ">
         <h1 class="f2 pt6 f-subheadline-l fw2 silver mb0 lh-title white word-wrap">
           {{ .Title | compare.Default .Site.Title }}
         </h1>
