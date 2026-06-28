@@ -7,19 +7,28 @@
 
 /*gradients*/
 .bg-gradient-teal-white {
-  background: white;
-  background: linear-gradient(
-    185deg,
-    white 0%,
-    rgba(116, 207, 207, 1) 25%,
-    rgba(0, 129, 129, 1) 100%
-  );
+  background: #ffffcf;
+  background: linear-gradient(to top right, #001429, #004141, #008181, #84e6e8);
+  background-size: 400%;
+  background-position: 0% 50%;
+  animation: hshift 18s infinite alternate;
 }
+
+@keyframes hshift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 
 /*dimming class*/
 .bg-teal-80 {
   background-color: #008080cc;
   backdrop-filter: blur(10px);
+}
+
+.bg-darkteal {
+  background-color: #004141;
 }
 
 /*site body*/
