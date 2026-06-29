@@ -1,0 +1,4 @@
+{{ if .Site.Params.favicon }}
+<link rel="shortcut icon" type="image/x-icon" href="{{ urls.RelURL ($.Site.Params.favicon) }}.ico" sizes="any">
+<link rel="shortcut icon" type="image/svg+xml" href="{{ urls.RelURL ($.Site.Params.favicon) }}.svg">
+{{ end }}
