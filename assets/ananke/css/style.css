@@ -138,3 +138,7 @@ h2.white-80 {
   background-color: var(--teal-700);
 }
 
+/*call-to-action block occupying all page height*/
+.cta-block-ph {
+  height: calc(100vh - 200px);
+}

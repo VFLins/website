@@ -2,6 +2,7 @@ css_class = "bg-gradient-1 white"
 title = "Está pronto para o sucesso?"
 description = "Entre em contato comigo, e vamos desbloquear o potencial da sua empresa."
 image = "images/icons/rocket_dark.png"
+page_height = true
 
 [button]
 css_class = "cta-button-dark"
