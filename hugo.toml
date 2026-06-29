@@ -1,4 +1,5 @@
 baseURL = "https://vflins.github.io/"
+favicon = "/favicon.svg"
 languageCode = "pt_BR"
 defaultContentLanguage = "pt-br"
 title = "Vitor Lins"
