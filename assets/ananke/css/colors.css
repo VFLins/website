@@ -30,7 +30,7 @@
 
 /*dimming class*/
 .bg-teal-80 {
-  background-color: #008080cc;
+  background-color: #004545cc;
   backdrop-filter: blur(10px);
 }
 
@@ -61,11 +61,11 @@ footer.bg-dark-green {
 }
 
 /*links*/
-main a, main a:visited {
+a, a:visited {
 text-decoration: none;
 color: var(--teal-700);
 }
-main a:focus, main a:hover {
+a:focus, a:hover {
   color: #0c645d;
   transition: color .1s ease-in;
 }

@@ -1,10 +1,10 @@
 css_class = "bg-gradient-1 white"
-title = "Está pronto para o sucesso?"
-description = "Entre em contato comigo, e vamos desbloquear o potencial da sua empresa."
+title = "Se torne competitivo e relevante"
+description = "Tudo o que você precisa para transformar sua empresa é tecnologia e educação, me mande uma mensagem e vamos discutir o seu futuro."
 image = "images/icons/rocket_dark.png"
 page_height = true
 
 [button]
 css_class = "cta-button-dark"
-text = "Entrar em contato"
+text = "entrar em contato"
 url = "/contato"

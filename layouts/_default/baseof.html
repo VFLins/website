@@ -55,7 +55,7 @@
   </head>
 
   {{- $environment := hugo.Environment | compare.Default "production" -}}
-  <body class="ma0 {{ $.Param "body_classes"  | compare.Default "avenir bg-near-white"}} {{ $environment }}">
+  <body class="ma0 {{ $.Param "body_classes"  | compare.Default "bg-near-white"}} {{ $environment }}">
 
     {{ block "header" . }}{{ partials.Include "site-header.html" .}}{{ end }}
     {{/* Add top paddingpage to avoid clipping with the navbar */}}

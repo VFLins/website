@@ -31,18 +31,37 @@ body.light-theme {
 */
 
 
-h1 {
-  font-family: 'Space Grotesk';
-  font-size: 60px;
+h1, .heading1 {
+  font-family: 'Space Mono';
+  font-weight: bold;
+  font-size: 40px;
   text-transform: uppercase;
 }
 
-h2 {
+h2, .heading2 {
   font-family: 'Space Mono';
-  font-size: 36px;
+  font-size: 32px;
 }
 
-p td {
+h3, .heading3 {
+  font-family: 'Space Mono';
+  font-weight: normal;
+  font-size: 25px;
+}
+
+h4, .heading4 {
+  font-family: 'Space Mono';
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.d3 {
+  font-family: Anton;
+  font-weight: normal;
+  font-size: 48px;
+}
+
+p, p td {
   font-family: Inter;
   font-size: 16px;
 }
@@ -58,8 +77,9 @@ code {
 
 
 /*site navigation: item*/
-.nav-item {
+li.nav-item a {
   font-family: 'Space Mono';
+  color: #ffffffd9;
   font-weight: normal;
   font-size: 18px;
   margin-right: inherit;
@@ -116,29 +136,30 @@ h2.white-80 {
 
 
 /*call-to-action elements*/
-.cta-button-dark {
+a.cta-button-dark {
   font-family: 'Space Mono';
   font-weight: bold;
-  color: var(--teal-700);
-  background-color: white;
+  border: solid 1px white;
+  color: white;
 }
-.cta-button-dark:hover {
+a.cta-button-dark:hover {
   color: black;
   background-color: var(--teal-400);
+  border: solid 1px var(--teal-400);
 }
 
-.cta-button {
+a.cta-button {
   font-family: 'Space Mono';
   font-weight: bold;
   color: var(--teal-700);
   border: solid 1px var(--teal-700);
 }
-.cta-button:hover {
+a.cta-button:hover {
   color: white;
   background-color: var(--teal-700);
 }
 
 /*call-to-action block occupying all page height*/
 .cta-block-ph {
-  height: calc(100vh - 200px);
+  height: calc(100vh - 190px);
 }

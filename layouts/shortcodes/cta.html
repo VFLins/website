@@ -10,19 +10,19 @@
 
     <!-- Left Column (Text content) -->
     <div class="w-100 w-70-ns tl">
-      <h2 class="f3 f2-ns fw7 lh-title mt0 mb3">{{ $data.title }}</h2>
-      <p class="f5 f4-ns lh-copy mt0 mb4 o-90">{{ $data.description }}</p>
+      <h2 class="d3 lh-solid mt0 mb3">{{ $data.title }}</h2>
+      <p class="f4 lh-copy mt0 mb4 o-90">{{ $data.description }}</p>
       {{ if $data.button }}
-      <a href="{{ $data.button.url }}" class="{{ $data.button.css_class }} br2 dib link mt4 ph2 pv1">
+      <a href="{{ $data.button.url }}" class="{{ $data.button.css_class }} heading4 br2 dib link mt4-ns ph2 pv1">
           {{ $data.button.text }}
         </a>
       {{ end }}
     </div>
 
     <!-- Right Column (Image content) -->
-    <div class="w-100 w-40-ns tc mb4 mb0-ns">
+    <div class="w-100 w-40-ns h5 h-auto-ns tc mb4 mb0-ns">
       {{ if $data.image }}
-        <img src="{{ $data.image | relURL }}" class="mw-100 h-auto dib" alt="{{ $data.title }}">
+        <img src="{{ $data.image | relURL }}" class="mw-100 h-100 dib" alt="{{ $data.title }}">
       {{ else }}
         <div class="dn db-ns">&nbsp;</div>
       {{ end }}
