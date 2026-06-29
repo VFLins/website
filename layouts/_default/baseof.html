@@ -58,8 +58,8 @@
   <body class="ma0 {{ $.Param "body_classes"  | compare.Default "avenir bg-near-white"}} {{ $environment }}">
 
     {{ block "header" . }}{{ partials.Include "site-header.html" .}}{{ end }}
-    {{/* Add top-padding (pt5) on homepage to add clearence for navbar */}}
-    <main class="pb7 {{ if .IsHome }}pt5{{ end }}" role="main">
+    {{/* Add top paddingpage to avoid clipping with the navbar */}}
+    <main class="pb7 {{ if .IsHome }}nav-clearance{{ end }}" role="main">
       {{ block "main" . }}{{ end }}
     </main>
     {{ block "footer" . }}{{ partials.IncludeCached "site-footer.html" . }}{{ end }}

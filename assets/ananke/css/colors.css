@@ -1,4 +1,6 @@
 
+@layer base, override;
+
 :root {
   --teal-400: #32d6d0;
   --teal-500: #12bbb7;
@@ -12,6 +14,11 @@
   background-size: 400%;
   background-position: 0% 50%;
   animation: hshift 18s infinite alternate;
+}
+
+.bg-gradient-1 {
+  background: #00241e;
+  background: linear-gradient(to top left, #151f1f, #2f4f4f 45%);
 }
 
 @keyframes hshift {
@@ -55,8 +62,8 @@ footer.bg-dark-green {
 
 /*links*/
 main a, main a:visited {
-  text-decoration: none;
-  color: var(--teal-700);
+text-decoration: none;
+color: var(--teal-700);
 }
 main a:focus, main a:hover {
   color: #0c645d;

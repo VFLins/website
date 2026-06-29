@@ -4,6 +4,17 @@
   margin-top: 2px; /*adjust logo vertical alignment*/
 }
 
+/*site nav*/
+.nav-clearance {
+  padding-top: 70px;
+}
+
+@media (min-width: 60em) {
+  .nav-clearance {
+    padding-top: 40px;
+  }
+}
+
 /*table of contents*/
 .pa3.nested-list-reset {
   position: sticky;

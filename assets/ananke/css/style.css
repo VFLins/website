@@ -81,6 +81,7 @@ h2.white-80 {
   font-size: 20px;
 }
 
+/*summary page elements*/
 .summary-overline {
   font-family: 'Space Mono';
   text-transform: uppercase;
@@ -112,3 +113,28 @@ h2.white-80 {
   color: white;
   background-color: var(--teal-700);
 }
+
+
+/*call-to-action elements*/
+.cta-button-dark {
+  font-family: 'Space Mono';
+  font-weight: bold;
+  color: var(--teal-700);
+  background-color: white;
+}
+.cta-button-dark:hover {
+  color: black;
+  background-color: var(--teal-400);
+}
+
+.cta-button {
+  font-family: 'Space Mono';
+  font-weight: bold;
+  color: var(--teal-700);
+  border: solid 1px var(--teal-700);
+}
+.cta-button:hover {
+  color: white;
+  background-color: var(--teal-700);
+}
+
