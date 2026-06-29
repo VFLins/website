@@ -6,10 +6,10 @@
 <!-- Full-width element using minimal custom breakout + Tachyons padding and skins -->
 <div class="tachyons-breakout pv5 {{ $data.css_class }}">
   <!-- Container max-width (mw8 = ~64rem/1024px), flex columns layout on mobile, side-by-side on desktop (flex-ns) -->
-    <div class="{{ if $pageHeight }}cta-block-ph{{ else }}cta-block{{ end }} mw8 center ph4 flex flex-column-reverse flex-row-ns items-center justify-between gap-custom">
+    <div class="{{ if $pageHeight }}cta-block-ph{{ else }}cta-block{{ end }} mw8 center ph4 flex flex-column-reverse flex-row-ns items-center justify-center justify-between-ns gap-custom">
 
     <!-- Left Column (Text content) -->
-    <div class="w-100 w-70-ns tl-ns tc">
+    <div class="w-100 w-70-ns tl">
       <h2 class="f3 f2-ns fw7 lh-title mt0 mb3">{{ $data.title }}</h2>
       <p class="f5 f4-ns lh-copy mt0 mb4 o-90">{{ $data.description }}</p>
       {{ if $data.button }}
