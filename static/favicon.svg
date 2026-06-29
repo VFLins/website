@@ -38,13 +38,13 @@
      fill-rule="evenodd"
      clip-rule="evenodd"
      d="m 20,32 h 8 v 12 h 8 V 32 h 8 V 8 H 64 V 32.001 H 56 V 44 H 42 V 56 H 22 V 44 H 8 V 32.001 H 0 V 8 h 20 z m 16,22 h 4 V 46 H 36 Z M 22,42 h 4 v -8 h -4 z m 28,0 h 4 V 34 H 50 Z M 14,30.001 h 4 V 10.00098 h -4 z m 44,0 h 4 V 10.00098 h -4 z"
-     fill="#008181"
+     fill="var(--fill-color)"
      id="path3" />
   <style>
     :root { --fill-color: #008181; }
 
     @media (prefers-color-scheme: dark) {
-      :root { --fill-colr: #12bbb7; }
+      :root { --fill-color: #12bbb7; }
     }
   </style>
 </svg>
