@@ -7,6 +7,10 @@
   --teal-700: #008181;
 }
 
+.teal-light { color: var(--teal-400) }
+.teal { color: var(--teal-700) }
+.teal-dark { color: #004141 }
+
 /*gradients*/
 .bg-gradient-teal-white {
   background: #ffffcf;

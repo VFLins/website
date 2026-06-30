@@ -1,9 +1,9 @@
 css_class = "bg-laptop white"
-id = "homepage-block-2"
+id = "homepage-block-5"
 # image = "/images/illustrations/andras-vas-unsplash-notebook.jpg"
 
 [title]
-css_class = "heading1"
+css_class = "d3"
 text = "Software"
 
 [description]

@@ -1,5 +1,5 @@
-css_class = "bg-wires white"
-id = "homepage-block-2"
+css_class = "ba ma3"
+id = "homepage-block-3"
 # image = "/images/illustrations/andras-vas-unsplash-notebook.jpg"
 
 [title]
@@ -12,7 +12,7 @@ text = "Alguns ganhos de eficiência e qualidade de vida só são possíveis qua
 
 [button]
 type = "link" # 'scroller' or 'link'
-css_class = "cta-button-dark"
+css_class = "cta-button"
 
 [button.params]
 text = "começe (agora):"

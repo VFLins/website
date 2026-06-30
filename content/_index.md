@@ -22,7 +22,7 @@ Se você acredita que precisa de um profissional versátil que pode aplicar muit
 do conhecimento em soluções práticas para a sua demanda, você não precisa mais continuar
 procurando.
 
-{{< emphasis-grid my-strong-points >}}
+{{< emphasis-list my-strong-points >}}
 
 ---
 

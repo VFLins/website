@@ -1,4 +1,4 @@
-css_class = "bg-papers white"
+css_class = "ba ma3"
 id = "homepage-block-2"
 # image = "/images/illustrations/andras-vas-unsplash-notebook.jpg"
 
@@ -12,7 +12,7 @@ text = "Treinamento empresarial com foco prático no dia-a-dia do empresário, a
 
 [button]
 type = "link" # 'scroller' or 'link'
-css_class = "cta-button-dark"
+css_class = "cta-button"
 
 [button.params]
 text = "< acesse />"

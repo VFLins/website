@@ -32,7 +32,7 @@
             const navBar = document.querySelector("nav.fixed"); 
             const navBarHeight = navBar ? navBar.offsetHeight : 0;
             const offsetPosition = elementPosition - navBarHeight;
-            window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+            window.scrollTo({ top: offsetPosition - 10, behavior: "smooth" });
           }
         </script>
       {{ end }}

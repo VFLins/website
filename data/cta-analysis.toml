@@ -1,5 +1,5 @@
-css_class = "bg-presentation white"
-id = "homepage-block-2"
+css_class = "ba ma3"
+id = "homepage-block-4"
 # image = "/images/illustrations/andras-vas-unsplash-notebook.jpg"
 
 [title]
@@ -12,7 +12,7 @@ text = "Projetos analíticos para colocar você em vantagem na competição, e d
 
 [button]
 type = "link" # 'scroller' or 'link'
-css_class = "cta-button-dark"
+css_class = "cta-button"
 
 [button.params]
 text = "{ veja: 'quais' }"
