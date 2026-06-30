@@ -28,6 +28,24 @@
   background-position: center;
 }
 
+.bg-wires {
+  background-image: url("/images/illustrations/scott-rodgerson-unsplash-wires-blur.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-presentation {
+  background-image: url("/images/illustrations/alex-litvin-unsplash-presentation-blur.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-laptop {
+  background-image: url("/images/illustrations/andras-vas-unsplash-laptop-blur.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
 @keyframes hshift {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
