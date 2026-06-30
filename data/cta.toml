@@ -1,10 +1,20 @@
 css_class = "bg-gradient-1 white"
-title = "Se torne competitivo e relevante"
-description = "Tudo o que você precisa para transformar sua empresa é tecnologia e educação, me mande uma mensagem e vamos discutir o seu futuro."
-image = "images/icons/rocket_dark.png"
+# image = "images/icons/rocket_dark.png"
 page_height = true
 
+[title]
+css_class = "d2"
+text = "Nenhum passo em falso"
+
+[description]
+css_class = ""
+text = "Tudo o que você precisa para transformar sua empresa é tecnologia e educação, me mande uma mensagem e vamos discutir o seu futuro."
+
 [button]
+type = "scroller" # 'scroller' or 'link'
 css_class = "cta-button-dark"
-text = "entrar em contato"
-url = "/contato"
+
+[button.params]
+percent = "50"
+text = "veja o que podemos fazer />"
+# url = "/contato"

@@ -10,12 +10,24 @@
 
     <!-- Left Column (Text content) -->
     <div class="w-100 w-70-ns tl">
-      <h2 class="d3 lh-solid mt0 mb3">{{ $data.title }}</h2>
-      <p class="f4 lh-copy mt0 mb4 o-90">{{ $data.description }}</p>
-      {{ if $data.button }}
-      <a href="{{ $data.button.url }}" class="{{ $data.button.css_class }} heading4 br2 dib link mt4-ns ph2 pv1">
-          {{ $data.button.text }}
+      <h2 class="{{ $data.title.css_class }} lh-solid mt0 mb3">{{ $data.title.text }}</h2>
+      <p class="{{ $data.descriptions.css_class }} lh-copy mt0 mb4 o-90">{{ $data.description.text }}</p>
+      {{ if eq $data.button.type "link" }}
+      <a href="{{ $data.button.params.url }}" class="{{ $data.button.css_class }} heading4 br2 dib link mt4-ns ph3 pv2">
+          {{ $data.button.params.text }}
         </a>
+      {{ end }}
+      {{ if eq $data.button.type "scroller" }}
+        {{ $btnID := printf "scroller-btn-%d" .Ordinal }}
+        <a href="" id="{{ $btnID }}" role="button" class="{{ $data.button.css_class }} heading4 br2 dib link mt4-ns ph3 pv2" onclick="event.preventDefault(); scrollToPercent()">{{ $data.button.params.text }}</a>
+
+        <script>
+          function scrollToPercent() {
+            const percent = parseFloat( {{ $data.button.params.percent }} ) / 100;
+            const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+            window.scrollTo({top: totalHeight * percent, behavior: 'smooth'});
+          }
+        </script>
       {{ end }}
     </div>
 

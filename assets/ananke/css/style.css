@@ -55,10 +55,27 @@ h4, .heading4 {
   font-size: 20px;
 }
 
+.d1 {
+  font-family: Anton;
+  font-weight: normal;
+  font-size: 112px;
+  text-transform: uppercase;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.d2 {
+  font-family: Anton;
+  font-weight: normal;
+  font-size: 90px;
+  text-transform: uppercase;
+}
+
 .d3 {
   font-family: Anton;
   font-weight: normal;
-  font-size: 48px;
+  font-size: 72px;
+  text-transform: uppercase;
 }
 
 p, p td {

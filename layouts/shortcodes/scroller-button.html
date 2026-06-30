@@ -1,0 +1,17 @@
+{{ $percent := .Get "percent" | default "50" }}
+{{ $text:= .Get "text" | default "Scroll Down" }}
+{{ $cssClass := .Get "css_class" | default "" }}
+{{ $btnID := printf "scroller-btn-%d" .Ordinal }}
+
+<a href="#" role="button" class="{{ $cssClass }}">{{ $text }}</a>
+
+<script>
+document.getElementById('{{ $btnID }}').addEventListener('click', function() {
+    const percent = parseFloat("{{ $percent }}") / 100;
+    const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+    window.scrollTo({
+        top: totalHeight * percent,
+        behavior: 'smooth'
+    });
+});
+</script>
