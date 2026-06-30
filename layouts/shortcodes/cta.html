@@ -4,35 +4,43 @@
 
 {{ if $data }}
 <!-- Full-width element using minimal custom breakout + Tachyons padding and skins -->
-<div class="tachyons-breakout pv5 {{ $data.css_class }}">
+<div class="tachyons-breakout pv5 {{ $data.css_class }}" id="{{ $data.id }}">
   <!-- Container max-width (mw8 = ~64rem/1024px), flex columns layout on mobile, side-by-side on desktop (flex-ns) -->
     <div class="{{ if $pageHeight }}cta-block-ph{{ else }}cta-block{{ end }} mw8 center ph4 flex flex-column-reverse flex-row-ns items-center justify-center justify-between-ns gap-custom">
 
     <!-- Left Column (Text content) -->
     <div class="w-100 w-70-ns tl">
+
       <h2 class="{{ $data.title.css_class }} lh-solid mt0 mb3">{{ $data.title.text }}</h2>
+
       <p class="{{ $data.descriptions.css_class }} lh-copy mt0 mb4 o-90">{{ $data.description.text }}</p>
+
       {{ if eq $data.button.type "link" }}
       <a href="{{ $data.button.params.url }}" class="{{ $data.button.css_class }} heading4 br2 dib link mt4-ns ph3 pv2">
-          {{ $data.button.params.text }}
-        </a>
+        {{ $data.button.params.text }}
+      </a>
       {{ end }}
+
       {{ if eq $data.button.type "scroller" }}
         {{ $btnID := printf "scroller-btn-%d" .Ordinal }}
-        <a href="" id="{{ $btnID }}" role="button" class="{{ $data.button.css_class }} heading4 br2 dib link mt4-ns ph3 pv2" onclick="event.preventDefault(); scrollToPercent()">{{ $data.button.params.text }}</a>
+        <a href="" id="{{ $btnID }}" role="button" class="{{ $data.button.css_class }} heading4 br2 dib link mt4-ns ph3 pv2" onclick="event.preventDefault(); scrollToElement()">{{ $data.button.params.text }}</a>
 
         <script>
-          function scrollToPercent() {
-            const percent = parseFloat( {{ $data.button.params.percent }} ) / 100;
-            const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
-            window.scrollTo({top: totalHeight * percent, behavior: 'smooth'});
+          function scrollToElement() {
+            const element = document.getElementById( "{{ $data.button.params.scroll_to }}" );
+            const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+            const navBar = document.querySelector("nav.fixed"); 
+            const navBarHeight = navBar ? navBar.offsetHeight : 0;
+            const offsetPosition = elementPosition - navBarHeight;
+            window.scrollTo({ top: offsetPosition, behavior: "smooth" });
           }
         </script>
       {{ end }}
+
     </div>
 
     <!-- Right Column (Image content) -->
-    <div class="w-100 w-40-ns h5 h-auto-ns tc mb4 mb0-ns">
+    <div class="w-100 w-40-ns h4 h-auto-ns tc mb4 mb0-ns">
       {{ if $data.image }}
         <img src="{{ $data.image | relURL }}" class="mw-100 h-100 dib" alt="{{ $data.title }}">
       {{ else }}

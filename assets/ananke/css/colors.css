@@ -17,8 +17,15 @@
 }
 
 .bg-gradient-1 {
-  background: #00241e;
-  background: linear-gradient(to top left, #151f1f, #2f4f4f 45%);
+  background-image: url("/images/illustrations/istvan-kovacs-unsplash-bluepurple.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-papers {
+  background-image: url("/images/illustrations/arisa-chattasa-unsplash-papers-blur.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 @keyframes hshift {

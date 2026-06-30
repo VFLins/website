@@ -1,4 +1,5 @@
 css_class = "bg-gradient-1 white"
+id = "homepage-block-1"
 # image = "images/icons/rocket_dark.png"
 page_height = true
 
@@ -8,13 +9,13 @@ text = "Nenhum passo em falso"
 
 [description]
 css_class = ""
-text = "Tudo o que você precisa para transformar sua empresa é tecnologia e educação, me mande uma mensagem e vamos discutir o seu futuro."
+text = "O mundo dos negócios está cheio de incertezas, mas com informação e tecnologia, podemos explorá-lo com segurança."
 
 [button]
 type = "scroller" # 'scroller' or 'link'
 css_class = "cta-button-dark"
 
 [button.params]
-percent = "50"
-text = "veja o que podemos fazer />"
+text = "o que podemos fazer />"
+scroll_to = "homepage-block-2"
 # url = "/contato"

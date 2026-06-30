@@ -5,6 +5,8 @@ featured_image: "/images/illustrations/a-chosen-soul-unsplash-abstractcyan1.jpg"
 
 {{< cta cta >}}
 
+{{< cta cta-training >}}
+
 Sou _Vitor_, um consultor de empresas localizado em Palmares, Pernambuco. Você está
 convidado a saber mais [sobre mim](sobre) e sobre o que eu posso fazer por você:
 

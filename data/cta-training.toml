@@ -1,0 +1,20 @@
+css_class = "bg-papers white"
+id = "homepage-block-2"
+# image = "/images/illustrations/andras-vas-unsplash-notebook.jpg"
+
+[title]
+css_class = "heading1"
+text = "Treinamentos"
+
+[description]
+css_class = ""
+text = "Treinamento empresarial com foco prático no dia-a-dia do empresário, abordando aspectos específicos tanto da operação, quanto do planejamento em minicursos."
+
+[button]
+type = "link" # 'scroller' or 'link'
+css_class = "cta-button-dark"
+
+[button.params]
+text = "< acesse />"
+# scroll_to = "homepage-block-2"
+url = "/categories/treinamento"
