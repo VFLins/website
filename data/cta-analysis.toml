@@ -1,4 +1,4 @@
-css_class = "ba ma3"
+css_class = "ba br3 ma4 bg-white b--teal-700 mw8 center"
 id = "homepage-block-4"
 # image = "/images/illustrations/andras-vas-unsplash-notebook.jpg"
 
@@ -17,4 +17,4 @@ css_class = "cta-button"
 [button.params]
 text = "{ veja: 'quais' }"
 # scroll_to = "homepage-block-2"
-url = "/categories/implantação-de-tecnologia"
+url = "/categories/análise"

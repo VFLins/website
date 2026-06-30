@@ -24,5 +24,3 @@ procurando.
 
 {{< emphasis-list my-strong-points >}}
 
----
-
