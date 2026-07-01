@@ -4,6 +4,7 @@ featured_image = "images/illustrations/owen-beard-unsplash-xraynice.jpg"
 omit_header_text = true
 toc = true
 categories = ["análise"]
+draft = true
 +++
 
 Mesmo com o controle rotineiro que o empresário pode adotar para não ter problemas com dívidas, ainda existem muitos dados inexplorados que podem fazer a diferença, tanto na sua competitividade, quanto na experiência do seu cliente. Os dados inexplorados dos seus pontos de venda podem ser mais valiosos do que você pensa, veja como:

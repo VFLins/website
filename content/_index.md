@@ -29,8 +29,12 @@ featured_image: "/images/illustrations/a-chosen-soul-unsplash-abstractcyan1.jpg"
 {{< cta cta-cashd >}}
 
 
+{{< fmt class="d2 w-90 mw8 mt6 center" id="heading-software" >}}
+  Sobre
+{{< /fmt >}}
+
 {{< fmt class="p w-90 mw8 center" id="heading-software" >}}
-  Sou _Vitor_, um consultor de empresas localizado em Palmares, Pernambuco. Você está
+  Sou _Vitor Lins_, um consultor de empresas localizado em Palmares, Pernambuco. Você está
   convidado a saber mais [sobre mim](sobre) e sobre o que eu posso fazer por você:
 
   ## Você encontrou o que procurava

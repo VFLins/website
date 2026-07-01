@@ -1,7 +1,7 @@
 +++
 title = "Software"
 weight = 60
-featured_image = "images/illustrations/pawel-czerwinski-unsplash-abstractteal.jpg"
+featured_image = "images/illustrations/pawel-czerwinski-unsplash-abstractteal4.jpg"
 +++
 
 Estes programas de computador são desenvolvidos seguindo três princípios em mente:

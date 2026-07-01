@@ -32,6 +32,7 @@
   background-position: center;
 }
 
+/*images*/
 .bg-papers {
   background-image: url("/images/illustrations/arisa-chattasa-unsplash-papers-blur.jpg");
   background-size: cover;
@@ -54,6 +55,15 @@
   background-image: url("/images/illustrations/andras-vas-unsplash-laptop-blur.jpg");
   background-size: cover;
   background-position: center;
+}
+
+/*colors*/
+.bg-slategray-300 {
+  background-color: var(--slategray-300);
+}
+
+.slategray-800 {
+  color: var(--slategray-800);
 }
 
 @keyframes hshift {
