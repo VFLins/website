@@ -17,5 +17,5 @@ css_class = "cta-button-dark"
 
 [button.params]
 text = "o que podemos fazer />"
-scroll_to = "homepage-block-2"
+scroll_to = "heading-produtos"
 # url = "/contato"
