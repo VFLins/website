@@ -5,12 +5,30 @@
   --teal-400: #32d6d0;
   --teal-500: #12bbb7;
   --teal-700: #008181;
+
   --slategray-50: #f8fafc;
+  --slategray-100: #f2f6f8;
+  --slategray-200: #e4e9ee;
   --slategray-300: #ced6de;
   --slategray-400: #98a7b4;
   --slategray-500: #708090;
   --slategray-600: #4b6865;
+  --slategray-700: #374451;
   --slategray-800: #212c38;
+  --slategray-900: #121a27;
+  --slategray-950: #040915;
+
+  --mspringreen-50: #edfff7;
+  --mspringreen-100: #d5ffef;
+  --mspringreen-200: #aeffe0;
+  --mspringreen-300: #70ffc9;
+  --mspringreen-400: #2bfdac;
+  --mspringreen-500: #00fa9a;
+  --mspringreen-600: #00c072;
+  --mspringreen-700: #00965c;
+  --mspringreen-800: #06754c;
+  --mspringreen-900: #121a27;
+  --mspringreen-950: #040915;
 }
 
 .teal-light { color: var(--teal-400) }
@@ -58,13 +76,33 @@
 }
 
 /*colors*/
-.bg-slategray-300 {
-  background-color: var(--slategray-300);
-}
+.bg-slategray-50 { background-color: var(--slategray-50); }
+.bg-slategray-100 { background-color: var(--slategray-100); }
+.bg-slategray-200 { background-color: var(--slategray-200); }
+.bg-slategray-300 { background-color: var(--slategray-300); }
+.bg-slategray-400 { background-color: var(--slategray-400); }
+.bg-slategray-500 { background-color: var(--slategray-500); }
+.bg-slategray-600 { background-color: var(--slategray-600); }
+.bg-slategray-700 { background-color: var(--slategray-700); }
+.bg-slategray-800 { background-color: var(--slategray-800); }
+.bg-slategray-900 { background-color: var(--slategray-900); }
+.bg-slategray-950 { background-color: var(--slategray-950); }
 
-.slategray-800 {
-  color: var(--slategray-800);
-}
+.slategray-50 { color: var(--slategray-50); }
+.slategray-100 { color: var(--slategray-100); }
+.slategray-200 { color: var(--slategray-200); }
+.slategray-300 { color: var(--slategray-300); }
+.slategray-400 { color: var(--slategray-400); }
+.slategray-500 { color: var(--slategray-500); }
+.slategray-600 { color: var(--slategray-600); }
+.slategray-700 { color: var(--slategray-700); }
+.slategray-800 { color: var(--slategray-800); }
+.slategray-900 { color: var(--slategray-900); }
+.slategray-950 { color: var(--slategray-950); }
+
+.bg-cashd { background-color: #478eff; }
+.cashd { background-color: #478eff; }
+
 
 @keyframes hshift {
   0% { background-position: 0% 50%; }
