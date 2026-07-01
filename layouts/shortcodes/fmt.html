@@ -1,0 +1,6 @@
+{{ $css_class := .Get "class" | default "" }}
+{{ $tag_id := .Get "id" | default "" }}
+
+<div class="{{ $css_class }}" id="{{ $tag_id }}">
+  {{ .Inner | markdownify }}
+</div>

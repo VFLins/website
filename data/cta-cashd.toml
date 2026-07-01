@@ -1,0 +1,20 @@
+css_class = "bg-blue white ma4 br3 mw8 center"
+id = "homepage-block-5"
+# image = "/images/illustrations/andras-vas-unsplash-notebook.jpg"
+
+[title]
+css_class = "h1"
+text = "Cashd"
+
+[description]
+css_class = ""
+text = "Registre o saldo de caixa das suas vendas em fiado, e tenha mais controle sobre as finanças de seu negócio."
+
+[button]
+type = "link" # 'scroller' or 'link'
+css_class = "cta-button-dark"
+
+[button.params]
+text = "baixe __de_graça__"
+# scroll_to = "homepage-block-2"
+url = "/software/cashd"
