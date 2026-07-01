@@ -42,7 +42,7 @@
     <!-- Right Column (Image content) -->
     <div class="w-100 w-40-ns h4 h-auto-ns tc mb4 mb0-ns">
       {{ if $data.image }}
-        <img src="{{ $data.image | relURL }}" class="mw-100 h-100 dib" alt="{{ $data.title }}">
+      <img src="{{ $data.image.path | relURL }}" class="{{ $data.image.css_class }}" alt="{{ $data.title.text }}">
       {{ else }}
         <div class="dn db-ns">&nbsp;</div>
       {{ end }}

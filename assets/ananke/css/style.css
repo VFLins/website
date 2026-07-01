@@ -181,6 +181,18 @@ a.cta-button-dark:hover {
   border: solid 1px var(--teal-400);
 }
 
+a.cta-button-dark2 {
+  font-family: 'Space Mono';
+  font-weight: bold;
+  border: solid 1px white;
+  color: white;
+}
+a.cta-button-dark2:hover {
+  color: black;
+  background-color: white;
+  border: solid 1px white;
+}
+
 a.cta-button {
   font-family: 'Space Mono';
   font-weight: bold;

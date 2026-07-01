@@ -186,7 +186,7 @@ blockquote.callout-faliure {
 }
 
 /* big static checkboxes */
-input[type="checkbox"]:disabled {
+input[ type="checkbox" ]:disabled {
     width: 18px;
     height: 18px;
     float: left;
