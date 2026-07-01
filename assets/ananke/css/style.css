@@ -96,11 +96,23 @@ code {
 /*site navigation: item*/
 li.nav-item a {
   font-family: 'Space Mono';
-  color: #ffffffd9;
+  color: var(--slategray-800);
   font-weight: normal;
   font-size: 18px;
   margin-right: inherit;
   text-transform: lowercase;
+  transition: linear 0.1s;
+}
+li.nav-item a:hover {
+    color: black;
+}
+
+.ananke-socials a {
+  fill: var(--slategray-800);
+  transitio: linear 0.1s;
+}
+.ananke-socials a:hover {
+  fill: black;
 }
 
 /*site header: title*/

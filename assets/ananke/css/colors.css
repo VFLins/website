@@ -5,6 +5,12 @@
   --teal-400: #32d6d0;
   --teal-500: #12bbb7;
   --teal-700: #008181;
+  --slategray-50: #f8fafc;
+  --slategray-300: #ced6de;
+  --slategray-400: #98a7b4;
+  --slategray-500: #708090;
+  --slategray-600: #4b6865;
+  --slategray-800: #212c38;
 }
 
 .teal-light { color: var(--teal-400) }
@@ -58,8 +64,13 @@
 
 
 /*dimming class*/
-.bg-teal-80 {
+.bg-teal-800-80 {
   background-color: #004545cc;
+  backdrop-filter: blur(10px);
+}
+
+.bg-slategray-300-80 {
+  background-color: #ced6decc;
   backdrop-filter: blur(10px);
 }
 

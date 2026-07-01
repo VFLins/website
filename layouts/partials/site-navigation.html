@@ -1,9 +1,9 @@
 {{ $cover_dimming_class := site.Params.cover_dimming_class | compare.Default "bg-black-60" }}
-<nav class="fixed top-0 left-0 right-0 z-max pv3 ph3 ph4-ns bg-teal-80" role="navigation">
+<nav class="fixed top-0 left-0 right-0 z-max pv3 ph3 ph4-ns bg-slategray-300-80" role="navigation">
   <div class="flex-l center items-center justify-between">
 
     <div class="flex justify-between items-center w-100 w-auto-l">
-      <a href="{{ .Site.Home.RelPermalink }}" class="f3 fw2 hover-white white-90 dib no-underline">
+      <a href="{{ .Site.Home.RelPermalink }}" class="f3 fw2 dib no-underline">
         {{ with .Site.Params.site_logo }}
           <img src="{{ urls.RelURL . }}" class="logo-width" alt="{{ $.Site.Title }}" />
         {{ else }}
@@ -11,7 +11,7 @@
         {{ end }}
       </a>
 
-      <button id="menu-toggle" class="pointer bg-transparent bn white-90 hover-white f3 dn-l" aria-label="Abrir menu">
+      <button id="menu-toggle" class="pointer bg-transparent bn f3 dn-l" aria-label="Abrir menu">
         &#9776;
       </button>
     </div>
@@ -23,7 +23,7 @@
         <ul class="list {{ compare.Conditional (compare.Eq $.Site.Language.LanguageDirection "rtl") "pr0 ml3-l" "pl0 mr3-l" }} flex flex-column flex-row-l mv0">
           {{ range .Site.Menus.main }}
           <li class="nav-item f5 f4-ns fw4 pv2 pv0-l ml3 {{ compare.Conditional (compare.Eq $.Site.Language.LanguageDirection "rtl") "pl3-l" "pr3-l" }}">
-            <a class="hover-white white-90 no-underline db" href="{{ .URL }}" title="{{ lang.Translate "pageTitle" . }}">
+            <a class="no-underline db" href="{{ .URL }}" title="{{ lang.Translate "pageTitle" . }}">
               {{ .Name }}
             </a>
           </li>

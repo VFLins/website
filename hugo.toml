@@ -8,7 +8,7 @@ sectionPagesMenu = "main"
 enableEmoji = true
 
 [params]
-site_logo = "images/icons/logo-vitor-symbolic-dark.svg"
+site_logo = "images/icons/logo-vitor-symbolic.svg"
 date_format = ":date_full"
 locale = "pt_BR"
 read_more_copy = "continue lendo"
