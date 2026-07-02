@@ -1,20 +1,45 @@
+<style>
+  .aspect-16-9 {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: center;
+  }
+</style>
+
 <div class="w-100 mb4 relative">
-  <div class="mb3 pa4 gray overflow-hidden bg-white br3 ba b--teal-700">
-    {{with .CurrentSection.Title }}
-    <span class="summary-overline f6 db"><b>{{ . }}</b>
-      {{end}}
-      {{ with .Params.categories }}|{{ range $index, $category := . }}
-        {{ if $index }}・ {{ end }}{{ . | title}}
-      {{ end }} {{ end }}
-    </span>
-    <h1 class="summary-title f3 near-black">
-      <a href="{{ .RelPermalink }}">
-        {{ .Title }}
+  <div class="mb3 pa4 overflow-hidden bg-slategray-200 br3 flex flex-column">
+
+    {{ with .Params.featured_image }}
+    <div class="aspect-16-9 w-100 mb3"> <a href="{{ $.RelPermalink }}" class="db">
+        <img src="{{ . | relURL }}" alt="{{ $.Title }}" class="db w-100 br2 object-cover" style="max-height: 250px; width: 100%; object-position: center;">
       </a>
-    </h1>
-    <div class="summary-content nested-links f5 lh-copy nested-copy-line-height">
-      {{ .Summary }}
     </div>
-    <a href="{{.RelPermalink}}" class="summary-readmore ba br2 dib f7 link mt2 ph2 pv1">{{ $.Param "read_more_copy" | compare.Default (lang.Translate "readMore") }}</a>
+    {{ end }}
+
+    <div class="w-100">
+      {{ with .CurrentSection.Title }}
+      <span class="summary-overline f6 db"><b>{{ . }}</b>
+        {{ end }}
+        {{ with .Params.categories }}|{{ range $index, $category := . }}
+          {{ if $index }}・ {{ end }}{{ . | title }}
+        {{ end }} {{ end }}
+      </span>
+
+      <h1 class="summary-title f3 near-black mt2">
+        <a href="{{ .RelPermalink }}" class="link dim near-black">
+          {{ .Title }}
+        </a>
+      </h1>
+
+      <div class="summary-content nested-links f5 lh-copy nested-copy-line-height">
+        {{ .Summary }}
+      </div>
+
+      <a href="{{ .RelPermalink }}" class="summary-readmore ba br2 dib f7 link mt2 ph2 pv1">
+        {{ $.Param "read_more_copy" | compare.Default (lang.Translate "readMore") }}
+      </a>
+    </div>
+
   </div>
 </div>
