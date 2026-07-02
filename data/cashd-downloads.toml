@@ -2,7 +2,7 @@
 title = "Windows"
 description = "Para qualquer sistema Windows, mas testado apenas no Windows 11"
 url = "https://github.com/VFLins/cashd/releases/download/v0.3.4/cashd-windows-installer-x86_64.zip"
-icon = "windows-solid.svg"
+icon = "windows.svg"
 
 [[items]]
 title = "Linux .deb"

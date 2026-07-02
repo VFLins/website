@@ -44,4 +44,4 @@ featured_image: "/images/illustrations/a-chosen-soul-unsplash-abstractcyan1.jpg"
   procurando.
 {{< /fmt >}}
 
-{{< emphasis-grid my-strong-points >}}
+{{< emphasis-list2 my-strong-points >}}
