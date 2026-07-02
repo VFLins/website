@@ -1,32 +1,38 @@
 <style>
-  .card-image-16-9 {
+  .aspect-16-9 {
+    display: block;
     width: 100%;
+    height: auto;
     aspect-ratio: 16 / 9;
     object-fit: cover;
     object-position: center;
   }
 </style>
 
-<div class="w-100 mw6 center mb4 relative">
-  <div class="pa4 overflow-hidden bg-slategray-200 br3 flex flex-column">
-
+<div class="w-100 mb4 nested-copy-line-height relative bg-slategray-200 br4">
+  <div class="mb3 pa4 overflow-hidden">
     {{ with .Params.featured_image }}
-    <div class="aspect-16-9 w-100"> <a href="{{ $.RelPermalink }}" class="db">
-        <img src="{{ . | relURL }}" alt="{{ $.Title }}" class="db w-100 br2 object-cover" style="max-height: 250px; width: 100%; object-position: center;">
+    <div class="w-100">
+      <a href="{{ $.RelPermalink }}" class="db">
+        <img src="{{ . | relURL }}" alt="{{ $.Title }}" class="aspect-16-9 db mb4 w-100 br2 object-cover grow">
       </a>
     </div>
     {{ end }}
-
-    <div class="w-100">
-
-      <div class="summary-content nested-links f5 lh-copy nested-copy-line-height">
-        {{ .Summary }}
-      </div>
-
-      <a href="{{ .RelPermalink }}" class="summary-readmore ba br2 dib f7 link mt2 ph2 pv1">
-        Saiba mais
+    {{with .CurrentSection.Title }}
+      <span class="summary-overline"><b>{{ . }}</b>
+    {{end}}
+    {{ with .Params.categories }}|{{ range $index, $category := . }}
+      {{ if $index }}・ {{ end }}{{ . | title}}
+    {{ end }} {{ end }}
+    </span>
+    <h1 class="f3 near-black">
+      <a href="{{ .RelPermalink }}" class="link black dim">
+        {{ .Title }}
       </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      {{ .Summary }}
     </div>
-
+    <a href="{{.RelPermalink}}" class="summary-readmore br2 color-inherit dib f7 link mt2 ph2 pv1">{{ $.Param "read_more_copy" | compare.Default (lang.Translate "readMore") }}</a>
   </div>
 </div>
