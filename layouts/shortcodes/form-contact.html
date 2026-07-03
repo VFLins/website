@@ -1,7 +1,11 @@
-{{ $.Scratch.Add "labelClasses" "f6 b db mb1 mt3 sans-serif mid-gray" }}
-{{ $.Scratch.Add "inputClasses" "w-100 f5 pv3 ph3 bg-light-gray bn" }}
+{{ $.Scratch.Add "labelClasses" "b db mb1 mt3" }}
+{{ $.Scratch.Add "inputClasses" "w-100 pv3 ph3 bg-slategray-200 bn br3" }}
 
-<form class="black-80 sans-serif" accept-charset="UTF-8" action="{{ .Get "action" }}" method="POST" role="form">
+<style>
+  input:focus, textarea:focus { outline: 2px solid var(--teal-700) }
+</style>
+
+<form class="p" accept-charset="UTF-8" action="{{ .Get "action" }}" method="POST" role="form">
 
     <label class="{{ $.Scratch.Get "labelClasses" }}"  for="name">{{ lang.Translate "yourName" }}</label>
     <input type="text" id="name" name="name" class="{{ $.Scratch.Get "inputClasses" }}"  required placeholder="Nome"  aria-labelledby="name"/>
@@ -15,6 +19,6 @@
     <label class="{{ $.Scratch.Get "labelClasses" }}" for="message">{{ lang.Translate "message" }}</label>
     <textarea id="message" name="message" required placeholder="Mensagem" class="{{ $.Scratch.Get "inputClasses" }} h4" aria-labelledby="message"></textarea>
 
-    <input class="db w-100 mv2 white pa3 bn hover-shadow hover-bg-black bg-animate bg-black" type="submit" value="Enviar" />
+    <input class="summary-readmore bg-slategray-50 b br3 w-100 mv2 pa3" type="submit" value="Enviar" />
 
 </form>
