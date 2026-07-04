@@ -1,6 +1,6 @@
 baseURL = "https://vflins.github.io/"
 favicon = "/favicon"
-languageCode = "pt_BR"
+locale = "pt_BR"
 defaultContentLanguage = "pt-br"
 title = "Vitor Lins"
 theme = ["ananke"]
@@ -37,6 +37,9 @@ username = "VFLins"
 [params.ananke.social.follow]
 new_window_icon = true
 networks = ["instagram", "github"]
+
+[markup.goldmark.renderer]
+unsafe = true
 
 [markup.highlight]
 style = "trac"

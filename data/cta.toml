@@ -1,11 +1,11 @@
-css_class = "bg-gradient-1 white"
+css_class = ""
 id = "homepage-block-1"
 # image = "images/icons/rocket_dark.png"
 page_height = true
 
 [title]
 css_class = "d2"
-text = "Nenhum passo em falso"
+text = "<span class='teal'>Nenhum</span> passo em falso"
 
 [description]
 css_class = ""
@@ -13,7 +13,7 @@ text = "O mundo dos negócios está cheio de incertezas, mas com informação e 
 
 [button]
 type = "scroller" # 'scroller' or 'link'
-css_class = "button-link-white"
+css_class = "button-link"
 
 [button.params]
 text = "o que podemos fazer />"

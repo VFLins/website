@@ -6,9 +6,9 @@ featured_image: "/images/illustrations/a-chosen-soul-unsplash-abstractcyan1.jpg"
 {{< cta cta >}}
 
 
-{{< fmt class="d2 w-90 mw8 mt6 center" id="heading-produtos" >}}
+{{< block class="d2 w-90 mw8 mt6 center" id="heading-produtos" >}}
   Produtos
-{{< /fmt >}}
+{{< /block >}}
 
 {{< cta2 cta-training >}}
 
@@ -17,31 +17,37 @@ featured_image: "/images/illustrations/a-chosen-soul-unsplash-abstractcyan1.jpg"
 {{< cta2 cta-analysis >}}
 
 
-{{< fmt class="d2 w-90 mw8 mt6 center" id="heading-software" >}}
+{{< block class="d2 w-90 mw8 mt6 center" id="heading-software" >}}
   Software
-{{< /fmt >}}
+{{< /block >}}
 
-{{< fmt class="p w-90 mw8 center" id="heading-software" >}}
+{{< block class="p w-90 mw8 center" id="heading-software" >}}
   Programas de computador de código aberto desenvolvidos por mim para melhorar a sua
   produtividade.
-{{< /fmt >}}
+{{< /block >}}
 
 {{< cta cta-cashd >}}
 
 
-{{< fmt class="d2 w-90 mw8 mt6 center" id="heading-software" >}}
+{{< block class="d2 w-90 mw8 mt6 center" id="heading-software" >}}
   Sobre
-{{< /fmt >}}
+{{< /block >}}
 
-{{< fmt class="p w-90 mw8 center" id="heading-software" >}}
+{{< block class="p w-90 mw8 center" id="heading-software" >}}
   Sou _Vitor Lins_, um consultor de empresas localizado em Palmares, Pernambuco. Você está
   convidado a saber mais [sobre mim](sobre) e sobre o que eu posso fazer por você:
+{{< /block >}}
 
-  ## Você encontrou o que procurava
+{{< block class="w-90 mw8 center" >}}
+  {{< fmt class="heading1" >}}Você{{< /fmt >}}
+  {{< fmt class="heading1 teal" >}}encontrou{{< /fmt >}}
+  {{< fmt class="heading1" >}}o que procurava{{< /fmt >}}
+{{< /block >}}
 
+{{< block class="p w-90 mw8 center" id="heading-software" >}}
   Se você acredita que precisa de um profissional versátil que pode aplicar muitas áreas
   do conhecimento em soluções práticas para a sua demanda, você não precisa mais continuar
   procurando.
-{{< /fmt >}}
+{{< /block >}}
 
 {{< emphasis-list2 my-strong-points >}}
