@@ -1,4 +1,4 @@
-css_class = "bg-cashd white ma4 br3 w-90 mw8 center"
+css_class = "bg-cashd white ma4 w-100 center"
 id = "homepage-block-5"
 
 [image]
@@ -6,16 +6,15 @@ css_class = "mw4 mw5-l"
 path = "/images/icons/cashd-logo-symbolic-dark.png"
 
 [title]
-css_class = "h1"
+css_class = "heading1"
 text = "Cashd"
 
 [description]
-css_class = ""
 text = "Em vez de registrar na caderneta, acompanhe as transações fiado de seus clientes virtualmente, e tenha acesso a informações relevantes seus hábitos de compra e a saúde financeira de sua empresa."
 
 [button]
 type = "link" # 'scroller' or 'link'
-css_class = "cta-button-dark2"
+css_class = "button-link-white"
 
 [button.params]
 text = "baixe __de_graça__"

@@ -13,7 +13,7 @@ text = "O mundo dos negócios está cheio de incertezas, mas com informação e 
 
 [button]
 type = "scroller" # 'scroller' or 'link'
-css_class = "cta-button-dark"
+css_class = "button-link-white"
 
 [button.params]
 text = "o que podemos fazer />"

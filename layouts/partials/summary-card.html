@@ -9,7 +9,7 @@
   }
 </style>
 
-<div class="w-100 mb4 nested-copy-line-height relative bg-slategray-200 br4">
+<div class="w-100 mb4 nested-copy-line-height relative">
   <div class="mb3 pa4 overflow-hidden">
     {{ with .Params.featured_image }}
     <div class="w-100">
@@ -19,20 +19,20 @@
     </div>
     {{ end }}
     {{with .CurrentSection.Title }}
-      <span class="summary-overline"><b>{{ . }}</b>
+      <span class="overline-text slategray-500"><b>{{ . }}</b>
     {{end}}
     {{ with .Params.categories }}|{{ range $index, $category := . }}
       {{ if $index }}・ {{ end }}{{ . | title}}
     {{ end }} {{ end }}
     </span>
-    <h1 class="f3 near-black">
-      <a href="{{ .RelPermalink }}" class="link black dim">
+    <h1 class="heading2">
+      <a href="{{ .RelPermalink }}" class="dim slategray-800">
         {{ .Title }}
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
       {{ .Summary }}
     </div>
-    <a href="{{.RelPermalink}}" class="summary-readmore br2 color-inherit dib f7 link mt2 ph2 pv1">{{ $.Param "read_more_copy" | compare.Default (lang.Translate "readMore") }}</a>
+    <a href="{{.RelPermalink}}" class="button-link overline-text br2 color-inherit dib f7 link mt2 ph2 pv1">{{ $.Param "read_more_copy" | compare.Default (lang.Translate "readMore") }}</a>
   </div>
 </div>

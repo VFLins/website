@@ -35,6 +35,12 @@ body.light-theme {
   color: var(--slategray-800)
 }
 
+.overline-text {
+  font-family: 'Space Mono';
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
 h1, .heading1 {
   font-family: 'Space Mono';
   font-weight: bold;
@@ -155,54 +161,28 @@ h2.white-80 {
   font-size: 16px;
 }
 
-.summary-readmore {
-  font-family: 'Space Mono';
-  color: var(--teal-700);
-  border: solid 1px var(--teal-700);
-  text-transform: uppercase;
-  font-size: 13px;
-}
-
 .summary-readmore:hover {
   color: white;
   background-color: var(--teal-700);
 }
 
-
-/*call-to-action elements*/
-a.cta-button-dark {
-  font-family: 'Space Mono';
-  font-weight: bold;
-  border: solid 1px white;
-  color: white;
-}
-a.cta-button-dark:hover {
-  color: black;
-  background-color: var(--teal-400);
-  border: solid 1px var(--teal-400);
-}
-
-a.cta-button-dark2 {
-  font-family: 'Space Mono';
-  font-weight: bold;
-  border: solid 1px white;
-  color: white;
-}
-a.cta-button-dark2:hover {
-  color: black;
-  background-color: white;
-  border: solid 1px white;
-}
-
-a.cta-button {
-  font-family: 'Space Mono';
-  font-weight: bold;
+/* style a link to look like a button */
+a.button-link {
   color: var(--teal-700);
   border: solid 1px var(--teal-700);
 }
-a.cta-button:hover {
+a.button-link:hover {
   color: white;
   background-color: var(--teal-700);
+}
+
+a.button-link-white {
+  color: white;
+  border: solid 1px white;
+}
+a.button-link-white:hover {
+  color: black;
+  background-color: white;
 }
 
 /*call-to-action block occupying all page height*/
