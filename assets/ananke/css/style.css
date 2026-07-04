@@ -41,6 +41,12 @@ body.light-theme {
   font-size: 13px;
 }
 
+.p-mono {
+  font-family: 'Space Mono';
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
 h1, .heading1 {
   font-family: 'Space Mono';
   font-weight: bold;
@@ -105,16 +111,19 @@ code {
 
 /*site navigation: item*/
 li.nav-item a {
-  font-family: 'Space Mono';
   color: var(--slategray-800);
   font-weight: normal;
-  font-size: 18px;
   margin-right: inherit;
   text-transform: lowercase;
   transition: linear 0.1s;
 }
 li.nav-item a:hover {
     color: black;
+}
+
+li.nav-text {
+  font-size: 20px;
+  font-family: 'Space Mono';
 }
 
 .ananke-socials a {
@@ -176,6 +185,15 @@ a.button-link:hover {
   background-color: var(--teal-700);
 }
 
+a.button-link-teal {
+  color: var(--slategray-50);
+  background-color: var(--teal-700);
+}
+a.button-link-teal:hover {
+  color: var(--slategray-800);
+  background-color: var(--teal-400);
+}
+
 a.button-link-white {
   color: white;
   border: solid 1px white;
@@ -183,6 +201,16 @@ a.button-link-white {
 a.button-link-white:hover {
   color: black;
   background-color: white;
+}
+
+/* style other elements as button */
+.button {
+  color: var(--teal-700);
+  border: solid 1px var(--teal-700);
+}
+.button:hover {
+  color: white;
+  background-color: var(--teal-700);
 }
 
 /*call-to-action block occupying all page height*/

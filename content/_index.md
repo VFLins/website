@@ -38,7 +38,7 @@ featured_image: "/images/illustrations/a-chosen-soul-unsplash-abstractcyan1.jpg"
   convidado a saber mais [sobre mim](sobre) e sobre o que eu posso fazer por você:
 {{< /block >}}
 
-{{< block class="w-90 mw8 center" >}}
+{{< block class="w-90 mw8 center mt5" >}}
   {{< fmt class="heading1" >}}Você{{< /fmt >}}
   {{< fmt class="heading1 teal" >}}encontrou{{< /fmt >}}
   {{< fmt class="heading1" >}}o que procurava{{< /fmt >}}

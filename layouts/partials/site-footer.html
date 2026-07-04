@@ -1,8 +1,7 @@
-<footer class="bg-darkteal bottom-0 w-100 pa3" role="contentinfo">
+<footer class="bg-darkteal bottom-0 w-100 pa3 h3" role="contentinfo">
   <div class="flex justify-between">
-  <a class="heading4 hover-white dn dib-ns ph3 no-underline" href="{{ .Site.Home.Permalink }}" >
+  <a class="heading4 hover-white" href="{{ .Site.Home.Permalink }}" >
     &copy; {{ with .Site.Copyright | compare.Default .Site.Title }} {{ . | safe.HTML }} {{ now.Format "2006"}} {{ end }}
   </a>
-    <div>{{ partials.IncludeCached "social/follow.html" . }}</div>
   </div>
 </footer>

@@ -9,11 +9,11 @@ text = "<span class='teal'>Nenhum</span> passo em falso"
 
 [description]
 css_class = ""
-text = "O mundo dos negócios está cheio de incertezas, mas com informação e tecnologia, podemos explorá-lo com segurança."
+text = "O mundo dos <span class='teal b'>negócios</span> está cheio de incertezas, mas com <span class='teal b'>informação</span> e <span class='teal b'>tecnologia</span>, podemos explorá-lo com segurança."
 
 [button]
 type = "scroller" # 'scroller' or 'link'
-css_class = "button-link"
+css_class = "button-link-teal"
 
 [button.params]
 text = "o que podemos fazer />"
