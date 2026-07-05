@@ -12,13 +12,13 @@
     </div>
     <div class="tl">
       {{ if .url }}
-      <h3 class="f4 fw6 lh-title mv0"><a href="{{ .url }}">{{ .title }}</a></h3>
+      <h3 class="heading4 mv0"><a href="{{ .url }}">{{ .title }}</a></h3>
       {{ else }}
-        <h3 class="f4 fw6 lh-title mv0">{{ .title }}</h3>
+        <h3 class="lh-title mv0">{{ .title }}</h3>
       {{ end }}
-      <p class="f5 lh-copy gray mv1"><i>{{ .description }}</i></p>
+      <p class="slategray-500 mv1">{{ .description }}</p>
       {{ if .topics }}
-        <ul class="f5 lh-copy gray mv1">
+        <ul class="lh-copy gray mv1">
         {{ range .topics }}
           <li>{{ . }}</li>
         {{ end }}

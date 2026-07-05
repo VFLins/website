@@ -12,7 +12,7 @@ A venda no “fiado” ainda é bastante presente em nossa região, embora muita
 
 ## Como isso me afeta?
 
-Saber exatamente o quanto está se comprometendo ao fazer uma venda à prazo pode evitar algumas armadilhas invisíveis da venda à prazo. Por isso, se você já aceita ou pretende aceitar fiado, é recomendado que conheça também o [[Como não quebrar vendendo à prazo]], já que isto afeta diretamente sua lucratividade e a capacidade de repor estoque.
+Saber exatamente o quanto está se comprometendo ao fazer uma venda à prazo pode evitar algumas armadilhas invisíveis da venda à prazo. Por isso, se você já aceita ou pretende aceitar fiado, é recomendado que conheça também o [Como não quebrar vendendo à prazo](./treinamento-vendas-a-prazo.md), já que isto afeta diretamente sua lucratividade e a capacidade de repor estoque.
 
 Além do risco mais elevado de inadimplência do cliente, o fiado também pode afetar a sua operação, deixando o seu atendimento mais lento e tendo que manter contato para garantir que os clientes não esqueceram do saldo devedor.
 
@@ -28,7 +28,7 @@ Mesmo que você possa se organizar com sucesso usando o tradicional papel e cane
 
 ## Qual é o _software_?
 
-O nome do _software_ que pode te ajudar é [[Cashd]], de código aberto e desenvolvido internamente, o Cashd é oferecido em duas distribuições: `cashd-server` e `cashd-local`, para mais informações sobre as distribuições, e para saber qual é a mais indicada para você, leia [a introdução do projeto](https://github.com/VFLins/cashd/blob/main/README.md).
+O nome do _software_ que pode te ajudar é [Cashd](../software/cashd.md), de código aberto e desenvolvido internamente, o Cashd é oferecido em duas distribuições: `cashd-server` e `cashd-local`, para mais informações sobre as distribuições, e para saber qual é a mais indicada para você, leia [a introdução do projeto](https://github.com/VFLins/cashd/blob/main/README.md).
 
 Você pode instalar a versão mais recente do Cashd gratuitamente, basta seguir as [instruções de instalação](https://github.com/VFLins/cashd/wiki/Instalando-e-Atualizando#2-cashd-local), mas caso precise de ajuda para:
 

@@ -101,6 +101,7 @@ p, p td, .p {
 
 li {
   font-family: Inter;
+  font-size: 16px;
 }
 
 code {
@@ -222,4 +223,9 @@ a.button-link-white:hover {
 /*call-to-action block occupying all page height*/
 .cta-block-ph {
   height: calc(100vh - 190px);
+}
+
+/* post: toc */
+nav#TableOfContents a {
+  font-family: 'Space Mono';
 }

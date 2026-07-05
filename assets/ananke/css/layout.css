@@ -33,27 +33,10 @@
 /*tables*/
 table {
   border-spacing: 0px;
+  font-family: Inter;
 }
 td {
   padding: 6px;
-}
-/*tables: top-left corner*/
-table tr:first-child th:first-child,
-table tr:first-child td:first-child {
-border-top-left-radius: 8px;
-}
-/*tables: top-right corner*/
-table tr:first-child th:last-child,
-table tr:first-child td:last-child {
-border-top-right-radius: 8px;
-}
-/*tables: bottom-left corner*/
-table tr:last-child td:first-child {
-border-bottom-left-radius: 10px;
-}
-/*tables: bottom-right corner*/
-table tr:last-child td:last-child {
-border-bottom-right-radius: 10px;
 }
 
 /*code blocks*/
@@ -65,10 +48,15 @@ pre {
 
 /*callouts*/
 blockquote.alert {
-  padding: 5px 10px;
-  border-radius: 8px;
+  padding: 0px 20px;
 }
 /*callouts: heading*/
 blockquote.alert p.alert-heading {
-  font-size: 1.2em;
+  font-family: 'Space Mono';
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.ananke-social-link {
+  margin: 16px 20px 16px 0px;
 }

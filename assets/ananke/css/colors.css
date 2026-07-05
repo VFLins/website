@@ -164,11 +164,11 @@ a.ba.b--moon-gray {
   color: #777777;
 }
 .nested-links a {
-  color: #52827e;
+  color: var(--teal-700);
 }
 .nested-links a:focus, .nested-links a:hover {
-    color: #21a7a0;
-    transition: color .1s ease-in;
+  color: var(--teal-500);
+  transition: color .1s ease-in;
 }
 
 a:visited.category-link, a.category-link {
@@ -181,9 +181,9 @@ a:hover.category-link {
 
 /*teal tint on images*/
 .duotone-teal {
-    background-color: #55918c; /* Turquesa (DarkTurquoise) */
-    display: inline-block;
-    line-height: 0;
+  background-color: #55918c; /* Turquesa (DarkTurquoise) */
+  display: inline-block;
+  line-height: 0;
   border-radius: 6px;
 }
 .duotone-teal img {
@@ -201,13 +201,20 @@ a:hover.category-link {
 }
 
 /*tables*/
+table {
+  font-size: 16px;
+}
+
 th {
-  background-color: darkslategray;
-  color: #ffffff;
+  font-family: 'Space Mono';
+  text-align: left;
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--slategray-800);
+  color: var(--slategray-800);
   padding: 8px;
 }
 tr:nth-child(even) {
-  background-color: #dbeaec;
+  background-color: var(--slategray-100);
 }
 
 /*code blocks*/
@@ -222,10 +229,6 @@ pre code {
   background-color: #e0e0e0;
 }
 
-/*callout*/
-blockquote.alert {
-  background-color: #e0e0e0;
-}
 /*callout: success*/
 blockquote.alert.alert-success {
   border-left-color: green;
@@ -240,7 +243,7 @@ blockquote.alert.alert-product,
 blockquote.alert.alert-retail,
 blockquote.alert.alert-service,
 blockquote.alert.alert-analysis {
-  border-left-color: teal;
+  border-left-color: var(--teal-700);
 }
 
 /*callout-heading*/
@@ -280,7 +283,7 @@ blockquote.alert-product p.alert-heading,
 blockquote.alert-retail p.alert-heading,
 blockquote.alert-service p.alert-heading,
 blockquote.alert-analysis p.alert-heading {
-  color: teal;
+  color: var(--teal-700);
 }
 
 /* Custom tachyons-styled classes */

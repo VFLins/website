@@ -23,7 +23,7 @@ category = "categories"
 
 [params.ananke.social.share]
 icons = true
-networks = ["email", "facebook", "instagram", "linkedin", "whatsapp"]
+networks = ["email", "instagram", "whatsapp"]
 
 [params.ananke.social.linkedin]
 username = "vflins"

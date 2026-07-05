@@ -8,14 +8,14 @@
   {{ $section := .Site.GetPage "section" .Section }}
   <article class="flex-l mw8 center ph3 flex-wrap justify-between">
     <header class="mt4 w-100">
-      <aside class="instapaper_ignoref b helvetica tracked ttu">
+      <aside class="overline-text b tracked ttu">
           {{/*
           CurrentSection allows us to use the section title instead of inferring from the folder.
           https://gohugo.io/variables/page/#section-variables-and-methods
           */}}
 	  {{ .CurrentSection.Title }} {{ with .GetTerms "categories" }} | {{ range $index, $term := . }}
 	  {{ if $index }}・ {{ end }}
-              <a class="category-link" href="{{ $term.Permalink }}">{{ $term.LinkTitle }}</a>
+              <a class="" href="{{ $term.Permalink }}">{{ $term.LinkTitle }}</a>
           {{ end }} {{ end }}
       </aside>
       {{- partials.IncludeCached "social/share.html" . . -}}
@@ -53,7 +53,7 @@
         <span class="f6 mv4 dib tracked"> - {{ lang.Translate "wordCount" .WordCount }} </span>
       {{ end }}
     </header>
-    <div class="nested-copy-line-height lh-copy f4 nested-links {{ $.Param "text_color" | compare.Default "mid-gray" }} {{ compare.Conditional (compare.Eq $.Site.Language.LanguageDirection "rtl") "pl4-l" "pr4-l" }} w-two-thirds-l">
+    <div class="nested-copy-line-height lh-copy f4 {{ $.Param "text_color" | compare.Default "mid-gray" }} {{ compare.Conditional (compare.Eq $.Site.Language.LanguageDirection "rtl") "pl4-l" "pr4-l" }} w-two-thirds-l">
       {{- .Content -}}
       {{- partials.Include "tags.html" . -}}
       <div class="mt6 instapaper_ignoref">

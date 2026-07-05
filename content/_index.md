@@ -22,8 +22,10 @@ featured_image: "/images/illustrations/a-chosen-soul-unsplash-abstractcyan1.jpg"
 {{< /block >}}
 
 {{< block class="p w-90 mw8 center" id="heading-software" >}}
+  {{< block class="mw7" >}}
   Programas de computador de código aberto desenvolvidos por mim para melhorar a sua
   produtividade.
+  {{< /block >}}
 {{< /block >}}
 
 {{< cta cta-cashd >}}
@@ -34,9 +36,11 @@ featured_image: "/images/illustrations/a-chosen-soul-unsplash-abstractcyan1.jpg"
 {{< /block >}}
 
 {{< block class="p w-90 mw8 center" id="heading-software" >}}
+  {{< block class="mw7" >}}
   Sou _Vitor Lins_, um consultor de empresas localizado em Palmares, Pernambuco, e este
-  é um convite para que você saiba mais [sobre mim](sobre) e sobre o que eu posso fazer
-      por você.
+  é um convite para que você saiba mais [sobre mim](sobre) e sobre o que eu posso
+  fazer por você.
+  {{< /block >}}
 {{< /block >}}
 
 {{< block class="w-90 mw8 center mt5" >}}
@@ -45,10 +49,12 @@ featured_image: "/images/illustrations/a-chosen-soul-unsplash-abstractcyan1.jpg"
   {{< fmt class="heading1" >}}o que procurava{{< /fmt >}}
 {{< /block >}}
 
-{{< block class="p w-90 mw8 center" id="heading-software" >}}
-  Se você acredita que precisa de um profissional versátil que pode aplicar muitas áreas
-  do conhecimento em soluções práticas para a sua demanda, você não precisa mais continuar
-  procurando.
+{{< block class="p w-90 mw8 center" >}}
+  {{< block class="mw7" >}}
+  Se você acredita que precisa de um profissional versátil que pode aplicar muitas
+  áreas do conhecimento em soluções práticas para a sua demanda, você não precisa
+  mais continuar procurando.
+  {{< /block >}}
 {{< /block >}}
 
 {{< emphasis-list2 my-strong-points >}}
