@@ -34,8 +34,9 @@ featured_image: "/images/illustrations/a-chosen-soul-unsplash-abstractcyan1.jpg"
 {{< /block >}}
 
 {{< block class="p w-90 mw8 center" id="heading-software" >}}
-  Sou _Vitor Lins_, um consultor de empresas localizado em Palmares, Pernambuco. Você está
-  convidado a saber mais [sobre mim](sobre) e sobre o que eu posso fazer por você:
+  Sou _Vitor Lins_, um consultor de empresas localizado em Palmares, Pernambuco, e este
+  é um convite para que você saiba mais [sobre mim](sobre) e sobre o que eu posso fazer
+      por você.
 {{< /block >}}
 
 {{< block class="w-90 mw8 center mt5" >}}
@@ -51,3 +52,7 @@ featured_image: "/images/illustrations/a-chosen-soul-unsplash-abstractcyan1.jpg"
 {{< /block >}}
 
 {{< emphasis-list2 my-strong-points >}}
+
+{{< block class="w-90 mw8 center mt5" >}}
+  {{< fmt class="button heading4 ttu ph3 pv2 br2" >}}[agende uma consulta](/contato){{< /fmt >}}
+{{< /block >}}

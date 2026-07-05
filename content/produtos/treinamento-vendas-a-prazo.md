@@ -4,6 +4,7 @@ featured_image = "images/illustrations/loriane-magnenat-unsplash-bird.jpg"
 omit_header_text = true
 toc = true
 categories = ["treinamento"]
+draft = true
 +++
 
 Para manter o negócio em funcionamento, precisamos manter a entrada constante de

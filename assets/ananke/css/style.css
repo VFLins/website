@@ -208,11 +208,13 @@ a.button-link-white:hover {
 }
 
 /* style other elements as button */
-.button {
+.button a {
   color: var(--teal-700);
   border: solid 1px var(--teal-700);
+  border-radius: 4px;
+  padding: 8px 16px;
 }
-.button:hover {
+.button a:hover {
   color: white;
   background-color: var(--teal-700);
 }
