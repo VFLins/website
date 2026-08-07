@@ -5,11 +5,11 @@ page_height = true
 
 [title]
 css_class = "d2"
-text = "<span class='teal'>Nenhum</span> passo em falso"
+text = "Nenhum passo<br/>em falso_"
 
 [description]
-css_class = ""
-text = "O mundo dos <b>negócios</b> está cheio de incertezas, mas com <b>informação</b> e <b>tecnologia</b>, podemos explorá-lo com segurança."
+css_class = "p-mono"
+text = "{<br/><p class='p-mono ml4 mv0'>O mundo dos <b>negócios</b> está cheio de incertezas, mas com <b>informação</b> e <b>tecnologia</b>, podemos explorá-lo com segurança.</p>}"
 
 [button]
 type = "scroller" # 'scroller' or 'link'

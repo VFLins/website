@@ -11,7 +11,7 @@
 
       <div class="{{ $data.title.css_class }} lh-solid mt0 mb3">{{ $data.title.text | safeHTML }}</div>
 
-      <p class="{{ $data.descriptions.css_class }} lh-copy mt0 mb4 o-90">{{ $data.description.text | safeHTML }}</p>
+      <div class="{{ $data.description.css_class }} lh-copy mt0 mb4 o-90">{{ $data.description.text | safeHTML }}</div>
 
       {{ if eq $data.button.type "link" }}
       <a href="{{ $data.button.params.url }}" class="{{ $data.button.css_class }} heading4 br2 dib link mt4-ns ph3 pv2">
