@@ -7,7 +7,7 @@ featured_image: "/images/illustrations/a-chosen-soul-unsplash-abstractcyan1.jpg"
 
 
 {{< block class="d2 w-90 mw8 mt6 center" id="heading-produtos" >}}
-  Produtos
+  <span class="teal dn dib-ns">/</span> Produtos <span class="teal dn dib-ns">/</span>
 {{< /block >}}
 
 {{< cta2 cta-training >}}
@@ -18,7 +18,7 @@ featured_image: "/images/illustrations/a-chosen-soul-unsplash-abstractcyan1.jpg"
 
 
 {{< block class="d2 w-90 mw8 mt6 center" id="heading-software" >}}
-  Software
+  <span class="teal dn dib-ns">/</span> Software <span class="teal dn dib-ns">/</span>
 {{< /block >}}
 
 {{< block class="p w-90 mw8 center" id="heading-software" >}}
@@ -32,7 +32,7 @@ featured_image: "/images/illustrations/a-chosen-soul-unsplash-abstractcyan1.jpg"
 
 
 {{< block class="d2 w-90 mw8 mt6 center" id="heading-software" >}}
-  Sobre
+  <span class="teal dn dib-ns">/</span> Sobre <span class="teal dn dib-ns">/</span>
 {{< /block >}}
 
 {{< block class="p w-90 mw8 center" id="heading-software" >}}
@@ -43,9 +43,11 @@ featured_image: "/images/illustrations/a-chosen-soul-unsplash-abstractcyan1.jpg"
   {{< /block >}}
 {{< /block >}}
 
+{{< emphasis-grid my-strong-points >}}
+
 {{< block class="w-90 mw8 center mt5" >}}
   {{< fmt class="heading1" >}}Você{{< /fmt >}}
-  {{< fmt class="heading1 teal" >}}encontrou{{< /fmt >}}
+  {{< fmt class="heading1 b" >}}encontrou{{< /fmt >}}
   {{< fmt class="heading1" >}}o que procurava{{< /fmt >}}
 {{< /block >}}
 
@@ -56,8 +58,6 @@ featured_image: "/images/illustrations/a-chosen-soul-unsplash-abstractcyan1.jpg"
   mais continuar procurando.
   {{< /block >}}
 {{< /block >}}
-
-{{< emphasis-list2 my-strong-points >}}
 
 {{< block class="w-90 mw8 center mt5" >}}
   {{< fmt class="button heading4 ttu ph3 pv2 br2" >}}[agende uma consulta](/contato){{< /fmt >}}
