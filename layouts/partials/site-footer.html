@@ -1,7 +1,10 @@
-<footer class="bg-darkteal bottom-0 w-100 pa3 h3" role="contentinfo">
+<footer class="bg-darkteal bottom-0 w-100 pa4" role="contentinfo">
   <div class="flex justify-between">
   <a class="heading4 hover-white" href="{{ .Site.Home.Permalink }}" >
     &copy; {{ with .Site.Copyright | compare.Default .Site.Title }} {{ . | safe.HTML }} {{ now.Format "2006"}} {{ end }}
   </a>
+  </div>
+  <div class="overline-text teal mt4 bg-darkteal">
+    Identidade visual e design de Hompage <a class="hover-white" href="https://www.instagram.com/debyilustra">@debyilustra</a>
   </div>
 </footer>
