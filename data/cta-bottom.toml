@@ -1,0 +1,16 @@
+css_class = ""
+id = "homepage-block-1"
+# image = "images/icons/rocket_dark.png"
+page_height = false
+
+[description]
+css_class = "p-mono"
+text = "Se você precisa de um profissional versátil que pode aplicar muitas áreas do conhecimento em soluções práticas para a sua demanda, você não precisa mais continuar procurando."
+
+[button]
+type = "link" # 'scroller' or 'link'
+css_class = "button-link-teal"
+
+[button.params]
+text = "AGENDAR (CONSULTA):"
+url = "/contato"

@@ -208,6 +208,15 @@ a.button-link-white:hover {
   background-color: white;
 }
 
+a.button-link-dark {
+  color: var(--slategray-800);
+  border: solid 1px var(--slategray-800);
+}
+a.button-link-dark:hover {
+  color: var(--slategray-50);
+  background-color: var(--slategray-800);
+}
+
 /* style other elements as button */
 .button a {
   color: var(--teal-700);

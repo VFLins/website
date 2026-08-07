@@ -45,20 +45,9 @@ featured_image: "/images/illustrations/a-chosen-soul-unsplash-abstractcyan1.jpg"
 
 {{< emphasis-grid my-strong-points >}}
 
-{{< block class="w-90 mw8 center mt5" >}}
-  {{< fmt class="heading1" >}}Você{{< /fmt >}}
-  {{< fmt class="heading1 b" >}}encontrou{{< /fmt >}}
-  {{< fmt class="heading1" >}}o que procurava{{< /fmt >}}
+{{< block class="w-90 mw8 center mt5 lh-title d3" >}}
+  Você<br/><span class="teal">{</span> encontrou <span class="teal">}</span><br/>o que procurava
 {{< /block >}}
 
-{{< block class="p w-90 mw8 center" >}}
-  {{< block class="mw7" >}}
-  Se você acredita que precisa de um profissional versátil que pode aplicar muitas
-  áreas do conhecimento em soluções práticas para a sua demanda, você não precisa
-  mais continuar procurando.
-  {{< /block >}}
-{{< /block >}}
+{{< cta2 cta-bottom >}}
 
-{{< block class="w-90 mw8 center mt5" >}}
-  {{< fmt class="button heading4 ttu ph3 pv2 br2" >}}[agende uma consulta](/contato){{< /fmt >}}
-{{< /block >}}

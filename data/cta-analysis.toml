@@ -12,7 +12,7 @@ text = "Projetos analíticos para colocar você em vantagem na competição, e d
 
 [button]
 type = "link" # 'scroller' or 'link'
-css_class = "button-link"
+css_class = "button-link-dark"
 
 [button.params]
 text = "{ veja: 'quais' }"

@@ -20,7 +20,9 @@
     <!-- Left Column (Text content) -->
     <div class="w-100 w-70-ns">
 
-      <h2 class="{{ $data.title.css_class }} lh-solid mt0 mb3">{{ $data.title.text }}</h2>
+      {{ if $data.title }}
+        <h2 class="{{ $data.title.css_class }} lh-solid mt0 mb3">{{ $data.title.text }}</h2>
+      {{ end }}
 
       <p class="{{ $data.descriptions.css_class }} lh-copy mt0 mb4 o-90">{{ $data.description.text }}</p>
 
