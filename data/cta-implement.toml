@@ -7,7 +7,7 @@ css_class = "heading1"
 text = "Implementação de tecnologias"
 
 [description]
-css_class = ""
+css_class = "p"
 text = "Alguns ganhos de eficiência e qualidade de vida só são possíveis quando incorporamos tecnologia no nosso dia a dia."
 
 [button]
