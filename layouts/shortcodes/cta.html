@@ -26,11 +26,11 @@
 
       {{ if eq $data.button.type "scroller" }}
         {{ $btnID := printf "scroller-btn-%d" .Ordinal }}
-        <a href="" id="{{ $btnID }}" role="button" class="{{ $data.button.css_class }} heading4 br2 dib link mt4-ns ph3 pv2" onclick="event.preventDefault(); scrollToElement()">{{ $data.button.params.text }}</a>
+	<a href="" id="{{ $btnID }}" role="button" class="{{ $data.button.css_class }} heading4 br2 dib link mt4-ns ph3 pv2" onclick="event.preventDefault(); scrollToElement( {{ $data.button.params.scroll_to }} )">{{ $data.button.params.text }}</a>
 
         <script>
-          function scrollToElement() {
-            const element = document.getElementById( "{{ $data.button.params.scroll_to }}" );
+          function scrollToElement(elemId) {
+            const element = document.getElementById( elemId );
             const elementPosition = element.getBoundingClientRect().top + window.scrollY;
             const navBar = document.querySelector("nav.fixed"); 
             const navBarHeight = navBar ? navBar.offsetHeight : 0;

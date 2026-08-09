@@ -23,5 +23,5 @@ css_class = "button-link-dark"
 
 [button.params]
 text = "__baixe_de_graça__"
-scroll_to = "heading-download"
+scroll_to = "download"
 # url = "/software/cashd"

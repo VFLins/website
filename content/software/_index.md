@@ -4,12 +4,9 @@ weight = 60
 featured_image = "images/illustrations/pawel-czerwinski-unsplash-abstractteal4.jpg"
 +++
 
-Estes programas são desenvolvidos seguindo três princípios em mente:
+O principal objetivo destes _softwares_ é de oferecer a maior ajuda possível com o
+menor custo, os programas abaixo são gratuitos e foram desenvolvidos com três
+princípios em mente:
 
-{{< emphasis-list software-principles >}}
-
-Todos eles são gratuitos para instalar e usar, sem períodos de teste, e sem recursos
-_premium_, basta instalar e usar como quiser. Se precisar de ajuda com instalação,
-treinamento, ou suporte prioritário, [entre em contato](../contato) comigo, e fazemos um
-orçamento.
+{{< emphasis-grid software-principles >}}
 

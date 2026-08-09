@@ -1,25 +1,17 @@
+n_columns = 3
+
 [[items]]
-title = "Privacidadede em primeiro lugar"
+title = "[privado]"
 icon = "lock.svg"
-description = """
-  Os dados estão sempre com você, e você tem controle total sobre o que acontece com
-  eles;
-"""
+description = "Seus dados estão na sua máquina e você tem total controle sobre eles"
 
 [[items]]
-title = "Interação simples"
+title = "[intuitivo]"
 icon = "check.svg"
-description = """
-  A interface deve ser simples e fácil de usar. Poucos elementos na tela, e um
-  propósito claro para cada controle que você vê;
-"""
+description = "A interface é simples e fácil de usar"
 
 [[items]]
-title = "Código aberto"
+title = "[código aberto]"
 icon = "book-open.svg"
-description = """
-  O código fonte é aberto e a rotina usada para compilar os códigos é pública.
-  A qualidade e segurança do software pode ser verificada por você mesmo ou um
-  especialista de sua confiança.
-"""
+description = "O código fonte é aberto e pode ser fácilmente verificado"
 

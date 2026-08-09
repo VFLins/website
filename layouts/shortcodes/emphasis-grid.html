@@ -1,9 +1,22 @@
 {{ $file := .Get 0 }}
 {{ $data := index .Site.Data $file }}
 
-<ul class="list pl0 w-90 mw8 center pv4 flex flex-wrap nl3 nr3">
+{{/* Define o número de colunas (padrão 2 caso $data.n_columns não exista) */}}
+{{ $cols := $data.n_columns | default 2 }}
+
+{{/* Mapeia a quantidade de colunas para as classes do Tachyons no breakpoint desktop/tablet (-ns) */}}
+{{ $widthClass := "w-50-ns" }}
+{{ if eq $cols 1 }}
+  {{ $widthClass = "w-100-ns" }}
+{{ else if eq $cols 3 }}
+  {{ $widthClass = "w-33-ns" }}
+{{ else if eq $cols 4 }}
+  {{ $widthClass = "w-25-ns" }}
+{{ end }}
+
+<ul class="list pl0 center pv4 flex flex-wrap nl3 nr3 {{ $data.css_class }}">
   {{ range $data.items }}
-  <li class="flex items-start mb4 w-100 w-50-ns ph3">
+  <li class="flex items-start mb4 w-100 {{ $widthClass }} ph3">
     <div class="pr3 flex-shrink-0">
       <span class="f3">
         {{ $iconName := .icon | default "ellipsis.svg" }}

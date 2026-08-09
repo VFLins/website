@@ -10,7 +10,7 @@ type = "page"
 
 {{< cta cta-cashd-main >}}
 
-{{< block class="w-90 mw8 mt6 center" id="heading-sobre" >}}
+{{< block class="w-90 mw8 mt6 center" id="sobre" >}}
   <h1 class="d3">
   <span class="teal dn dib-ns">/</span> Sobre <span class="teal dn dib-ns">/</span>
   </h1>
@@ -34,7 +34,7 @@ type = "page"
 
 {{< cta cta-cashd-server >}}
 
-{{< block class="w-90 mw8 mt6 center" id="heading-download" >}}
+{{< block class="w-90 mw8 mt6 center" id="download" >}}
   <h1 class="d3">
   <span class="teal dn dib-ns">/</span> Download <span class="teal dn dib-ns">/</span>
   </h1>
@@ -44,11 +44,6 @@ type = "page"
   escolha o instalador compatível com o seu sistema operacional, extraia o instalador do
   arquivo .zip e o execute normalmente. O código fonte usado para compilar esta versão
   também está disponibilizado abaixo.
-
-  Para instalar a distribuição `cashd-server`, siga
-  [estas instruções](https://github.com/VFLins/cashd/wiki/Instalando-e-Atualizando#1-cashd-server),
-  ou se não se sentir confiante para fazê-lo, procure um profissional de sua confiança,
-  [entre em contato](/contato) comigo se desejar, para fazer esta instalação.
   </p>
 {{< /block >}}
 
