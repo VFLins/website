@@ -1,0 +1,26 @@
+css_class = "bg-cashd white w-100 center"
+id = "homepage-block-5"
+page_height = true
+text_width = 40
+always_vertical = true
+
+[image]
+# css_class = "mw5 mw6-l"
+path = "/images/gh_banner-cashd.png"
+
+[title]
+css_class = "heading3"
+text = "Você quer continuar registrando as compras no fiado, mas não quer mais usar a caderneta."
+
+[description]
+css_class = "p"
+text = "Traga seus registros para o <code>Cashd</code>, e facilite todo o processo."
+
+[button]
+type = "scroller" # 'scroller' or 'link'
+css_class = "button-link-white"
+
+[button.params]
+text = "{ conheça }:"
+scroll_to = "heading-sobre"
+# url = "/software/cashd"

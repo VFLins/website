@@ -1,0 +1,26 @@
+css_class = "w-100 center"
+id = "homepage-block-5"
+page_height = false
+text_width = 40
+always_vertical = false
+
+[image]
+# css_class = "mw5 mw6-l"
+path = "/images/illustrations/cashd-server-mockup.png"
+
+[title]
+css_class = "heading4"
+text = "Para lojas maiores"
+
+[description]
+css_class = "p"
+text = "Peça uma instalação do <code>Cashd Server</code> se você precisa que multiplos funcionários acessem o mesmo sistema, cada um de seu dispositivo."
+
+[button]
+type = "link" # 'scroller' or 'link'
+css_class = "button-link-dark"
+
+[button.params]
+text = "marcar (visita):"
+# scroll_to = "heading-sobre"
+url = "/contato"

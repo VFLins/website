@@ -1,0 +1,27 @@
+css_class = "w-100 center"
+id = "homepage-block-5"
+page_height = false
+text_width = 40
+always_vertical = false
+image_left = true
+
+[image]
+# css_class = "mw5 mw6-l"
+path = "/images/illustrations/cashd-local-mockup.png"
+
+[title]
+css_class = "heading4"
+text = "Para lojas pequenas"
+
+[description]
+css_class = "p"
+text = "O <code>Cashd Local</code> é instalado no computador onde todas as transações são registradas."
+
+[button]
+type = "scroller" # 'scroller' or 'link'
+css_class = "button-link-dark"
+
+[button.params]
+text = "__baixe_de_graça__"
+scroll_to = "heading-download"
+# url = "/software/cashd"
