@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ site.Language.LanguageCode }}" {{- if eq site.Language.LanguageDirection "rtl" }} dir="rtl" {{- end }}>
+<html lang="{{ site.Language.Locale }}" {{- if eq site.Language.Direction "rtl" }} dir="rtl" {{- end }}>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -59,7 +59,7 @@
 
     {{ block "header" . }}{{ partials.Include "site-header.html" .}}{{ end }}
     {{/* Add top paddingpage to avoid clipping with the navbar */}}
-    <main class="pb7 {{ if .IsHome }}nav-clearance{{ end }}" role="main">
+    <main class="pb7 nav-clearance" role="main">
       {{ block "main" . }}{{ end }}
     </main>
     {{ block "footer" . }}{{ partials.IncludeCached "site-footer.html" . }}{{ end }}
