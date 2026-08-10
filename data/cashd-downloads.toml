@@ -1,3 +1,5 @@
+css_class = "w-90 mw8-ns"
+
 [[items]]
 title = "Windows"
 description = "Para qualquer sistema Windows, mas testado apenas no Windows 11"
@@ -12,7 +14,7 @@ icon = "linux.svg"
 
 [[items]]
 title = "Linux .rpm"
-description = "Para sistemas baseados em RPM (Fedora, CentOS, OpenSUSE, entre outros)"
+description = "Para sistemas baseados em Fedora"
 url = "https://github.com/VFLins/cashd/releases/latest/download/cashd-rpm-installer-x86_64.zip"
 icon = "linux.svg"
 

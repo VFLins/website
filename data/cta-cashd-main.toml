@@ -10,7 +10,10 @@ path = "/images/gh_banner-cashd.png"
 
 [title]
 css_class = "heading2"
-text = "Você quer continuar registrando as compras no fiado, mas não quer mais usar a caderneta."
+text = """
+    Se você quer continuar registrando as compras no fiado, mas não quer mais usar
+    a caderneta...
+"""
 
 [description]
 css_class = "p"

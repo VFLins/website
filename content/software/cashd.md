@@ -1,10 +1,6 @@
 +++
-title = "Cashd"
 description = "Controle de fiado simplificado"
-omit_header_text = true
 featured_image = "images/gh_banner-cashd.png"
-toc = true
-type = "page"
 +++
 
 <!--more-->
@@ -41,10 +37,11 @@ type = "page"
   </h1>
 
   <p>
-  Os instaladores abaixo instalam a versão mais recente da distribuição `cashd-local`,
-  escolha o instalador compatível com o seu sistema operacional, extraia o instalador do
-  arquivo .zip e o execute normalmente. O código fonte usado para compilar esta versão
-  também está disponibilizado abaixo.
+  Os instaladores abaixo instalam a versão mais recente da distribuição <code>
+  Cashd Local</code>, escolha o instalador compatível com o seu sistema operacional,
+  extraia o instalador do arquivo .zip e o execute normalmente. O código fonte mais
+  recente também está disponibilizado abaixo, e pode conter recursos ainda não
+  adicionados.
   </p>
 {{< /block >}}
 
