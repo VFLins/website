@@ -5,7 +5,7 @@ text_width = 40
 always_vertical = true
 
 [image]
-# css_class = "mw5 mw6-l"
+css_class = "w-100 w-50-ns"
 path = "/images/gh_banner-cashd.png"
 
 [title]
