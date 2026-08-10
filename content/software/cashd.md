@@ -1,5 +1,6 @@
 +++
 title = "Cashd"
+description = "Controle de fiado simplificado"
 omit_header_text = true
 featured_image = "images/gh_banner-cashd.png"
 toc = true
