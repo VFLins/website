@@ -7,9 +7,9 @@
       {{ .Content }}
     </section>
 
-    <aside class="flex flex-wrap w-100 mt5 justify-between">
+    <aside class="flex flex-wrap w-100 mt5 justify-between card-grid">
       {{ range .Paginator.Pages }}
-        <div class="w-100 w-50-l relative pa3 flex">
+        <div class="w-90 center flex">
           {{ partial "summary-card.html" . }}
         </div>
       {{ end }}
