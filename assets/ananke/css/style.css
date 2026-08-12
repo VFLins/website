@@ -232,7 +232,7 @@ a.button-link-dark:hover {
 
 /*call-to-action block occupying all page height*/
 .cta-block-ph {
-  height: calc(100vh - 190px);
+  height: calc(100vh - 63px);
 }
 
 /* post: toc */

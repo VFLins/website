@@ -8,7 +8,7 @@
   {{ $alwaysVertical := $data.always_vertical | default false }}
   {{ $imageLeft := $data.image_left | default false }}
 
-<div class="tachyons-breakout pv5 {{ $data.css_class }}" id="{{ $data.id }}">
+<div class="{{ $data.css_class }}" id="{{ $data.id }}">
     <div class="{{ if $pageHeight }}cta-block-ph{{ else }}cta-block{{ end }} mw8 center ph4 flex {{ if and (not $alwaysVertical) $imageLeft }}flex-column-reverse flex-row-reverse-ns{{ else }}flex-column-reverse {{ if not $alwaysVertical }}flex-row-ns justify-between-ns{{ end }}{{ end }} items-center justify-center gap-custom">
 
     <!-- Left Column (Text content) -->
