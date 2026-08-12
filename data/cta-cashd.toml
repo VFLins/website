@@ -1,4 +1,4 @@
-css_class = "bg-cashd white ma4 w-100 center"
+css_class = "bg-cashd white ma4 pv5 w-100 center"
 id = "homepage-block-5"
 
 [image]
