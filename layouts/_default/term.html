@@ -1,0 +1,19 @@
+{{ define "main" }}
+    {{ $data := .Data }}
+  <div class="w-90 mw8 center">
+    <section class="ph4">
+      {{ range $term := .Data.Pages }}
+        <h2 class="f1">
+          <a href="{{ $term.RelPermalink }}" class="link blue hover-black">
+            {{ $.Data.Singular | inflect.Humanize }}: {{ $term.LinkTitle }}
+          </a>
+        </h2>
+        <aside class="flex flex-wrap w-100 w-50-m mt5 justify-between card-grid">
+          {{ range $term.Pages }}
+            {{ .Render "summary" }}
+          {{ end }}
+        </aside>
+      {{ end }}
+    </section>
+  </div>
+{{ end }}

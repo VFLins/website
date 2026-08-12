@@ -1,45 +1,64 @@
 <style>
+  /* Container da lista de artigos */
+  .card-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 coluna no celular */
+    gap: 1.5rem;
+  }
+
+  /* 2 colunas em Tablets (a partir de 600px) */
+  @media (min-width: 600px) {
+    .card-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  /* 3 colunas em Desktops (a partir de 1024px) */
+  @media (min-width: 1024px) {
+    .card-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
   .aspect-16-9 {
-    width: 100%;
+    display: block;
+    width: inherit;
+    height: auto;
     aspect-ratio: 16 / 9;
     object-fit: cover;
     object-position: center;
   }
 </style>
 
-<div class="w-100 mb4 relative">
-  <div class="mb3 pa4 overflow-hidden bg-slategray-200 br3 flex flex-column">
+<!-- Estrutura do Cartão -->
+<div class="mb4 nested-copy-line-height relative">
+  <div class="mb3 pa3 overflow-hidden h-100 flex flex-column justify-between">
 
-    {{ with .Params.featured_image }}
-    <div class="aspect-16-9 w-100 mb3"> <a href="{{ $.RelPermalink }}" class="db">
-        <img src="{{ . | relURL }}" alt="{{ $.Title }}" class="db w-100 br2 object-cover" style="max-height: 250px; width: 100%; object-position: center;">
-      </a>
-    </div>
-    {{ end }}
+    <div>
+      {{ with .Params.featured_icon }}
+      <div class="w-100">
+        <a href="{{ $.RelPermalink }}" class="db">
+          <img src="{{ . | relURL }}" alt="{{ $.Title }}" class="db mb3 w2 br2 object-cover">
+        </a>
+      </div>
+      {{ end }}
 
-    <div class="w-100">
-      {{ with .CurrentSection.Title }}
-      <span class="summary-overline f6 db"><b>{{ . }}</b>
-        {{ end }}
-        {{ with .Params.categories }}|{{ range $index, $category := . }}
-          {{ if $index }}・ {{ end }}{{ . | title }}
-        {{ end }} {{ end }}
-      </span>
-
-      <h1 class="summary-title f3 near-black mt2">
-        <a href="{{ .RelPermalink }}" class="link dim near-black">
+      <h1 class="heading4 mt2 mb2">
+        <a href="{{ .RelPermalink }}">
           {{ .Title }}
         </a>
       </h1>
 
-      <div class="summary-content nested-links f5 lh-copy nested-copy-line-height">
-        {{ .Summary }}
+      <div class="lh-copy nested-copy-line-height">
+        <p>
+        {{ if .Params.description}}
+          {{ .Params.description }}
+        {{ else }}
+          {{ .Summary }}
+        {{ end }}
+        </p>
       </div>
 
-      <a href="{{ .RelPermalink }}" class="summary-readmore ba br2 dib f7 link mt2 ph2 pv1">
-        {{ $.Param "read_more_copy" | compare.Default (lang.Translate "readMore") }}
-      </a>
     </div>
-
   </div>
 </div>

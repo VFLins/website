@@ -59,7 +59,7 @@
 
     {{ block "header" . }}{{ partials.Include "site-header.html" .}}{{ end }}
     {{/* Add top paddingpage to avoid clipping with the navbar */}}
-    <main class="pb7 nav-clearance" role="main">
+    <main role="main">
       {{ block "main" . }}{{ end }}
     </main>
     {{ block "footer" . }}{{ partials.IncludeCached "site-footer.html" . }}{{ end }}
