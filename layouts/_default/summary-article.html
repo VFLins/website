@@ -1,0 +1,79 @@
+<style>
+  /* Container da lista de artigos */
+  .card-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 coluna no celular */
+    gap: 1.5rem;
+  }
+
+  /* 2 colunas em Tablets (a partir de 600px) */
+  @media (min-width: 600px) {
+    .card-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  /* 3 colunas em Desktops (a partir de 1024px) */
+  @media (min-width: 1024px) {
+    .card-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .aspect-16-9 {
+    display: block;
+    width: inherit;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: center;
+  }
+</style>
+
+<div class="mb4 nested-copy-line-height relative">
+  <div class="mb3 pa3 overflow-hidden h-100 flex flex-column g3">
+
+    <div class="flex flex-row items-center justify-between w-100 mb3">
+
+      {{ with .Params.featured_image }}
+      <div class="w-30 flex-shrink-0 mr3">
+        <a href="{{ $.RelPermalink }}" class="db">
+          <img src="{{ . | relURL }}" alt="{{ $.Title }}" class="db w-100 br2 object-cover">
+        </a>
+      </div>
+      {{ end }}
+
+      <div class="{{ if .Params.featured_image }}w-70{{ else }}w-100{{ end }}">
+
+        <div class="overline-text f6 ttu tracked mb1">
+          {{ with .CurrentSection.Title }}
+            <span class="overline-text"><b>{{ . }}</b>
+          {{ end }}
+          {{ with .Params.tags }}|{{ range $index, $tag := . }}
+            {{ if $index }}・ {{ end }}{{ . | title}}
+          {{ end }}{{ end }}
+        </div>
+
+        <h1 class="heading4 mt0 mb0">
+          <a href="{{ .RelPermalink }}">
+            {{ .Title }}
+          </a>
+        </h1>
+
+      </div>
+    </div>
+
+    <div class="w-100">
+      <div class="lh-copy nested-copy-line-height">
+        <p class="mt0 mb0">
+        {{ if .Params.description }}
+          {{ .Params.description }}
+        {{ else }}
+          {{ .Summary }}
+        {{ end }}
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>

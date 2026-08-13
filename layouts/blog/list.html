@@ -7,10 +7,10 @@
       {{ .Content }}
     </section>
 
-    <aside class="flex flex-wrap w-100 mt5 justify-between">
+    <aside class="flex flex-wrap w-100 mt3 justify-between">
       {{ range .Paginator.Pages }}
         <div class="w-100 w-50-l relative pa3 flex">
-          {{ partial "summary-article.html" . }}
+          {{ .Render "summary-article" }}
         </div>
       {{ end }}
     </aside>
