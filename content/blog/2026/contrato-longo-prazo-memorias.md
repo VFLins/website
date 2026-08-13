@@ -14,8 +14,10 @@ ruim quanto parece.
 
 <!--more-->
 
-![](https://images.unsplash.com/photo-1542978709-19c95dc3bc7e?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
-
+![Ilustração: Fotografia de uma memória RAM, da Unsplash, foto de Franck V.](https://images.unsplash.com/photo-1542978709-19c95dc3bc7e?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
+{{< block class="overline-text tc" >}}
+  por Franck V., da Unsplash
+{{< /block >}}
 
 ## _Data centers_ em construção
 
@@ -27,7 +29,7 @@ computação prevista para os próximos anos[^2].
 Além de aumentos nos preços do _hardware_, a construção de _data centers_ também tem
 provocado aumentos nos preços da energia e da construção[^2]. Este choque de oferta age
 como um desincentivo natural para continuar expandindo as capacidades computacionais
-instaladas, cada nova construção será mais cara que a anterior.
+instaladas, porque cada nova construção será mais cara que a anterior.
 
 A construção destas instalações são motivadas pela expectativa de que as grandes
 empresas de tecnologia poderão monetizar seus produtos de IA no futuro, e que terão
@@ -44,9 +46,22 @@ generativa que conhecemos hoje:
 1. O custo dos planos de acesso à IA aumentaram ao ponto de não justificar o retorno
 gerado para as empresas[^3];
 2. A procura pelos principais modelos e IA tem sofrido redução gradativa nos últimos
-meses[^4];
+meses, indicando uma reversão da tendência dos últimos três anos[^4];
 3. A qualidade dos serviços de empresas que substituiram trabalho humano por IA
 diminuiu de forma perceptível[^5].
+
+Com tanta incerteza sobre a sustentabilidade da demanda no longo prazo, parece estranho
+imaginar que as _big techs_ façam investimentos tão expressivos na construção de novas
+instalações de computação.
+
+Mas ao mesmo tempo que existem muitos pontos de atenção,
+também existe uma grande expectativa de que esta tecnologia seja uma revolução da
+computação moderna.
+
+
+### Estratégia dos intermediários
+
+As maiores empresas que
 
 ## Os contratos impostos pelas fabricantes
 
