@@ -3,7 +3,6 @@ title = "Aquisição de equipamento de informática"
 description = "Encontre a máquina perfeita para as suas necessidades de computação."
 omit_header_text = true
 categories = ["implantação de tecnologia"]
-featured_image = "images/illustrations/andras-vas-unsplash-notebook.jpg"
 featured_icon = "images/icons/computer.svg"
 +++
 

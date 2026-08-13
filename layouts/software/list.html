@@ -10,7 +10,7 @@
     <aside class="flex flex-wrap w-100 justify-between">
       {{ range .Paginator.Pages }}
         <div class="w-100 w-50-l relative pa3 flex">
-          {{ partial "summary-simplecard.html" . }}
+          {{ .Render "summary" }}
         </div>
       {{ end }}
     </aside>

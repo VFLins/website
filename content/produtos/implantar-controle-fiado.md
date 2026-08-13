@@ -2,7 +2,6 @@
 title = "Software para controle de fiado"
 description = "Controle suas vendas em fiado digitalmente."
 omit_header_text = true
-featured_image = "images/gh_banner-cashd.png"
 featured_icon = "images/icons/point-of-sale.svg"
 toc = true
 categories = ["implantação de tecnologia"]

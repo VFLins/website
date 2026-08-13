@@ -35,13 +35,27 @@
   <div class="mb3 pa3 overflow-hidden h-100 flex flex-column justify-between">
 
     <div>
-      {{ with .Params.featured_icon }}
-      <div class="w-100">
-        <a href="{{ $.RelPermalink }}" class="db">
-          <img src="{{ . | relURL }}" alt="{{ $.Title }}" class="db mb3 w2 br2 object-cover">
-        </a>
-      </div>
-      {{ end }}
+      {{ if .Params.featured_image }}
+
+        {{ with .Params.featured_image }}
+        <div class="w-100 h-auto">
+          <a href="{{ $.RelPermalink }}" class="db">
+            <img src="{{ . | relURL }}" alt="{{ $.Title }}" class="db mb3 br2 object-cover">
+          </a>
+        </div>
+        {{ end }}
+
+      {{ else }}
+
+        {{ with .Params.featured_icon }}
+        <div class="w-100">
+          <a href="{{ $.RelPermalink }}" class="db">
+            <img src="{{ . | relURL }}" alt="{{ $.Title }}" class="db mb3 w2 object-cover">
+          </a>
+        </div>
+        {{ end }}
+  
+      {{ end}}
 
       <h1 class="heading4 mt2 mb2">
         <a href="{{ .RelPermalink }}">

@@ -1,7 +1,6 @@
 +++
 title = "Análise de produtos mais lucrativos"
 description = "Conheça seus produtos campeões, entenda melhor por que são mais procurados."
-featured_image = "images/illustrations/linn-legros-unsplash-catbasekts.jpg"
 featured_icon = "images/icons/trophy.svg"
 omit_header_text = true
 toc = true

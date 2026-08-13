@@ -1,6 +1,7 @@
 +++
+title = "Cashd"
 description = "Controle de fiado simplificado"
-featured_image = "images/gh_banner-cashd.png"
+featured_image = "images/icons/cashd.png"
 +++
 
 <!--more-->
