@@ -20,11 +20,11 @@
     }
   }
 
-  .aspect-16-9 {
+  .aspect-4-3 {
     display: block;
     width: inherit;
     height: auto;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 4 / 3;
     object-fit: cover;
     object-position: center;
   }
@@ -38,16 +38,16 @@
       {{ with .Params.featured_image }}
       <div class="w-30 flex-shrink-0 mr3">
         <a href="{{ $.RelPermalink }}" class="db">
-          <img src="{{ . | relURL }}" alt="{{ $.Title }}" class="db w-100 br2 object-cover">
+          <img src="{{ . | relURL }}" alt="{{ $.Title }}" class="db w-100 br2 aspect-4-3 object-cover">
         </a>
       </div>
       {{ end }}
 
       <div class="{{ if .Params.featured_image }}w-70{{ else }}w-100{{ end }}">
 
-        <div class="overline-text f6 ttu tracked mb1">
-          {{ with .CurrentSection.Title }}
-            <span class="overline-text"><b>{{ . }}</b>
+        <div class="overline-text tracked mb1">
+          {{ with .Params.date }}
+            <span class="overline-text"><b>{{ time.Format "02/01/2006" . }}</b>
           {{ end }}
           {{ with .Params.tags }}|{{ range $index, $tag := . }}
             {{ if $index }}・ {{ end }}{{ . | title}}
@@ -73,6 +73,9 @@
         {{ end }}
         </p>
       </div>
+      <a href="{{ .RelPermalink }}" class="button-link overline-text">
+        {{ $.Param "read_more_copy" | compare.Default (lang.Translate "readMore") }}
+      </a>
     </div>
 
   </div>

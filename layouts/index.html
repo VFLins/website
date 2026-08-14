@@ -13,11 +13,12 @@
     <div class="ph4-ns w-100 enter">
       {{ $n_posts := $.Param "recent_posts_number" | compare.Default 4 }}
 
-      <section class="cf ph2-ns w-100">
+      <section class="cf pt6 w-100 mw8 center">
+        <h1>Últimas publicações</h1>
         {{/* Range through the first $n_posts items of the section */}}
         {{ range (collections.First $n_posts $section) }}
           <div class="fl w-100 w-50-ns pa2 mb4 relative">
-            {{ .Render "summary-with-image" }}
+            {{ .Render "summary-article" }}
           </div>
         {{ end }}
       </section>

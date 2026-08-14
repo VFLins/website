@@ -132,8 +132,8 @@ construir, mas muitos dos chips são comprados com antecedência[^11].
 
 Eu não daria um prazo de meses para que os preços das memórias comecem a normalizar,
 mas as projeções das fabricantes de 4 anos de preços elevados me parecem otimistas
-demais. Para mim, arriscando uma previsão, um número mais realista seria de até 18
-meses.
+demais. Para mim, arriscando uma previsão, um número mais realista seria de até dois
+anos.
 
 
 [^1]: **SK Hynix Newsroom**.
