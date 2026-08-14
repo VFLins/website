@@ -108,8 +108,8 @@ fabricantes[^10].
 
 Isso fortalece a crença de que a decisão de firmar contratos de longo prazo é, na
 verdade, uma forma de garantir as generosas margens de lucro atuais por mais tempo,
-quando vêem nos próximos anos, a possibilidade de uma redução gradual dos preços[^9]
-[^10], de volta para patamares normais.
+quando vêem nos próximos anos, a possibilidade de uma redução gradual dos preços de
+volta para patamares normais[^9] [^10].
 
 ### O lado positivo
 
@@ -130,9 +130,10 @@ O tempo de construção dos _data centers_ já operacionais foi de cerca de trê
 os projetos atuais em construção são maiores e podem levar o dobro do tempo para
 construir, mas muitos dos chips são comprados com antecedência[^11].
 
-Eu não daria um prazo de meses para que os preços das memórias comece a normalizar, mas
-as projeções das fabricantes e 4 anos de preços elevados me parecem muito mais
-otimistas do que realistas.
+Eu não daria um prazo de meses para que os preços das memórias comecem a normalizar,
+mas as projeções das fabricantes de 4 anos de preços elevados me parecem otimistas
+demais. Para mim, arriscando uma previsão, um número mais realista seria de até 18
+meses.
 
 
 [^1]: **SK Hynix Newsroom**.
