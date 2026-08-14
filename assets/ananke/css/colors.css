@@ -66,6 +66,8 @@
 .teal-light { color: var(--teal-400) }
 .teal { color: var(--teal-700) }
 .teal-dark { color: var(--teal-900) }
+.fail-text { color: var(--firebrick-700) }
+.warn-text { color: var(--orange-500) }
 
 /*gradients*/
 .bg-gradient-teal-white {

@@ -17,6 +17,7 @@ background_color_class = "bg-gradient-teal-white"
 mainSections = ["blog"]
 text_color = "slategray-800"
 body_classes = "nav-clearance bg-slategray-50"
+show_reading_time = true
 
 [taxonomies]
 tag = "tags"
