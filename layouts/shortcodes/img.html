@@ -1,0 +1,16 @@
+{{/*
+
+{{< img path="/caminho/imagem.jpg" alt="Descrição alt" legend="Legenda da imagem" >}}
+
+Parâmetros:
+- path: Caminho ou URL da imagem (obrigatório)
+- alt: Texto alternativo para acessibilidade (obrigatório)
+- legend: Legenda exibida abaixo da imagem (opcional)
+
+*/}}
+<figure>
+  <img src="{{ .Get "path" }}" alt="{{ .Get "alt" }}" class="br2">
+  {{ with .Get "legend" }}
+    <figcaption class="overline-text tc">{{ . }}</figcaption>
+  {{ end }}
+</figure>
