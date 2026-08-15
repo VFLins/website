@@ -1,0 +1,5 @@
+[readingTime]
+other = "{{ . }} minutos de leitura"
+
+[wordCount]
+other = "{{ . }} palavras"

@@ -9,8 +9,8 @@ Parâmetros:
 
 */}}
 <figure>
-  <img src="{{ .Get "path" }}" alt="{{ .Get "alt" }}" class="br2">
+  <img src="{{ .Get "path" }}" alt="{{ .Get "alt" }}" class="br2 aspect-4-3">
   {{ with .Get "legend" }}
-    <figcaption class="overline-text tc">{{ . }}</figcaption>
+    <figcaption class="overline-text tc mv3">{{ . }}</figcaption>
   {{ end }}
 </figure>

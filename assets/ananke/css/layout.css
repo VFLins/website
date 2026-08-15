@@ -54,3 +54,23 @@ blockquote.alert p.alert-heading {
 .ananke-social-link {
   margin: 16px 20px 16px 0px;
 }
+
+/* Enforce aspect ratio on images */
+.aspect-4-3 {
+  display: block;
+  width: inherit;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center;
+}
+
+.aspect-16-9 {
+  display: block;
+  width: inherit;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center;
+}
+

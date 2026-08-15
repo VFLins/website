@@ -1,36 +1,3 @@
-<style>
-  /* Container da lista de artigos */
-  .card-grid {
-    display: grid;
-    grid-template-columns: 1fr; /* 1 coluna no celular */
-    gap: 1.5rem;
-  }
-
-  /* 2 colunas em Tablets (a partir de 600px) */
-  @media (min-width: 600px) {
-    .card-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  /* 3 colunas em Desktops (a partir de 1024px) */
-  @media (min-width: 1024px) {
-    .card-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-
-  .aspect-16-9 {
-    display: block;
-    width: inherit;
-    height: auto;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-    object-position: center;
-  }
-</style>
-
-<!-- Estrutura do Cartão -->
 <div class="mb4 nested-copy-line-height relative">
   <div class="mb3 pa3 overflow-hidden h-100 flex flex-column justify-between">
 
@@ -38,9 +5,9 @@
       {{ if .Params.featured_image }}
 
         {{ with .Params.featured_image }}
-        <div class="w-100 h-auto">
+        <div class="w-100">
           <a href="{{ $.RelPermalink }}" class="db">
-            <img src="{{ . | relURL }}" alt="{{ $.Title }}" class="db mb3 br2 object-cover">
+            <img src="{{ . | relURL }}" alt="{{ $.Title }}" class="db mb3 br2 aspect-16-9">
           </a>
         </div>
         {{ end }}

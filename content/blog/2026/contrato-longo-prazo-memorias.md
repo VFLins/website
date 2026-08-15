@@ -1,9 +1,9 @@
 +++
-date = '2026-08-14T16:06:50-03:00'
-toc = true
-title = 'Por que fabricantes de memória estão firmando contratos de estabilidade de preços?'
+title = 'Por que fabricantes de memória estão forçando contratos de longo prazo?'
 featured_image = "https://images.unsplash.com/photo-1542978709-19c95dc3bc7e?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+date = '2026-08-14T16:06:50-03:00'
 tags = ["economia"]
+toc = true
 +++
 
 A maior parte dos comunicadores do meio de _hardware_ recebeu com tristeza as notícias
@@ -132,8 +132,8 @@ construir, mas muitos dos chips são comprados com antecedência[^11].
 
 Eu não daria um prazo de meses para que os preços das memórias comecem a normalizar,
 mas as projeções das fabricantes de 4 anos de preços elevados me parecem otimistas
-demais. Para mim, arriscando uma previsão, um número mais realista seria de até dois
-anos.
+demais. Para mim, arriscando uma previsão conservadora, um número mais realista seria
+de até dois anos.
 
 
 [^1]: **SK Hynix Newsroom**.
