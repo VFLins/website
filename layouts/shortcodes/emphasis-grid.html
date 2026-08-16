@@ -12,11 +12,13 @@
   {{ $widthClass = "w-33-ns" }}
 {{ else if eq $cols 4 }}
   {{ $widthClass = "w-25-ns" }}
+{{ else if eq $cols -1 }}
+  {{ $widthClass = "" }}
 {{ end }}
 
-<ul class="list pl0 center pv4 flex flex-wrap nl3 nr3 {{ $data.css_class }}">
+<ul class="list pl0 pv4 flex flex-wrap nl3 nr3 {{ $data.css_class }}">
   {{ range $data.items }}
-  <li class="flex items-start mb4 w-100 {{ $widthClass }} ph3">
+  <li class="flex items-start pa3 {{ $widthClass }} {{ .css_class }}">
     <div class="pr3 flex-shrink-0">
       <span class="f3">
         {{ $iconName := .icon | default "ellipsis.svg" }}
@@ -29,7 +31,7 @@
       {{ else }}
         <h3 class="heading4 mv0">{{ .title }}</h3>
       {{ end }}
-      <p class="mv1">{{ .description }}</p>
+      <p class="mv1">{{ .description | safeHTML }}</p>
       {{ if .topics }}
         <ul class="lh-copy gray mv1">
         {{ range .topics }}

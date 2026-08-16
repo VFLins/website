@@ -4,8 +4,8 @@
 */}}
 
 {{- if .Params.toc -}}
-  <div class="bg-slategray-200 pa3 nested-list-reset nested-copy-line-height">
-    <p class="f5 b mb3">{{ lang.Translate "whatsInThis" . }}</p>
+  <div class="sticky-toc nested-list-reset nested-copy-line-height">
+    <p class="f5 b mb3 p-mono">{{ lang.Translate "whatsInThis" . }}</p>
       {{ .TableOfContents }}
   </div>
 {{- end -}}
@@ -21,13 +21,11 @@
   <div class="pa3 nested-list-reset nested-copy-line-height">
     <p class="f5 b mb3">{{ lang.Translate "related" }}</p>
     <ul class="pa0 list">
-	   {{ range . }}
-	     <li  class="mb2">
-          <a href="{{ .RelPermalink }}">
-            {{- .Title -}}
-          </a>
+      {{ range . }}
+        <li  class="mb2">
+          <a href="{{ .RelPermalink }}">{{- .Title -}}</a>
         </li>
-	    {{ end }}
+      {{ end }}
     </ul>
-</div>
+  </div>
 {{ end }}

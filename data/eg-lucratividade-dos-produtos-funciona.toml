@@ -1,0 +1,39 @@
+css_class = "w-90"
+n_columns = -1
+
+[[items]]
+css_class = "w-100 w-60-ns"
+title = "[direitos]"
+icon = "gavel.svg"
+description = """
+  São discutidos os direitos e limites no uso dos dados da sua empresa, respeitando
+  as normas estabelecidas na LGPD
+"""
+
+[[items]]
+css_class = "w-100 w-60-ns"
+title = "[viabilidade]"
+icon = "ellipsis.svg"
+description = """
+  fazemos a extração de dados e verificamos se estão em qualidade e quantidade
+  suficientes para prosseguir com o projeto
+"""
+
+[[items]]
+css_class = "w-100 w-60-ns"
+title = "[desenvolvimento]"
+icon = "test-tube.svg"
+description = """
+  A análise é desenvolvida e um relatório será produzido com as principais informações
+  dentro do escopo
+"""
+
+[[items]]
+css_class = "w-100 w-60-ns"
+title = "[resultados]"
+icon = "presentation.svg"
+description = """
+  Em um último encontro, os resultados são apresentados, junto com o documento do
+  relatório
+"""
+

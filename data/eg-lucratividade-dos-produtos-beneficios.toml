@@ -1,0 +1,31 @@
+css_class = "w-90"
+n_columns = -1
+
+[[items]]
+css_class = "w-100 w-60-ns ml-auto"
+title = "[para o comerciante]"
+icon = "shopping-cart.svg"
+description = """
+  Descubra qual é o seu produto mais lucrativo, otimize a alocação nas prateleiras e no
+  estoque, e se torne mais lucrativo.
+"""
+
+[[items]]
+css_class = "w-100 w-60-ns ml-auto"
+title = "[para o prestador de serviço]"
+icon = "service.svg"
+description = """
+  Entenda melhor as preferências dos seus clientes, tome melhores decisões de marketing
+  e esteja melhor preparado para estruturar novos serviços.
+"""
+
+[[items]]
+css_class = "w-100 w-60-ns ml-auto"
+title = "[estratégicos]"
+icon = "chart-line.svg"
+description = """
+  Embora a métrica final obtida seja a lucratividade de seus produtos/serviços, esta
+  análise permite conhecer alguns aspectos de sua empresa, clientes, e até da
+  concorrência.
+"""
+

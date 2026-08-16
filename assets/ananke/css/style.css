@@ -32,47 +32,47 @@ body.light-theme {
 
 [ role="main" ] {
   background-color: var(--slategray-50);
-  color: var(--slategray-800)
+  color: var(--slategray-800);
 }
 
 .overline-text {
-  font-family: 'Space Mono';
+  font-family: 'Space Mono', 'Courier New', Courier, monospace;
   text-transform: uppercase;
   font-size: 13px;
 }
 
 .p-mono {
-  font-family: 'Space Mono';
+  font-family: 'Space Mono', 'Courier New', Courier, monospace;
   text-transform: uppercase;
   font-size: 16px;
 }
 
 h1, .heading1 {
-  font-family: 'Space Mono';
+  font-family: 'Space Mono', 'Courier New', Courier, monospace;
   font-weight: bold;
   font-size: 40px;
   text-transform: uppercase;
 }
 
 h2, .heading2 {
-  font-family: 'Space Mono';
+  font-family: 'Space Mono', 'Courier New', Courier, monospace;
   font-size: 32px;
 }
 
 h3, .heading3 {
-  font-family: 'Space Mono';
+  font-family: 'Space Mono', 'Courier New', Courier, monospace;
   font-weight: normal;
   font-size: 25px;
 }
 
 h4, .heading4 {
-  font-family: 'Space Mono';
+  font-family: 'Space Mono', 'Courier New', Courier, monospace;
   font-weight: bold;
   font-size: 20px;
 }
 
 .d1 {
-  font-family: Anton;
+  font-family: Anton, Impact, fantasy;
   font-weight: normal;
   font-size: 112px;
   text-transform: uppercase;
@@ -81,32 +81,32 @@ h4, .heading4 {
 }
 
 .d2 {
-  font-family: Anton;
+  font-family: Anton, Impact, fantasy;
   font-weight: normal;
   font-size: 90px;
   text-transform: uppercase;
 }
 
 .d3 {
-  font-family: Anton;
+  font-family: Anton, Impact, fantasy;
   font-weight: normal;
   font-size: 72px;
   text-transform: uppercase;
 }
 
 p, p td, .p {
-  font-family: Inter;
+  font-family: Inter, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
 }
 
 li {
-  font-family: Inter;
+  font-family: Inter, Arial, sans-serif;
   font-size: 16px;
 }
 
 code {
-  font-family: 'Space Mono';
+  font-family: 'Space Mono', 'Courier New', Courier, monospace;
   font-size: 16px;
 }
 
@@ -129,7 +129,7 @@ li.nav-item a:hover {
 
 li.nav-text {
   font-size: 16px;
-  font-family: 'Space Mono';
+  font-family: 'Space Mono', 'Courier New', Courier, monospace;
 }
 
 .ananke-socials a {
@@ -140,31 +140,16 @@ li.nav-text {
   fill: black;
 }
 
-/*site header: title*/
-h1.f-subheadline-l {
-  font-family: 'Space Grotesk';
-  font-weight: bold;
-  font-size: 60px;
-  text-transform: uppercase;
-  word-break: break-word;
-}
-
-/*site header: description*/
-h2.white-80 {
-  font-family: 'Space Mono';
-  font-size: 20px;
-}
-
 /*summary page elements*/
 .summary-overline {
-  font-family: 'Space Mono';
+  font-family: 'Space Mono', 'Courier New', Courier, monospace;
   color: var(--slategray-400);
   text-transform: uppercase;
   font-size: 13px;
 }
 
 .summary-title {
-  font-family: 'Space Mono';
+  font-family: 'Space Mono', 'Courier New', Courier, monospace;
   font-weight: normal;
   font-size: 32px;
   line-height: 110%;
@@ -172,7 +157,7 @@ h2.white-80 {
 }
 
 .summary-content {
-  font-family: Inter;
+  font-family: Inter, Arial, sans-serif;
   font-size: 16px;
 }
 
@@ -236,6 +221,7 @@ a.button-link-dark:hover {
 }
 
 /* post: toc */
-nav#TableOfContents a {
-  font-family: 'Space Mono';
+nav#TableOfContents ul li {
+  font-family: 'Space Mono', 'Courier New', Courier, monospace;
+  margin: 1em;
 }

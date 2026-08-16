@@ -2,14 +2,14 @@
 {{/*
   This template is the same as the default and is here to demonstrate that if you have a content directory called "post" you can create a layouts directory, just for that section.
    */}}
-  <article class="pa3 pa4-l mw9-l center nested-copy-line-height">
-    <section class="cf ph3 ph5-l pv3 pv4-l f4 center measure-wide lh-copy nested-links {{ $.Param "text_color" | compare.Default "mid-gray" }}">
+  <article class="pa3 pa4-l w-100 mw8 center nested-copy-line-height">
+    <section class="cf f4 center lh-copy nested-links {{ $.Param "text_color" | compare.Default "mid-gray" }}">
       {{ .Content }}
     </section>
 
     <aside class="flex flex-wrap w-100 mw8 mt5 center justify-between card-grid">
       {{ range .Paginator.Pages }}
-        <div class="w-90 w-50-m w-30-l flex">
+        <div class="w-100 w-50-m w-33-l flex">
           {{ .Render "summary" }}
         </div>
       {{ end }}

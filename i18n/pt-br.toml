@@ -3,3 +3,6 @@ other = "{{ . }} minutos de leitura"
 
 [wordCount]
 other = "{{ . }} palavras"
+
+[whatsInThis]
+other = "nesta postagem"

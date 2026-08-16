@@ -10,7 +10,7 @@
 }
 
 /*table of contents*/
-.pa3.nested-list-reset {
+div.sticky-toc {
   position: sticky;
   top: 6em;
   border-radius: 8px;

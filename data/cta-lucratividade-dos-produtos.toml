@@ -1,0 +1,30 @@
+css_class = ""
+id = "block-1"
+always_vertical = true
+# image = "images/icons/rocket_dark.png"
+page_height = true
+
+[title]
+css_class = "heading1"
+text = "Análise de lucratividade<br/>dos produtos<span class='teal'>_</span>"
+
+[description]
+css_class = "p mw6"
+text = """
+  Não é só a margem de lucro que afeta a lucratividade de um produto, com dados de boa
+  qualidade sobre as suas vendas, é possível identificar quais são os seus produtos
+  campeões.
+"""
+
+[image]
+css_class = "w3"
+path = "images/icons/trophy.svg"
+
+[button]
+type = "scroller" # 'scroller' or 'link'
+css_class = "button-link-teal"
+
+[button.params]
+text = "entenda: { }"
+scroll_to = "block-2"
+# url = "/contato"

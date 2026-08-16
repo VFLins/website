@@ -3,7 +3,7 @@ n_columns = 3
 [[items]]
 title = "[privado]"
 icon = "lock.svg"
-description = "Seus dados estão na sua máquina e você tem total controle sobre eles"
+description = "Seus dados estão na sua máquina e você tem total controle e responsabilidade sobre eles"
 
 [[items]]
 title = "[intuitivo]"

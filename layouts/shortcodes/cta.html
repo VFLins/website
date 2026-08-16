@@ -43,7 +43,7 @@
     </div>
 
     <!-- Right Column (Image content) -->
-      <div class="w-100 {{ if not $alwaysVertical }}w-{{ $imgWidth }}-ns mb0-ns{{ end }} h-auto tc mb4{{ if not $data.image }} dn db-ns{{ end }}">
+      <div class="w-100 {{ if not $alwaysVertical }}w-{{ $imgWidth }}-ns mb0-ns{{ end }} h-auto mb4{{ if not $data.image }} dn db-ns{{ end }}">
       {{ if $data.image }}
       <img src="{{ $data.image.path | relURL }}" class="{{ $data.image.css_class }}" alt="{{ $data.title.text }}">
       {{ else }}

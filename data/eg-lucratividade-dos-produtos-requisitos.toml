@@ -1,0 +1,27 @@
+css_class = "w-90"
+n_columns = -1
+
+[[items]]
+css_class = "w-100 w-60-ns"
+title = "[hardware]"
+icon = "computer.svg"
+description = """
+  Deve usar um computador para fazer o registro das vendas, se não tiver,
+  <a href="../equipamento-de-informatica">tente outro serviço</a>
+"""
+
+[[items]]
+css_class = "w-100 w-60-ns"
+title = "[sistema]"
+icon = "point-of-sale.svg"
+description = """
+  Este computador deve ter um sistema de PDV instalado, isto garante que existirão
+  dados para analisar
+"""
+
+[[items]]
+css_class = "w-100 w-60-ns"
+title = "[registro]"
+icon = "check.svg"
+description = "As vendas devem ser registradas regularmente, isto garante a qualidade dos dados"
+
