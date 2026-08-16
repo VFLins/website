@@ -324,3 +324,14 @@ blockquote.alert-analysis p.alert-heading {
 .b--teal-700 {
   border-color: var(--teal-700)
 }
+
+/* content effects */
+.blink {
+  animation: blink-sharp 2.2s steps(1, start) infinite;
+}
+
+@keyframes blink-sharp {
+  50% {
+    opacity: 0;
+  }
+}

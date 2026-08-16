@@ -2,7 +2,7 @@ css_class = "bg-cashd white ma4 pv5 w-100 center"
 id = "homepage-block-5"
 
 [image]
-css_class = "mw4 mw5-l"
+css_class = "mw4 mw5-l fc-ns"
 path = "/images/icons/cashd-logo-symbolic-dark.png"
 
 [title]
@@ -10,7 +10,7 @@ css_class = "heading1"
 text = "Cashd"
 
 [description]
-css_class = "p"
+css_class = "p pr4"
 text = "Em vez de registrar na caderneta, acompanhe as transações fiado de seus clientes virtualmente, e tenha acesso a informações relevantes seus hábitos de compra e a saúde financeira de sua empresa."
 
 [button]

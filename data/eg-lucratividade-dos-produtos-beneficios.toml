@@ -1,9 +1,9 @@
-css_class = "w-90"
+css_class = "w-90 mw8 center"
 n_columns = -1
 
 [[items]]
 css_class = "w-100 w-60-ns ml-auto"
-title = "[para o comerciante]"
+title = "Para o comerciante"
 icon = "shopping-cart.svg"
 description = """
   Descubra qual é o seu produto mais lucrativo, otimize a alocação nas prateleiras e no
@@ -12,7 +12,7 @@ description = """
 
 [[items]]
 css_class = "w-100 w-60-ns ml-auto"
-title = "[para o prestador de serviço]"
+title = "Para o prestador de serviço"
 icon = "service.svg"
 description = """
   Entenda melhor as preferências dos seus clientes, tome melhores decisões de marketing
@@ -21,7 +21,7 @@ description = """
 
 [[items]]
 css_class = "w-100 w-60-ns ml-auto"
-title = "[estratégicos]"
+title = "Estratégicos"
 icon = "chart-line.svg"
 description = """
   Embora a métrica final obtida seja a lucratividade de seus produtos/serviços, esta

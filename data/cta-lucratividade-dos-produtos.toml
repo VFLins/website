@@ -6,7 +6,7 @@ page_height = true
 
 [title]
 css_class = "heading1"
-text = "Análise de lucratividade<br/>dos produtos<span class='teal'>_</span>"
+text = "Análise de lucratividade<br/>dos produtos<span class='teal blink'>_</span>"
 
 [description]
 css_class = "p mw6"

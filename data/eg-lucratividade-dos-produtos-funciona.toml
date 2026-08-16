@@ -1,9 +1,9 @@
-css_class = "w-90"
+css_class = "w-90 mw8 center"
 n_columns = -1
 
 [[items]]
 css_class = "w-100 w-60-ns"
-title = "[direitos]"
+title = "1. direitos"
 icon = "gavel.svg"
 description = """
   São discutidos os direitos e limites no uso dos dados da sua empresa, respeitando
@@ -12,7 +12,7 @@ description = """
 
 [[items]]
 css_class = "w-100 w-60-ns"
-title = "[viabilidade]"
+title = "2. viabilidade"
 icon = "ellipsis.svg"
 description = """
   fazemos a extração de dados e verificamos se estão em qualidade e quantidade
@@ -21,7 +21,7 @@ description = """
 
 [[items]]
 css_class = "w-100 w-60-ns"
-title = "[desenvolvimento]"
+title = "3. desenvolvimento"
 icon = "test-tube.svg"
 description = """
   A análise é desenvolvida e um relatório será produzido com as principais informações
@@ -30,7 +30,7 @@ description = """
 
 [[items]]
 css_class = "w-100 w-60-ns"
-title = "[resultados]"
+title = "4. resultados"
 icon = "presentation.svg"
 description = """
   Em um último encontro, os resultados são apresentados, junto com o documento do

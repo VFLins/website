@@ -1,0 +1,22 @@
+css_class = "w-100 mv5"
+id = "block-2"
+always_vertical = false
+page_height = false
+image_left = true
+
+[title]
+css_class = "heading2"
+text = "O melhor equilíbrio possível"
+
+[description]
+css_class = "p mw6"
+text = """
+  O computador é um investimento que deve ser feito cedo no ciclo de vida do negócio,
+  mas um investimento mal feito pode ser um desperdício de dinheiro ou causar dores de
+  cabeça.
+"""
+
+[image]
+#css_class = "w3 fl fr-ns pr4"
+#path = "images/icons/balance.svg"
+

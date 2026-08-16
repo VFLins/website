@@ -1,0 +1,39 @@
+css_class = "w-90 mw8 center"
+n_columns = -1
+
+[[items]]
+css_class = "w-100 w-60-ns"
+title = "1. necessidades"
+icon = "info.svg"
+description = """
+  Vamos avaliar quais as suas necessidades e quanto você está disposto à investir no
+  seu equipamento
+"""
+
+[[items]]
+css_class = "w-100 w-60-ns"
+title = "2. viabilidade"
+icon = "ellipsis.svg"
+description = """
+  Pode ser necessário realinhar seu orçamento ou suas expectativas,
+  dependendo da realidade do mercado
+"""
+
+[[items]]
+css_class = "w-100 w-60-ns"
+title = "3. aquisição"
+icon = "shopping-cart.svg"
+description = """
+  Sua solução pode ser pré montada ou customizada, você seguirá as minhas orientações
+  para fazer a compra do equipamento
+"""
+
+[[items]]
+css_class = "w-100 w-60-ns"
+title = "4. montagem"
+icon = "service.svg"
+description = """
+  Opcionalmente, depois que o equipamento for recebido, eu posso fazer a montagem para
+  você
+"""
+

@@ -10,11 +10,11 @@ featured_image: "/images/illustrations/a-chosen-soul-unsplash-abstractcyan1.jpg"
   <span class="teal dn dib-ns">/</span> Produtos <span class="teal dn dib-ns">/</span>
 {{< /block >}}
 
-{{< cta2 cta-training >}}
+{{< cta cta-training >}}
 
-{{< cta cta-implement >}}
+{{< cta cta-technology >}}
 
-{{< cta2 cta-analysis >}}
+{{< cta cta-analysis >}}
 
 
 {{< block class="d2 w-90 mw8 mt6 center" id="heading-software" >}}
@@ -43,11 +43,7 @@ featured_image: "/images/illustrations/a-chosen-soul-unsplash-abstractcyan1.jpg"
   {{< /block >}}
 {{< /block >}}
 
-{{< emphasis-grid my-strong-points >}}
+{{< emphasis-grid eg-my-strong-points >}}
 
-{{< block class="w-90 mw8 center mt5 lh-title d3" >}}
-  Você<br/><span class="teal">{</span> encontrou <span class="teal">}</span><br/>o que procurava
-{{< /block >}}
-
-{{< cta2 cta-bottom >}}
+{{< cta cta-bottom >}}
 

@@ -9,12 +9,12 @@ categories = ["análise"]
 
 {{< cta cta-lucratividade-dos-produtos >}}
 
-{{< block class="heading1 mt5 mb3 center" id="block-2" >}}
+{{< block class="heading1 mt5 mb3 w-90 mw8 center" id="block-2" >}}
   <span class="teal dn dib-ns">\\\\</span> Requisitos
 {{< /block >}}
 
-{{< block class="p center" id="heading-software" >}}
-  {{< block class="mw7" >}}
+{{< block class="p w-90 mw8 center" id="heading-software" >}}
+  {{< block class="mw6" >}}
   Por se tratar de uma análise com nível maior de complexidade, alguns requisitos
   precisam ser satisfeitos para que este projeto de análise seja possível:
   {{< /block >}}
@@ -22,13 +22,13 @@ categories = ["análise"]
 
 {{< emphasis-grid eg-lucratividade-dos-produtos-requisitos >}}
 
-{{< block class="heading1 mt5 mb3 center" id="block-2" >}}
+{{< block class="heading1 mt5 mb3 w-90 mw8 center" id="block-2" >}}
   <span class="teal dn dib-ns">*</span> Benefícios<span class="teal dn dib-ns">:</span>
 {{< /block >}}
 
 {{< emphasis-grid eg-lucratividade-dos-produtos-beneficios >}}
 
-{{< block class="heading1 mt5 mb3 center" id="block-2" >}}
+{{< block class="heading1 mt5 mb3 w-90 mw8 center" id="block-2" >}}
   <span class="teal dn dib-ns">\></span> Como funciona<span class="teal dn dib-ns">_</span> 
 {{< /block >}}
 

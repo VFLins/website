@@ -1,0 +1,28 @@
+css_class = "w-100 mv5"
+id = "block-4"
+always_vertical = false
+page_height = false
+image_left = true
+
+[title]
+css_class = "heading2"
+text = "Comece a facilitar a sua vida agora mesmo"
+
+[description]
+css_class = "p mw6"
+text = """
+  Entre em contato e me conte qual é o equipamento ideal para você.
+"""
+
+[image]
+#css_class = "w3 fl fr-ns pr4"
+#path = "images/icons/balance.svg"
+
+[button]
+type = "link" # 'scroller' or 'link'
+css_class = "button-link"
+
+[button.params]
+text = "mandar (mensagem):"
+# scroll_to = "block-2"
+url = "/contato"

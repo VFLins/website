@@ -1,5 +1,5 @@
 {{ $file := .Get 0 }}
-{{ $data := index .Site.Data $file }}
+{{ $data := index hugo.Data $file }}
 
 {{/* Define o número de colunas (padrão 2 caso $data.n_columns não exista) */}}
 {{ $cols := $data.n_columns | default 2 }}

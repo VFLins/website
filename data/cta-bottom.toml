@@ -1,10 +1,21 @@
 css_class = ""
 id = "homepage-block-1"
 # image = "images/icons/rocket_dark.png"
+image_left = true
 page_height = false
 
+[title]
+css_class = "heading1"
+text = '''
+  Você
+  <br/>
+  <span class="teal dn dib-ns">{</span> encontrou <span class="teal dn dib-ns">}</span>
+  <br/>
+  o que procurava
+'''
+
 [description]
-css_class = "p-mono"
+css_class = "p"
 text = "Se você precisa de um profissional versátil que pode aplicar muitas áreas do conhecimento em soluções práticas para a sua demanda, você não precisa mais continuar procurando."
 
 [button]

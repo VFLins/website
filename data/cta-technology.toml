@@ -1,10 +1,10 @@
-css_class = "ma4 w-90 mw8 center"
+css_class = "mv6 w-90 mw8 center"
 id = "homepage-block-3"
 # image = "/images/illustrations/andras-vas-unsplash-notebook.jpg"
 
 [title]
 css_class = "heading1"
-text = "Implementação de tecnologias"
+text = "Adição de tecnologias"
 
 [description]
 css_class = "p"
@@ -17,4 +17,4 @@ css_class = "button-link-dark"
 [button.params]
 text = "começe (agora):"
 # scroll_to = "homepage-block-2"
-url = "/categories/implantação-de-tecnologia"
+url = "/categories/adição-de-tecnologia"
