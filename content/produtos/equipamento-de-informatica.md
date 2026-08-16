@@ -19,3 +19,8 @@ featured_icon = "images/icons/computer.svg"
 
 {{< cta cta-equipamento-de-informatica-bottom >}}
 
+{{< block class="legend-text w-90 mw8 center" id="block-5" >}}
+  *A disponibilidade para montagem depende da disponibilidade geográfica e dos custos
+  de transporte.
+{{< /block >}}
+

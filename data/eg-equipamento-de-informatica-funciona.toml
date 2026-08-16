@@ -30,7 +30,7 @@ description = """
 
 [[items]]
 css_class = "w-100 w-60-ns"
-title = "4. montagem"
+title = "4. montagem*"
 icon = "service.svg"
 description = """
   Opcionalmente, depois que o equipamento for recebido, eu posso fazer a montagem para
