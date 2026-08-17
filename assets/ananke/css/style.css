@@ -110,12 +110,26 @@ code {
 li.nav-item a {
   color: var(--slategray-800);
   font-weight: normal;
-  margin-right: inherit;
+  margin: 0em 0.8em;
   text-transform: lowercase;
   transition: linear 0.1s;
+  display: inline-block;
+  position: relative;
 }
-li.nav-item a:hover {
-    color: black;
+li.nav-item a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--teal-700);
+  transition: transform 0.1s ease-in;
+}
+li.nav-item a:hover::after {
+  color: var(--teal-500);
+  transform: scaleX(1);
 }
 
 li.nav-text {
