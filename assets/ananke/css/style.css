@@ -1,38 +1,7 @@
-/* Theme variables
-:root {
-    --page-bg: #212729;
-    --page-dark-bg: #1a1d1f;
-    --page-light-bg: #183034;
-    --page-text: #8db2b0;
-    --link-color: #84b3b0;
-    --link-hover-color: #2f8683;
-    --header-text: #20B2AA;
-    --header-bg: #293f46;
-    --success-text: #84b397;
-    --success-bg: #23352d;
-    --faliure-text: #b38484;
-    --faliure-bg: #352323;
-}
-
-body.light-theme {
-    --page-bg: #ffffff;
-    --page-dark-bg: #e9f2f1;
-    --page-light-bg: #dbeaec;
-    --page-text: #47827d;
-    --link-color: #52827e;
-    --link-hover-color: #21a7a0;
-    --header-text: darkslategray;
-    --header-bg: #e9f2f1;
-    --success-text: #496133;
-    --success-bg: #d9f5d5;
-    --faliure-text: #8b4848;
-    --faliure-bg: #e5c5c5;
-}
-*/
-
 [ role="main" ] {
   background-color: var(--slategray-50);
   color: var(--slategray-800);
+  font-family: Inter, Arial, sans-serif;
 }
 
 .overline-text {
@@ -123,6 +92,8 @@ p, p td, .p {
 li {
   font-family: Inter, Arial, sans-serif;
   font-size: 16px;
+  line-height: 1.5;
+  margin: 1em 0em;
 }
 
 code {
@@ -150,6 +121,7 @@ li.nav-item a:hover {
 li.nav-text {
   font-size: 16px;
   font-family: 'Space Mono', 'Courier New', Courier, monospace;
+  margin: 0em;
 }
 
 .ananke-socials a {
@@ -237,7 +209,7 @@ a.button-link-dark:hover {
 
 /*call-to-action block occupying all page height*/
 .cta-block-ph {
-  height: calc(100vh - 63px);
+  height: calc(100vh - var(--nav-height));
 }
 
 /* post: toc */

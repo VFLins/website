@@ -1,0 +1,29 @@
+css_class = "w-90 mw8 center"
+n_columns = -1
+
+[[items]]
+css_class = "w-100 w-60-ns ml-auto"
+title = "[operação]"
+icon = "rocket_dark.svg"
+description = """
+  Encontre o nome do cliente e registre a transação em segundos, sem precisar folhear
+"""
+
+[[items]]
+css_class = "w-100 w-60-ns ml-auto"
+title = "[inteligência]"
+icon = "chart-line.svg"
+description = """
+  Tenha acesso à estatísticas de transações e às informações de contato dos seus
+  clientes, não deixe o fiado sair do controle
+"""
+
+[[items]]
+css_class = "w-100 w-60-ns ml-auto"
+title = "[conveniente]"
+icon = "mobile.svg"
+description = """
+  Não deixe a fila crescer por causa de uma caderneta, você e seus funcionários podem
+  fazer registros no mesmo sistema ao mesmo tempo
+"""
+

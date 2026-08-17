@@ -5,7 +5,7 @@ page_height = true
 
 [title]
 css_class = "d2"
-text = "Nenhum passo<br/>em falso<span class='teal'>_</span>"
+text = "Nenhum passo<br/>em falso<span class='teal blink'>_</span>"
 
 [description]
 css_class = "p-mono"

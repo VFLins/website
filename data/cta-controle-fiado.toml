@@ -1,0 +1,29 @@
+css_class = "w-100"
+id = "block-1"
+page_height = true
+text_width = 60
+always_vertical = false
+
+[image]
+#css_class = "w-100 w-50-ns"
+#path = "/images/gh_banner-cashd.png"
+
+[title]
+css_class = "heading1"
+text = 'Software para controle de fiado<span class="teal blink">_</span>'
+
+[description]
+css_class = "p"
+text = """
+  Você não pretende deixar de vender no fiado, mas também não precisa das limitações
+  da caderneta de papel, mude para o registro digital.
+"""
+
+[button]
+type = "scroller" # 'scroller' or 'link'
+css_class = "button-link-teal"
+
+[button.params]
+text = "_saiba_mais:"
+scroll_to = "block-2"
+# url = "/software/cashd"

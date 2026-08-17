@@ -6,8 +6,8 @@
 {{ define "main" }}
   {{ $page := . }}
   {{ $section := .Site.GetPage "section" .Section }}
-  <article class="flex-l mw8 center ph3 flex-wrap justify-between">
-    <header class="mt4 w-100">
+  <article class="flex mw8 center ph3 flex-wrap justify-between">
+    <header class="nav-clearance w-100">
       <aside class="overline-text b tracked ttu">
           {{/*
           CurrentSection allows us to use the section title instead of inferring from the folder.
@@ -35,27 +35,22 @@
         </strong>
       </p>
       {{ end }}
-      {{/* Hugo uses Go's date formatting is set by example. Here are two formats */}}
       {{ if not .Date.IsZero }}
       <time class="mv4 dib overline-text b" {{ fmt.Printf `datetime="%s"` (.Date.Format "2006-01-02T15:04:05Z07:00") | safe.HTMLAttr }}>
         {{- .Date | time.Format (compare.Default "January 2, 2006" .Site.Params.date_format) -}}
       </time>
       {{end}}
 
-      {{/*
-          Show "reading time" and "word count" but only if one of the following are true:
-          1) A global config `params` value is set `show_reading_time = true`
-          2) A section front matter value is set `show_reading_time = true`
-          3) A page front matter value is set `show_reading_time = true`
-        */}}
       {{ if or (.Param "show_reading_time") ($section.Params.show_reading_time) }}
-      <span class="mv4 ml1 dib overline-text">| {{ lang.Translate "readingTime" .ReadingTime }}</span>
+      <span class="mv4 ml1-ns dib overline-text">
+        <span class="dn dib-ns mr2">|</span>{{ lang.Translate "readingTime" .ReadingTime }}
+      </span>
       {{ end }}
     </header>
-    <div class="nested-copy-line-height lh-copy f4 {{ $.Param "text_color" | compare.Default "mid-gray" }} {{ compare.Conditional (compare.Eq $.Site.Language.Direction "rtl") "pl4-l" "pr4-l" }} w-two-thirds-l">
+    <div class="{{ $.Param "text_color" | compare.Default "mid-gray" }} {{ compare.Conditional (compare.Eq $.Site.Language.Direction "rtl") "pl4-l" "pr4-l" }} w-two-thirds-l">
       {{- .Content -}}
       {{- partials.Include "tags.html" . -}}
-      <div class="mt6 instapaper_ignoref">
+      <div class="mt4 instapaper_ignoref">
       {{ if .Site.Config.Services.Disqus.Shortname }}
         {{ template "_internal/disqus.html" . }}
       {{ end }}
@@ -65,7 +60,7 @@
       </div>
     </div>
 
-    <aside class="w-30-l mt6-l">
+    <aside class="w-30-l mv6">
       {{- partials.Include "menu-contextual.html" . -}}
     </aside>
 

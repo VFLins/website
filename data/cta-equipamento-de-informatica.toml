@@ -1,4 +1,4 @@
-css_class = "bg-laptop w-100 white"
+css_class = "w-100"
 id = "block-1"
 always_vertical = true
 # image = "images/icons/rocket_dark.png"
@@ -6,7 +6,7 @@ page_height = true
 
 [title]
 css_class = "heading1 mw6"
-text = "Aquisição de equipamento de informática<span class='teal-light blink'>_</span>"
+text = "Aquisição de equipamento de informática<span class='teal blink'>_</span>"
 
 [description]
 css_class = "p mw6"
@@ -21,7 +21,7 @@ text = """
 
 [button]
 type = "scroller" # 'scroller' or 'link'
-css_class = "button-link-white"
+css_class = "button-link"
 
 [button.params]
 text = "é para _você_?:"

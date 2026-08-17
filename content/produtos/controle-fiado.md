@@ -1,17 +1,32 @@
 +++
 title = "Software para controle de fiado"
 description = "Controle suas vendas em fiado digitalmente."
-omit_header_text = true
 featured_icon = "images/icons/point-of-sale.svg"
-toc = true
-categories = ["implantação de tecnologia"]
+categories = ["adição de tecnologia"]
 +++
 
-A venda no “fiado” ainda é bastante presente em nossa região, embora muitas vezes, não seja uma prática recomendada. Muitos comerciantes ainda se sentem presos à esta prática, por não se ver capazes de demonstrar nenhum diferencial em relação aos grandes concorrentes na região.
+{{< cta cta-controle-fiado >}}
 
-<!--more-->
 
-## Como isso me afeta?
+
+{{< block class="heading1 mt5 mb3 w-90 mw8 center" id="block-2" >}}
+  <span class="teal dn dib-ns">\\\\</span> Por que?
+{{< /block >}}
+
+{{< block class="w-90 mw8 center" >}}
+  {{< block class="p mw6" >}}
+  O fiado exige um nível de relacionamento que o grande varejo é incapaz de alcançar,
+  você pode se diferenciar oferecendo esta forma de pagamento para os seus clientes
+  mais próximos.
+  {{< /block >}}
+{{< /block >}}
+
+
+{{< block class="heading1 mt5 mb3 w-90 mw8 center" id="block-2" >}}
+  <span class="teal dn dib-ns">\></span> Benefícios<span class="teal dn dib-ns">:</span>
+{{< /block >}}
+
+{{< emphasis-grid eg-controle-fiado-beneficios >}}
 
 Saber exatamente o quanto está se comprometendo ao fazer uma venda à prazo pode evitar algumas armadilhas invisíveis da venda à prazo. Por isso, se você já aceita ou pretende aceitar fiado, é recomendado que conheça também o [Como não quebrar vendendo à prazo](./treinamento-vendas-a-prazo.md), já que isto afeta diretamente sua lucratividade e a capacidade de repor estoque.
 

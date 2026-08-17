@@ -102,7 +102,7 @@ a:hover {
     color: var(--link-hover-color);
 }
 
-p {
+p, li.p {
     line-height: 1.5;
     font-size: 1rem;
 }
