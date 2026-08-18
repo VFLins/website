@@ -25,12 +25,12 @@
     <div class="{{ .Site.Params.background_color_class | compare.Default "bg-black" }}">
       {{ partials.Include "site-navigation.html" . }}
       {{ if not .IsHome }}
-        <div class="pa3 pa4-ns w-100 w-70-l center ">
-          <h1 class="f2 pt6 f-subheadline-l fw2 silver mb0 lh-title white word-wrap">
-            {{ .Title | compare.Default .Site.Title }}
+        <div class="pt4 pb3 w-90 mw8 center">
+          <h1 class="d1 mb0 fg-slategray word-wrap">
+            {{ .Title | compare.Default .Site.Title }}<span class="teal blink">_</span>
           </h1>
           {{ with .Params.description }}
-            <h2 class="fw1 f5 f3-l white-80 center lh-copy mt3 mb4">
+            <h2 class="subtitle fg-slategray center lh-copy mt3 mb4">
               {{ . }}
             </h2>
           {{ end }}

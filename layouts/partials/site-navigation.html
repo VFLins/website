@@ -1,5 +1,5 @@
 {{ $cover_dimming_class := site.Params.cover_dimming_class | compare.Default "bg-black-60" }}
-<nav class="fixed top-0 left-0 right-0 z-max site-nav ph3 ph4-ns bg-slategray shadow-1" role="navigation">
+<nav class="fixed top-0 left-0 right-0 z-max site-nav ph3 ph4-ns bg-slategray shadow-bottom" role="navigation">
   <div class="flex-l center items-center justify-between">
 
     <div class="flex justify-between items-center w-100 w-auto-l">
@@ -19,9 +19,9 @@
     <div id="nav-menu" class="dn center flex-l items-center w-100 w-auto-l mt3 mt0-l">
       {{ partials.Include "i18nlist.html" . }}
       {{ if .Site.Menus.main }}
-        <ul class="list {{ compare.Conditional (compare.Eq $.Site.Language.Direction "rtl") "pr0 ml3-l" "pl0 mr3-l" }} flex flex-column flex-row-l mv0">
+        <ul class="list flex flex-column flex-row-l mv0 pl0">
           {{ range .Site.Menus.main }}
-          <li class="nav-item nav-text f5 f4-ns fw4 pv2 pv0-l ml3 {{ compare.Conditional (compare.Eq $.Site.Language.Direction "rtl") "pl3-l" "pr3-l" }}">
+          <li class="nav-item nav-text f5 f4-ns fw4 pv2 pv0-l ml3">
             <a class="no-underline db" href="{{ .URL }}" title="{{ lang.Translate "pageTitle" . }}">
               {{ .Name }}
             </a>
@@ -33,10 +33,10 @@
 
     <div id="social-menu" class="dn right flex-l items-center w-100 w-auto-l mt3 mt0-l">
       {{ if .Site.Menus.social }}
-        <ul class="list {{ compare.Conditional (compare.Eq $.Site.Language.Direction "rtl") "pr0 ml3-l" "pl0 mr3-l" }} flex flex-column flex-row-l mv0">
+        <ul class="list flex flex-column flex-row-l mv0 pl0">
           {{ range .Site.Menus.social }}
-          <li class="nav-text fw4 pb4 pt3 pv0-l ml3 {{ compare.Conditional (compare.Eq $.Site.Language.Direction "rtl") "pl3-l" "pr3-l" }}">
-            <a class="button-link-symbolic b db pv2 ph3 br2 ttu mw4 tc" href="{{ .URL }}" title="{{ lang.Translate "pageTitle" . }}">
+          <li class="nav-text fw4 pb4 pt3 pv0-l ml3">
+            <a class="button-link-symbolic no-underline bn b db pv2 ph3 br2 ttu mw4 tc" href="{{ .URL }}" title="{{ lang.Translate "pageTitle" . }}">
               {{ .Name }}
             </a>
           </li>

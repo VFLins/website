@@ -1,4 +1,4 @@
-<footer class="bg-slategray-alt fg-slategray bottom-0 w-100 pa4" role="contentinfo">
+<footer class="bg-slategray fg-slategray shadow-top bottom-0 w-100 pa4" role="contentinfo">
   <div class="flex justify-between">
   <a class="heading4" href="{{ .Site.Home.Permalink }}" >
     &copy; {{ with .Site.Copyright | compare.Default .Site.Title }} {{ . | safe.HTML }} {{ now.Format "2006"}} {{ end }}

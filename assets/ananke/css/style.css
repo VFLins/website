@@ -107,7 +107,8 @@ code {
 
 /* site navigation: logo */
 .site-logo {
-  max-width: 6rem;
+  height: 18px;
+  margin: calc( var(--nav-height) - 28px ) 0;
 }
 
 /*site navigation: item*/
@@ -196,7 +197,7 @@ a.button-link-teal:hover {
 
 a.button-link-symbolic {
   color: var(--fg-color);
-  background-color: var(--bg-color);
+  background-color: transparent;
   border: solid 1px var(--fg-color);
 }
 a.button-link-symbolic:hover {
@@ -222,18 +223,6 @@ a.button-link-dark {
 a.button-link-dark:hover {
   color: var(--slategray-50);
   background-color: var(--slategray-800);
-}
-
-/* style other elements as button */
-.button a {
-  color: var(--teal-700);
-  border: solid 1px var(--teal-700);
-  border-radius: 4px;
-  padding: 8px 16px;
-}
-.button a:hover {
-  color: white;
-  background-color: var(--teal-700);
 }
 
 /*call-to-action block occupying all page height*/

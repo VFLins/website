@@ -86,7 +86,7 @@ só uma delas pode trazer um resultado positivo:
 
 |                                               | Investir | Não investir |
 | :---                                          |  :----:  |    :----:    |
-| <p class="p-mono b">Expectativa atingidas</p> | <p class="teal">Nova fonte de receita trilionária</p> | <p class="fail-text">Oportunidade perdida</p> |
+| <p class="p-mono b">Expectativa atingida</p> | <p class="teal">Nova fonte de receita trilionária</p> | <p class="fail-text">Oportunidade perdida</p> |
 | <p class="p-mono b">Decepção</p>    | <p class="fail-text">Investimento desperdiçado</p> | Crescer pouco mais que os concorrentes em outros segmentos |
 
 
