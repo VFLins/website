@@ -1,0 +1,29 @@
+css_class = "w-100 mv5 center"
+id = "homepage-block-5"
+page_height = false
+text_width = 70
+always_vertical = false
+image_left = true
+
+[image]
+#path = "images/icons/shopping-cart.svg"
+#css_class = "h4"
+
+[title]
+css_class = "heading2"
+text = "Se você precisa de suporte para instalação ou treinamento..."
+
+[description]
+css_class = "p mw6"
+text = """
+  Basta entrar em contato comigo informando as suas necessidades, é rápido.
+"""
+
+[button]
+type = "link" # 'scroller' or 'link'
+css_class = "button-link-teal"
+
+[button.params]
+text = "mandar (mensagem):"
+# scroll_to = "heading-produtos"
+url = "/contato"

@@ -23,7 +23,7 @@ categories = ["análise"]
 {{< emphasis-grid eg-lucratividade-dos-produtos-requisitos >}}
 
 {{< block class="heading1 mt5 mb3 w-90 mw8 center" id="block-2" >}}
-  <span class="teal dn dib-ns">*</span> Benefícios<span class="teal dn dib-ns">:</span>
+  <span class="teal dn dib-ns">{</span>Benefícios<span class="teal dn dib-ns">}:</span>
 {{< /block >}}
 
 {{< emphasis-grid eg-lucratividade-dos-produtos-beneficios >}}
