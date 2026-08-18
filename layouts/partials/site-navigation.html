@@ -11,8 +11,8 @@
         {{ end }}
       </a>
 
-      <button id="menu-toggle" class="pointer bg-transparent bn f3 dn-l" aria-label="Abrir menu">
-        &#9776;
+      <button id="menu-toggle" class="pointer bg-transparent fg-slategray mono bn f3 dn-l" aria-label="Abrir menu">
+        [+]
       </button>
     </div>
 
@@ -35,7 +35,7 @@
       {{ if .Site.Menus.social }}
         <ul class="list {{ compare.Conditional (compare.Eq $.Site.Language.Direction "rtl") "pr0 ml3-l" "pl0 mr3-l" }} flex flex-column flex-row-l mv0">
           {{ range .Site.Menus.social }}
-          <li class="nav-text f5 f4-ns fw4 pv2 pv0-l ml3 {{ compare.Conditional (compare.Eq $.Site.Language.Direction "rtl") "pl3-l" "pr3-l" }}">
+          <li class="nav-text fw4 pb4 pt3 pv0-l ml3 {{ compare.Conditional (compare.Eq $.Site.Language.Direction "rtl") "pl3-l" "pr3-l" }}">
             <a class="button-link-symbolic b db pv2 ph3 br2 ttu mw4 tc" href="{{ .URL }}" title="{{ lang.Translate "pageTitle" . }}">
               {{ .Name }}
             </a>
@@ -51,19 +51,27 @@
 <script>
   document.getElementById('menu-toggle').addEventListener('click', function() {
     var nav = document.getElementById('nav-menu');
-    var social = document.getElementById('social-menu')
+    var social = document.getElementById('social-menu');
+    var toggleBtn = this;
+
     if (nav.classList.contains('dn')) {
       nav.classList.remove('dn');
       social.classList.remove('dn');
 
       nav.classList.add('db');
       social.classList.add('db');
+
+      toggleBtn.textContent = '[-]';
+      toggleBtn.setAttribute('aria-label', 'Fechar menu');
     } else {
       nav.classList.remove('db');
       social.classList.remove('db');
 
       nav.classList.add('dn');
       social.classList.add('dn');
+
+      toggleBtn.textContent = '[+]';
+      toggleBtn.setAttribute('aria-label', 'Abrir menu');
     }
   });
 </script>
