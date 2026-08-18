@@ -1,5 +1,5 @@
 {{ $dataKey := .Get 0 }}
-{{ $data := index .Site.Data $dataKey }}
+{{ $data := index hugo.Data $dataKey }}
 {{ $pageHeight := $data.page_height | default false }}
 
 {{ if $data }}

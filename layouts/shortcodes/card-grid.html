@@ -1,5 +1,5 @@
 {{ $file := .Get 0 }}
-{{ $data := index .Site.Data $file }}
+{{ $data := index hugo.Data $file }}
 
 <div class="cf w-90 mw8 center ph3 mt0 mb5">
   <div class="flex flex-wrap na2">

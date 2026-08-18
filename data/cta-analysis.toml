@@ -16,7 +16,7 @@ text = """
 
 [button]
 type = "link" # 'scroller' or 'link'
-css_class = "button-link-dark"
+css_class = "button-link-symbolic"
 
 [button.params]
 text = "{ veja: 'quais' }"

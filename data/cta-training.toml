@@ -13,7 +13,7 @@ text = "Treinamento empresarial com foco prático no dia-a-dia do empresário, a
 
 [button]
 type = "link" # 'scroller' or 'link'
-css_class = "button-link-dark"
+css_class = "button-link-symbolic"
 
 [button.params]
 text = "< acesse />"

@@ -20,7 +20,7 @@ text = """
 
 [button]
 type = "link" # 'scroller' or 'link'
-css_class = "button-link"
+css_class = "button-link-teal"
 
 [button.params]
 text = "mandar (mensagem):"

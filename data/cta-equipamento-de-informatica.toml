@@ -21,7 +21,7 @@ text = """
 
 [button]
 type = "scroller" # 'scroller' or 'link'
-css_class = "button-link"
+css_class = "button-link-teal"
 
 [button.params]
 text = "é para _você_?:"
