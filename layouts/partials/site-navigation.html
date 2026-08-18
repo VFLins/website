@@ -3,7 +3,7 @@
   <div class="flex-l center items-center justify-between">
 
     <div class="flex justify-between items-center w-100 w-auto-l">
-      <a href="{{ .Site.Home.RelPermalink }}" class="f3 fw2 dib no-underline">
+      <a href="{{ .Site.Home.RelPermalink }}" class="f3 fw2 dib flex no-underline">
         {{ with .Site.Params.site_logo }}
           <img src="{{ urls.RelURL . }}" class="nav-logo site-logo" alt="{{ $.Site.Title }}" />
         {{ else }}
