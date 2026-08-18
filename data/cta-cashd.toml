@@ -15,7 +15,7 @@ text = "Em vez de registrar na caderneta, acompanhe as transações fiado de seu
 
 [button]
 type = "link" # 'scroller' or 'link'
-css_class = "button-link-white"
+css_class = "button-link-light"
 
 [button.params]
 text = "baixe __de_graça__"

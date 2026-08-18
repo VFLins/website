@@ -8,52 +8,62 @@
    id="svg204"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
-  <defs
-     id="defs204" />
+  <defs id="defs204">
+    <style>
+      .fill-color {
+        fill: #212c38;
+      }
+      @media (prefers-color-scheme: dark) {
+        .fill-color {
+          fill: #f8fafc;
+        }
+      }
+    </style>
+  </defs>
   <path
      d="m 10.0028,24.986 h 3.5015 L 17.5055,6.602 h 5.9192 L 17.7558,30 H 5.66895 L 0,6.602 h 6.0017 z"
-     fill="#212c38"
+     class="fill-color"
      id="path41" />
   <path
      d="M 32.7224,30 H 26.8031 V 6.602 h 5.9193 z"
-     fill="#212c38"
+     class="fill-color"
      id="path42" />
   <path
      d="m 43.813,7.437 h 9.0026 v 5.014 H 43.813 v 12.535 h 9.0026 V 30 H 42.479 L 37.8948,25.404 V 2.841 L 43.813,0.752 Z"
-     fill="#212c38"
+     class="fill-color"
      id="path43" />
   <path
      fill-rule="evenodd"
      clip-rule="evenodd"
      d="M 77.6028,11.03 V 25.572 L 73.1845,30 H 60.7639 L 56.3456,25.572 V 11.03 l 4.4183,-4.428 h 12.4206 z m -15.339,14.123 h 9.4198 V 11.448 h -9.4198 z"
-     fill="#212c38"
+     class="fill-color"
      id="path44" />
   <path
      d="M 99.0514,11.95 H 88.3811 V 30 H 82.4628 V 11.197 L 87.048,6.602 h 12.0034 z"
-     fill="#212c38"
+     class="fill-color"
      id="path45" />
   <path
      d="m 108.794,24.983 h 9.002 v 5.014 h -9.002 V 30 h -1.333 l -2.316,-2.319 -1.42,-1.428 -0.85,-0.853 V 0.752 h 5.909 l 0.009,-0.003 z"
-     fill="#212c38"
+     class="fill-color"
      id="path46" />
   <path
      d="m 127.516,30 h -5.919 V 6.602 h 5.919 z"
-     fill="#212c38"
+     class="fill-color"
      id="path47" />
   <path
      d="M 154.195,11.198 V 30 h -5.918 V 11.783 h -9.67 V 30 h -5.918 V 6.602 h 16.921 z"
-     fill="#212c38"
+     class="fill-color"
      id="path48" />
   <path
      d="m 180,11.449 h -15.005 v 4.888 H 180 v 9.359 L 175.707,30 h -16.631 v -4.846 h 15.006 v -5.14 H 159.076 V 11.03 l 4.419,-4.428 H 180 Z"
-     fill="#212c38"
+     class="fill-color"
      id="path49" />
   <path
      d="M 32.7224,4.178 H 26.8031 V 0 h 5.9193 z"
-     fill="#212c38"
+     class="fill-color"
      id="path50" />
   <path
      d="m 127.516,4.179 h -5.919 V 0 h 5.919 z"
-     fill="#212c38"
+     class="fill-color"
      id="path51" />
 </svg>

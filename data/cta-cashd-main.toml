@@ -21,7 +21,7 @@ text = "Traga seus registros para o <code>Cashd</code>, e facilite todo o proces
 
 [button]
 type = "scroller" # 'scroller' or 'link'
-css_class = "button-link-white"
+css_class = "button-link-light"
 
 [button.params]
 text = "{ conheça }:"

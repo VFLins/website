@@ -1,6 +1,6 @@
 [ role="main" ] {
-  background-color: var(--slategray-50);
-  color: var(--slategray-800);
+  background-color: var(--bg-color);
+  color: var(--fg-color);
   font-family: Inter, Arial, sans-serif;
 }
 
@@ -108,7 +108,7 @@ code {
 
 /*site navigation: item*/
 li.nav-item a {
-  color: var(--slategray-800);
+  color: var(--fg-color);
   font-weight: normal;
   margin: 0em 0.8em;
   text-transform: lowercase;
@@ -124,11 +124,10 @@ li.nav-item a::after {
   height: 2px;
   bottom: -4px;
   left: 0;
-  background-color: var(--teal-700);
+  background-color: var(--brand-color);
   transition: transform 0.1s ease-in;
 }
 li.nav-item a:hover::after {
-  color: var(--teal-500);
   transform: scaleX(1);
 }
 
@@ -174,30 +173,42 @@ li.nav-text {
 
 /* style a link to look like a button */
 a.button-link {
-  color: var(--teal-700);
-  border: solid 1px var(--teal-700);
+  color: var(--brand-color);
+  border: solid 1px var(--brand-color);
 }
 a.button-link:hover {
-  color: white;
-  background-color: var(--teal-700);
+  color: var(--bg-color);
+  background-color: var(--brand-color);
 }
 
 a.button-link-teal {
-  color: var(--slategray-50);
-  background-color: var(--teal-700);
+  color: var(--bg-color);
+  background-color: var(--brand-color);
 }
 a.button-link-teal:hover {
-  color: var(--slategray-800);
-  background-color: var(--teal-400);
+  color: var(--fg-color);
+  background-color: var(--brand-color-alt);
 }
 
-a.button-link-white {
-  color: white;
-  border: solid 1px white;
+a.button-link-symbolic {
+  color: var(--fg-color);
+  background-color: var(--bg-color);
+  border: solid 1px var(--fg-color);
 }
-a.button-link-white:hover {
-  color: black;
-  background-color: white;
+a.button-link-symbolic:hover {
+  color: var(--bg-color);
+  background-color: var(--fg-color);
+  border: solid 1px var(--bg-color);
+}
+
+
+a.button-link-light {
+  color: var(--slategray-50);
+  border: solid 1px var(--slategray-50);
+}
+a.button-link-light:hover {
+  color: var(--slategray-800);
+  background-color: var(--slategray-50);
 }
 
 a.button-link-dark {

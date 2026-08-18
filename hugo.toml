@@ -15,8 +15,8 @@ read_more_copy = "continue lendo"
 custom_css = ["colors.css", "layout.css", "style.css"]
 background_color_class = "bg-gradient-teal-white"
 mainSections = ["blog"]
-text_color = "slategray-800"
-body_classes = "nav-clearance bg-slategray-50"
+text_color = "fg-slategray"
+body_classes = "nav-clearance bg-slategray"
 show_reading_time = true
 
 [taxonomies]
