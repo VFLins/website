@@ -20,10 +20,8 @@
   {{ range $data.items }}
   <li class="flex items-start pa3 {{ $widthClass }} {{ .css_class }}">
     <div class="pr3 flex-shrink-0">
-      <span class="f3">
-        {{ $iconName := .icon | default "ellipsis.svg" }}
-        <img src="/images/icons/{{ $iconName }}" alt="Ícone {{ .title }}" class="w2 h2 db" />
-      </span>
+      {{ $iconName := .icon | default "ellipsis.svg" }}
+      <object data="/images/icons/{{ $iconName }}" alt="Ícone {{ $iconName }}" class="w2 db" type="image/svg+xml"></object>
     </div>
     <div class="tl">
       {{ if .url }}

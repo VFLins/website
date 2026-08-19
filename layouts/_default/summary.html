@@ -17,11 +17,11 @@
         {{ with .Params.featured_icon }}
         <div class="w-100">
           <a href="{{ $.RelPermalink }}" class="db">
-            <img src="{{ . | relURL }}" alt="{{ $.Title }}" class="db mb3 w2 object-cover">
+            <object data="{{ . | relURL }}" alt="{{ $.Title }}" class="db mb3 w2 object-cover" type="image/svg+xml"></object>
           </a>
         </div>
         {{ end }}
-  
+
       {{ end}}
 
       <h1 class="heading4 mt2 mb2">

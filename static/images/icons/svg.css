@@ -1,0 +1,9 @@
+.branded-icon {
+  fill: #008181;
+}
+@media (prefers-color-scheme: dark) {
+  .branded-icon {
+    fill: #12bbb7;
+  }
+}
+

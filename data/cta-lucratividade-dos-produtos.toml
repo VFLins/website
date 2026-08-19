@@ -17,6 +17,7 @@ text = """
 """
 
 [image]
+is_csv = true
 css_class = "w3"
 path = "images/icons/trophy.svg"
 

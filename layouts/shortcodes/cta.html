@@ -11,7 +11,7 @@
 <div class="{{ $data.css_class }}" id="{{ $data.id }}">
     <div class="{{ if $pageHeight }}cta-block-ph{{ else }}cta-block{{ end }} mw8 center ph4 flex {{ if and (not $alwaysVertical) $imageLeft }}flex-column-reverse flex-row-reverse-ns{{ else }}flex-column-reverse {{ if not $alwaysVertical }}flex-row-ns justify-between-ns{{ end }}{{ end }} items-center justify-center gap-custom">
 
-    <!-- Left Column (Text content) -->
+    <!-- Text content -->
     <div class="w-100 {{ if not $alwaysVertical }}w-{{ $textWidth }}-ns{{ end }} tl">
 
       <div class="{{ $data.title.css_class }} lh-solid mt0 mb3">{{ $data.title.text | safeHTML }}</div>
@@ -26,7 +26,7 @@
 
       {{ if eq $data.button.type "scroller" }}
         {{ $btnID := printf "scroller-btn-%d" .Ordinal }}
-	<a href="" id="{{ $btnID }}" role="button" class="{{ $data.button.css_class }} heading4 br2 dib link mt4-ns ph3 pv2" onclick="event.preventDefault(); scrollToElement( {{ $data.button.params.scroll_to }} )">{{ $data.button.params.text }}</a>
+        <a href="" id="{{ $btnID }}" role="button" class="{{ $data.button.css_class }} heading4 br2 dib link mt4-ns ph3 pv2" onclick="event.preventDefault(); scrollToElement( {{ $data.button.params.scroll_to }} )">{{ $data.button.params.text }}</a>
 
         <script>
           function scrollToElement(elemId) {
@@ -42,10 +42,15 @@
 
     </div>
 
-    <!-- Right Column (Image content) -->
+    <!-- Image content -->
       <div class="w-100 {{ if not $alwaysVertical }}w-{{ $imgWidth }}-ns mb0-ns{{ end }} h-auto mb4{{ if not $data.image }} dn db-ns{{ end }}">
       {{ if $data.image }}
-      <img src="{{ $data.image.path | relURL }}" class="{{ $data.image.css_class }}" alt="{{ $data.title.text }}">
+        {{ if $data.image.is_csv }}
+          <object data="{{ $data.image.path | relURL }}" alt="{{ $data.title.text }}" class="{{ $data.image.css_class }}" type="image/svg+xml">
+          </object>
+        {{ else }}
+          <img src="{{ $data.image.path | relURL }}" class="{{ $data.image.css_class }}" alt="{{ $data.title.text }}">
+        {{ end }}
       {{ else }}
         <div class="dn db-ns">&nbsp;</div>
       {{ end }}
