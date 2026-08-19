@@ -1,0 +1,30 @@
+{{ define "main" }}
+
+  {{ $siteSections := slice }}
+  {{ range .Pages }} {{/* term pages */}}
+    {{ range .Pages }} {{/* content pages */}}
+      {{ if .Section }}
+        {{ $siteSections = $siteSections | append .Section }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+  {{ $siteSections = $siteSections | uniq | sort }}
+
+  <div class="w-90 mw8 center">
+    <section>
+      <h1 class="subtitle">
+        de [ {{ delimit $siteSections ", " }} ]:
+      </h1>
+      <ul class="list pl0 mv5 flex flex-row">
+      {{ range $term := .Data.Pages }}
+        <li class="p-mono mr3">
+          <a href="{{ $term.RelPermalink }}" class="button-link br2 ph3 pv2">
+            {{ $term.LinkTitle }}
+          </a>
+        </li>
+      {{ end }}
+      </ul>
+    </section>
+  </div>
+{{ end }}

@@ -21,4 +21,4 @@ css_class = "button-link-symbolic"
 [button.params]
 text = "{ veja: 'quais' }"
 # scroll_to = "homepage-block-2"
-url = "/categories/análise"
+url = "/categorias/análise"

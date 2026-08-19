@@ -2,7 +2,7 @@
 title = 'Por que fabricantes de memória estão forçando contratos de longo prazo?'
 featured_image = "https://images.unsplash.com/photo-1542978709-19c95dc3bc7e?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 date = '2026-08-14T16:06:50-03:00'
-tags = ["economia"]
+assuntos = ["economia"]
 toc = true
 +++
 

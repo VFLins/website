@@ -49,7 +49,7 @@
     </header>
     <div class="{{ $.Param "text_color" | compare.Default "mid-gray" }} {{ compare.Conditional (compare.Eq $.Site.Language.Direction "rtl") "pl4-l" "pr4-l" }} w-100 w-two-thirds-l">
       {{- .Content -}}
-      {{- partials.Include "tags.html" . -}}
+      {{- partials.Include "assuntos.html" . -}}
       <div class="mt4 instapaper_ignoref">
       {{ if .Site.Config.Services.Disqus.Shortname }}
         {{ template "_internal/disqus.html" . }}

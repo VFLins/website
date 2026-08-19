@@ -4,7 +4,7 @@ description = "Conheça seus produtos campeões, entenda melhor por que são mai
 featured_icon = "images/icons/trophy.svg"
 omit_header_text = true
 toc = true
-categories = ["análise"]
+categorias = ["análise"]
 +++
 
 {{< cta cta-lucratividade-dos-produtos >}}

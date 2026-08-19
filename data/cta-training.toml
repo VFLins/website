@@ -18,4 +18,4 @@ css_class = "button-link-symbolic"
 [button.params]
 text = "< acesse />"
 # scroll_to = "homepage-block-2"
-url = "/categories/treinamento"
+url = "/categorias/treinamento"

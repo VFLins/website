@@ -20,8 +20,8 @@ body_classes = "nav-clearance bg-slategray"
 show_reading_time = true
 
 [taxonomies]
-tag = "tags"
-category = "categories"
+assunto = "assuntos"
+categoria = "categorias"
 
 [languages.pt-br]
 label = "Português"

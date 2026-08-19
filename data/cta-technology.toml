@@ -17,4 +17,4 @@ css_class = "button-link-symbolic"
 [button.params]
 text = "começe (agora):"
 # scroll_to = "homepage-block-2"
-url = "/categories/adição-de-tecnologia"
+url = "/categorias/adição-de-tecnologia"

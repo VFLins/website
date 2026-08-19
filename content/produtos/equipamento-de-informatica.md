@@ -2,7 +2,7 @@
 title = "Aquisição de equipamento de informática"
 description = "Encontre a máquina perfeita para as suas necessidades de computação."
 omit_header_text = true
-categories = ["adição de tecnologia"]
+categorias = ["adição de tecnologia"]
 featured_icon = "images/icons/computer.svg"
 +++
 

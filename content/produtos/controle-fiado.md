@@ -2,7 +2,7 @@
 title = "Software para controle de fiado"
 description = "Controle suas vendas em fiado digitalmente."
 featured_icon = "images/icons/point-of-sale.svg"
-categories = ["adição de tecnologia"]
+categorias = ["adição de tecnologia"]
 +++
 
 {{< cta cta-controle-fiado >}}
