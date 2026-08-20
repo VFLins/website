@@ -368,3 +368,9 @@ blockquote.alert-analysis p.alert-heading {
     opacity: 0;
   }
 }
+
+hr {
+  border: none;
+  height: 2px;
+  background-color: var(--bg-color-alt)
+}

@@ -14,7 +14,7 @@
   }
 </style>
 
-<div class="flex flex-row">
+<div class="flex flex-row flex-wrap">
   {{- range $networks -}}
     {{- $network := . -}}
     {{- $setup := collections.Index $config $network -}}
@@ -26,7 +26,7 @@
       {{- $link = printf $link . -}}
     {{- end -}}
 
-    {{- $languageDirection := compare.Conditional (compare.Eq $.Site.Language.LanguageDirection "rtl") "ml1" "mr1" -}}
+    {{- $languageDirection := compare.Conditional (compare.Eq $.Site.Language.LanguageDirection "rtl") "ml2" "mr2" -}}
       {{/* @todo add the following lines to a partial, reused in social/share.html */}}
       {{- if $setup.icon -}}
         <a href="{{ $link }}" target="_blank" rel="noopener{{- with $rel }} {{ . -}}{{- end -}}"
@@ -39,7 +39,7 @@
         </a>
       {{- else -}}
         <a href="{{ $link }}" target="_blank" rel="noopener{{- with $rel }} {{ . -}}{{- end -}}"
-          class="p-mono button-link svg-link br2 pv2 ph3 db {{ $network }} dib z-999 pt3 pt0-l {{ $languageDirection }}"
+          class="p-mono button-link svg-link br2 pv2 ph3 mt2 db {{ $network }} dib z-999 {{ $languageDirection }}"
           title="Entre em contato pelo {{ $network | title }}, abre em uma nova janela"
           aria-label="Entre em contato pelo {{ $network | title }}, abre em uma nova janela">
           {{- $network -}}
