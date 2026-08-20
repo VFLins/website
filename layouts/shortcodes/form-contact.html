@@ -1,8 +1,16 @@
 {{ $.Scratch.Add "labelClasses" "b db mb1 mt3" }}
-{{ $.Scratch.Add "inputClasses" "w-100 pv3 ph3 bg-slategray-200 bn br3" }}
+{{ $.Scratch.Add "inputClasses" "w-100 pv3 ph3 bg-slategray-alt bn br2" }}
 
 <style>
-  input:focus, textarea:focus { outline: 1px solid var(--teal-700) }
+  input:focus, textarea:focus { outline: 2px solid var(--brand-color) }
+  input[type="submit"] {
+    border: none;
+    background-color: var(--brand-color);
+    color: var(--bg-color);
+  }
+  ::placeholder {
+    color: var(--fg-color-alt);
+  }
 </style>
 
 {{ partials.IncludeCached "social/follow.html" . }}
@@ -21,6 +29,6 @@
     <label class="{{ $.Scratch.Get "labelClasses" }}" for="message">{{ lang.Translate "message" }}</label>
     <textarea id="message" name="message" required placeholder="Mensagem" class="{{ $.Scratch.Get "inputClasses" }} h4" aria-labelledby="message"></textarea>
 
-    <input class="heading4 button bg-slategray-50 b br3 w-100 mv2 pa3 ttu" type="submit" value="Enviar" />
+    <input class="heading4 br2 w-100 mv2 pa3 ttu" type="submit" value="Enviar" />
 
 </form>

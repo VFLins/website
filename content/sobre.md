@@ -4,6 +4,11 @@ type = "page"
 menu = "main"
 +++
 
+{{< img
+  path="/images/photos/profile.png"
+  alt="Uma fotografia minha, olhando sorridente para a câmera."
+>}}
+
 Sou _Vitor_, de Palmares-PE, formado em Ciências Econômicas em 2022. Despertei o meu
 interesse pela área de dados e TI durante a segunda metade do meu Bacharelado, a partir
 deste momento, o meu objetivo passou a ser trabalhar em um ramo em que eu consiga
