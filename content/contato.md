@@ -6,4 +6,4 @@ type = "page"
 menu = "social"
 +++
 
-{{< form-contact action="https://formspree.io/f/maqwnkzg"  >}}
+{{< form-contact action="https://formspree.io/f/maqwnkzg" >}}

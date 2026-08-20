@@ -43,8 +43,26 @@ username = "vitorlins.consultor"
 username = "VFLins"
 
 [params.ananke.social.follow]
-new_window_icon = true
+new_window_icon = false
 networks = ["instagram", "github"]
+
+[params.contact]
+networks = ["instagram", "whatsapp", "email"]
+
+[params.contact.instagram]
+username = "vitorlins.consultor"
+send_msg = "https://ig.me/m/%s"
+profile = "https://instagram.com/%s"
+
+[params.contact.whatsapp]
+username = "+5581988788208"
+send_msg = "https://wa.me/%s"
+profile = "https://wa.me/%s"
+
+[params.contact.email]
+username = "vitorlins.consultor"
+send_msg = "mailto:%s@gmail.com"
+icon = "mail.svg"
 
 [markup.goldmark.renderer]
 unsafe = true

@@ -143,11 +143,11 @@ li.nav-text {
 }
 
 .ananke-socials a {
-  fill: var(--slategray-800);
-  transitio: linear 0.2s;
+  fill: var(--fg-color);
+  transition: linear 0.2s;
 }
 .ananke-socials a:hover {
-  fill: black;
+  fill: var(--brand-color);
 }
 
 /*summary page elements*/
