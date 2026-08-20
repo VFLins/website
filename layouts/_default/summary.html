@@ -1,5 +1,6 @@
+{{ $page := . }}
 <div class="mb4 nested-copy-line-height relative">
-  <div class="mb3 pa3 overflow-hidden h-100 flex flex-column justify-between">
+  <div class="mb3 pa3 overflow-hidden h-100 flex flex-column justify-center">
 
     <div>
       {{ if .Params.featured_image }}
@@ -24,6 +25,25 @@
 
       {{ end}}
 
+      {{ if .Params.date }}
+      <div class="overline-text tracked mb2">
+        {{ with .Params.date }}
+          <span class="overline-text"><b>{{ time.Format "02/01/2006" . }}</b>
+        {{ end }}
+        {{ range $taxo, $terms := .Site.Taxonomies }}
+          {{ with $page.GetTerms $taxo }}
+            {{ $names := slice }}
+            {{ range . }}
+              {{ $names = $names | append .LinkTitle }}
+            {{ end }}
+            | {{ delimit $names " ・ " }}
+          {{ end }}
+        {{ end }}
+      </div>
+      {{ end }}
+
+    </div>
+
       <h1 class="heading4 mt2 mb2">
         <a href="{{ .RelPermalink }}">
           {{ .Title }}
@@ -36,6 +56,9 @@
           {{ .Params.description }}
         {{ else }}
           {{ .Summary }}
+          <a href="{{ .RelPermalink }}" class="button-link overline-text br2 pv1 ph2">
+            {{ $.Param "read_more_copy" | compare.Default (lang.Translate "readMore") }}
+          </a>
         {{ end }}
         </p>
       </div>

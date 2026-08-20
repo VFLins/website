@@ -18,7 +18,7 @@
         {{/* Range through the first $n_posts items of the section */}}
         {{ range (collections.First $n_posts $section) }}
           <div class="fl w-100 w-50-l pa2 mb4 relative">
-            {{ .Render "summary-article" }}
+            {{ .Render "summary" }}
           </div>
         {{ end }}
       </section>

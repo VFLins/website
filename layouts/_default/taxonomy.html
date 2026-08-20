@@ -1,11 +1,12 @@
 {{ define "main" }}
-  <article class="cf pa3 pa4-ns">
+  <article class="w-90 mw8 center">
+    <h1 class="subtitle mt5 mb6">[ {{ .Data.Singular }} ]:</h1>
     <div class="measure-wide-l center f4 lh-copy nested-copy-line-height nested-links {{ $.Param "text_color" | compare.Default "mid-gray" }}">
       <p>{{ lang.Translate "taxonomyPageList" . }}</p>
     </div>
   </article>
   <div class="mw8 center">
-    <section class="flex flex-wrap justify-around">
+    <section class="flex flex-wrap">
       {{ range  .Pages }}
         <div class="w-100 w-50-m w-33-l mb4 relative">
           {{ .Render "summary" }}

@@ -19,14 +19,14 @@
       <div class="{{ $data.description.css_class }} lh-copy mt0 mb4 o-90">{{ $data.description.text | safeHTML }}</div>
 
       {{ if eq $data.button.type "link" }}
-      <a href="{{ $data.button.params.url }}" class="{{ $data.button.css_class }} heading4 br2 dib link mt4-ns ph3 pv2">
+      <a href="{{ $data.button.params.url }}" class="{{ $data.button.css_class }} heading4 br2 dib link mt4-ns pa3">
         {{ $data.button.params.text }}
       </a>
       {{ end }}
 
       {{ if eq $data.button.type "scroller" }}
         {{ $btnID := printf "scroller-btn-%d" .Ordinal }}
-        <a href="" id="{{ $btnID }}" role="button" class="{{ $data.button.css_class }} heading4 br2 dib link mt4-ns ph3 pv2" onclick="event.preventDefault(); scrollToElement( {{ $data.button.params.scroll_to }} )">{{ $data.button.params.text }}</a>
+        <a href="" id="{{ $btnID }}" role="button" class="{{ $data.button.css_class }} heading4 br2 dib link mt4-ns pa3" onclick="event.preventDefault(); scrollToElement( {{ $data.button.params.scroll_to }} )">{{ $data.button.params.text }}</a>
 
         <script>
           function scrollToElement(elemId) {
