@@ -2,7 +2,18 @@
 {{ $.Scratch.Add "inputClasses" "w-100 pv3 ph3 bg-slategray-alt bn br2" }}
 
 <style>
-  input:focus, textarea:focus { outline: 2px solid var(--brand-color) }
+  /* input text */
+  input:focus, textarea:focus {
+    outline: 2px solid var(--brand-color);
+    font-family: 'Space Mono', 'Courier New', Courier, mono;
+    color: var(--fg-color);
+  }
+  /* input placeholder text */
+  ::placeholder {
+    font-family: 'Space Mono', 'Courier New', Courier, mono;
+    color: color-mix(in srgb, var(--fg-color) 40%, transparent);
+  }
+  /* form button */
   input[type="submit"] {
     border: none;
     background-color: var(--brand-color);
@@ -11,10 +22,6 @@
   input[type="submit"]:hover {
     border: none;
     background-color: var(--brand-color-alt);
-    color: var(--fg-color);
-  }
-  ::placeholder {
-    font-family: 'Space Mono', 'Courier New', Courier, mono;
     color: var(--fg-color);
   }
 </style>
