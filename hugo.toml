@@ -62,7 +62,7 @@ profile = "https://wa.me/%s"
 [params.contact.email]
 username = "vitorlins.consultor"
 send_msg = "mailto:%s@gmail.com"
-icon = "mail.svg"
+# icon = "mail.svg"
 
 [markup.goldmark.renderer]
 unsafe = true
