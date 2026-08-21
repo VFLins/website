@@ -16,6 +16,8 @@ div.sticky-toc {
   position: sticky;
   top: 6em;
   border-radius: 8px;
+  max-height: calc(100vh - var(--nav-height) - 3rem);
+  overflow-y: auto;
 }
 
 /*site title block*/
