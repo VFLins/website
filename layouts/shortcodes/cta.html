@@ -1,5 +1,47 @@
-{{ $dataKey := .Get 0 }}
-{{ $data := index hugo.Data $dataKey }}
+{{/*
+  {{< cta "mycta.toml" >}}
+
+  Looks for a file configuring a Call To Action, searched first alongside the page (page bundle); if not found, it is searched in `assets/`.
+
+  Configuration arguments:
+  - css_class (Str[""]): CSS classes customizing the main block
+  - id (Str[""]): HTML id of the main block
+  - page_height (Bool[false]): Should the main block take up the full height of the page?
+  - always_vertical (Bool[true]): If true, the block will always be vertical; otherwise, it will only have this layout on narrow screens
+  - image_left (Bool[true]): If true, the CTA image will appear
+  - title
+    - css_class (Str[""]): CSS classes customizing the title
+    - text (Str[""]): Title content, can accept HTML
+  - description
+    - css_class (Str[""]): CSS classes customizing the description
+    - text (Str[""]): Description content, can accept HTML
+  - image
+    - css_class (Str[""]): CSS classes customizing the image
+    - path (Str[""]): Path to the image, searched in `static/`
+    - is_svg (Bool[false]): Indicates whether the image should be treated as an SVG
+  - buttons (List)
+    - css_class (Str[""]): CSS classes customizing the button
+    - scroller (Bool[false]): If true, indicates that this button should scroll to another element on the page
+    - target (Str[""]): URL if `scroller=false`, element id on the page otherwise
+*/}}
+
+
+{{ $data := dict }}
+{{ $dataPath := .Get 0 }}
+
+{{/* look in page bundle, if not there look globally in assets/ */}}
+{{ $file := .Page.Resources.Get $dataPath}}
+{{ if not $file }}
+  {{ $file = resources.Get $dataPath }}
+{{ end }}
+
+{{ with $file }}
+  {{ with . | transform.Unmarshal }} {{ $data = . }} {{ end }}
+{{ else }}
+  {{/* raise if not found */}}
+  {{ errorf "shortcode: cta.html: Unable to get resource %q from page bundle %s or in assets" $dataPath .Page.File.Path}}
+{{ end }}
+
 {{ $pageHeight := $data.page_height | default false }}
 
 {{ if $data }}
@@ -18,28 +60,47 @@
 
       <div class="{{ $data.description.css_class }} lh-copy mt0 mb4 o-90">{{ $data.description.text | safeHTML }}</div>
 
-      {{ if eq $data.button.type "link" }}
-      <a href="{{ $data.button.params.url }}" class="{{ $data.button.css_class }} heading4 br2 dib link mt4-ns pa3">
-        {{ $data.button.params.text }}
-      </a>
+      {{ if and $data $data.buttons }}
+        <div class="cta-buttons-container">
+          {{ range $index, $e := $data.buttons }}
+
+            {{ if .scroller }}
+              <a href="#{{ .target }}"
+                 role="button"
+                 class="{{ .css_class }} heading4 br2 dib link mt4-ns ph4 pv3"
+                 onclick="event.preventDefault(); scrollToElement('{{ .target }}')">
+                {{ .text }}
+              </a>
+
+            {{ else }}
+              <a href="{{ .target }}"
+                 class="{{ .css_class }} heading4 br2 dib link mt4-ns ph4 pv3">
+                {{ .text }}
+              </a>
+            {{ end }}
+
+          {{ end }}
+        </div>
+
+        {{/* Add script if any scroller button is present */}}
+        {{ $hasScroller := false }}
+        {{ range $data.buttons }}{{ if .scroller }}{{ $hasScroller = true }}{{ end }}{{ end }}
+
+        {{ if $hasScroller }}
+          <script>
+            function scrollToElement(elemId) {
+              const element = document.getElementById(elemId);
+              if (!element) return;
+              const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+              const navBar = document.querySelector("nav.fixed");
+              const navBarHeight = navBar ? navBar.offsetHeight : 0;
+              const offsetPosition = elementPosition - navBarHeight;
+              window.scrollTo({ top: offsetPosition - 10, behavior: "smooth" });
+            }
+          </script>
+        {{ end }}
+
       {{ end }}
-
-      {{ if eq $data.button.type "scroller" }}
-        {{ $btnID := printf "scroller-btn-%d" .Ordinal }}
-        <a href="" id="{{ $btnID }}" role="button" class="{{ $data.button.css_class }} heading4 br2 dib link mt4-ns pa3" onclick="event.preventDefault(); scrollToElement( {{ $data.button.params.scroll_to }} )">{{ $data.button.params.text }}</a>
-
-        <script>
-          function scrollToElement(elemId) {
-            const element = document.getElementById( elemId );
-            const elementPosition = element.getBoundingClientRect().top + window.scrollY;
-            const navBar = document.querySelector("nav.fixed"); 
-            const navBarHeight = navBar ? navBar.offsetHeight : 0;
-            const offsetPosition = elementPosition - navBarHeight;
-            window.scrollTo({ top: offsetPosition - 10, behavior: "smooth" });
-          }
-        </script>
-      {{ end }}
-
     </div>
 
     <!-- Image content -->
@@ -58,6 +119,4 @@
 
   </div>
 </div>
-{{ else }}
-  {{ warnf "CTA Shortcode error: Data file 'data/%s.toml' not found." $dataKey }}
 {{ end }}

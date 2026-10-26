@@ -5,5 +5,4 @@ weight = 60
 description = "programas desenvolvidos para o pequeno empresário, seguindo três princípios:"
 +++
 
-{{< emphasis-grid software-principles >}}
-
+{{< emphasis-grid "software-principles.toml" >}}

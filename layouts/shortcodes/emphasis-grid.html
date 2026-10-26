@@ -1,10 +1,34 @@
-{{ $file := .Get 0 }}
-{{ $data := index hugo.Data $file }}
+{{/*
+  {{< emphasis-grid "mygrid.toml">}}
 
-{{/* Define o número de colunas (padrão 2 caso $data.n_columns não exista) */}}
+  Looks for a file configuring a grid of iconized items, searched first alongside the page (page bundle); if not found, it is searched in `assets/`.
+
+  Configuration arguments:
+  - n_columns (Int[2]): Number of columns of the grid, expects an integer from 1 to 4, -1 to have as many columns as items
+  - items (List):
+    - title (Str[""]): Title of the item
+    - icon (Str["ellipsis.svg"]): Filename of an icon from `static/images/icons/`
+    - description (Str[""]) Description of the item, can accept HTML
+*/}}
+
+
+{{ $data := dict }}
+{{ $dataPath := .Get 0 }}
+
+{{/* look in page bundle, if not there look globally in assets/ */}}
+{{ $file := .Page.Resources.Get $dataPath}}
+{{ if not $file }}
+  {{ $file = resources.Get $dataPath }}
+{{ end }}
+
+{{ with $file }}
+  {{ with . | transform.Unmarshal }} {{ $data = . }} {{ end }}
+{{ else }}
+  {{/* raise if not found */}}
+  {{ errorf "shortcode: emphasis-grid.html: Unable to get resource %q from page bundle %s or in assets" $dataPath .Page.File.Path}}
+{{ end }}
+
 {{ $cols := $data.n_columns | default 2 }}
-
-{{/* Mapeia a quantidade de colunas para as classes do Tachyons no breakpoint desktop/tablet (-ns) */}}
 {{ $widthClass := "w-50-ns" }}
 {{ if eq $cols 1 }}
   {{ $widthClass = "w-100-ns" }}

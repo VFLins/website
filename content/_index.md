@@ -3,18 +3,18 @@ description: "Um especialista para a sua empresa."
 featured_image: "/images/illustrations/a-chosen-soul-unsplash-abstractcyan1.jpg"
 ---
 
-{{< cta cta >}}
+{{< cta "cta.toml" >}}
 
 
 {{< block class="d2 w-90 mw8 mt6 center" id="heading-produtos" >}}
   <span class="teal dn dib-ns">/</span> Produtos <span class="teal dn dib-ns">/</span>
 {{< /block >}}
 
-{{< cta cta-training >}}
+{{< cta "cta-training.toml" >}}
 
-{{< cta cta-technology >}}
+{{< cta "cta-technology.toml" >}}
 
-{{< cta cta-analysis >}}
+{{< cta "cta-analysis.toml" >}}
 
 
 {{< block class="d2 w-90 mw8 mt6 center" id="heading-software" >}}
@@ -28,7 +28,7 @@ featured_image: "/images/illustrations/a-chosen-soul-unsplash-abstractcyan1.jpg"
   {{< /block >}}
 {{< /block >}}
 
-{{< cta cta-cashd >}}
+{{< cta "data/cta-cashd.toml" >}}
 
 
 {{< block class="d2 w-90 mw8 mt6 center" id="heading-software" >}}
@@ -43,7 +43,6 @@ featured_image: "/images/illustrations/a-chosen-soul-unsplash-abstractcyan1.jpg"
   {{< /block >}}
 {{< /block >}}
 
-{{< emphasis-grid eg-my-strong-points >}}
+{{< emphasis-grid "data/eg-my-strong-points.toml" >}}
 
-{{< cta cta-bottom >}}
-
+{{< cta "cta-bottom.toml" >}}
