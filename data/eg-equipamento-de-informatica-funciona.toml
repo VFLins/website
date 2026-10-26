@@ -12,11 +12,11 @@ description = """
 
 [[items]]
 css_class = "w-100 w-60-ns"
-title = "2. viabilidade"
-icon = "ellipsis.svg"
+title = "2. pesquisa"
+icon = "search.svg"
 description = """
-  Pode ser necessário realinhar seu orçamento ou suas expectativas,
-  dependendo da realidade do mercado
+  É feita uma pesquisa de mercado, para encontrar a opções disponíveis com melhor
+  aderência às suas necessidades
 """
 
 [[items]]
@@ -25,7 +25,7 @@ title = "3. aquisição"
 icon = "shopping-cart.svg"
 description = """
   Sua solução pode ser pré montada ou customizada, você seguirá as minhas orientações
-  para fazer a compra do equipamento
+  para fazer a compra do seu equipamento
 """
 
 [[items]]

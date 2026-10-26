@@ -11,12 +11,16 @@ text = "O melhor equilíbrio possível"
 [description]
 css_class = "p mw6"
 text = """
-  O computador é um investimento que deve ser feito cedo no ciclo de vida do negócio,
-  mas um investimento mal feito pode ser um desperdício de dinheiro ou causar dores de
-  cabeça.
+  O investimento em um computador pode nos deixar com medo, seja de gastar demais
+  comprando um aparelho superdimensionado, ou de se frustrar com a compra de um aparelho
+  defasado.
+  <br /><br />
+  Uma consultoria especializada será capaz de encontrar o equilíbrio ideal, garantindo
+  um nível de desempenho compatível com as suas necessidades.
 """
 
 [image]
-#css_class = "w3 fl fr-ns pr4"
-#path = "images/icons/balance.svg"
+is_svg = true
+css_class = "w-50 fl fr-ns pr4"
+path = "images/icons/balance--large.svg"
 

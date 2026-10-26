@@ -45,7 +45,7 @@
     <!-- Image content -->
       <div class="w-100 {{ if not $alwaysVertical }}w-{{ $imgWidth }}-ns mb0-ns{{ end }} h-auto mb4{{ if not $data.image }} dn db-ns{{ end }}">
       {{ if $data.image }}
-        {{ if $data.image.is_csv }}
+        {{ if $data.image.is_svg }}
           <object data="{{ $data.image.path | relURL }}" alt="{{ $data.title.text }}" class="{{ $data.image.css_class }}" type="image/svg+xml">
           </object>
         {{ else }}
