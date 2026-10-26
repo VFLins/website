@@ -1,0 +1,16 @@
+css_class = "mv6 w-90 mw8 center"
+id = "homepage-block-3"
+# image = "/images/illustrations/andras-vas-unsplash-notebook.jpg"
+
+[title]
+css_class = "heading1"
+text = "Adição de tecnologias"
+
+[description]
+css_class = "p"
+text = "Alguns ganhos de eficiência e qualidade de vida só são possíveis quando incorporamos tecnologia no nosso dia a dia."
+
+[[buttons]]
+css_class = "button-link-symbolic"
+text = "comece (agora):"
+target = "/categorias/adição-de-tecnologia"

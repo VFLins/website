@@ -1,0 +1,20 @@
+css_class = "mv6 w-90 mw8 center"
+id = "homepage-block-4"
+image_left = true
+# image = "/images/illustrations/andras-vas-unsplash-notebook.jpg"
+
+[title]
+css_class = "heading1"
+text = "Análise"
+
+[description]
+css_class = "p"
+text = """
+  Projetos analíticos para colocar você em vantagem na competição, e dominar suas
+  contas, elevar sua relação com clientes para outro nível.
+"""
+
+[[buttons]]
+css_class = "button-link-symbolic"
+text = "{ veja: 'quais' }"
+target = "/categorias/análise"

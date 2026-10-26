@@ -1,0 +1,20 @@
+css_class = "w-100 mv5"
+id = "block-4"
+always_vertical = false
+page_height = false
+image_left = true
+
+[title]
+css_class = "heading2"
+text = "Comece a facilitar a sua vida agora mesmo"
+
+[description]
+css_class = "p mw6"
+text = """
+  Entre em contato e me conte qual é o equipamento ideal para você.
+"""
+
+[[buttons]]
+css_class = "button-link-teal"
+text = "mandar (mensagem):"
+target = "/contato"

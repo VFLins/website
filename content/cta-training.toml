@@ -1,0 +1,17 @@
+css_class = "mv6 w-90 mw8 center"
+id = "homepage-block-2"
+image_left = true
+# image = "/images/illustrations/andras-vas-unsplash-notebook.jpg"
+
+[title]
+css_class = "heading1"
+text = "Treinamentos"
+
+[description]
+css_class = "p"
+text = "Treinamento empresarial com foco prático no dia-a-dia do empresário, abordando aspectos específicos tanto da operação, quanto do planejamento em minicursos."
+
+[[buttons]]
+css_class = "button-link-symbolic"
+text = "< acesse />"
+target = "/categorias/treinamento"

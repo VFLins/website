@@ -1,0 +1,25 @@
+css_class = "w-100 mv5"
+id = "block-2"
+always_vertical = false
+page_height = false
+image_left = true
+
+[title]
+css_class = "heading2"
+text = "O melhor equilíbrio possível"
+
+[description]
+css_class = "p mw6"
+text = """
+  O investimento em um computador pode nos deixar com medo, seja de gastar demais
+  comprando um aparelho superdimensionado, ou de se frustrar com a compra de um aparelho
+  defasado.
+  <br /><br />
+  Uma consultoria especializada será capaz de encontrar o equilíbrio ideal, garantindo
+  um nível de desempenho compatível com as suas necessidades.
+"""
+
+[image]
+is_svg = true
+css_class = "w-25 w-50-ns fl fr-ns pr4"
+path = "images/icons/balance--large.svg"

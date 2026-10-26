@@ -1,0 +1,26 @@
+css_class = "w-100"
+id = "block-1"
+always_vertical = true
+# image = "images/icons/rocket_dark.png"
+page_height = true
+
+[title]
+css_class = "heading1 mw6"
+text = "Aquisição de equipamento de informática<span class='teal blink'>_</span>"
+
+[description]
+css_class = "p mw6"
+text = """
+  Depois de um certo ponto, o único jeito de aumentar sua produtividade é implementar
+  novas tecnologias, mas antes disso você vai precisar do seu próprio <i>hardware</i>.
+"""
+
+[image]
+#css_class = "w3"
+#path = "images/icons/computer-light.svg"
+
+[[buttons]]
+scroller = true
+css_class = "button-link-teal"
+text = "é para _você_?:"
+target = "block-2"
