@@ -63,7 +63,6 @@ h4, .heading4 {
   overflow-wrap: break-word;
   hyphens: auto;
 }
-
 .d2 {
   font-family: Anton, Impact, fantasy;
   font-weight: normal;
@@ -71,7 +70,6 @@ h4, .heading4 {
   line-height: 1.12;
   text-transform: uppercase;
 }
-
 .d3 {
   font-family: Anton, Impact, fantasy;
   font-weight: normal;
@@ -79,6 +77,32 @@ h4, .heading4 {
   line-height: 1.12;
   text-transform: uppercase;
 }
+@media screen and (min-width: 30em) {
+  .d1-ns {
+    font-family: Anton, Impact, fantasy;
+    font-weight: normal;
+    font-size: 112px;
+    line-height: 1.12;
+    text-transform: uppercase;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+  .d2-ns {
+    font-family: Anton, Impact, fantasy;
+    font-weight: normal;
+    font-size: 90px;
+    line-height: 1.12;
+    text-transform: uppercase;
+  }
+  .d3-ns {
+    font-family: Anton, Impact, fantasy;
+    font-weight: normal;
+    font-size: 72px;
+    line-height: 1.12;
+    text-transform: uppercase;
+  }
+}
+
 
 .subtitle {
   font-family: 'Space Mono', 'Courier New', Courier, monospace;
@@ -225,7 +249,34 @@ a.button-link-dark:hover {
   background-color: var(--slategray-800);
 }
 
-/*call-to-action block occupying all page height*/
+
+/* discrete button for secondary actions */
+a.secondary-button-symbolic {
+  color: var(--fg-color);
+  font-weight: 400;
+  font-weight: normal;
+  transition: linear 0.1s;
+  display: inline-block;
+  position: relative;
+  padding: 0 0 0.4em 0;
+}
+a.secondary-button-symbolic:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--fg-color);
+  transition: transform 0.1s ease-in;
+}
+
+a.secondary-button-symbolic:hover:after {
+  transform: scaleX(1);
+}
+
+/* call-to-action block occupying all page height */
 .cta-block-ph {
   height: calc(100vh - var(--nav-height));
 }

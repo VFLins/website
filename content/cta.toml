@@ -4,7 +4,7 @@ id = "homepage-block-1"
 page_height = true
 
 [title]
-css_class = "d2"
+css_class = "d3 d2-ns"
 text = "Nenhum passo<br/>em falso<span class='teal blink'>_</span>"
 
 [description]
@@ -12,12 +12,13 @@ css_class = "p-mono"
 text = "{<br/><p class='p-mono ml4 mv0'>O nosso mundo está cheio de incertezas, mas com <b>informação</b> e <b>tecnologia</b>, podemos explorá-lo com segurança.</p>}"
 
 [[buttons]]
-scroller = true
 css_class = "button-link-teal mr4 mb4"
-text = "o que podemos fazer/>"
-target= "heading-produtos"
+text = "fale.comigo( )"
+target = "/contato"
 
 [[buttons]]
-css_class = "button-link-symbolic"
-text = "CONTATO"
-target = "/contato"
+scroller = true
+css_class = "secondary-button-symbolic"
+text = "o que podemos fazer />"
+target= "heading-produtos"
+

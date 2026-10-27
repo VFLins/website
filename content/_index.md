@@ -6,7 +6,7 @@ featured_image: "/images/illustrations/a-chosen-soul-unsplash-abstractcyan1.jpg"
 {{< cta "cta.toml" >}}
 
 
-{{< block class="d2 w-90 mw8 mt6 center" id="heading-produtos" >}}
+{{< block class="d3 d2-ns w-90 mw8 mt6 center" id="heading-produtos" >}}
   <span class="teal dn dib-ns">/</span> Produtos <span class="teal dn dib-ns">/</span>
 {{< /block >}}
 
@@ -17,7 +17,7 @@ featured_image: "/images/illustrations/a-chosen-soul-unsplash-abstractcyan1.jpg"
 {{< cta "cta-analysis.toml" >}}
 
 
-{{< block class="d2 w-90 mw8 mt6 center" id="heading-software" >}}
+{{< block class="d3 d2-ns w-90 mw8 mt6 center" id="heading-software" >}}
   <span class="teal dn dib-ns">/</span> Software <span class="teal dn dib-ns">/</span>
 {{< /block >}}
 
@@ -31,7 +31,7 @@ featured_image: "/images/illustrations/a-chosen-soul-unsplash-abstractcyan1.jpg"
 {{< cta "data/cta-cashd.toml" >}}
 
 
-{{< block class="d2 w-90 mw8 mt6 center" id="heading-software" >}}
+{{< block class="d3 d2-ns w-90 mw8 mt6 center" id="heading-software" >}}
   <span class="teal dn dib-ns">/</span> Sobre <span class="teal dn dib-ns">/</span>
 {{< /block >}}
 
