@@ -17,6 +17,8 @@ featured_icon = "images/icons/computer.svg"
 
 {{< emphasis-grid "eg-funciona.toml" >}}
 
+{{< carousel "carousel-success-cases.toml" >}}
+
 {{< cta "cta-bottom.toml" >}}
 
 {{< block class="legend-text w-90 mw8 center" id="block-5" >}}

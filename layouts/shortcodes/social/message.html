@@ -26,7 +26,7 @@
       {{- $link = printf $link . -}}
     {{- end -}}
 
-    {{- $languageDirection := compare.Conditional (compare.Eq $.Site.Language.LanguageDirection "rtl") "ml2" "mr2" -}}
+    {{- $languageDirection := compare.Conditional (compare.Eq $.Site.Language.Direction "rtl") "ml2" "mr2" -}}
       {{/* @todo add the following lines to a partial, reused in social/share.html */}}
       {{- if $setup.icon -}}
         <a href="{{ $link }}" target="_blank" rel="noopener{{- with $rel }} {{ . -}}{{- end -}}"

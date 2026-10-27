@@ -1,0 +1,196 @@
+{{/*
+  {{< carousel "mycarousel.toml">}}
+
+  Looks for a file configuring a carousel, searched first alongside the page (page bundle); if not found, it is searched in `assets/`.
+
+  Configuration arguments:
+  - items (List):
+    - title (Str[""]): Title of the item
+    - image (Str[""]): Filename of an icon from `static/images/` or a URL
+    - content (Str[""]) Description of the item, can accept HTML
+*/}}
+
+
+{{ $data := dict }}
+{{ $dataPath := .Get 0 }}
+
+{{/* look in page bundle, if not there look globally in assets/ */}}
+{{ $file := .Page.Resources.Get $dataPath}}
+{{ if not $file }}
+  {{ $file = resources.Get $dataPath }}
+{{ end }}
+
+{{ with $file }}
+  {{ with . | transform.Unmarshal }} {{ $data = . }} {{ end }}
+{{ else }}
+  {{/* raise if not found */}}
+  {{ errorf "shortcode: carousel.html: Unable to get resource %q from page bundle %s or in assets" $dataPath .Page.File.Path}}
+{{ end }}
+
+{{/* prepare a fallback image */}}
+{{ $fallbackImage := "illustrations/a-chosen-soul-unsplash-abstractcyan1.jpg" }}
+
+<div class="custom-carousel">
+  <div class="carousel-track-container">
+    <div class="carousel-track">
+      {{ range $index, $item := $data.items }}
+        {{ $img := $item.image }}
+        {{ if not $img }} {{ $img = $fallbackImage }} {{ end }}
+
+        <div class="carousel-slide {{ if eq $index 0 }}current-slide{{ end }}">
+          {{ if $img }}
+            <img src="{{ $img }}" alt="{{ $item.title | default "Carousel Image" }}">
+          {{ end }}
+          <div>
+            {{ if $item.title }}
+              <h3 class="heading3">{{ $item.title }}</h3>
+            {{ end }}
+            {{ if $item.content }}
+              <div>{{ $item.content | safeHTML }}</div>
+            {{ end }}
+          </div>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+
+  <button class="carousel-btn carousel-btn--prev" aria-label="Anterior">&#10094;</button>
+  <button class="carousel-btn carousel-btn--next" aria-label="Próximo">&#10095;</button>
+
+  <div class="carousel-nav">
+    {{ range $index, $item := $data.items }}
+      <button class="carousel-indicator {{ if eq $index 0 }}current-slide{{ end }}" aria-label="Ir para slide {{ add $index 1 }}"></button>
+    {{ end }}
+  </div>
+</div>
+
+<style>
+.custom-carousel {
+  position: relative;
+  margin: 2rem auto;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.carousel-track-container {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+  width: 100%;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel-slide img {
+  width: 100%;
+  max-height: calc(60vh - var(--nav-height));
+  object-fit: cover;
+  display: block;
+}
+
+/* Botões de navegação */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--bg-color);
+  color: var(--fg-color);
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.carousel-btn--prev {
+  left: 10px;
+}
+
+.carousel-btn--next {
+  right: 10px;
+}
+
+/* Indicadores */
+.carousel-nav {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px;
+}
+
+.carousel-indicator {
+  border: none;
+  width: 10px;
+  height: 12px;
+  background: var(--fg-color);
+  cursor: pointer;
+}
+
+.carousel-indicator.current-slide {
+  background: var(--brand-color);
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const track = document.querySelector('.custom-carousel .carousel-track');
+  if (!track) return;
+  
+  const slides = Array.from(track.children);
+  const nextButton = document.querySelector('.custom-carousel .carousel-btn--next');
+  const prevButton = document.querySelector('.custom-carousel .carousel-btn--prev');
+  const dotsNav = document.querySelector('.custom-carousel .carousel-nav');
+  const dots = Array.from(dotsNav.children);
+
+  const updateSlidePosition = (targetIndex) => {
+    track.style.transform = `translateX(-${targetIndex * 100}%)`;
+
+    slides.forEach((slide, index) => {
+      if (index === targetIndex) {
+        slide.classList.add('current-slide');
+      } else {
+        slide.classList.remove('current-slide');
+      }
+    });
+
+    dots.forEach((dot, index) => {
+      if (index === targetIndex) {
+        dot.classList.add('current-slide');
+      } else {
+        dot.classList.remove('current-slide');
+      }
+    });
+  };
+
+  let currentIndex = 0;
+
+  nextButton.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    updateSlidePosition(currentIndex);
+  });
+
+  prevButton.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    updateSlidePosition(currentIndex);
+  });
+
+  dotsNav.addEventListener('click', e => {
+    const targetDot = e.target.closest('button');
+    if (!targetDot) return;
+    const targetIndex = dots.findIndex(dot => dot === targetDot);
+    currentIndex = targetIndex;
+    updateSlidePosition(currentIndex);
+  });
+});
+</script>
