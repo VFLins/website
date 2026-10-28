@@ -6,7 +6,7 @@
   Configuration arguments:
   - items (List):
     - title (Str[""]): Title of the item
-    - image (Str[""]): Filename of an icon from `static/images/` or a URL
+    - image (Str[""]): Filename of an image from `static/images/` or a URL
     - content (Str[""]) Description of the item, can accept HTML
 */}}
 
@@ -30,20 +30,27 @@
 {{/* prepare a fallback image */}}
 {{ $fallbackImage := "illustrations/a-chosen-soul-unsplash-abstractcyan1.jpg" }}
 
-<div class="custom-carousel">
-  <div class="carousel-track-container">
+
+<div class="relative mv5 center overflow-hidden shadow-4 flex flex-column" id="carousel">
+  <div class="overflow-hidden w-100">
     <div class="carousel-track">
       {{ range $index, $item := $data.items }}
         {{ $img := $item.image }}
         {{ if not $img }} {{ $img = $fallbackImage }} {{ end }}
+        {{ if and (not (hasPrefix $img "http://")) (not (hasPrefix $img "https://")) }}
+          {{ $img = printf "images/%s" $img | relURL }}
+        {{ end }}
 
         <div class="carousel-slide {{ if eq $index 0 }}current-slide{{ end }}">
           {{ if $img }}
-            <img src="{{ $img }}" alt="{{ $item.title | default "Carousel Image" }}">
+            <div class="carousel-image-wrapper">
+              <img src="{{ $img }}" alt="{{ $item.title | default "Carousel Image" }}">
+            </div>
           {{ end }}
-          <div>
+
+          <div class="carousel-caption">
             {{ if $item.title }}
-              <h3 class="heading3">{{ $item.title }}</h3>
+              <h3>{{ $item.title }}</h3>
             {{ end }}
             {{ if $item.content }}
               <div>{{ $item.content | safeHTML }}</div>
@@ -54,28 +61,20 @@
     </div>
   </div>
 
-  <button class="carousel-btn carousel-btn--prev" aria-label="Anterior">&#10094;</button>
-  <button class="carousel-btn carousel-btn--next" aria-label="Próximo">&#10095;</button>
+  <div class="flex items-center justify-center g4 pa3 w-100 border-box">
+    <button class="carousel-btn carousel-btn--prev" aria-label="Anterior">&#10094;</button>
 
-  <div class="carousel-nav">
-    {{ range $index, $item := $data.items }}
-      <button class="carousel-indicator {{ if eq $index 0 }}current-slide{{ end }}" aria-label="Ir para slide {{ add $index 1 }}"></button>
-    {{ end }}
+    <div class="carousel-nav">
+      {{ range $index, $_ := $data.items }}
+        <button class="carousel-indicator {{ if eq $index 0 }}current-slide{{ end }}" aria-label="Ir para slide {{ add $index 1 }}"></button>
+      {{ end }}
+    </div>
+
+    <button class="carousel-btn carousel-btn--next" aria-label="Próximo">&#10095;</button>
   </div>
 </div>
 
 <style>
-.custom-carousel {
-  position: relative;
-  margin: 2rem auto;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.carousel-track-container {
-  overflow: hidden;
-  width: 100%;
-}
 
 .carousel-track {
   display: flex;
@@ -88,70 +87,71 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
-.carousel-slide img {
+.carousel-image-wrapper {
   width: 100%;
-  max-height: calc(60vh - var(--nav-height));
+}
+
+.carousel-image-wrapper img {
+  width: 100%;
+  max-height: 60vh;
   object-fit: cover;
   display: block;
 }
 
-/* Botões de navegação */
 .carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: var(--bg-color);
+  background: transparent;
   color: var(--fg-color);
-  border: none;
-  padding: 0.5rem 1rem;
+  border: 0;
+  padding: 0.3rem 0.8rem;
   cursor: pointer;
-  z-index: 10;
-  border-radius: 4px;
-  transition: background 0.2s;
 }
 
-.carousel-btn--prev {
-  left: 10px;
+.carousel-btn:hover {
+  color: var(--brand-color);
 }
 
-.carousel-btn--next {
-  right: 10px;
-}
-
-/* Indicadores */
+/* nav page indicator */
 .carousel-nav {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 8px;
-  padding: 10px;
 }
 
 .carousel-indicator {
   border: none;
-  width: 10px;
-  height: 12px;
-  background: var(--fg-color);
+  width: 1rem;
+  height: 0.5rem;
   cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  padding: 0;
 }
 
 .carousel-indicator.current-slide {
   background: var(--brand-color);
+  transform: scale(1.1);
+}
+
+.carousel-caption {
+  padding: 1rem;
 }
 </style>
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  const track = document.querySelector('.custom-carousel .carousel-track');
+  const carousel = document.getElementById('carousel');
+  const track = carousel.querySelector('.carousel-track');
   if (!track) return;
-  
+
   const slides = Array.from(track.children);
-  const nextButton = document.querySelector('.custom-carousel .carousel-btn--next');
-  const prevButton = document.querySelector('.custom-carousel .carousel-btn--prev');
-  const dotsNav = document.querySelector('.custom-carousel .carousel-nav');
+  const nextButton = carousel.querySelector('.carousel-btn--next');
+  const prevButton = carousel.querySelector('.carousel-btn--prev');
+  const dotsNav = carousel.querySelector('.carousel-nav');
   const dots = Array.from(dotsNav.children);
+
+  let currentIndex = 0;
 
   const updateSlidePosition = (targetIndex) => {
     track.style.transform = `translateX(-${targetIndex * 100}%)`;
@@ -173,8 +173,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
-  let currentIndex = 0;
-
   nextButton.addEventListener('click', () => {
     currentIndex = (currentIndex + 1) % slides.length;
     updateSlidePosition(currentIndex);
@@ -189,8 +187,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const targetDot = e.target.closest('button');
     if (!targetDot) return;
     const targetIndex = dots.findIndex(dot => dot === targetDot);
-    currentIndex = targetIndex;
-    updateSlidePosition(currentIndex);
+    if (targetIndex !== -1) {
+      currentIndex = targetIndex;
+      updateSlidePosition(currentIndex);
+    }
   });
 });
 </script>
