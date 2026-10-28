@@ -2,6 +2,10 @@
 @layer base, override;
 
 :root {
+  --breakpoint-not-small: screen and (min-width: 30em);
+  --breakpoint-medium: screen and (min-width: 30em) and (max-width: 60em);
+  --breakpoint-large: screen and (min-width: 60em);
+
   --teal-50: #f0fffd;
   --teal-100: #cffaf7;
   --teal-200: #9ef3ee;
@@ -356,6 +360,37 @@ blockquote.alert-analysis p.alert-heading {
 /* Custom tachyons-styled classes */
 .b--teal {
   border-color: var(--brand-color)
+}
+
+/* min-width: 100% */
+.min-w-100 {
+  min-width: 100%;
+}
+@media (--breakpoint-not-small) {
+  .min-w-100-ns {
+    min-width: 100%;
+  }
+}
+@media (--breakpoint-medium) {
+  .min-w-100-m {
+    min-width: 100%;
+  }
+}
+@media (--breakpoint-large) {
+  .min-w-100-l {
+    min-width: 100%;
+  }
+}
+
+/* transition: all 0.1s ease-in-out */
+.transition-fast {
+  transition: all 0.1s ease-in-out;
+}
+.transition-normal {
+  transition: all 0.3s ease-in-out;
+}
+.transition-slow {
+  transition: all 0.8s ease-in-out;
 }
 
 /* content effects */

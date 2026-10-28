@@ -276,9 +276,14 @@ a.secondary-button-symbolic:hover:after {
   transform: scaleX(1);
 }
 
-/* call-to-action block occupying all page height */
-.cta-block-ph {
+/* blocks that should alway use the page height */
+.ph-block {
   height: calc(100vh - var(--nav-height));
+}
+
+/* blocks that should grow up to page heigth */
+.m-ph-block {
+  max-height: calc(100vh - var(--nav-height));
 }
 
 /* post: toc */

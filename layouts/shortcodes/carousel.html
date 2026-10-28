@@ -31,9 +31,9 @@
 {{ $fallbackImage := "illustrations/a-chosen-soul-unsplash-abstractcyan1.jpg" }}
 
 
-<div class="relative mv5 center overflow-hidden shadow-4 flex flex-column" id="carousel">
-  <div class="overflow-hidden w-100">
-    <div class="carousel-track">
+<div class="mw9 m-ph-block relative mv5 center overflow-hidden flex flex-column" id="carousel">
+  <div class="overflow-hidden w-100 h-100">
+    <div class="flex w-100 transition-normal" id="carousel-track">
       {{ range $index, $item := $data.items }}
         {{ $img := $item.image }}
         {{ if not $img }} {{ $img = $fallbackImage }} {{ end }}
@@ -41,14 +41,18 @@
           {{ $img = printf "images/%s" $img | relURL }}
         {{ end }}
 
-        <div class="carousel-slide {{ if eq $index 0 }}current-slide{{ end }}">
+        <div class="flex flex-column flex-row-ns border-box min-w-100 {{ if eq $index 0 }}current-slide{{ end }}">
           {{ if $img }}
             <div class="carousel-image-wrapper">
-              <img src="{{ $img }}" alt="{{ $item.title | default "Carousel Image" }}">
+              <img
+                src="{{ $img }}"
+                alt="{{ $item.title | default "Carousel Image" }}"
+                class="aspect4-3"
+              >
             </div>
           {{ end }}
 
-          <div class="carousel-caption">
+          <div class="carousel-caption w-100 mw6 overflow-y-auto ph3">
             {{ if $item.title }}
               <h3>{{ $item.title }}</h3>
             {{ end }}
@@ -64,9 +68,12 @@
   <div class="flex items-center justify-center g4 pa3 w-100 border-box">
     <button class="carousel-btn carousel-btn--prev" aria-label="Anterior">&#10094;</button>
 
-    <div class="carousel-nav">
+    <div class="carousel-nav mh5">
       {{ range $index, $_ := $data.items }}
-        <button class="carousel-indicator {{ if eq $index 0 }}current-slide{{ end }}" aria-label="Ir para slide {{ add $index 1 }}"></button>
+        <button
+          class="carousel-indicator {{ if eq $index 0 }}current-slide{{ end }}"
+          aria-label="Ir para slide {{ add $index 1 }}"
+        ></button>
       {{ end }}
     </div>
 
@@ -74,28 +81,17 @@
   </div>
 </div>
 
+
 <style>
-
-.carousel-track {
-  display: flex;
-  transition: transform 0.4s ease-in-out;
-  width: 100%;
-}
-
-.carousel-slide {
-  min-width: 100%;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-}
-
 .carousel-image-wrapper {
   width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
 }
 
 .carousel-image-wrapper img {
   width: 100%;
-  max-height: 60vh;
+  height: 100%;
   object-fit: cover;
   display: block;
 }
@@ -112,14 +108,6 @@
   color: var(--brand-color);
 }
 
-/* nav page indicator */
-.carousel-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-}
-
 .carousel-indicator {
   border: none;
   width: 1rem;
@@ -134,15 +122,12 @@
   transform: scale(1.1);
 }
 
-.carousel-caption {
-  padding: 1rem;
-}
 </style>
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const carousel = document.getElementById('carousel');
-  const track = carousel.querySelector('.carousel-track');
+  const track = document.getElementById('carousel-track');
   if (!track) return;
 
   const slides = Array.from(track.children);
