@@ -31,8 +31,8 @@
 {{ $fallbackImage := "illustrations/a-chosen-soul-unsplash-abstractcyan1.jpg" }}
 
 
-<div class="mw9 m-ph-block relative mv5 center overflow-hidden flex flex-column" id="carousel">
-  <div class="overflow-hidden w-100 h-100">
+<div class="mw9 m-ph-block relative mv5 center overflow-hidden flex flex-column bg-slategray-alt br2" id="carousel">
+  <div class="overflow-hidden w-100">
     <div class="flex w-100 transition-normal" id="carousel-track">
       {{ range $index, $item := $data.items }}
         {{ $img := $item.image }}
@@ -43,11 +43,11 @@
 
         <div class="flex flex-column flex-row-ns border-box min-w-100 {{ if eq $index 0 }}current-slide{{ end }}">
           {{ if $img }}
-            <div class="carousel-image-wrapper">
+            <div class="h-50 w-100-ns">
               <img
                 src="{{ $img }}"
                 alt="{{ $item.title | default "Carousel Image" }}"
-                class="aspect4-3"
+                class="aspect-4-3"
               >
             </div>
           {{ end }}
@@ -83,19 +83,6 @@
 
 
 <style>
-.carousel-image-wrapper {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  overflow: hidden;
-}
-
-.carousel-image-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
 .carousel-btn {
   background: transparent;
   color: var(--fg-color);
@@ -121,7 +108,6 @@
   background: var(--brand-color);
   transform: scale(1.1);
 }
-
 </style>
 
 <script>
