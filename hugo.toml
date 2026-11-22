@@ -17,6 +17,7 @@ mainSections = ["blog"]
 text_color = "fg-slategray"
 body_classes = "nav-clearance bg-slategray"
 show_reading_time = true
+custom_css = ["colors.css", "layout.css", "style.css"]
 
 [taxonomies]
 assunto = "assuntos"

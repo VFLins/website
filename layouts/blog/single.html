@@ -18,7 +18,7 @@
               <a class="" href="{{ $term.Permalink }}">{{ $term.LinkTitle }}</a>
           {{ end }} {{ end }}
       </aside>
-      <h1 class="f1 mt3 mb1">
+      <h1>
         {{- .Title -}}
       </h1>
       {{ with .Params.author | compare.Default .Site.Params.author }}

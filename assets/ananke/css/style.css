@@ -32,12 +32,24 @@ h1, .heading1 {
   font-size: 40px;
   text-transform: uppercase;
   line-height: 1.1;
+  hyphens: auto;
+}
+@media screen and (min-width: 60em) {
+    h1, .heading1 {
+        font-size: 60px;
+    }
 }
 
 h2, .heading2 {
   font-family: 'Space Mono', 'Courier New', Courier, monospace;
   font-size: 32px;
   line-height: 1.1;
+  hyphens: auto;
+}
+@media screen and (min-width: 60em) {
+    h2, .heading2 {
+        font-size: 40px;
+    }
 }
 
 h3, .heading3 {
@@ -45,6 +57,12 @@ h3, .heading3 {
   font-weight: normal;
   font-size: 25px;
   line-height: 1.1;
+  hyphens: auto;
+}
+@media screen and (min-width: 60em) {
+    h3, .heading3 {
+        font-size: 32px;
+    }
 }
 
 h4, .heading4 {

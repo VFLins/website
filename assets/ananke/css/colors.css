@@ -95,7 +95,6 @@
 .warn-text { color: var(--warn-color) }
 
 
-/*
 .bg-gradient-teal-white {
   background: #ffffcf;
   background: linear-gradient(to top right, #001429, #004141, #008181, #84e6e8);
@@ -105,35 +104,35 @@
 }
 
 .bg-gradient-1 {
-  background-image: url("/images/illustrations/istvan-kovacs-unsplash-bluepurple.jpg");
+  background-image: url("images/illustrations/istvan-kovacs-unsplash-bluepurple.jpg");
   background-size: cover;
   background-position: center;
 }
 
 .bg-papers {
-  background-image: url("/images/illustrations/arisa-chattasa-unsplash-papers-blur.jpg");
+  background-image: url("images/illustrations/arisa-chattasa-unsplash-papers-blur.jpg");
   background-size: cover;
   background-position: center;
 }
 
 .bg-wires {
-  background-image: url("/images/illustrations/scott-rodgerson-unsplash-wires-blur.jpg");
+  background-image: url("images/illustrations/scott-rodgerson-unsplash-wires-blur.jpg");
   background-size: cover;
   background-position: center;
 }
 
 .bg-presentation {
-  background-image: url("/images/illustrations/alex-litvin-unsplash-presentation-blur.jpg");
+  background-image: url("images/illustrations/alex-litvin-unsplash-presentation-blur.jpg");
   background-size: cover;
   background-position: center;
 }
 
 .bg-laptop {
-  background-image: url("/images/illustrations/andras-vas-unsplash-laptop-blur.jpg");
+  background-image: url("images/illustrations/andras-vas-unsplash-laptop-blur.jpg");
   background-size: cover;
   background-position: center;
 }
-*/
+
 
 /*colors*/
 .bg-slategray { background-color: var(--bg-color); }
