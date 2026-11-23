@@ -18,6 +18,7 @@ text_color = "fg-slategray"
 body_classes = "nav-clearance bg-slategray"
 show_reading_time = true
 custom_css = ["colors.css", "layout.css", "style.css"]
+math=true
 
 [taxonomies]
 assunto = "assuntos"
@@ -72,6 +73,13 @@ unsafe = true
 
 [markup.highlight]
 style = "trac"
+
+[markup.goldmark.extensions.passthrough]
+enable = true
+
+[markup.goldmark.extensions.passthrough.delimiters]
+block = [['\[', '\]'], ['$$', '$$']]
+inline = [['\(', '\)']]
 
 [markup.goldmark.parser.attribute]
 block = true

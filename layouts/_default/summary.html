@@ -52,15 +52,15 @@
 
       <div class="lh-copy nested-copy-line-height">
         <p>
-        {{ if .Params.description}}
+        {{ if .Params.description }}
           {{ .Params.description }}
         {{ else }}
           {{ .Summary }}
-          <a href="{{ .RelPermalink }}" class="button-link overline-text br2 pv1 ph2">
-            {{ $.Param "read_more_copy" | compare.Default (lang.Translate "readMore") }}
-          </a>
         {{ end }}
         </p>
+        <a href="{{ .RelPermalink }}" class="button-link overline-text br2 pv1 ph2">
+          {{ $.Param "read_more_copy" | compare.Default (lang.Translate "readMore") }}
+        </a>
       </div>
 
     </div>
