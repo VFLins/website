@@ -1,15 +1,53 @@
 {{/*
 
-{{< img path="/caminho/imagem.jpg" alt="Descrição alt" legend="Legenda da imagem" >}}
+{{< img path="/caminho/imagem.jpg" alt="Descrição alt" legend="Legenda da imagem" ignore_aspect="false" >}}
 
 Parâmetros:
-- path: Caminho ou URL da imagem (obrigatório)
+- path: Caminho ou URL da imagem (obrigatório). A busca prioriza recursos locais antes de recorrer à web:
+  - Se começar com "http" (ex.: http:// ou https://): usa a URL diretamente na web.
+  - Se começar com "/": busca o recurso local a partir da raiz do site (ex.: /images/foto.jpg).
+  - Se não começar com "/" nem com "http": busca o recurso local dentro do Page Bundle atual (ex.: foto.jpg).
 - alt: Texto alternativo para acessibilidade (obrigatório)
 - legend: Legenda exibida abaixo da imagem (opcional)
+- ignore_aspect: Booleano opcional (padrão: false). Se true, omite a classe "aspect-4-3" da imagem.
 
 */}}
+{{ $path := .Get "path" }}
+{{ $src := $path }}
+
+{{ if or (hasPrefix $path "http://") (hasPrefix $path "https://") }}
+  {{ $src = $path }}
+{{ else if hasPrefix $path "/" }}
+  {{ $rootPath := strings.TrimPrefix "/" $path }}
+  {{ with resources.Get $rootPath }}
+    {{ $src = .RelPermalink }}
+  {{ end }}
+{{ else }}
+  {{ with .Page.Resources.GetMatch $path }}
+    {{ $src = .RelPermalink }}
+  {{ else }}
+    {{ with resources.Get $path }}
+      {{ $src = .RelPermalink }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ $ignoreAspect := false }}
+{{ with .Get "ignore_aspect" }}
+  {{ if reflect.IsSlice . }}
+    {{ $ignoreAspect = index . 0 }}
+  {{ else }}
+    {{ $ignoreAspect = . }}
+  {{ end }}
+{{ end }}
+
+{{ $class := "br2" }}
+{{ if not $ignoreAspect }}
+  {{ $class = printf "%s aspect-4-3" $class }}
+{{ end }}
+
 <figure>
-  <img src="{{ .Get "path" }}" alt="{{ .Get "alt" }}" class="br2 aspect-4-3">
+  <img src="{{ $src }}" alt="{{ .Get "alt" }}" class="{{ $class }}">
   {{ with .Get "legend" }}
     <figcaption class="legend-text tc mv3">{{ . }}</figcaption>
   {{ end }}
