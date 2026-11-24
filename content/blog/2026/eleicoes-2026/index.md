@@ -296,17 +296,17 @@ os resultados do primeiro turno:
 ### Metodologia
 
 Para dizer exatamente quantos votos um candidato pode receber, ainda
-considerando que um candidato \$A \$não pode conquistar que já está decidido por
-votar em seu adversário \$B\ \$ isto significa que o percentual de eleitores
-conquistaveis por A, \$p_A \$é composto pelos percentuais de eleitores que não
-decidiram o voto \$v_U \$e ao mesmo tempo também não o rejeitam:
+considerando que um candidato \$A\$ não pode conquistar que já está decidido por
+votar em seu adversário \$B\$ isto significa que o percentual de eleitores
+conquistaveis por A, \$p_A\$é composto pelos percentuais de eleitores que não
+decidiram o voto \$v_U\$e ao mesmo tempo também não o rejeitam:
 
 $$
 p_A = v_U \times (1 - P(\text{rejeita A} \mid \text{vota B})) \tag 1
 $$
 
-Os eleitores que rejeitam o candidato \$A \$estarão distribuídos entre os que não
-decidiram o voto \$v_U \$e os que já decidiram votar no candidato adversário
+Os eleitores que rejeitam o candidato \$A\$ estarão distribuídos entre os que não
+decidiram o voto \$v_U\$ e os que já decidiram votar no candidato adversário
 \$v_B\$. No cenário mais favorárel, todos os que o rejeitam já decidiram votar no
 adversário, isto deixa uma proporção conquistável maior, e no pior cenário,
 todos os indecisos já o rejeitam, o que significa que a decisão deles será
@@ -328,8 +328,8 @@ $$
 \max(0, v_U + (1 - r_A) - 1) \le p_A \le \min(v_U, (1 - r_A)) \tag 2
 $$
 
-O limite superior original \$\min(v_U, (1 - r_A)) \$pode ficar muito amplo se a
-rejeição ao candidato \$A \$for maior que as intenções de voto ao candidato \$B\$
+O limite superior original \$\min(v_U, (1 - r_A))\$pode ficar muito amplo se a
+rejeição ao candidato \$A\$ for maior que as intenções de voto ao candidato \$B\$
 neste caso, os votos conquistáveis serão os votos indecisos menos a diferença
 entre \$r_A\$ e \$v_B\$. Com o ajuste no limite superior, teremos:
 
@@ -364,17 +364,17 @@ $$
 \beta = \frac{ P(\text{rejeita A} \mid \text{indeciso}) }{ P(\text{rejeita A} \mid \text{vota B}) } \tag 5
 $$
 
-Nesta configuração, podemos dizer que quando \$\beta=1 \$ a proporção de
+Nesta configuração, podemos dizer que quando \$\beta=1\$ a proporção de
 rejeições é igual entre os eleitores do adversário e indecisos. Aumentando o
 valor, a proporção passa a ser maior entre os indecisos, e valores entre 0 e 1
 aumentam a proporção entre os eleitores do candidato adversário.
 
 {{< img
   path="scenarios3.png"
-  legend="Figura 3: Exemplos de distribuição de rejeição estimada para diferentes valores de \$\beta$"
+  legend="Figura 3: Exemplos de distribuição de rejeição estimada para diferentes valores de β"
 >}}
 
-Agora podemos usar o \$\beta \$da equação 5 que criamos para resolver a equação 4
+Agora podemos usar o \$\beta\$ da equação 5 que criamos para resolver a equação 4
 da probabilidade condicional de rejeitar o candidato \$A\$:
 
 $$
@@ -393,8 +393,8 @@ $$
 ### Potencial de votos versus Votos obtidos
 
 Agora que sabemos como medir a proporção de votos que podem ser conquistados,
-podemos encontrar o valor de \$\beta \$que aproxima o teto ajustado do resultado
-real das eleições. Isto nos dará um parâmetro para fixar um \$\beta \$para cada
+podemos encontrar o valor de \$\beta\$ que aproxima o teto ajustado do resultado
+real das eleições. Isto nos dará um parâmetro para fixar um \$\beta\$ para cada
 candidato.
 
 As conclusões que podem ser tiradas desta abordagem assumem que ambos os
@@ -403,7 +403,7 @@ e que portanto, nenhum eleitor que tenha anulado o voto ou deixado de votar o
 fez por falta de esforços de convencimento das partes.
 
 Como vimos antes, isto só é verdade para o candidato Lula, e portanto, o valor
-de \$\beta \$obtido para o candidato Flávio pode ser mais baixo do que o que
+de \$\beta\$ obtido para o candidato Flávio pode ser mais baixo do que o que
 medimos aqui.
 
 A proporção de votos conquistadas no gráfico abaixo é medida pela diferença de
@@ -416,7 +416,7 @@ totais no segundo turno.
   ignore_aspect=true
 >}}
 
-Não foi possível encotrar um valor de \$\beta \$que aproximasse a média das
+Não foi possível encotrar um valor de \$\beta\$ que aproximasse a média das
 estimativas mais do que o que já está mostrado no gráfico, valores abaixo de
 0,1 não têm impacto no resultado.
 
@@ -448,7 +448,7 @@ estimados para cada candidato, se esta diferença é verdadeira, significa pode
 existir uma diferença importante no motivo para o voto entre os eleitores de
 cada candidato.
 
-Um valor de \$\beta \$muito baixo para um candidato pode indicar que uma grande
+Um valor de \$\beta\$ muito baixo para um candidato pode indicar que uma grande
 parte do seu eleitorado vota em você por rejeição ao candidato adversário, isso
 pode parecer bom à primeira vista, porque pode indicar um eleitorado
 conquistável maior.
@@ -493,7 +493,7 @@ isso, tem intenção de determinar o comportamento individual de cada eleitor,
 mas de ajudar a identificar um padrão entre as pesquisas.
 
 A presença de uma correlação mais forte as intenções de voto ao Flávio e a
-rejeição à Lula pode ser um indicativo de que o coeficiente \$\beta \$verdadeiro
+rejeição à Lula pode ser um indicativo de que o coeficiente \$\beta\$ verdadeiro
 do candidato era mais baixo do que o medido. A métrica pode ter sido
 superestimada por que ele teve um desempenho abaixo do esperado em atrair votos
 dos eleitores de candidatos derrotados no primeiro turno, o que é coerente com
@@ -521,7 +521,7 @@ pesquisas eleitorais apresentaram após o primeiro turno, quanto pelo
 abrandamento de sua campanha.
 
 Flávio mostra um alto nível de correlação entre intenções de votos com rejeição
-ao adversário, uma distribuição com \$\beta \$mais baixo que o medido (como na
+ao adversário, uma distribuição com \$\beta\$ mais baixo que o medido (como na
 figura 3). Não foi investigado mais a fundo aqui, mas isto pode confirmar que
 ele teria mais capacidade de atrair votos dos eleitores de outros candidatos.
 

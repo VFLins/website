@@ -147,8 +147,11 @@ code {
   font-size: 16px;
 }
 
-math {
+math,
+mfrac mrow,
+mfrac msub {
   font-family: 'Noto Sans Math', math;
+  font-size: 1rem;
 }
 
 /* site navigation: logo */
