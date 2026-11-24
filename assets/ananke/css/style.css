@@ -122,7 +122,6 @@ h4, .heading4 {
   }
 }
 
-
 .subtitle {
   font-family: 'Space Mono', 'Courier New', Courier, monospace;
   font-weight: normal;
@@ -146,6 +145,10 @@ li {
 code {
   font-family: 'Space Mono', 'Courier New', Courier, monospace;
   font-size: 16px;
+}
+
+math {
+  font-family: 'Noto Sans Math', math;
 }
 
 /* site navigation: logo */
