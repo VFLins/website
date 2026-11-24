@@ -56,9 +56,9 @@
     <!-- Text content -->
     <div class="w-100 {{ if not $alwaysVertical }}w-{{ $textWidth }}-ns{{ end }} tl">
 
-      <div class="{{ $data.title.css_class }} lh-solid mt0 mb3">{{ $data.title.text | safeHTML }}</div>
+      <div class="{{ $data.title.css_class }}">{{ $data.title.text | safeHTML }}</div>
 
-      <div class="{{ $data.description.css_class }} lh-copy mt0 mb4 o-90">{{ $data.description.text | safeHTML }}</div>
+      <div class="{{ $data.description.css_class }}">{{ $data.description.text | safeHTML }}</div>
 
       {{ if and $data $data.buttons }}
         <div class="cta-buttons-container">

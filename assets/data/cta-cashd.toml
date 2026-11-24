@@ -6,7 +6,7 @@ css_class = "mw4 mw5-l fc-ns"
 path = "/images/icons/cashd-logo-symbolic-dark.png"
 
 [title]
-css_class = "heading1"
+css_class = "heading3 mb4"
 text = "Cashd"
 
 [description]

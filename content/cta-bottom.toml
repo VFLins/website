@@ -5,7 +5,7 @@ image_left = true
 page_height = false
 
 [title]
-css_class = "heading1"
+css_class = "heading2 mb4"
 text = '''
   Você
   <br/>

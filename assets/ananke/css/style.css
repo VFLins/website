@@ -42,6 +42,7 @@ h1, .heading1 {
 
 h2, .heading2 {
   font-family: 'Space Mono', 'Courier New', Courier, monospace;
+  font-weight: 700;
   font-size: 32px;
   line-height: 1.1;
   hyphens: auto;

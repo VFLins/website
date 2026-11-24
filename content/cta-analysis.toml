@@ -4,7 +4,7 @@ image_left = true
 # image = "/images/illustrations/andras-vas-unsplash-notebook.jpg"
 
 [title]
-css_class = "heading1"
+css_class = "heading4 mb4"
 text = "Análise"
 
 [description]
