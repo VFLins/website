@@ -67,14 +67,14 @@
             {{ if .scroller }}
               <a href="#{{ .target }}"
                  role="button"
-                 class="{{ .css_class }} heading4 br2 dib link mt4-ns ph4 pv3"
+                 class="{{ .css_class }} heading4 br2 dib link ph4 pv3"
                  onclick="event.preventDefault(); scrollToElement('{{ .target }}')">
                 {{ .text }}
               </a>
 
             {{ else }}
               <a href="{{ .target }}"
-                 class="{{ .css_class }} heading4 br2 dib link mt4-ns ph4 pv3">
+                 class="{{ .css_class }} heading4 br2 dib link ph4 pv3">
                 {{ .text }}
               </a>
             {{ end }}
