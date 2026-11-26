@@ -89,13 +89,20 @@
         {{ if $hasScroller }}
           <script>
             function scrollToElement(elemId) {
-              const element = document.getElementById(elemId);
-              if (!element) return;
-              const elementPosition = element.getBoundingClientRect().top + window.scrollY;
-              const navBar = document.querySelector("nav.fixed");
-              const navBarHeight = navBar ? navBar.offsetHeight : 0;
-              const offsetPosition = elementPosition - navBarHeight;
-              window.scrollTo({ top: offsetPosition - 10, behavior: "smooth" });
+              setTimeout(() => {
+                const element = document.getElementById(elemId);
+                if (!element) return;
+
+                const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+                const navBar = document.querySelector("nav.fixed");
+                const navBarHeight = navBar ? navBar.offsetHeight : 0;
+                const offsetPosition = elementPosition - navBarHeight;
+
+                window.scrollTo({
+                  top: offsetPosition - 10,
+                  behavior: "smooth",
+                });
+              }, 180);
             }
           </script>
         {{ end }}
