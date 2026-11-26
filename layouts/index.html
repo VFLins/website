@@ -10,10 +10,10 @@
   {{ $section_count := len $section }}
 
   {{ if and ($show_recent_posts) (compare.Ge $section_count 1) }}
-    <div class="w-100">
+    <div class="w-90 w-100-l mw8 center">
       {{ $n_posts := $.Param "recent_posts_number" | compare.Default 4 }}
 
-      <h1 class="w-90 w-100-ns mw8 center mt6">Últimas publicações</h1>
+      <h1 class="mw8 mt6">Últimas publicações</h1>
       <aside class="flex flex-wrap w-100 mw8 center card-grid">
         {{/* Range through the first $n_posts items of the section */}}
         {{ range (collections.First $n_posts $section) }}

@@ -96,13 +96,13 @@
                 const elementPosition = element.getBoundingClientRect().top + window.scrollY;
                 const navBar = document.querySelector("nav.fixed");
                 const navBarHeight = navBar ? navBar.offsetHeight : 0;
-                const offsetPosition = elementPosition - navBarHeight;
+                const offsetPosition = elementPosition - navBarHeight - 50;
 
                 window.scrollTo({
                   top: offsetPosition - 10,
                   behavior: "smooth",
                 });
-              }, 180);
+              }, 280);
             }
           </script>
         {{ end }}

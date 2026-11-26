@@ -296,12 +296,15 @@ a.secondary-button-symbolic:after {
   background-color: var(--fg-color);
   transition: transform 0.1s ease-in;
 }
-
 a.secondary-button-symbolic:hover:after {
   transform: scaleX(1);
 }
+a.secondary-button-symbolic:focus-visible {
+  -webkit-tap-highlight-color: transparent;
+  outline: 0px;
+}
 
-/* blocks that should alway use the page height */
+/* blocks that should always use the page height */
 .ph-block {
   height: calc(100vh - var(--nav-height));
 }
