@@ -1,0 +1,25 @@
+css_class = "w-90 mw8 center"
+n_columns = 3
+
+[[items]]
+title = "Escritório"
+icon = "computer.svg"
+description = """
+  Computador ou notebook básico para pacote Office ou ponto de venda (PDV)
+"""
+
+[[items]]
+title = "Workstation"
+icon = "service.svg"
+description = """
+  Computador ou notebook de alto desempenho para trabalhos avançados em qualquer área
+"""
+
+[[items]]
+title = "Mini servidor"
+icon = "hard-drive.svg"
+description = """
+  Computador de baixo consumo e baixa necessidade de manutenção, que te ajuda a
+  economizar com serviços de <i>cloud</i>
+"""
+

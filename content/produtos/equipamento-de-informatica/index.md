@@ -11,11 +11,21 @@ featured_icon = "images/icons/computer.svg"
 {{< cta "cta-justificativa.toml" >}}
 
 
-{{< block class="heading1 mt5 mb3 w-90 mw8 center" id="block-3" >}}
-  <span class="teal dn dib-ns">\\\\</span> Como funciona 
+{{< block class="heading1 mt6 mb3 w-90 mw8 center" id="block-3" >}}
+  <span class="teal dn dib-ns">{</span> Como funciona <span class="teal dn dib-ns">}:</span> 
 {{< /block >}}
 
 {{< emphasis-grid "eg-funciona.toml" >}}
+
+{{< block class="heading1 mt6 mb3 w-90 mw8 center" id="block-3" >}}
+  <span class="teal dn dib-ns">///</span> Do que você precisa?
+{{< /block >}}
+
+{{< emphasis-grid "eg-opcoes.toml" >}}
+
+{{< block class="heading1 mt6 mb3 w-90 mw8 center" id="block-3" >}}
+  <span class="teal dn dib-ns">\></span> Casos de sucesso:<span class="teal blink dn dib-ns">_</span>
+{{< /block >}}
 
 {{< carousel "carousel-success-cases.toml" >}}
 
