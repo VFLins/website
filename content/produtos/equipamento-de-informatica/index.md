@@ -21,7 +21,7 @@ featured_icon = "images/icons/computer.svg"
 {{< /dec-text >}}
 
 {{< block class="w-60">}}
-Não tenha medo de procurar ajuda, mesmo que seja um equipamento de baixo custo,
+Não tenha medo de procurar ajuda, mesmo que seja um equipamento básico,
 a sua economia vai superar qualquer custo.
 {{< /block >}}
 
