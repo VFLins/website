@@ -78,3 +78,22 @@ blockquote.alert p.alert-heading {
   object-position: center;
 }
 
+/*preserve whitespaces, tabs and linebreaks*/
+.pre-wrap {
+  white-space: pre-wrap;
+}
+@media screen and (min-width: 30em) {
+  .pre-wrap-ns {
+    white-space: pre-wrap;
+  }
+}
+@media screen and (min-width: 30em) and (max-width: 60em) {
+  .pre-wrap-m {
+    white-space: pre-wrap;
+  }
+}
+@media screen and (min-width: 60em) {
+  .pre-wrap-l {
+    white-space: pre-wrap;
+  }
+}

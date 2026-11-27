@@ -10,22 +10,26 @@ featured_icon = "images/icons/computer.svg"
 
 {{< cta "cta-justificativa.toml" >}}
 
-
-{{< block class="heading1 mt6 mb3 w-90 mw8 center" id="block-3" >}}
-  <span class="teal dn dib-ns">{</span> Como funciona <span class="teal dn dib-ns">}:</span> 
-{{< /block >}}
+{{< dec-text css_class="heading1 mt6 mb4" prefix="{ " suffix=" }:" >}}
+   Como funciona
+{{< /dec-text >}}
 
 {{< emphasis-grid "eg-funciona.toml" >}}
 
-{{< block class="heading1 mt6 mb3 w-90 mw8 center" id="block-3" >}}
-  <span class="teal dn dib-ns">///</span> Do que você precisa?
+{{< dec-text css_class="heading1 mt6 mb4" prefix="/// " >}}
+  Do que você precisa?
+{{< /dec-text >}}
+
+{{< block class="w-60">}}
+Não tenha medo de procurar ajuda, mesmo que seja um equipamento de baixo custo,
+a sua economia vai superar qualquer custo.
 {{< /block >}}
 
 {{< emphasis-grid "eg-opcoes.toml" >}}
 
-{{< block class="heading1 mt6 mb3 w-90 mw8 center" id="block-3" >}}
-  <span class="teal dn dib-ns">\></span> Casos de sucesso:<span class="teal blink dn dib-ns">_</span>
-{{< /block >}}
+{{< dec-text css_class="heading1 mt6 mb4" prefix="> " suffix=":" >}}
+  Casos de sucesso
+{{< /dec-text >}}
 
 {{< carousel "carousel-success-cases.toml" >}}
 

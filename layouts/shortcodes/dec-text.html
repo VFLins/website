@@ -1,0 +1,30 @@
+{{- /*
+  Shortcode: dec-text
+  Descrição: Renderiza um bloco de texto com prefixo e sufixo decorativos em destaque
+  (visíveis em telas grandes e ocultos em telas pequenas via `dn dib-ns`).
+
+  Parâmetros:
+    - css_class: Classes CSS aplicadas ao container <div>.
+    - prefix:    Texto decorativo exibido antes do conteúdo.
+    - suffix:    Texto decorativo exibido após o conteúdo.
+    - content:   Texto interno (opcional; usa `.Inner` caso omitido).
+
+  Uso:
+    {{< dec-text css_class="heading1 mt6 mb3" prefix="{" suffix="}:"
+      Como funciona
+    >}}
+*/ -}}
+{{- $cssClass := .Get "css_class" | default "" -}}
+{{- $prefix := .Get "prefix" | default "" -}}
+{{- $suffix := .Get "suffix" | default "" -}}
+{{- $content := .Get "content" | default .Inner -}}
+
+<div{{ with $cssClass }} class="{{ . }}"{{ end }}>
+  {{- with $prefix -}}
+    <span class="teal dn dib-ns pre-wrap">{{ . }}</span>
+  {{- end -}}
+  {{- $content | markdownify -}}
+  {{- with $suffix -}}
+    <span class="teal dn dib-ns pre-wrap">{{ . }}</span>
+  {{- end -}}
+</div>
