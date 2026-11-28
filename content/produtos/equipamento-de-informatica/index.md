@@ -21,8 +21,8 @@ featured_icon = "images/icons/computer.svg"
 {{< /dec-text >}}
 
 {{< block class="w-60">}}
-Não tenha medo de procurar ajuda, mesmo que seja um equipamento básico,
-a sua economia vai superar qualquer custo.
+Não importa qual a sua necessidade, se você tem um pequeno negócio, nós
+podemos encontrar a melhor solução para a sua demanda.
 {{< /block >}}
 
 {{< emphasis-grid "eg-opcoes.toml" >}}
