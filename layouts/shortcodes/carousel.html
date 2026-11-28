@@ -38,7 +38,7 @@
         {{ $img := $item.image }}
         {{ if not $img }} {{ $img = $fallbackImage }} {{ end }}
         {{ if and (not (hasPrefix $img "http://")) (not (hasPrefix $img "https://")) }}
-          {{ $img = printf "images/%s" $img | relURL }}
+          {{ $img = printf "images/%s" $img }}
         {{ end }}
 
         <div class="flex flex-column flex-row-ns border-box min-w-100 ph3 pt3 items-center {{ if eq $index 0 }}current-slide{{ end }}">
